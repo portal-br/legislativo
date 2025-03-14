@@ -55,6 +55,10 @@ jobs:
             backend:
               - 'backend/**'
               - '.github/workflows/backend.yml'
+            docs:
+              - '.readthedocs.yaml'
+              - 'docs/**'
+              - '.github/workflows/docs.yml'
             frontend:
               - 'frontend/**'
               - '.github/workflows/frontend.yml'

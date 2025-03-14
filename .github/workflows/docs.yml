@@ -1,4 +1,4 @@
-name: Documentação
+name: "Documentação PortalBrasil: Legislativo"
 
 on:
   workflow_call:
