@@ -36,6 +36,7 @@ dependencies = [
     "plone.api",
     "plone.restapi",
     "plone.volto",
+    "plonegovbr.brfields",
 ]
 
 [project.optional-dependencies]
@@ -301,6 +302,7 @@ constraint-dependencies = [
     "plone.versioncheck==1.8.2",
     "plone.volto==5.0.2",
     "plone.z3cform==2.0.4",
+    "plonegovbr.brfields==1.0.0a3",
     "Plone==6.1.0",
     "plonetheme.barceloneta==3.2.2",
     "pluggy==1.5.0",
@@ -538,7 +540,7 @@ include = [
 
 [tool.hatch.build.targets.wheel]
 sources = ["src"]
-only-include = ["src/plonegovbr/portal_leg"]
+only-include = ["src/plonegovbr"]
 
 [tool.towncrier]
 directory = "news/"

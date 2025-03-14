@@ -235,6 +235,7 @@ constraints = [
     { name = "plone-versioncheck", specifier = "==1.8.2" },
     { name = "plone-volto", specifier = "==5.0.2" },
     { name = "plone-z3cform", specifier = "==2.0.4" },
+    { name = "plonegovbr-brfields", specifier = "==1.0.0a2" },
     { name = "plonetheme-barceloneta", specifier = "==3.2.2" },
     { name = "pluggy", specifier = "==1.5.0" },
     { name = "products-btreefolder2", specifier = "==5.1" },
@@ -3374,12 +3375,29 @@ wheels = [
 ]
 
 [[package]]
+name = "plonegovbr-brfields"
+version = "1.0.0a2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "plone-api" },
+    { name = "plone-restapi" },
+    { name = "plone-volto" },
+    { name = "products-cmfplone" },
+    { name = "validate-docbr" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/4a/69/6979a5843e13fb7fbae3a4e4756f94cf86e162fbed118f01e6826420cc72/plonegovbr.brfields-1.0.0a2.tar.gz", hash = "sha256:d4a3b7d67fa608c41e08a1c8cf138bd34cb5abcb7c24eba4b7d9543d0d11ca40", size = 18911 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bf/14/14ccf582445aa11b775ddddf31847488a461fdd933aac9cdd389ec298e7f/plonegovbr.brfields-1.0.0a2-py3-none-any.whl", hash = "sha256:ac477727e7e77abe0ea45e59ee976b5b3849a1e8f8bd9d8b4c229b434337a470", size = 34205 },
+]
+
+[[package]]
 name = "plonegovbr-portal-leg"
 source = { editable = "." }
 dependencies = [
     { name = "plone-api" },
     { name = "plone-restapi" },
     { name = "plone-volto" },
+    { name = "plonegovbr-brfields" },
     { name = "products-cmfplone" },
 ]
 
@@ -3417,6 +3435,7 @@ requires-dist = [
     { name = "plone-restapi" },
     { name = "plone-restapi", extras = ["test"], marker = "extra == 'test'" },
     { name = "plone-volto" },
+    { name = "plonegovbr-brfields" },
     { name = "products-cmfplone", specifier = "==6.1.0" },
     { name = "pytest", marker = "extra == 'test'" },
     { name = "pytest-cov", marker = "extra == 'test'" },
@@ -4637,6 +4656,14 @@ wheels = [
 [package.optional-dependencies]
 socks = [
     { name = "pysocks" },
+]
+
+[[package]]
+name = "validate-docbr"
+version = "1.10.0"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8b/0d/799d5c729efb85a8bd7786c7cb55780bb66f9c386ec805198e05d3fa0c80/validate_docbr-1.10.0-py3-none-any.whl", hash = "sha256:ff016f180b0c5ecff06abce1d83385924438c4d4c7f5c050e90fb724f1d968bb", size = 18814 },
 ]
 
 [[package]]

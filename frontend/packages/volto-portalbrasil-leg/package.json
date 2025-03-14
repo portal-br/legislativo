@@ -50,7 +50,7 @@
     "@mbarde/volto-image-crop-widget": "0.5.1",
     "@plone/components": "workspace:*",
     "@plonegovbr/volto-vlibras": "0.4.0",
-    "@plonegovbr/volto-brwidgets": "1.0.0-alpha.2",
+    "@plonegovbr/volto-brwidgets": "1.0.0-alpha.3",
     "volto-form-block": "^3.9.1"
   },
   "peerDependencies": {

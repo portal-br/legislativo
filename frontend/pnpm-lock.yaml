@@ -1560,8 +1560,8 @@ importers:
         specifier: workspace:*
         version: link:../../core/packages/components
       '@plonegovbr/volto-brwidgets':
-        specifier: 1.0.0-alpha.2
-        version: 1.0.0-alpha.2(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(semantic-ui-react@2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
+        specifier: 1.0.0-alpha.3
+        version: 1.0.0-alpha.3(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(semantic-ui-react@2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
       '@plonegovbr/volto-vlibras':
         specifier: 0.4.0
         version: 0.4.0(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)
@@ -3543,8 +3543,8 @@ packages:
     resolution: {integrity: sha512-3h/EQvIboAyNkKMk3S5ncuSkOzioUjoSjCw5z7bth/IYKteLJQ02dyIy4qSsDkgUKdNhrlsdMHA4AcEICNSJ8A==}
     engines: {node: ^20 || ^22}
 
-  '@plonegovbr/volto-brwidgets@1.0.0-alpha.2':
-    resolution: {integrity: sha512-KAkn0k9rxHGqVlFLoWai7YsBmjXCXLf7idk6I/e4aXvZyAfev6o3AgAasifhAdxZAuPx9fNIst9rr/VnaJP1Aw==}
+  '@plonegovbr/volto-brwidgets@1.0.0-alpha.3':
+    resolution: {integrity: sha512-Q3oFFBgHnZFFgQQNl8vCITwzgVSmaWWp29qmRFxm3Er0A4msQ4rTcojSxqF03YnE5CHTgssJa49y+4iB+zrjKA==}
     peerDependencies:
       prop-types: 15.8.1
       react: 18.2.0
@@ -17045,7 +17045,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@plonegovbr/volto-brwidgets@1.0.0-alpha.2(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(semantic-ui-react@2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))':
+  '@plonegovbr/volto-brwidgets@1.0.0-alpha.3(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(semantic-ui-react@2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))':
     dependencies:
       prop-types: 15.8.1
       react: 18.2.0
