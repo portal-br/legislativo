@@ -1,0 +1,25 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="plonegovbr.portal_leg"
+    >
+
+  <genericsetup:registerProfile
+      name="default"
+      title="PortalBrasil: Legislativo"
+      description="Configura um novo site com o PortalBrasil: Legislativo"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/default"
+      post_handler=".setuphandlers.content.create_base_content"
+      />
+
+  <!-- Hide Uninstall Profile-->
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="plonegovbr.portal_leg"
+      />
+
+
+  <include package=".upgrades" />
+
+</configure>

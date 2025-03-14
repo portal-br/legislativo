@@ -1,0 +1,26 @@
+[repository]
+name = "portalbrasil-legislativo"
+managed_by_uv = true
+changelog = "CHANGELOG.md"
+version = "version.txt"
+compose = "docker-compose.yml"
+
+[backend]
+path = "backend"
+
+[backend.package]
+name = "plonegovbr.portal_leg"
+path = "backend"
+changelog = "backend/CHANGELOG.md"
+towncrier_settings = "backend/pyproject.toml"
+publish = true
+
+[frontend]
+path = "frontend"
+
+[frontend.package]
+name = "@plonegovbr/portalbrasil-leg"
+path = "frontend/packages/volto-portalbrasil-leg"
+changelog = "frontend/packages/volto-portalbrasil-leg/CHANGELOG.md"
+towncrier_settings = "frontend/packages/volto-portalbrasil-leg/towncrier.toml"
+publish = true
