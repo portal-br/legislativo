@@ -17,6 +17,7 @@ YELLOW=`tput setaf 3`
 
 IMAGE_NAME_PREFIX=ghcr.io/plonegovbr/portalbrasil-legislativo
 IMAGE_TAG=latest
+SEED=$(shell date +'%Y%m%d-%H%M%S')
 
 # Python checks
 UV?=uv
@@ -158,4 +159,4 @@ build-image:  ## Build Docker Images
 	@echo "$(GREEN)==> Building $(IMAGE_NAME_PREFIX)-backend:$(IMAGE_TAG) $(RESET)"
 	@docker build . -t $(IMAGE_NAME_PREFIX)-backend:$(IMAGE_TAG) --progress plain -f Dockerfile --build-arg PLONE_VERSION=$(PLONE_VERSION)
 	@echo "$(GREEN)==> Building $(IMAGE_NAME_PREFIX)-demo:$(IMAGE_TAG) $(RESET)"
-	@docker build .  --pull=false -t $(IMAGE_NAME_PREFIX)-beispiele:$(IMAGE_TAG) -f Dockerfile.demo --build-arg IMAGE_TAG=$(IMAGE_TAG) --build-arg SEED=$(SEED)
+	@docker build .  --pull=false -t $(IMAGE_NAME_PREFIX)-demo:$(IMAGE_TAG) -f Dockerfile.demo --build-arg IMAGE_TAG=$(IMAGE_TAG) --build-arg SEED=$(SEED)

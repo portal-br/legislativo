@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 ARG IMAGE_TAG
 ARG SEED=1000
-FROM ghcr.io/ghcr.io/plonegovbr/portalbrasil-legislativo-backend:${IMAGE_TAG:-latest}
+FROM ghcr.io/plonegovbr/portalbrasil-legislativo-backend:${IMAGE_TAG:-latest}
 
 LABEL maintainer="PloneGov-BR <gov@plone.org.br>" \
       org.label-schema.name="portalbrasil-legislativo-demo" \
