@@ -235,7 +235,7 @@ constraints = [
     { name = "plone-versioncheck", specifier = "==1.8.2" },
     { name = "plone-volto", specifier = "==5.0.2" },
     { name = "plone-z3cform", specifier = "==2.0.4" },
-    { name = "plonegovbr-brfields", specifier = "==1.0.0a2" },
+    { name = "plonegovbr-brfields", specifier = "==1.0.0a3" },
     { name = "plonetheme-barceloneta", specifier = "==3.2.2" },
     { name = "pluggy", specifier = "==1.5.0" },
     { name = "products-btreefolder2", specifier = "==5.1" },
@@ -3376,7 +3376,7 @@ wheels = [
 
 [[package]]
 name = "plonegovbr-brfields"
-version = "1.0.0a2"
+version = "1.0.0a3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "plone-api" },
@@ -3385,9 +3385,9 @@ dependencies = [
     { name = "products-cmfplone" },
     { name = "validate-docbr" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/4a/69/6979a5843e13fb7fbae3a4e4756f94cf86e162fbed118f01e6826420cc72/plonegovbr.brfields-1.0.0a2.tar.gz", hash = "sha256:d4a3b7d67fa608c41e08a1c8cf138bd34cb5abcb7c24eba4b7d9543d0d11ca40", size = 18911 }
+sdist = { url = "https://files.pythonhosted.org/packages/9f/7d/1f4124bc479c287a7a47000e005ad73d4579dbd467ce122a50e29aefa537/plonegovbr.brfields-1.0.0a3.tar.gz", hash = "sha256:a096b32b2182b978076f2502caf8f386bc8a7ab643dadf23ad7d645f25854006", size = 18908 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/bf/14/14ccf582445aa11b775ddddf31847488a461fdd933aac9cdd389ec298e7f/plonegovbr.brfields-1.0.0a2-py3-none-any.whl", hash = "sha256:ac477727e7e77abe0ea45e59ee976b5b3849a1e8f8bd9d8b4c229b434337a470", size = 34205 },
+    { url = "https://files.pythonhosted.org/packages/d6/3c/97c280c1e13718d99645ac7746cec6db526920a61c646266ae1f37096218/plonegovbr.brfields-1.0.0a3-py3-none-any.whl", hash = "sha256:4522725fa9a13c127e0fbbb84ba7d2742e216d2633ea1c209072ad4379f9252b", size = 34204 },
 ]
 
 [[package]]
