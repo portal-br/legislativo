@@ -2,9 +2,12 @@
 name: '🚀 PortalBrasil: Legislativo - Nova funcionalidade'
 description: 'Solicitação de nova funcionalidade para a solução PortalBrasil: Legislativo'
 labels: ['Funcionalidade', 'precisa: avaliação']
+projects:
+  - plonegovbr/5
 type: Feature
 assignees:
-  - '@plonegovbr/portalbrasil-desenvolvedores'
+  - 'rafahela'
+  - 'rbenevid'
 body:
   - type: markdown
     attributes:

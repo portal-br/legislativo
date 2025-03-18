@@ -1,0 +1,23 @@
+---
+name: '📝 PortalBrasil: Legislativo - Documentação'
+description: 'Solicitação de melhorias na documentação da solução PortalBrasil: Legislativo'
+labels: ['Documentação', 'precisa: avaliação']
+projects:
+  - plonegovbr/5
+type: Feature
+assignees:
+  - 'rafahela'
+  - 'rbenevid'
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por compartilhar esse pedido de melhoria da documentação do projeto.
+
+  - type: textarea
+    id: comentarios
+    attributes:
+      label: Descreva as melhorias
+      description: Uma descrição clara e detalhada sobre o que precisa ser corrigido ou escrito.
+    validations:
+      required: true

@@ -1,0 +1,74 @@
+---
+name: '🐛 PortalBrasil: Legislativo - Problema'
+description: 'Descreve um problema encontrado na solução PortalBrasil: Legislativo'
+labels: ['Bug', 'precisa: avaliação']
+projects:
+  - plonegovbr/5
+type: Bug
+assignees:
+  - 'rafahela'
+  - 'rbenevid'
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por reportar esse problema. Por favor, nos informe o máximo de detalhes para que possamos agilizar a avaliação.
+  - type: textarea
+    id: issue
+    attributes:
+      label: Descreva o problema
+      description: Uma descrição clara e concisa do que é o problema
+      placeholder: "exemplo: A busca de remuneração não está funcionando corretamente."
+    validations:
+      required: true
+  - type: textarea
+    id: ideal
+    attributes:
+      label: Comportamento esperado
+      description: Descreva, em detalhes, os passos para reproduzir o comportamento
+      placeholder: |
+        1. Vá para '...'
+        2. Clique em '....'
+        3. Role para baixo até '....'
+        4. Veja o erro"
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Capturas de tela
+      description: Se aplicável, adicione capturas de tela para ajudar a explicar o seu problema.
+    validations:
+      required: false
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Em quais navegadores o problema acontece?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Em quais sistema operacional o problema acontece?
+      multiple: true
+      options:
+        - Windows
+        - Linux
+        - macOS
+        - Android
+        - iOS
+    validations:
+      required: true
+  - type: textarea
+    id: comentarios
+    attributes:
+      label: Contexto adicional
+      description: Adicione qualquer outro contexto sobre o problema aqui.
+    validations:
+      required: false
