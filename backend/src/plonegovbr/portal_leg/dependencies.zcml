@@ -5,5 +5,7 @@
   <include package="plone.restapi" />
   <include package="plone.volto" />
   <include package="plonegovbr.brfields" />
+  <include package="collective.volto.formsupport" />
+  <include package="collective.honeypot" />
 
 </configure>

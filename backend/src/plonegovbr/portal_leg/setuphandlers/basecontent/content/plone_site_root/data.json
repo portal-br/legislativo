@@ -241,27 +241,27 @@
   "creators": [
     "admin"
   ],
-  "description": "",
+  "description": "Site da c\u00e2mara modelo",
   "effective": null,
   "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
-  "exportimport.versions": {},
   "id": "Plone",
   "is_folderish": true,
-  "items_total": 0,
+  "items_total": 2,
   "language": "##DEFAULT##",
   "lock": {
     "locked": false,
     "stealable": true
   },
-  "parent": {},
   "review_state": null,
   "rights": "",
   "subjects": [],
   "table_of_contents": null,
-  "title": "Project Title",
+  "title": "C\u00e2mara Modelo",
   "type_title": "Plone Site",
-  "workflow_history": {}
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
 }

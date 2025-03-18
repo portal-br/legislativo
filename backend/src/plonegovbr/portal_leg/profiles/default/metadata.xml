@@ -4,5 +4,6 @@
   <dependencies>
     <dependency>profile-plone.restapi:default</dependency>
     <dependency>profile-plone.volto:default</dependency>
+    <dependency>profile-collective.volto.formsupport:default</dependency>
   </dependencies>
 </metadata>

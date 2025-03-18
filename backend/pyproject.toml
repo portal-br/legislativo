@@ -37,6 +37,8 @@ dependencies = [
     "plone.restapi",
     "plone.volto",
     "plonegovbr.brfields",
+    "collective.volto.formsupport",
+    "collective.honeypot",
 ]
 
 [project.optional-dependencies]

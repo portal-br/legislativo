@@ -1,0 +1,126 @@
+{
+  "@id": "/contato",
+  "@type": "Document",
+  "UID": "c5a3eb2bc63247f0bb4c83a2003fec12",
+  "allow_discussion": null,
+  "blocks": {
+    "03733514-0ee4-47f3-a323-8710ce5e1656": {
+      "@type": "title"
+    },
+    "21f51136-502d-4f73-83eb-a33d5e3e2c4e": {
+      "@type": "slate"
+    },
+    "499ec3ae-8285-4611-9873-2c98b2fa935a": {
+      "@type": "form",
+      "captcha": "honeypot",
+      "captcha_props": {
+        "id": "protected_1"
+      },
+      "configValidation": {
+        "required_fields": [
+          "default_to",
+          "default_from",
+          "default_subject",
+          "captcha"
+        ],
+        "schema_validation": [],
+        "valid": true
+      },
+      "default_from": "noreply@plone.org",
+      "default_subject": "Mensagem do Site",
+      "default_to": "contato@interlegis.leg.br",
+      "lastChange": 1742320930530,
+      "send_email": true,
+      "show_cancel": false,
+      "store": true,
+      "subblocks": [
+        {
+          "description": "Informe seu nome completo",
+          "field_id": "1742320711460",
+          "field_type": "text",
+          "id": "1742320711460",
+          "label": "Nome",
+          "required": true
+        },
+        {
+          "field_id": "1742320775244",
+          "field_type": "from",
+          "id": "1742320775244",
+          "label": "E-mail",
+          "required": false,
+          "use_as_bcc": false,
+          "use_as_reply_to": true
+        },
+        {
+          "description": "Nos conte como podemos te ajudar",
+          "field_id": "1742320813306",
+          "field_type": "textarea",
+          "id": "1742320813306",
+          "label": "Mensagem",
+          "required": false
+        }
+      ]
+    },
+    "b66f0098-1fa8-4f82-a890-ef86ac3a61da": {
+      "@type": "description"
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "03733514-0ee4-47f3-a323-8710ce5e1656",
+      "b66f0098-1fa8-4f82-a890-ef86ac3a61da",
+      "499ec3ae-8285-4611-9873-2c98b2fa935a",
+      "21f51136-502d-4f73-83eb-a33d5e3e2c4e"
+    ]
+  },
+  "changeNote": "",
+  "contributors": [],
+  "created": "2025-03-18T18:00:45+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "Entre em contato com a nossa casa legislativa.",
+  "effective": "2025-03-18T15:02:22",
+  "exclude_from_nav": true,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "contato",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "document_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-03-18T18:02:35+00:00",
+  "preview_caption": null,
+  "preview_image": null,
+  "review_state": "published",
+  "rights": "",
+  "subjects": [],
+  "title": "Fale conosco",
+  "type_title": "Page",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2025-03-18T18:00:45+00:00"
+      },
+      {
+        "action": "publish",
+        "actor": "admin",
+        "comments": "",
+        "review_state": "published",
+        "time": "2025-03-18T18:02:22+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}
