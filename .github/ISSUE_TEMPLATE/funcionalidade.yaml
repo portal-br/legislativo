@@ -1,0 +1,34 @@
+---
+name: '🚀 PortalBrasil: Legislativo - Nova funcionalidade'
+description: 'Solicitação de nova funcionalidade para a solução PortalBrasil: Legislativo'
+labels: ['Funcionalidade', 'precisa: avaliação']
+type: Feature
+assignees:
+  - '@plonegovbr/portalbrasil-desenvolvedores'
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por informar esse pedido de funcionalidade no site.
+
+  - type: textarea
+    id: especificacao
+    attributes:
+      label: Descreva a funcionalidade
+      description: Uma descrição clara e detalhada sobre essa nova funcionalidade
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Capturas de tela  / Exemplos
+      description: Se possível, adicione capturas de tela de como essa funcionalidade deveria ser exibida.
+    validations:
+      required: false
+  - type: textarea
+    id: comentarios
+    attributes:
+      label: Comentários
+      description: Adicione qualquer outro comentário sobre a funcionalidade aqui.
+    validations:
+      required: false
