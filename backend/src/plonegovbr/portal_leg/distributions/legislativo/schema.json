@@ -91,7 +91,6 @@
   },
   "uischema": {
     "site_id": {"ui:widget": "hidden"},
-    "setup_content": {"ui:widget": "hidden"},
     "default_language": {"ui:widget": "hidden"}
   }
 }
