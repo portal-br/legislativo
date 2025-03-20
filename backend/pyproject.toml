@@ -3,9 +3,9 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "plonegovbr.portal_leg"
+name = "portalbrasil.legislativo"
 dynamic = ["version"]
-description = "Ferramenta de portais para casas ddo legislativo brasileiro"
+description = "Portal Modelo: Ferramenta de portais para casas do legislativo brasileiro"
 readme = "README.md"
 license = "GPL-2.0-only"
 requires-python = ">=3.12"
@@ -68,10 +68,10 @@ test = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/plonegovbr/portalbrasil-legislativo"
-PyPI = "https://pypi.org/project/plonegovbr.portal_leg"
-Source = "https://github.com/plonegovbr/portalbrasil-legislativo"
-Tracker = "https://github.com/plonegovbr/portalbrasil-legislativo/issues"
+Homepage = "https://github.com/portal-br/legislativo"
+PyPI = "https://pypi.org/project/portalbrasil.legislativo"
+Source = "https://github.com/portal-br/legislativo"
+Tracker = "https://github.com/portal-br/legislativo/issues"
 
 [project.entry-points."z3c.autoinclude.plugin"]
 target = "plone"
@@ -530,10 +530,10 @@ constraint-dependencies = [
 
 [tool.hatch.build]
 strict-naming = false
-packages = ["src/plonegovbr",]
+packages = ["src/portalbrasil",]
 
 [tool.hatch.version]
-path = "src/plonegovbr/portal_leg/__init__.py"
+path = "src/portalbrasil/legislativo/__init__.py"
 
 [tool.hatch.build.targets.sdist]
 include = [
@@ -542,7 +542,7 @@ include = [
 
 [tool.hatch.build.targets.wheel]
 sources = ["src"]
-only-include = ["src/plonegovbr"]
+only-include = ["src/portalbrasil"]
 
 [tool.towncrier]
 directory = "news/"
@@ -550,37 +550,37 @@ filename = "CHANGES.md"
 start_string = "<!-- towncrier release notes start -->\n"
 title_format = "## {version} ({project_date})"
 template = "news/.changelog_template.jinja"
-issue_format = "[#{issue}](https://github.com/plonegovbr/portalbrasil-legislativo/issues/{issue})"
+issue_format = "[#{issue}](https://github.com/portal-br/legislativo/issues/{issue})"
 underlines = ["", "", ""]
 
 [[tool.towncrier.type]]
 directory = "breaking"
-name = "Breaking changes:"
+name = "Breaking"
 showcontent = true
 
 [[tool.towncrier.type]]
 directory = "feature"
-name = "New features:"
+name = "Funcionalidade"
 showcontent = true
 
 [[tool.towncrier.type]]
 directory = "bugfix"
-name = "Bug fixes:"
+name = "Correção de Bug"
 showcontent = true
 
 [[tool.towncrier.type]]
 directory = "internal"
-name = "Internal:"
+name = "Interno"
 showcontent = true
 
 [[tool.towncrier.type]]
 directory = "documentation"
-name = "Documentation:"
+name = "Documentação"
 showcontent = true
 
 [[tool.towncrier.type]]
 directory = "tests"
-name = "Tests"
+name = "Teste"
 showcontent = true
 
 [tool.ruff]
@@ -646,6 +646,6 @@ ignore = [
 testpaths = ["tests"]
 
 [tool.coverage.run]
-source_pkgs = ["plonegovbr.portal_leg", "tests"]
+source_pkgs = ["portalbrasil.legislativo", "tests"]
 branch = true
 parallel = true

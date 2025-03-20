@@ -1,8 +1,9 @@
-# PortalBrasil: Legislativo 🚀
+# Portal Modelo 🚀
+## PortalBrasil: Legislativo
 
-[![Testess](https://github.com/plonegovbr/portalbrasil-legislativo/actions/workflows/main.yml/badge.svg)](https://github.com/plonegovbr/portalbrasil-legislativo/actions/workflows/main.yml)
+[![Testes](https://github.com/portal-br/legislativo/actions/workflows/main.yml/badge.svg)](https://github.com/portal-br/legislativo/actions/workflows/main.yml)
 
-Ferramenta de portais para casas ddo legislativo brasileiro
+Ferramenta de portais para casas do legislativo brasileiro
 
 ## Quick Start 🏁
 
@@ -20,7 +21,7 @@ Ensure you have the following installed:
 1. Clone the repository:
 
 ```shell
-git clone git@github.com:plonegovbr/portalbrasil-legislativo.git
+git clone git@github.com:portal-br/legislativo.git
 cd portalbrasil-legislativo
 ```
 
@@ -58,7 +59,7 @@ Deploy a local `Docker Compose` environment that includes:
 
 - Docker images for Backend and Frontend 🖼️
 - A stack with a Traefik router and a Postgres database 🗃️
-- Accessible at [http://portalbrasil-legislativo.localhost](http://portalbrasil-legislativo.localhost) 🌐
+- Accessible at [http://portal-modelo.localhost](http://portal-modelo.localhost) 🌐
 
 Execute the following:
 
@@ -73,7 +74,7 @@ And... you're all set! Your Plone site is up and running locally! 🚀
 
 This monorepo consists of three distinct sections: `backend`, `frontend`, and `devops`.
 
-- **backend**: Houses the API and Plone installation, utilizing pip instead of buildout, and includes a policy package named plonegovbr.portal_leg.
+- **backend**: Houses the API and Plone installation, utilizing pip instead of buildout, and includes a policy package named portalbrasil.legislativo.
 - **frontend**: Contains the React (Volto) package.
 - **devops**: Encompasses Docker Stack, Ansible playbooks, and Cache settings.
 

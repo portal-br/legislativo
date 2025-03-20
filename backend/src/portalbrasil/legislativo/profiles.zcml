@@ -1,0 +1,25 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="portalbrasil.legislativo"
+    >
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Portal Modelo"
+      description="Configura um novo site com o Portal Modelo"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/default"
+      post_handler=".setuphandlers.content.create_base_content"
+      />
+
+  <!-- Hide Uninstall Profile-->
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="portalbrasil.legislativo"
+      />
+
+
+  <include package=".upgrades" />
+
+</configure>

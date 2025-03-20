@@ -1,15 +1,19 @@
 [repository]
-name = "portalbrasil-legislativo"
+name = "Portal Modelo"
 managed_by_uv = true
 changelog = "CHANGELOG.md"
 version = "version.txt"
 compose = "docker-compose.yml"
 
+[repository.towncrier]
+section = "Projeto"
+settings = "towncrier.toml"
+
 [backend]
 path = "backend"
 
 [backend.package]
-name = "plonegovbr.portal_leg"
+name = "portalbrasil.legislativo"
 path = "backend"
 changelog = "backend/CHANGELOG.md"
 towncrier_settings = "backend/pyproject.toml"
@@ -19,8 +23,8 @@ publish = true
 path = "frontend"
 
 [frontend.package]
-name = "@plonegovbr/portalbrasil-leg"
-path = "frontend/packages/volto-portalbrasil-leg"
-changelog = "frontend/packages/volto-portalbrasil-leg/CHANGELOG.md"
-towncrier_settings = "frontend/packages/volto-portalbrasil-leg/towncrier.toml"
+name = "@portalbrasil/legislativo"
+path = "frontend/packages/legislativo"
+changelog = "frontend/packages/legislativo/CHANGELOG.md"
+towncrier_settings = "frontend/packages/legislativo/towncrier.toml"
 publish = true

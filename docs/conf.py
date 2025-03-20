@@ -18,7 +18,7 @@ from pathlib import Path
 
 # -- Project information -----------------------------------------------------
 
-project = "PortalBrasil: Legislativo"
+project = "Portal Modelo"
 copyright = "PloneGov-BR"
 author = "PloneGov-BR"
 trademark_name = "PloneGov-BR"
@@ -76,7 +76,7 @@ linkcheck_ignore = [
     # Ignore links to static files
     r"/_static",
     # Ignore pages that require authentication
-    r"https://github.com/plonegovbr/portalbrasil-legislativo/issues/new",  # requires auth
+    r"https://github.com/portal-br/legislativo/issues/new",  # requires auth
     # Ignore github.com pages with anchors
     r"https://github.com/.*#.*",
     # Ignore other specific anchors
@@ -123,7 +123,7 @@ html_theme_options = {
     "icon_links": [
         {
             "name": "GitHub",
-            "url": "https://github.com/plonegovbr/portalbrasil-legislativo",
+            "url": "https://github.com/portal-br/legislativo",
             "icon": "fa-brands fa-square-github",
             "type": "fontawesome",
             "attributes": {
@@ -156,12 +156,12 @@ html_theme_options = {
         },
     ],
     "logo": {
-        "text": "Documentação do PortalBrasil: Legislativo",
+        "text": "Documentação do Portal Modelo",
     },
     "navigation_with_keys": True,
     "path_to_docs": "docs",
     "repository_branch": "main",
-    "repository_url": "https://github.com/ploonegovbr/portalbrasil-legislativo/tree/main/",
+    "repository_url": "https://github.com/portal-br/legislativo/tree/main/",
     "search_bar_text": "Search",  # TODO: Confirm usage of search_bar_text in plone-sphinx-theme
     "use_edit_page_button": True,
     "use_issues_button": True,
@@ -170,7 +170,9 @@ html_theme_options = {
 
 # Announce that we have an opensearch plugin
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_use_opensearch
-html_use_opensearch = "https://portalbrasil-legislativo.readthedocs.io/"  # TODO: Confirm usage of opensearch in theme
+html_use_opensearch = (
+    "https://portalmodelo.readthedocs.io/"  # TODO: Confirm usage of opensearch in theme
+)
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -223,10 +225,12 @@ intersphinx_mapping = {
 
 # -- OpenGraph configuration ----------------------------------
 
-ogp_site_url = "https://portalbrasil-legislativo.readthedocs.io/"
+ogp_site_url = "https://portalmodelo.readthedocs.io/"
 ogp_description_length = 200
-ogp_image = "https://portalbrasil-legislativo.readthedocs.io/en/latest/_static/Plone_logo_square.png"
-ogp_site_name = "Documentação do PortalBrasil: Legislativo"
+ogp_image = (
+    "https://portalmodelo.readthedocs.io/en/latest/_static/Plone_logo_square.png"
+)
+ogp_site_name = "Documentação do Portal Modelo"
 ogp_type = "website"
 ogp_custom_meta_tags = [
     '<meta property="og:locale" content="en_US" />',

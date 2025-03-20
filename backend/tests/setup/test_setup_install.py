@@ -1,14 +1,14 @@
-from plonegovbr.portal_leg import PACKAGE_NAME
+from portalbrasil.legislativo import PACKAGE_NAME
 
 
 class TestSetupInstall:
     def test_addon_installed(self, installer):
-        """Test if plonegovbr.portal_leg is installed."""
+        """Test if portalbrasil.legislativo is installed."""
         assert installer.is_product_installed(PACKAGE_NAME) is True
 
     def test_browserlayer(self, browser_layers):
         """Test that IBrowserLayer is registered."""
-        from plonegovbr.portal_leg.interfaces import IBrowserLayer
+        from portalbrasil.legislativo.interfaces import IBrowserLayer
 
         assert IBrowserLayer in browser_layers
 

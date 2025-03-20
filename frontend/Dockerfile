@@ -2,7 +2,7 @@
 ARG VOLTO_VERSION
 FROM plone/frontend-builder:${VOLTO_VERSION} AS builder
 
-COPY --chown=node packages/volto-portalbrasil-leg /app/packages/volto-portalbrasil-leg
+COPY --chown=node packages/legislativo /app/packages/legislativo
 COPY --chown=node volto.config.js /app/
 COPY --chown=node package.json /app/package.json.temp
 COPY --chown=node mrs.developer.json /app/
@@ -21,8 +21,8 @@ EOT
 FROM plone/frontend-prod-config:${VOLTO_VERSION}
 
 LABEL maintainer="PloneGov-BR <gov@plone.org.br>" \
-      org.label-schema.name="portalbrasil-legislativo-frontend" \
-      org.label-schema.description="PortalBrasil: Legislativo frontend image." \
+      org.label-schema.name="legislativo-frontend" \
+      org.label-schema.description="Portal Modelo: Imagem do frontend." \
       org.label-schema.vendor="PloneGov-BR"
 
 COPY --from=builder /app/ /app/

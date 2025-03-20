@@ -1,0 +1,96 @@
+{
+  "schema": {
+    "title": "Portal Modelo",
+    "description": "Portal de uma casa legislativa brasileira.",
+    "type": "object",
+    "definitions": {
+      "timezones": {
+        "title": "Fuso horário",
+        "type": "string",
+        "default": "America/Sao_Paulo",
+        "description": "A configuração de fuso horário padrão do portal. Os usuários poderão definir seu próprio fuso horário, se os fusos horários disponíveis estiverem definidos nas configurações de data e hora.",
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "America/Rio_Branco"
+            ],
+            "title": "Acre (America/Rio_Branco)"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "America/Noronha"
+            ],
+            "title": "Fernando de Noronha (America/Noronha)"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "America/Sao_Paulo"
+            ],
+            "title": "Brasília (America/Sao_Paulo)"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "America/Manaus"
+            ],
+            "title": "Manaus (America/Manaus)"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "UTC"
+            ],
+            "title": "UTC (UTC)"
+          }
+        ]
+      }
+    },
+    "required": [
+      "site_id",
+      "title"
+    ],
+    "properties": {
+      "site_id": {
+        "type": "string",
+        "title": "Identificador da portal",
+        "default": "Plone",
+        "description": "Nome curto do portal. Deve ser único nessa instalação."
+      },
+      "title": {
+        "type": "string",
+        "title": "Título",
+        "default": "Câmara Modelo",
+        "description": "Um título curto para o site. Ele será mostrado como parte do título da janela do navegador em cada página."
+      },
+      "description": {
+        "type": "string",
+        "title": "Descrição do Portal",
+        "default": "Site da câmara modelo"
+      },
+      "site_logo": {
+        "type": "string",
+        "format": "data-url",
+        "title": "Logo da casa"
+      },
+      "default_language": {
+        "type": "string",
+        "title": "Idioma",
+        "default": "pt-br"
+      },
+      "portal_timezone": {"$ref": "#/definitions/timezones"},
+      "setup_content": {
+        "type": "boolean",
+        "title": "Conteúdo de exemplo (Demo)",
+        "description": "Devemos adicionar conteúdo de exemplo durante a criação do site?",
+        "default": false
+      }
+    }
+  },
+  "uischema": {
+    "site_id": {"ui:widget": "hidden"},
+    "default_language": {"ui:widget": "hidden"}
+  }
+}

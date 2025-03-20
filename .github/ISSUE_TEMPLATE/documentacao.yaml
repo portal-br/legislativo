@@ -1,9 +1,9 @@
 ---
-name: '📝 PortalBrasil: Legislativo - Documentação'
-description: 'Solicitação de melhorias na documentação da solução PortalBrasil: Legislativo'
+name: '📝 Portal Modelo- Documentação'
+description: 'Solicitação de melhorias na documentação da solução Portal Modelo'
 labels: ['Documentação', 'precisa: avaliação']
 projects:
-  - plonegovbr/5
+  - portalbr/2
 type: Feature
 assignees:
   - 'rafahela'

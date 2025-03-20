@@ -15,7 +15,7 @@ GREEN=`tput setaf 2`
 RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
-IMAGE_NAME_PREFIX=ghcr.io/plonegovbr/portalbrasil-legislativo
+IMAGE_NAME_PREFIX=ghcr.io/portal-br/legislativo
 IMAGE_TAG=latest
 SEED=$(shell date +'%Y%m%d-%H%M%S')
 
@@ -30,8 +30,8 @@ endif
 PLONE_SITE_ID=Plone
 BACKEND_FOLDER=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 PLONE_VERSION=$(shell cat $(BACKEND_FOLDER)/version.txt)
-BASE_CONTENT_FOLDER=${BACKEND_FOLDER}/src/plonegovbr/portal_leg/setuphandlers/basecontent
-EXAMPLE_CONTENT_FOLDER=${BACKEND_FOLDER}/src/plonegovbr/portal_leg/distributions/legislativo/content
+BASE_CONTENT_FOLDER=${BACKEND_FOLDER}/src/portalbrasil/legislativo/setuphandlers/basecontent
+EXAMPLE_CONTENT_FOLDER=${BACKEND_FOLDER}/src/portalbrasil/legislativo/distributions/legislativo/content
 
 VENV_FOLDER=$(BACKEND_FOLDER)/.venv
 BIN_FOLDER=$(VENV_FOLDER)/bin
@@ -138,7 +138,7 @@ add: $(VENV_FOLDER)
 .PHONY: i18n
 i18n: $(VENV_FOLDER) ## Update locales
 	@echo "$(GREEN)==> Updating locales$(RESET)"
-	@uv run python -m plonegovbr.portal_leg.locales
+	@uv run python -m portalbrasil.legislativo.locales
 
 ###########################################
 # Tests
@@ -149,7 +149,7 @@ test: $(VENV_FOLDER) ## run tests
 
 .PHONY: test-coverage
 test-coverage: $(VENV_FOLDER) ## run tests with coverage
-	@uv run pytest --cov=plonegovbr.portal_leg --cov-report term-missing
+	@uv run pytest --cov=portalbrasil.legislativo --cov-report term-missing
 
 ###########################################
 # Docker Images

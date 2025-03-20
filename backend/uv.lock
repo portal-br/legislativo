@@ -3489,7 +3489,44 @@ wheels = [
 ]
 
 [[package]]
-name = "plonegovbr-portal-leg"
+name = "plonetheme-barceloneta"
+version = "3.2.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "plone-app-theming" },
+    { name = "plone-resource" },
+    { name = "plone-theme" },
+    { name = "products-genericsetup" },
+    { name = "setuptools" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/fb/5e/ec873bbf48cf24069b3040fb28f81259e50985164d5d2980f5ffdc192a8f/plonetheme_barceloneta-3.2.2.tar.gz", hash = "sha256:b4bcf7f7b0ed4ee946c452008b837eca6bca05c246e1338b1ed0fa462c1f5921", size = 6160958 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/52/90/1d63ae0384fa7de4e1c2417794fb26db03c499537e4d50216f6e9162baf6/plonetheme.barceloneta-3.2.2-py3-none-any.whl", hash = "sha256:d5497f37da0fcee0ff45f4c71dc4e6f07ccf94dcfc06afe0afe829e49d720e11", size = 6124118 },
+]
+
+[[package]]
+name = "pluggy"
+version = "1.5.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/96/2d/02d4312c973c6050a18b314a5ad0b3210edb65a906f868e31c111dede4a6/pluggy-1.5.0.tar.gz", hash = "sha256:2cffa88e94fdc978c4c574f15f9e59b7f4201d439195c3715ca9e2486f1d0cf1", size = 67955 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/88/5f/e351af9a41f866ac3f1fac4ca0613908d9a41741cfcf2228f4ad853b697d/pluggy-1.5.0-py3-none-any.whl", hash = "sha256:44e1ad92c8ca002de6377e165f3e0f1be63266ab4d554740532335b9d75ea669", size = 20556 },
+]
+
+[[package]]
+name = "plumber"
+version = "1.7"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "setuptools" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/94/f6/dba35af235a1fa6faa2dd84a67b0ecc49ac1b5c41eb44c354282367fb7f3/plumber-1.7.tar.gz", hash = "sha256:bde8d6323a8b3bdfc49ae3fa054c0801408a09a2c37e319ae9f0a4d49e4d5a23", size = 40414 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/84/53/e24f1e2e4263e9db0044c95c4302b7bc7f9f53c7cfe30bd19873199c02d1/plumber-1.7-py3-none-any.whl", hash = "sha256:4e734ce006b2b4367ce6f7e22c854f434f09eebfe9679b91758745c6184ddc11", size = 25295 },
+]
+
+[[package]]
+name = "portalbrasil-legislativo"
 source = { editable = "." }
 dependencies = [
     { name = "collective-honeypot" },
@@ -3559,43 +3596,6 @@ test = [
     { name = "pytest-cov" },
     { name = "pytest-docker", specifier = ">=3.2.0" },
     { name = "pytest-plone", specifier = ">=0.5.0" },
-]
-
-[[package]]
-name = "plonetheme-barceloneta"
-version = "3.2.2"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "plone-app-theming" },
-    { name = "plone-resource" },
-    { name = "plone-theme" },
-    { name = "products-genericsetup" },
-    { name = "setuptools" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/fb/5e/ec873bbf48cf24069b3040fb28f81259e50985164d5d2980f5ffdc192a8f/plonetheme_barceloneta-3.2.2.tar.gz", hash = "sha256:b4bcf7f7b0ed4ee946c452008b837eca6bca05c246e1338b1ed0fa462c1f5921", size = 6160958 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/52/90/1d63ae0384fa7de4e1c2417794fb26db03c499537e4d50216f6e9162baf6/plonetheme.barceloneta-3.2.2-py3-none-any.whl", hash = "sha256:d5497f37da0fcee0ff45f4c71dc4e6f07ccf94dcfc06afe0afe829e49d720e11", size = 6124118 },
-]
-
-[[package]]
-name = "pluggy"
-version = "1.5.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/96/2d/02d4312c973c6050a18b314a5ad0b3210edb65a906f868e31c111dede4a6/pluggy-1.5.0.tar.gz", hash = "sha256:2cffa88e94fdc978c4c574f15f9e59b7f4201d439195c3715ca9e2486f1d0cf1", size = 67955 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/88/5f/e351af9a41f866ac3f1fac4ca0613908d9a41741cfcf2228f4ad853b697d/pluggy-1.5.0-py3-none-any.whl", hash = "sha256:44e1ad92c8ca002de6377e165f3e0f1be63266ab4d554740532335b9d75ea669", size = 20556 },
-]
-
-[[package]]
-name = "plumber"
-version = "1.7"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "setuptools" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/94/f6/dba35af235a1fa6faa2dd84a67b0ecc49ac1b5c41eb44c354282367fb7f3/plumber-1.7.tar.gz", hash = "sha256:bde8d6323a8b3bdfc49ae3fa054c0801408a09a2c37e319ae9f0a4d49e4d5a23", size = 40414 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/84/53/e24f1e2e4263e9db0044c95c4302b7bc7f9f53c7cfe30bd19873199c02d1/plumber-1.7-py3-none-any.whl", hash = "sha256:4e734ce006b2b4367ce6f7e22c854f434f09eebfe9679b91758745c6184ddc11", size = 25295 },
 ]
 
 [[package]]

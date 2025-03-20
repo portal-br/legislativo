@@ -1,4 +1,4 @@
-plonegovbr.portal_leg Copyright 2025, PloneGov-BR
+portalbrasil.legislativo Copyright 2025, PloneGov-BR
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License version 2

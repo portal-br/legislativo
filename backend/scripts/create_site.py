@@ -1,8 +1,8 @@
 from AccessControl.SecurityManagement import newSecurityManager
 from pathlib import Path
 from plone.distribution.api import site as site_api
-from plonegovbr.portal_leg.utils.scripts import asbool
-from plonegovbr.portal_leg.utils.scripts import parse_answers
+from portalbrasil.legislativo.utils.scripts import asbool
+from portalbrasil.legislativo.utils.scripts import parse_answers
 from Testing.makerequest import makerequest
 
 import logging
@@ -38,7 +38,7 @@ def get_answers_file(filename: str) -> Path:
 
 
 # VARS
-DISTRIBUTION = os.getenv("DISTRIBUTION", "portalbrasil-legislativo")
+DISTRIBUTION = os.getenv("DISTRIBUTION", "portalmodelo")
 ANSWERS_FILE = os.getenv("ANSWERS", "default.json")
 DELETE_EXISTING = asbool(os.getenv("DELETE_EXISTING"))
 # ANSWERS OVERRIDE

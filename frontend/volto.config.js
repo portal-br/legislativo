@@ -1,4 +1,4 @@
-const addons = ['volto-portalbrasil-leg'];
+const addons = ['@portalbrasil/legislativo'];
 const theme = '@kitconcept/volto-light-theme';
 
 module.exports = {

@@ -1,9 +1,9 @@
 ---
-name: '⬆️ PortalBrasil: Legislativo - Atualizar componente'
-description: 'Requisita a atualização de um ou mais componentes do PortalBrasil: Legislativo'
+name: '⬆️ Portal Modelo- Atualizar componente'
+description: 'Requisita a atualização de um ou mais componentes do Portal Modelo'
 labels: ['Interno', 'precisa: avaliação']
 projects:
-  - plonegovbr/5
+  - portalbr/2
 type: Feature
 assignees:
   - 'rafahela'

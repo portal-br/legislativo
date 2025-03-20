@@ -1,11 +1,11 @@
-# PortalBrasil: Legislativo (volto-portalbrasil-leg)
+# Portal Modelo(legislativo)
 
-Ferramenta de portais para casas ddo legislativo brasileiro
+Ferramenta de portais para casas do legislativo brasileiro
 
-[![npm](https://img.shields.io/npm/v/volto-portalbrasil-leg)](https://www.npmjs.com/package/volto-portalbrasil-leg)
-[![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://plonegovbr.github.io/volto-portalbrasil-leg/)
-[![Code analysis checks](https://github.com/plonegovbr/portalbrasil-leg/actions/workflows/code.yml/badge.svg)](https://github.com/plonegovbr/portalbrasil-leg/actions/workflows/code.yml)
-[![Unit tests](https://github.com/plonegovbr/portalbrasil-leg/actions/workflows/unit.yml/badge.svg)](https://github.com/plonegovbr/portalbrasil-leg/actions/workflows/unit.yml)
+[![npm](https://img.shields.io/npm/v/legislativo)](https://www.npmjs.com/package/legislativo)
+[![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://plonegovbr.github.io/legislativo/)
+[![Code analysis checks](https://github.com/portal-br/legislativo/actions/workflows/code.yml/badge.svg)](https://github.com/portal-br/legislativo/actions/workflows/code.yml)
+[![Unit tests](https://github.com/portal-br/legislativo/actions/workflows/unit.yml/badge.svg)](https://github.com/portal-br/legislativo/actions/workflows/unit.yml)
 
 ## Features
 
@@ -22,19 +22,19 @@ Create a new Volto project (you can skip this step if you already have one):
 
 ```
 npm install -g yo @plone/generator-volto
-yo @plone/volto my-volto-project --addon volto-portalbrasil-leg
+yo @plone/volto my-volto-project --addon legislativo
 cd my-volto-project
 ```
 
-Add `volto-portalbrasil-leg` to your package.json:
+Add `legislativo` to your package.json:
 
 ```JSON
 "addons": [
-    "volto-portalbrasil-leg"
+    "legislativo"
 ],
 
 "dependencies": {
-    "volto-portalbrasil-leg": "*"
+    "legislativo": "*"
 }
 ```
 
@@ -52,24 +52,24 @@ yarn start
 
 ### Volto 18 and later
 
-Add `volto-portalbrasil-leg` to your `package.json`:
+Add `legislativo` to your `package.json`:
 
 ```json
 "dependencies": {
-    "volto-portalbrasil-leg": "*"
+    "legislativo": "*"
 }
 ```
 
-Add `volto-portalbrasil-leg` to your `volto.config.js`:
+Add `legislativo` to your `volto.config.js`:
 
 ```javascript
-const addons = ['volto-portalbrasil-leg'];
+const addons = ['legislativo'];
 ```
 
 If this package provides a Volto theme, and you want to activate it, then add the following to your `volto.config.js`:
 
 ```javascript
-const theme = 'volto-portalbrasil-leg';
+const theme = 'legislativo';
 ```
 
 ## Test installation

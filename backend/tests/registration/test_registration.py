@@ -19,10 +19,10 @@ class TestRegistration:
     @pytest.mark.parametrize(
         "attr,expected",
         [
-            ["title", "PortalBrasil: Legislativo"],
+            ["title", "Portal Modelo"],
             [
                 "description",
-                "Ferramenta de portais para casas ddo legislativo brasileiro.",
+                "Ferramenta de portais para casas do legislativo brasileiro.",
             ],
         ],
     )

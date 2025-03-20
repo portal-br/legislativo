@@ -1,9 +1,9 @@
 ---
-name: '🚀 PortalBrasil: Legislativo - Nova funcionalidade'
-description: 'Solicitação de nova funcionalidade para a solução PortalBrasil: Legislativo'
+name: '🚀 Portal Modelo- Nova funcionalidade'
+description: 'Solicitação de nova funcionalidade para a solução Portal Modelo'
 labels: ['Funcionalidade', 'precisa: avaliação']
 projects:
-  - plonegovbr/5
+  - portalbr/2
 type: Feature
 assignees:
   - 'rafahela'

@@ -1,4 +1,4 @@
-name: "PortalBrasil: Legislativo"
+name: "Portal Modelo"
 
 on:
   push:
@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME_PREFIX: ghcr.io/plonegovbr/portalbrasil-legislativo
+  IMAGE_NAME_PREFIX: ghcr.io/portal-br/legislativo
   NODE_VERSION: "22.x"
   PYTHON_VERSION: "3.12"
 

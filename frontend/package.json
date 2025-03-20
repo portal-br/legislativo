@@ -1,9 +1,9 @@
 {
-  "name": "volto-portalbrasil-leg-dev",
-  "version": "1.0.0-alpha.0",
-  "description": "Ferramenta de portais para casas ddo legislativo brasileiro",
+  "name": "legislativo-dev",
+  "version": "4.0.0-alpha.0",
+  "description": "Ferramenta de portais para casas do legislativo brasileiro",
   "author": "PloneGov-BR",
-  "homepage": "https://github.com/plonegovbr/portalbrasil-leg",
+  "homepage": "https://github.com/portal-br/legislativo",
   "license": "MIT",
   "keywords": [
     "volto-addon",
@@ -17,7 +17,7 @@
     "start:prod": "pnpm --filter @plone/volto start:prod",
     "build": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build",
     "build:deps": "pnpm --filter @plone/registry --filter @plone/components build",
-    "i18n": "pnpm --filter volto-portalbrasil-leg i18n && VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto i18n",
+    "i18n": "pnpm --filter legislativo i18n && VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto i18n",
     "test": "RAZZLE_JEST_CONFIG=$(pwd)/jest-addon.config.js pnpm --filter @plone/volto test -- --passWithNoTests",
     "lint": "VOLTOCONFIG=$(pwd)/volto.config.js eslint --max-warnings=0 'packages/**/src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "VOLTOCONFIG=$(pwd)/volto.config.js eslint --fix 'packages/**/src/**/*.{js,jsx,ts,tsx}'",
@@ -25,17 +25,17 @@
     "prettier:fix": "prettier --write 'packages/**/src/**/*.{js,jsx,ts,tsx}' ",
     "stylelint": "stylelint 'packages/**/src/**/*.{css,scss,less}' --allow-empty-input",
     "stylelint:fix": "stylelint 'packages/**/src/**/*.{css,scss,less}' --fix --allow-empty-input",
-    "dry-release": "pnpm --filter volto-portalbrasil-leg dry-release",
-    "release": "pnpm --filter volto-portalbrasil-leg release",
-    "release-major-alpha": "pnpm --filter volto-portalbrasil-leg release-major-alpha",
-    "release-alpha": "pnpm --filter volto-portalbrasil-leg release-alpha",
+    "dry-release": "pnpm --filter legislativo dry-release",
+    "release": "pnpm --filter legislativo release",
+    "release-major-alpha": "pnpm --filter legislativo release-major-alpha",
+    "release-alpha": "pnpm --filter legislativo release-alpha",
     "storybook": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto storybook dev -p 6006 -c $(pwd)/.storybook",
     "storybook-build": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build-storybook -c $(pwd)/.storybook"
   },
   "dependencies": {
     "@plone/volto": "workspace:*",
     "@plone/registry": "workspace:*",
-    "volto-portalbrasil-leg": "workspace:*"
+    "@portalbrasil/legislativo": "workspace:*"
   },
   "devDependencies": {
     "mrs-developer": "^2.2.0"

@@ -1,5 +1,5 @@
-from plonegovbr.portal_leg.testing import FUNCTIONAL_TESTING
-from plonegovbr.portal_leg.testing import INTEGRATION_TESTING
+from portalbrasil.legislativo.testing import FUNCTIONAL_TESTING
+from portalbrasil.legislativo.testing import INTEGRATION_TESTING
 from pytest_plone import fixtures_factory
 
 import pytest
@@ -19,4 +19,4 @@ globals().update(
 @pytest.fixture
 def distribution_name() -> str:
     """Distribution name."""
-    return "portalbrasil-legislativo"
+    return "portalmodelo"

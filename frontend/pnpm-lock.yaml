@@ -18,9 +18,9 @@ importers:
       '@plone/volto':
         specifier: workspace:*
         version: link:core/packages/volto
-      volto-portalbrasil-leg:
+      '@portalbrasil/legislativo':
         specifier: workspace:*
-        version: link:packages/volto-portalbrasil-leg
+        version: link:packages/legislativo
     devDependencies:
       mrs-developer:
         specifier: ^2.2.0
@@ -1530,7 +1530,7 @@ importers:
         specifier: ^17.1.1
         version: 17.1.1(typescript@5.8.2)
 
-  packages/volto-portalbrasil-leg:
+  packages/legislativo:
     dependencies:
       '@eeacms/volto-accordion-block':
         specifier: 11.0.4

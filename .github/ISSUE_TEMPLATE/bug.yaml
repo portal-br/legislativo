@@ -1,9 +1,9 @@
 ---
-name: '🐛 PortalBrasil: Legislativo - Problema'
-description: 'Descreve um problema encontrado na solução PortalBrasil: Legislativo'
+name: '🐛 Portal Modelo- Problema'
+description: 'Descreve um problema encontrado na solução Portal Modelo'
 labels: ['Bug', 'precisa: avaliação']
 projects:
-  - plonegovbr/5
+  - portalbr/2
 type: Bug
 assignees:
   - 'rafahela'

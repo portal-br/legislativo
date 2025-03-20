@@ -1,6 +1,7 @@
-# plonegovbr.portal_leg
+# Portal Modelo
+## PortalBrasil: Legislativo
 
-Ferramenta de portais para casas ddo legislativo brasileiro
+Ferramenta de portais para casas do legislativo brasileiro
 
 ## Features
 
@@ -8,10 +9,10 @@ TODO: List our awesome features
 
 ## Installation
 
-Install plonegovbr.portal_leg with `pip`:
+Install portalbrasil.legislativo with `pip`:
 
 ```shell
-pip install plonegovbr.portal_leg
+pip install portalbrasil.legislativo
 ```
 
 And to create the Plone site:
@@ -50,8 +51,8 @@ See also the documentation of [Mockup and Patternslib](https://6.docs.plone.org/
 
 ## Contribute
 
-- [Issue Tracker](https://github.com/plonegovbr/portalbrasil-legislativo/issues)
-- [Source Code](https://github.com/plonegovbr/portalbrasil-legislativo/)
+- [Issue Tracker](https://github.com/portal-br/legislativo/issues)
+- [Source Code](https://github.com/portal-br/legislativo/)
 
 ## License
 

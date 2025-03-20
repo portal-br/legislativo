@@ -1,0 +1,38 @@
+[tool.towncrier]
+filename = "CHANGELOG.md"
+directory = "news/"
+title_format = "## {version} ({project_date})"
+underlines = ["", "", ""]
+template = "./news/.changelog_template.jinja"
+start_string = "<!-- towncrier release notes start -->\n"
+issue_format = "[#{issue}](https://github.com/portal-br/legislativo/issue/{issue})"
+
+[[tool.towncrier.type]]
+directory = "breaking"
+name = "Breaking"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "feature"
+name = "Funcionalidade"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "bugfix"
+name = "Correção de Bug"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "internal"
+name = "Interno"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "documentation"
+name = "Documentação"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "tests"
+name = "Teste"
+showcontent = true

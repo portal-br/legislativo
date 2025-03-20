@@ -1,5 +1,5 @@
 from pathlib import Path
-from plonegovbr.portal_leg.utils.scripts import parse_answers
+from portalbrasil.legislativo.utils.scripts import parse_answers
 
 import pytest
 

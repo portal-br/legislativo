@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="portalbrasil.legislativo"
+    >
+
+  <plone:distribution
+      name="portalmodelo"
+      title="Portal Modelo"
+      description="Ferramenta de portais para casas do legislativo brasileiro."
+      directory="distributions/legislativo"
+      handler=".handlers.handler"
+      post_handler=".handlers.post_handler"
+      pre_handler=".handlers.pre_handler"
+      />
+
+</configure>

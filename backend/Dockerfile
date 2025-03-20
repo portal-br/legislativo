@@ -22,7 +22,7 @@ FROM plone/server-prod-config:${PLONE_VERSION}
 
 LABEL maintainer="PloneGov-BR <gov@plone.org.br>" \
       org.label-schema.name="portalbrasil-legislativo-backend" \
-      org.label-schema.description="PortalBrasil: Legislativo." \
+      org.label-schema.description="Portal Modelo." \
       org.label-schema.vendor="PloneGov-BR"
 
 # Copy /app from builder
