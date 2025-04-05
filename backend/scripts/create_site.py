@@ -1,6 +1,6 @@
 from AccessControl.SecurityManagement import newSecurityManager
 from pathlib import Path
-from plone.distribution.api import site as site_api
+from portalbrasil.core.factory import add_site
 from portalbrasil.legislativo.utils.scripts import asbool
 from portalbrasil.legislativo.utils.scripts import parse_answers
 from Testing.makerequest import makerequest
@@ -48,7 +48,6 @@ ANSWERS = {
     "description": os.getenv("SITE_DESCRIPTION"),
     "default_language": os.getenv("SITE_DEFAULT_LANGUAGE"),
     "portal_timezone": os.getenv("SITE_PORTAL_TIMEZONE"),
-    "workflow": os.getenv("SITE_WORKFLOW"),
     "setup_content": os.getenv("SITE_SETUP_CONTENT", "true"),
 }
 
@@ -80,12 +79,10 @@ def main():
             )
 
     if site_id not in app.objectIds():
-        site_api._create_site(
-            context=app, distribution_name=DISTRIBUTION, answers=answers
-        )
+        site = add_site(app, **answers)
         transaction.commit()
         app._p_jar.sync()
-        logger.info(" - Site created!")
+        logger.info(f" - Site {site.id} created!")
 
 
 if __name__ == "__main__":

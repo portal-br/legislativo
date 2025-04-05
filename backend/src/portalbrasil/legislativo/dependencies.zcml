@@ -2,9 +2,7 @@
 
   <!-- List all packages you depend here -->
   <include package="plone.distribution" />
-  <include package="plone.restapi" />
-  <include package="plone.volto" />
-  <include package="plonegovbr.brfields" />
+  <include package="portalbrasil.core" />
   <include package="collective.volto.formsupport" />
   <include package="collective.honeypot" />
 

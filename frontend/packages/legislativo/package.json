@@ -37,21 +37,12 @@
     "@mbarde/volto-image-crop-widget",
     "@plonegovbr/volto-vlibras",
     "@plonegovbr/volto-brwidgets",
-    "@kitconcept/volto-light-theme"
+    "@kitconcept/volto-light-theme",
+    "@portalbrasil/core"
   ],
   "dependencies": {
-    "@eeacms/volto-accordion-block": "11.0.4",
-    "@eeacms/volto-pdf-block": "1.0.12",
-    "@kitconcept/volto-button-block": "3.0.3",
-    "@kitconcept/volto-heading-block": "2.4.0",
-    "@kitconcept/volto-light-theme": "6.0.0-alpha.16",
-    "@kitconcept/volto-separator-block": "4.1.2",
-    "@kitconcept/volto-slider-block": "6.3.1",
-    "@mbarde/volto-image-crop-widget": "0.5.1",
     "@plone/components": "workspace:*",
-    "@plonegovbr/volto-vlibras": "0.4.0",
-    "@plonegovbr/volto-brwidgets": "1.0.0-alpha.3",
-    "volto-form-block": "^3.9.1"
+    "@portalbrasil/core": "workspace:*"
   },
   "peerDependencies": {
     "react": "18.2.0",
