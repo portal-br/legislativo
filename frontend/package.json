@@ -35,6 +35,7 @@
   "dependencies": {
     "@plone/volto": "workspace:*",
     "@plone/registry": "workspace:*",
+    "@portalbrasil/core": "workspace:*",
     "@portalbrasil/legislativo": "workspace:*"
   },
   "devDependencies": {

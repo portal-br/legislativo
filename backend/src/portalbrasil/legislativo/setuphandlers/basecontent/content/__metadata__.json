@@ -1,16 +1,20 @@
 {
   "__version__": "1.0.0",
   "_blob_files_": [
-    "a58ccead718140c1baa98d43595fc3e6/image/plone-foundation.png"
+    "a58ccead718140c1baa98d43595fc3e6/image/plone-foundation.png",
+    "7a05d4d192674a5b84e786b414fce0a8/image/portalbrasil.png",
+    "plone_site_root/logo/logo.svg"
   ],
   "_data_files_": [
     "plone_site_root/data.json",
     "c5a3eb2bc63247f0bb4c83a2003fec12/data.json",
     "a720393b3c0240e5bd27c43fcd2cfd1e/data.json",
-    "a58ccead718140c1baa98d43595fc3e6/data.json"
+    "a58ccead718140c1baa98d43595fc3e6/data.json",
+    "7a05d4d192674a5b84e786b414fce0a8/data.json"
   ],
   "default_page": {},
   "local_permissions": {
+    "7a05d4d192674a5b84e786b414fce0a8": {},
     "a58ccead718140c1baa98d43595fc3e6": {},
     "a720393b3c0240e5bd27c43fcd2cfd1e": {},
     "c5a3eb2bc63247f0bb4c83a2003fec12": {},
@@ -68,6 +72,13 @@
     }
   },
   "local_roles": {
+    "7a05d4d192674a5b84e786b414fce0a8": {
+      "local_roles": {
+        "admin": [
+          "Owner"
+        ]
+      }
+    },
     "a58ccead718140c1baa98d43595fc3e6": {
       "local_roles": {
         "admin": [
@@ -98,9 +109,10 @@
     }
   },
   "ordering": {
+    "7a05d4d192674a5b84e786b414fce0a8": 1,
     "a58ccead718140c1baa98d43595fc3e6": 0,
-    "a720393b3c0240e5bd27c43fcd2cfd1e": 41,
-    "c5a3eb2bc63247f0bb4c83a2003fec12": 42
+    "a720393b3c0240e5bd27c43fcd2cfd1e": 42,
+    "c5a3eb2bc63247f0bb4c83a2003fec12": 41
   },
   "relations": []
 }

@@ -1,10 +1,10 @@
 {
-  "@id": "/imagens/plone-foundation.png",
+  "@id": "/imagens/portalbrasil.png",
   "@type": "Image",
-  "UID": "a58ccead718140c1baa98d43595fc3e6",
+  "UID": "7a05d4d192674a5b84e786b414fce0a8",
   "allow_discussion": null,
   "contributors": [],
-  "created": "2024-05-27T03:23:37+00:00",
+  "created": "2025-04-05T19:52:31+00:00",
   "creators": [
     "admin"
   ],
@@ -14,26 +14,24 @@
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
-  "id": "plone-foundation.png",
+  "id": "portalbrasil.png",
   "image": {
-    "blob_path": "a58ccead718140c1baa98d43595fc3e6/image/plone-foundation.png",
+    "blob_path": "7a05d4d192674a5b84e786b414fce0a8/image/portalbrasil.png",
     "content-type": "image/png",
-    "filename": "plone-foundation.png",
-    "height": 439,
-    "size": 50737,
-    "width": 2000
+    "filename": "portalbrasil.png",
+    "height": 8533,
+    "size": 437722,
+    "width": 8533
   },
   "is_folderish": false,
   "language": "##DEFAULT##",
   "layout": "image_view",
   "lock": {},
-  "modified": "2025-04-05T19:51:57+00:00",
+  "modified": "2025-04-05T19:52:31+00:00",
   "review_state": null,
   "rights": "",
-  "subjects": [
-    "Plone"
-  ],
-  "title": "Plone Foundation Logo",
+  "subjects": [],
+  "title": "portalbrasil.png",
   "type_title": "Image",
   "version": "current",
   "workflow_history": {},

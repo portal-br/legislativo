@@ -18,6 +18,9 @@ importers:
       '@plone/volto':
         specifier: workspace:*
         version: link:core/packages/volto
+      '@portalbrasil/core':
+        specifier: workspace:*
+        version: link:core_pb/frontend/packages/core
       '@portalbrasil/legislativo':
         specifier: workspace:*
         version: link:packages/legislativo
