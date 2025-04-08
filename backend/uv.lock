@@ -281,8 +281,7 @@ constraints = [
     { name = "pyrsistent", specifier = "==0.20.0" },
     { name = "pysocks", specifier = "==1.7.1" },
     { name = "pytest", specifier = "==7.4.4" },
-    { name = "pytest-cov", specifier = "==5.0.0" },
-    { name = "pytest-docker", specifier = ">=3.2.0" },
+    { name = "pytest-cov", specifier = "==6.1.1" },
     { name = "pytest-plone", specifier = ">=1.0.0a1" },
     { name = "python-dateutil", specifier = "==2.9.0.post0" },
     { name = "python-dotenv", specifier = "==1.0.1" },
@@ -1110,6 +1109,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/8f/8a/cc1debe3514da292094f1c3a700e4ca25442489731ef7c0814358816bb03/hatchling-1.27.0.tar.gz", hash = "sha256:971c296d9819abb3811112fc52c7a9751c8d381898f36533bb16f9791e941fd6", size = 54983 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/08/e7/ae38d7a6dfba0533684e0b2136817d667588ae3ec984c1a4e5df5eb88482/hatchling-1.27.0-py3-none-any.whl", hash = "sha256:d3a2f3567c4f926ea39849cdf924c7e99e6686c9c8e288ae1037c8fa2a5d937b", size = 75794 },
+]
+
+[[package]]
+name = "horse-with-no-namespace"
+version = "20250404.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/26/36/ad353faf4a00daedbfa15946524b8b9299e3eb148929d31d91a275232edf/horse_with_no_namespace-20250404.0.tar.gz", hash = "sha256:93cf78f3393fcc3a1af65e50e0c6ed3a899c3d03e470d35b975dcc4a68cb05f7", size = 4274 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/35/9c/d37a53b73c6d239ad7b1de45ad86cb4a14ca1bb58684a6bea4d1f14e94f3/horse_with_no_namespace-20250404.0-py3-none-any.whl", hash = "sha256:851a5de692b938a7487b7715bce635329f34ad938871da564ff4a456d3912044", size = 4895 },
 ]
 
 [[package]]
@@ -3605,12 +3613,12 @@ dependencies = [
 
 [package.optional-dependencies]
 test = [
+    { name = "horse-with-no-namespace" },
     { name = "mypy" },
     { name = "plone-app-testing" },
     { name = "plone-restapi", extra = ["test"] },
     { name = "pytest" },
     { name = "pytest-cov" },
-    { name = "pytest-docker" },
     { name = "pytest-plone" },
 ]
 
@@ -3620,12 +3628,12 @@ build = [
     { name = "wheel" },
 ]
 test = [
+    { name = "horse-with-no-namespace" },
     { name = "mypy" },
     { name = "plone-app-testing" },
     { name = "plone-restapi", extra = ["test"] },
     { name = "pytest" },
     { name = "pytest-cov" },
-    { name = "pytest-docker" },
     { name = "pytest-plone" },
 ]
 
@@ -3633,13 +3641,13 @@ test = [
 requires-dist = [
     { name = "collective-honeypot" },
     { name = "collective-volto-formsupport" },
+    { name = "horse-with-no-namespace", marker = "extra == 'test'" },
     { name = "mypy", marker = "extra == 'test'", specifier = ">=1.15.0" },
     { name = "plone-app-testing", marker = "extra == 'test'" },
     { name = "plone-restapi", extras = ["test"], marker = "extra == 'test'" },
     { name = "portalbrasil-core", specifier = "==1.0.0a3" },
     { name = "pytest", marker = "extra == 'test'" },
-    { name = "pytest-cov", marker = "extra == 'test'" },
-    { name = "pytest-docker", marker = "extra == 'test'", specifier = ">=3.2.0" },
+    { name = "pytest-cov", marker = "extra == 'test'", specifier = "==6.1.1" },
     { name = "pytest-plone", marker = "extra == 'test'", specifier = ">=1.0.0a1" },
 ]
 provides-extras = ["test"]
@@ -3650,12 +3658,12 @@ build = [
     { name = "wheel" },
 ]
 test = [
+    { name = "horse-with-no-namespace" },
     { name = "mypy", specifier = ">=1.15.0" },
     { name = "plone-app-testing" },
     { name = "plone-restapi", extras = ["test"] },
     { name = "pytest" },
-    { name = "pytest-cov" },
-    { name = "pytest-docker", specifier = ">=3.2.0" },
+    { name = "pytest-cov", specifier = "==6.1.1" },
     { name = "pytest-plone", specifier = ">=1.0.0a1" },
 ]
 
@@ -4323,28 +4331,15 @@ wheels = [
 
 [[package]]
 name = "pytest-cov"
-version = "5.0.0"
+version = "6.1.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "coverage" },
     { name = "pytest" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/74/67/00efc8d11b630c56f15f4ad9c7f9223f1e5ec275aaae3fa9118c6a223ad2/pytest-cov-5.0.0.tar.gz", hash = "sha256:5837b58e9f6ebd335b0f8060eecce69b662415b16dc503883a02f45dfeb14857", size = 63042 }
+sdist = { url = "https://files.pythonhosted.org/packages/25/69/5f1e57f6c5a39f81411b550027bf72842c4567ff5fd572bed1edc9e4b5d9/pytest_cov-6.1.1.tar.gz", hash = "sha256:46935f7aaefba760e716c2ebfbe1c216240b9592966e7da99ea8292d4d3e2a0a", size = 66857 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/78/3a/af5b4fa5961d9a1e6237b530eb87dd04aea6eb83da09d2a4073d81b54ccf/pytest_cov-5.0.0-py3-none-any.whl", hash = "sha256:4f0764a1219df53214206bf1feea4633c3b558a2925c8b59f144f682861ce652", size = 21990 },
-]
-
-[[package]]
-name = "pytest-docker"
-version = "3.2.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "attrs" },
-    { name = "pytest" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/8f/05/5c25661d15d45ab0f7537545d552fc97b296215b82e1677c0a1916d48a22/pytest_docker-3.2.0.tar.gz", hash = "sha256:3d6537564e1582cab39e6cc3d6f3d931e92398af62f8313fc826e436f8233e21", size = 13461 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/66/70/d0148590517cd275bc6fa1fddd836fa787b77092ec3e9d3218466bd492aa/pytest_docker-3.2.0-py3-none-any.whl", hash = "sha256:3e266db66887aa3611b2dfd86fb2a3b42f25f3a29d3f14b6e57a831e93a64f60", size = 8545 },
+    { url = "https://files.pythonhosted.org/packages/28/d0/def53b4a790cfb21483016430ed828f64830dd981ebe1089971cd10cab25/pytest_cov-6.1.1-py3-none-any.whl", hash = "sha256:bddf29ed2d0ab6f4df17b4c55b0a657287db8684af9c42ea546b21b1041b3dde", size = 23841 },
 ]
 
 [[package]]
