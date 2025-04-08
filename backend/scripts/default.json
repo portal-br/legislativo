@@ -4,5 +4,6 @@
     "description": "Site da câmara modelo",
     "default_language": "pt-br",
     "portal_timezone": "America/Sao_Paulo",
-    "setup_content": true
+    "setup_content": true,
+    "distribution": "portalmodelo"
 }
