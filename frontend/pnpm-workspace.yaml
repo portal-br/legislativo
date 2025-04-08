@@ -1,6 +1,5 @@
 packages:
   # all packages in direct subdirs of packages/
   - 'core/packages/*'
-  - 'core_pb/frontend/packages/*'
   - 'packages/*'
   - 'packages/*/packages/*'

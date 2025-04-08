@@ -82,15 +82,21 @@
     },
     {
       "@id": "751a0f7f-0456-40e0-9e6a-f1b038e701a2",
-      "alt": "PortalBrasil",
+      "alt": "PloneGov-BR",
+      "href": [
+        {
+          "@id": "https://plone.org.br/",
+          "title": "plone.org.br/"
+        }
+      ],
       "logo": [
         {
-          "@id": "resolveuid/7a05d4d192674a5b84e786b414fce0a8",
+          "@id": "resolveuid/b20ab730c46b459a910592151e78c973",
           "@type": "Image",
           "Description": "",
-          "Title": "portalbrasil.png",
+          "Title": "plonegovbr.png",
           "image_field": "image",
-          "title": "portalbrasil.png"
+          "title": "plonegovbr.png"
         }
       ]
     }
@@ -108,12 +114,12 @@
     "stealable": true
   },
   "logo": {
-    "blob_path": "plone_site_root/logo/logo.svg",
-    "content-type": "image/svg+xml",
-    "filename": "logo.svg",
-    "height": 70,
-    "size": 6221,
-    "width": 184
+    "blob_path": "plone_site_root/logo/portalbrasil-wide-transp.png",
+    "content-type": "image/png",
+    "filename": "portalbrasil-wide-transp.png",
+    "height": 1080,
+    "size": 62036,
+    "width": 1920
   },
   "network_links": [
     {

@@ -34,7 +34,7 @@ classifiers = [
 dependencies = [
     "collective.volto.formsupport",
     "collective.honeypot",
-    "portalbrasil-core",
+    "portalbrasil.core==1.0.0a3",
 ]
 
 [project.optional-dependencies]
@@ -173,6 +173,7 @@ constraint-dependencies = [
     "MultiMapping==5.0",
     "multipart==1.2.1",
     "mxdev==4.0.3",
+    "mypy>=1.15.0",
     "natsort==8.4.0",
     "nh3==0.2.19",
     "nt-svcutils==2.13.0",
@@ -296,8 +297,10 @@ constraint-dependencies = [
     "plone.volto==5.0.4",
     "plone.z3cform==2.0.4",
     "Plone==6.1.1",
+    "plonegovbr.brfields==1.0.0a3",
     "plonetheme.barceloneta==3.2.3",
     "pluggy==1.5.0",
+    "portalbrasil.core==1.0.0a3",
     "Products.BTreeFolder2==5.1",
     "Products.CMFCore==3.7",
     "Products.CMFDiffTool==4.0.4",
@@ -344,6 +347,8 @@ constraint-dependencies = [
     "pyrsistent==0.20.0",
     "PySocks==1.7.1",
     "pytest-cov==5.0.0",
+    "pytest-docker>=3.2.0",
+    "pytest-plone>=1.0.0a1",
     "pytest==7.4.4",
     "python-dateutil==2.9.0.post0",
     "python-dotenv==1.0.1",
@@ -510,9 +515,6 @@ constraint-dependencies = [
     "Zope==5.13",
     "ZopeUndo==6.0",
 ]
-
-[tool.uv.sources]
-portalbrasil-core = { path = "/Users/ericof/Projects/Plone/GovBr/PortalBrasil/Code/core/backend", editable = true }
 
 [tool.hatch.build]
 strict-naming = false

@@ -107,6 +107,7 @@ constraints = [
     { name = "multimapping", specifier = "==5.0" },
     { name = "multipart", specifier = "==1.2.1" },
     { name = "mxdev", specifier = "==4.0.3" },
+    { name = "mypy", specifier = ">=1.15.0" },
     { name = "natsort", specifier = "==8.4.0" },
     { name = "nh3", specifier = "==0.2.19" },
     { name = "nt-svcutils", specifier = "==2.13.0" },
@@ -230,8 +231,10 @@ constraints = [
     { name = "plone-versioncheck", specifier = "==1.8.2" },
     { name = "plone-volto", specifier = "==5.0.4" },
     { name = "plone-z3cform", specifier = "==2.0.4" },
+    { name = "plonegovbr-brfields", specifier = "==1.0.0a3" },
     { name = "plonetheme-barceloneta", specifier = "==3.2.3" },
     { name = "pluggy", specifier = "==1.5.0" },
+    { name = "portalbrasil-core", specifier = "==1.0.0a3" },
     { name = "products-btreefolder2", specifier = "==5.1" },
     { name = "products-cmfcore", specifier = "==3.7" },
     { name = "products-cmfdifftool", specifier = "==4.0.4" },
@@ -279,6 +282,8 @@ constraints = [
     { name = "pysocks", specifier = "==1.7.1" },
     { name = "pytest", specifier = "==7.4.4" },
     { name = "pytest-cov", specifier = "==5.0.0" },
+    { name = "pytest-docker", specifier = ">=3.2.0" },
+    { name = "pytest-plone", specifier = ">=1.0.0a1" },
     { name = "python-dateutil", specifier = "==2.9.0.post0" },
     { name = "python-dotenv", specifier = "==1.0.1" },
     { name = "python-gettext", specifier = "==5.0" },
@@ -3574,7 +3579,8 @@ wheels = [
 
 [[package]]
 name = "portalbrasil-core"
-source = { editable = "../../core/backend" }
+version = "1.0.0a3"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "plone-api" },
     { name = "plone-distribution" },
@@ -3583,38 +3589,9 @@ dependencies = [
     { name = "plonegovbr-brfields" },
     { name = "products-cmfplone" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "plone-api" },
-    { name = "plone-app-testing", marker = "extra == 'test'" },
-    { name = "plone-distribution", specifier = "==3.1.2" },
-    { name = "plone-restapi" },
-    { name = "plone-restapi", extras = ["test"], marker = "extra == 'test'" },
-    { name = "plone-volto" },
-    { name = "plonegovbr-brfields", specifier = "==1.0.0a3" },
-    { name = "products-cmfplone", specifier = "==6.1.1" },
-    { name = "pytest", marker = "extra == 'test'" },
-    { name = "pytest-cov", marker = "extra == 'test'" },
-    { name = "pytest-plone", marker = "extra == 'test'", specifier = ">=1.0.0a1" },
-    { name = "zest-releaser", extras = ["recommended"], marker = "extra == 'test'" },
-    { name = "zestreleaser-towncrier", marker = "extra == 'test'" },
-]
-provides-extras = ["test"]
-
-[package.metadata.requires-dev]
-build = [
-    { name = "hatchling" },
-    { name = "wheel" },
-]
-test = [
-    { name = "mypy", specifier = ">=1.15.0" },
-    { name = "plone-app-testing" },
-    { name = "plone-restapi", extras = ["test"] },
-    { name = "pytest" },
-    { name = "pytest-cov" },
-    { name = "pytest-docker", specifier = ">=3.2.0" },
-    { name = "pytest-plone", specifier = ">=1.0.0a1" },
+sdist = { url = "https://files.pythonhosted.org/packages/a3/c2/f82e189661e117ba08c2eee3c44045053c17c9475bf4fe66ca14f13ca910/portalbrasil_core-1.0.0a3.tar.gz", hash = "sha256:2681e8b11061dbe8f6848f61cc2908ddcb954c1c666ba77e58997f01a1686d80", size = 37887 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/29/f2/1153b5a86b4afd426b40f966e95eda3b28b868a521a146a62c888d1d63b0/portalbrasil_core-1.0.0a3-py3-none-any.whl", hash = "sha256:5b3b951a3a5e215b74d709dcf2b765bb20da1377b02187d7d01f2cccb077e51f", size = 57237 },
 ]
 
 [[package]]
@@ -3659,7 +3636,7 @@ requires-dist = [
     { name = "mypy", marker = "extra == 'test'", specifier = ">=1.15.0" },
     { name = "plone-app-testing", marker = "extra == 'test'" },
     { name = "plone-restapi", extras = ["test"], marker = "extra == 'test'" },
-    { name = "portalbrasil-core", editable = "../../core/backend" },
+    { name = "portalbrasil-core", specifier = "==1.0.0a3" },
     { name = "pytest", marker = "extra == 'test'" },
     { name = "pytest-cov", marker = "extra == 'test'" },
     { name = "pytest-docker", marker = "extra == 'test'", specifier = ">=3.2.0" },

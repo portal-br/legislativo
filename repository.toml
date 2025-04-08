@@ -17,6 +17,7 @@ name = "portalbrasil.legislativo"
 path = "backend"
 changelog = "backend/CHANGELOG.md"
 towncrier_settings = "backend/pyproject.toml"
+base_package = "portalbrasil.core"
 publish = true
 
 [frontend]

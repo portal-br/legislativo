@@ -4,14 +4,6 @@
     "package": "@plone/volto",
     "url": "git@github.com:plone/volto.git",
     "https": "https://github.com/plone/volto.git",
-    "tag": "18.10.0"
-  },
-  "core_pb": {
-    "output": "./",
-    "packages": {
-      "@portalbrasil/core": "frontend/packages/core"
-    },
-    "url": "git@github.com:portal-br/core.git",
-    "https": "https://github.com/portal-br/core.git"
+    "tag": "18.11.0"
   }
 }

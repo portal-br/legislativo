@@ -42,7 +42,7 @@
   ],
   "dependencies": {
     "@plone/components": "workspace:*",
-    "@portalbrasil/core": "workspace:*"
+    "@portalbrasil/core": "1.0.0-alpha.3"
   },
   "peerDependencies": {
     "react": "18.2.0",
