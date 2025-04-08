@@ -39,7 +39,7 @@ dependencies = [
 
 [project.optional-dependencies]
 test = [
-    "horse-with-no-namespace",
+    "horse-with-no-namespace>=20250408.0",
     "mypy>=1.15.0",
     "plone.app.testing",
     "plone.restapi[test]",
@@ -54,7 +54,7 @@ build = [
     "wheel",
 ]
 test = [
-    "horse-with-no-namespace",
+    "horse-with-no-namespace>=20250408.0",
     "mypy>=1.15.0",
     "plone.app.testing",
     "plone.restapi[test]",
