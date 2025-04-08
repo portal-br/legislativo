@@ -1113,11 +1113,11 @@ wheels = [
 
 [[package]]
 name = "horse-with-no-namespace"
-version = "20250404.0"
+version = "20250408.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/26/36/ad353faf4a00daedbfa15946524b8b9299e3eb148929d31d91a275232edf/horse_with_no_namespace-20250404.0.tar.gz", hash = "sha256:93cf78f3393fcc3a1af65e50e0c6ed3a899c3d03e470d35b975dcc4a68cb05f7", size = 4274 }
+sdist = { url = "https://files.pythonhosted.org/packages/e6/66/681ab7f36264b8b287c9900f7382ce0539a0c139c609a63befd84c1e58f2/horse_with_no_namespace-20250408.0.tar.gz", hash = "sha256:d09810685faf6c4ffcc20f22b0ff320fe267fb75bd46ebfe7dc86b64e0a04b1d", size = 4294 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/35/9c/d37a53b73c6d239ad7b1de45ad86cb4a14ca1bb58684a6bea4d1f14e94f3/horse_with_no_namespace-20250404.0-py3-none-any.whl", hash = "sha256:851a5de692b938a7487b7715bce635329f34ad938871da564ff4a456d3912044", size = 4895 },
+    { url = "https://files.pythonhosted.org/packages/87/c8/09ded92d5fbf4c6c0948a16869090f98608a4a2913ef569a81f175af433c/horse_with_no_namespace-20250408.0-py3-none-any.whl", hash = "sha256:0f7913947abbc4c7e9fac015d8b2a14b5fc69cfa0d3665071cf6c94670e870bc", size = 4916 },
 ]
 
 [[package]]
@@ -3641,7 +3641,7 @@ test = [
 requires-dist = [
     { name = "collective-honeypot" },
     { name = "collective-volto-formsupport" },
-    { name = "horse-with-no-namespace", marker = "extra == 'test'" },
+    { name = "horse-with-no-namespace", marker = "extra == 'test'", specifier = ">=20250408.0" },
     { name = "mypy", marker = "extra == 'test'", specifier = ">=1.15.0" },
     { name = "plone-app-testing", marker = "extra == 'test'" },
     { name = "plone-restapi", extras = ["test"], marker = "extra == 'test'" },
@@ -3658,7 +3658,7 @@ build = [
     { name = "wheel" },
 ]
 test = [
-    { name = "horse-with-no-namespace" },
+    { name = "horse-with-no-namespace", specifier = ">=20250408.0" },
     { name = "mypy", specifier = ">=1.15.0" },
     { name = "plone-app-testing" },
     { name = "plone-restapi", extras = ["test"] },
