@@ -37,7 +37,7 @@ VENV_FOLDER=$(BACKEND_FOLDER)/.venv
 BIN_FOLDER=$(VENV_FOLDER)/bin
 
 # Environment variables to be exported
-export ALLOWED_DISTRIBUTIONS := portalbrasil-legislativo
+export ALLOWED_DISTRIBUTIONS := portalmodelo
 export PYTHONWARNINGS := ignore
 export DOCKER_BUILDKIT := 1
 

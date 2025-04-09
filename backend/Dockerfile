@@ -46,9 +46,12 @@ EOT
 FROM ghcr.io/portal-br/core-prod:${PB_VERSION:-latest}
 
 LABEL maintainer="PloneGov-BR <gov@plone.org.br>" \
-      org.label-schema.name="ghcr.io/portal-br/legislativo-demo" \
-      org.label-schema.description="Demo do Portal Modelo." \
+      org.label-schema.name="ghcr.io/portal-br/legislativo-backend" \
+      org.label-schema.description="Portal Modelo." \
       org.label-schema.vendor="PloneGov-BR"
+
+
+ENV CHAMELEON_CACHE=/data/var/cache
 
 # Copy the pre-built `/app` directory to the runtime container
 # and change the ownership to user app and group app in one step.

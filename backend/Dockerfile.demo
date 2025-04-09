@@ -5,13 +5,13 @@ FROM ghcr.io/portal-br/legislativo-backend:${IMAGE_TAG:-latest}
 
 LABEL maintainer="PloneGov-BR <gov@plone.org.br>" \
       org.label-schema.name="ghcr.io/portal-br/legislativo-demo" \
-      org.label-schema.description="Portal Modelo." \
+      org.label-schema.description="Demo do Portal Modelo." \
       org.label-schema.vendor="PloneGov-BR"
 
 # Disable MO Compilation
 ENV zope_i18n_compile_mo_files=
 # Show only our distributions
-ENV ALLOWED_DISTRIBUTIONS=portalbrasil-legislativo
+ENV ALLOWED_DISTRIBUTIONS=portalmodelo
 
 # Increase Upload limit to 6MB
 ENV ZOPE_FORM_MEMORY_LIMIT=6MB
