@@ -73,6 +73,7 @@ constraints = [
     { name = "gitpython", specifier = "==3.1.43" },
     { name = "gunicorn", specifier = "==23.0.0" },
     { name = "h11", specifier = "==0.14.0" },
+    { name = "horse-with-no-namespace", specifier = ">=20250408.0" },
     { name = "httplib2", specifier = "==0.22.0" },
     { name = "i18ndude", specifier = "==6.2.1" },
     { name = "icalendar", specifier = "==6.1.1" },
@@ -234,7 +235,7 @@ constraints = [
     { name = "plonegovbr-brfields", specifier = "==1.0.0a3" },
     { name = "plonetheme-barceloneta", specifier = "==3.2.3" },
     { name = "pluggy", specifier = "==1.5.0" },
-    { name = "portalbrasil-core", specifier = "==1.0.0a3" },
+    { name = "portalbrasil-core", specifier = "==1.0.0a4" },
     { name = "products-btreefolder2", specifier = "==5.1" },
     { name = "products-cmfcore", specifier = "==3.7" },
     { name = "products-cmfdifftool", specifier = "==4.0.4" },
@@ -267,6 +268,7 @@ constraints = [
     { name = "products-zopeversioncontrol", specifier = "==4.1" },
     { name = "progress", specifier = "==1.6" },
     { name = "prompt-toolkit", specifier = "==3.0.48" },
+    { name = "psycopg2", specifier = "==2.9.10" },
     { name = "py", specifier = "==1.11.0" },
     { name = "pycparser", specifier = "==2.22" },
     { name = "pygithub", specifier = "==2.5.0" },
@@ -292,6 +294,7 @@ constraints = [
     { name = "readme-renderer", specifier = "==44.0" },
     { name = "record", specifier = "==4.1" },
     { name = "referencing", specifier = "==0.35.1" },
+    { name = "relstorage", specifier = "==4.1.1" },
     { name = "repoze-xmliter", specifier = "==1.0b1" },
     { name = "requests", specifier = "==2.32.3" },
     { name = "requests-toolbelt", specifier = "==1.0.0" },
@@ -3613,7 +3616,7 @@ wheels = [
 
 [[package]]
 name = "portalbrasil-core"
-version = "1.0.0a3"
+version = "1.0.0a4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "plone-api" },
@@ -3623,9 +3626,9 @@ dependencies = [
     { name = "plonegovbr-brfields" },
     { name = "products-cmfplone" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a3/c2/f82e189661e117ba08c2eee3c44045053c17c9475bf4fe66ca14f13ca910/portalbrasil_core-1.0.0a3.tar.gz", hash = "sha256:2681e8b11061dbe8f6848f61cc2908ddcb954c1c666ba77e58997f01a1686d80", size = 37887 }
+sdist = { url = "https://files.pythonhosted.org/packages/a9/5c/42c139eddf59de72024f47b661b178fc216769777bc469487d22a50ccfd0/portalbrasil_core-1.0.0a4.tar.gz", hash = "sha256:2310b7e558d8fa446cc85fb301253ff38198546378b6a349e0af3c58c8484cbb", size = 37881 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/29/f2/1153b5a86b4afd426b40f966e95eda3b28b868a521a146a62c888d1d63b0/portalbrasil_core-1.0.0a3-py3-none-any.whl", hash = "sha256:5b3b951a3a5e215b74d709dcf2b765bb20da1377b02187d7d01f2cccb077e51f", size = 57237 },
+    { url = "https://files.pythonhosted.org/packages/23/2c/de557877cef0ec617220e8e7cbe5815e1e018bfac57a575d43d41c7246b4/portalbrasil_core-1.0.0a4-py3-none-any.whl", hash = "sha256:d31156aa46e1318ee28a6df1e24026a3f7fa0c55f205d206de399d95fbb1ba15", size = 57237 },
 ]
 
 [[package]]
@@ -3654,6 +3657,7 @@ build = [
     { name = "wheel" },
 ]
 container = [
+    { name = "plone-app-upgrade" },
     { name = "psycopg2" },
     { name = "relstorage" },
     { name = "zeo" },
@@ -3676,7 +3680,7 @@ requires-dist = [
     { name = "mypy", marker = "extra == 'test'", specifier = ">=1.15.0" },
     { name = "plone-app-testing", marker = "extra == 'test'" },
     { name = "plone-restapi", extras = ["test"], marker = "extra == 'test'" },
-    { name = "portalbrasil-core", specifier = "==1.0.0a3" },
+    { name = "portalbrasil-core", specifier = "==1.0.0a4" },
     { name = "pytest", marker = "extra == 'test'" },
     { name = "pytest-cov", marker = "extra == 'test'", specifier = "==6.1.1" },
     { name = "pytest-plone", marker = "extra == 'test'", specifier = ">=1.0.0a1" },
@@ -3689,6 +3693,7 @@ build = [
     { name = "wheel" },
 ]
 container = [
+    { name = "plone-app-upgrade" },
     { name = "psycopg2", specifier = "==2.9.10" },
     { name = "relstorage", specifier = "==4.1.1" },
     { name = "zeo", specifier = "==6.0.0" },
