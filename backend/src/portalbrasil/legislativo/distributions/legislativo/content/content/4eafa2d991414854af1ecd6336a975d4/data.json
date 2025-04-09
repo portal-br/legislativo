@@ -1,0 +1,101 @@
+{
+  "@id": "/transparencia-publica/receitas",
+  "@type": "Document",
+  "UID": "4eafa2d991414854af1ecd6336a975d4",
+  "allow_discussion": null,
+  "blocks": {
+    "382c2cf8-cdbe-48b0-acb8-451a5546414f": {
+      "@type": "slate",
+      "plaintext": "Cartilha: item 3.1 - Divulga as receitas do Poder ou \u00f3rg\u00e3o, evidenciando sua previs\u00e3o e realiza\u00e7\u00e3o",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": "Cartilha: item 3.1 - Divulga as receitas do Poder ou \u00f3rg\u00e3o, evidenciando sua previs\u00e3o e realiza\u00e7\u00e3o"
+                }
+              ],
+              "type": "p"
+            }
+          ],
+          "type": "blockquote"
+        }
+      ]
+    },
+    "7c776760-79dc-449e-a9de-4b6e25308893": {
+      "@type": "slate",
+      "plaintext": "Fundamenta\u00e7\u00e3o: Arts. 48, \u00a71\u00ba, II e 48-A, inciso II, da LC n\u00ba 101/00 e art. 8\u00ba, II, do Decreto n\u00ba 10.540/20",
+      "styles": {},
+      "theme": "default",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": "Fundamenta\u00e7\u00e3o: Arts. 48, \u00a71\u00ba, II e 48-A, inciso II, da LC n\u00ba 101/00 e art. 8\u00ba, II, do Decreto n\u00ba 10.540/20"
+                }
+              ],
+              "type": "p"
+            }
+          ],
+          "type": "blockquote"
+        }
+      ]
+    },
+    "87190e7d-2752-4e32-9512-b01d69a39a3a": {
+      "@type": "title"
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "87190e7d-2752-4e32-9512-b01d69a39a3a",
+      "382c2cf8-cdbe-48b0-acb8-451a5546414f",
+      "7c776760-79dc-449e-a9de-4b6e25308893"
+    ]
+  },
+  "changeNote": "",
+  "contributors": [],
+  "created": "2025-04-09T20:23:44+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "",
+  "effective": null,
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "receitas",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "document_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-04-09T20:25:25+00:00",
+  "preview_caption": null,
+  "preview_image": null,
+  "review_state": "private",
+  "rights": "",
+  "subjects": [],
+  "title": "Receitas",
+  "type_title": "Page",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2025-04-09T20:23:44+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

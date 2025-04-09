@@ -1,1 +1,7 @@
-[]
+[
+  {
+    "from_attribute": "isReferencing",
+    "from_uuid": "c957159bfea940acae08b475d9afb5b5",
+    "to_uuid": "734dbe5d682548118fc91d56f9a8323a"
+  }
+]

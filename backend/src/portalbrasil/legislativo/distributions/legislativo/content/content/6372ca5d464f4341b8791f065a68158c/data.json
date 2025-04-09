@@ -1,0 +1,80 @@
+{
+  "@id": "/institucional/sic",
+  "@type": "Document",
+  "UID": "6372ca5d464f4341b8791f065a68158c",
+  "allow_discussion": null,
+  "blocks": {
+    "343acfe9-ae44-4684-bbbd-bbfbf34b1413": {
+      "@type": "title"
+    },
+    "3bc25895-b560-469b-b2dc-3d25023a45f7": {
+      "@type": "slate",
+      "plaintext": "Em atendimento a Lei de Acesso \u00e0 Informa\u00e7\u00e3o, a C\u00e2mara Municipal de Portal\u00f3polis/DF, disponibiliza o Servi\u00e7o de Informa\u00e7\u00e3o ao Cidad\u00e3o - SIC / e-SIC, para aqueles que desejarem apresentar seu pedido de informa\u00e7\u00e3o p\u00fablica. O atendimento poder\u00e1 ser prestado de forma presencial ou eletr\u00f4nico, em sua sede ou via internet. Informa\u00e7\u00f5es e orienta\u00e7\u00f5es poder\u00e3o ser prestadas via telefone.\n\nTelefone: (209)3322-1220",
+      "styles": {},
+      "theme": "default",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Em atendimento a Lei de Acesso \u00e0 Informa\u00e7\u00e3o, a C\u00e2mara Municipal de Portal\u00f3polis/DF, disponibiliza o Servi\u00e7o de Informa\u00e7\u00e3o ao Cidad\u00e3o - SIC / e-SIC, para aqueles que desejarem apresentar seu pedido de informa\u00e7\u00e3o p\u00fablica. O atendimento poder\u00e1 ser prestado de forma presencial ou eletr\u00f4nico, em sua sede ou via internet. Informa\u00e7\u00f5es e orienta\u00e7\u00f5es poder\u00e3o ser prestadas via telefone.\n\nTelefone: (209)3322-1220"
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "b2ff345b-a8b1-4298-87ba-5c05e9b2dc0e": {
+      "@type": "slate"
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "343acfe9-ae44-4684-bbbd-bbfbf34b1413",
+      "3bc25895-b560-469b-b2dc-3d25023a45f7",
+      "b2ff345b-a8b1-4298-87ba-5c05e9b2dc0e"
+    ]
+  },
+  "changeNote": "",
+  "contributors": [],
+  "created": "2025-04-09T20:03:20+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "",
+  "effective": null,
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "sic",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "document_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-04-09T20:03:20+00:00",
+  "preview_caption": null,
+  "preview_image": null,
+  "review_state": "private",
+  "rights": "",
+  "subjects": [],
+  "title": "SIC",
+  "type_title": "Page",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2025-04-09T20:03:20+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

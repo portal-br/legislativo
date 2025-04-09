@@ -1,0 +1,40 @@
+{
+  "@id": "/institucional/icone-fala-br.jpeg",
+  "@type": "Image",
+  "UID": "734dbe5d682548118fc91d56f9a8323a",
+  "allow_discussion": null,
+  "contributors": [],
+  "created": "2025-04-09T20:04:58+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "",
+  "effective": null,
+  "exclude_from_nav": true,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "icone-fala-br.jpeg",
+  "image": {
+    "blob_path": "734dbe5d682548118fc91d56f9a8323a/image/icone-fala-br.jpeg",
+    "content-type": "image/jpeg",
+    "filename": "icone-fala-br.jpeg",
+    "height": 200,
+    "size": 6641,
+    "width": 200
+  },
+  "is_folderish": false,
+  "language": "##DEFAULT##",
+  "layout": "image_view",
+  "lock": {},
+  "modified": "2025-04-09T20:07:24+00:00",
+  "review_state": null,
+  "rights": "",
+  "subjects": [],
+  "title": "icone-fala-br.jpeg",
+  "type_title": "Image",
+  "version": "current",
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}

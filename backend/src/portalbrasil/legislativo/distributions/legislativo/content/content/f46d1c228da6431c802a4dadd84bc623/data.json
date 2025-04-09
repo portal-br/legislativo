@@ -1,0 +1,140 @@
+{
+  "@id": "/institucional/estrutura-organizacional",
+  "@type": "Document",
+  "UID": "f46d1c228da6431c802a4dadd84bc623",
+  "allow_discussion": null,
+  "blocks": {
+    "3f22243a-f4c4-4e13-9f2d-fc7bbe5bdce3": {
+      "@type": "slate",
+      "plaintext": "Mesa da C\u00e2mara Comiss\u00e3o Executiva Diretoria-Geral Diretoria de Licita\u00e7\u00f5es Diretoria Cont\u00e1bil Financeira Presid\u00eancia",
+      "styles": {},
+      "theme": "default",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": "Mesa da C\u00e2mara"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "Comiss\u00e3o Executiva"
+                    }
+                  ],
+                  "type": "li"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "Diretoria-Geral"
+                        }
+                      ],
+                      "type": "li"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "text": "Diretoria de Licita\u00e7\u00f5es"
+                            }
+                          ],
+                          "type": "li"
+                        },
+                        {
+                          "children": [
+                            {
+                              "text": "Diretoria Cont\u00e1bil Financeira"
+                            }
+                          ],
+                          "type": "li"
+                        }
+                      ],
+                      "type": "ul"
+                    }
+                  ],
+                  "type": "ul"
+                },
+                {
+                  "children": [
+                    {
+                      "text": "Presid\u00eancia"
+                    }
+                  ],
+                  "type": "li"
+                }
+              ],
+              "type": "ul"
+            }
+          ],
+          "type": "ul"
+        }
+      ]
+    },
+    "88fd3190-adc1-469a-9fdb-9a8310f0d3eb": {
+      "@type": "slate"
+    },
+    "b47da36b-4d7f-44ca-bf09-9b0bf284b89e": {
+      "@type": "title"
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "b47da36b-4d7f-44ca-bf09-9b0bf284b89e",
+      "3f22243a-f4c4-4e13-9f2d-fc7bbe5bdce3",
+      "88fd3190-adc1-469a-9fdb-9a8310f0d3eb"
+    ]
+  },
+  "changeNote": "",
+  "contributors": [],
+  "created": "2025-04-09T20:11:14+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "",
+  "effective": null,
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "estrutura-organizacional",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "document_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-04-09T20:11:14+00:00",
+  "preview_caption": null,
+  "preview_image": null,
+  "review_state": "private",
+  "rights": "",
+  "subjects": [],
+  "title": "Estrutura Organizacional",
+  "type_title": "Page",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2025-04-09T20:11:14+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

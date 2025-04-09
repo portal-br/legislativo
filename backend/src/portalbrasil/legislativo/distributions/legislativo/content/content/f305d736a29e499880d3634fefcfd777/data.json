@@ -1,0 +1,1011 @@
+{
+  "@id": "/acessibilidade",
+  "@type": "Document",
+  "UID": "f305d736a29e499880d3634fefcfd777",
+  "allow_discussion": null,
+  "blocks": {
+    "084dfa57-8a89-45db-a041-f7ade7d11aa2": {
+      "@type": "slate",
+      "plaintext": "Dictanote\u00a0Demo note - \u00c9 um\u00a0programa\u00a0de\u00a0reconhecimento\u00a0de\u00a0fala\u00a0totalmente\u00a0online,\u00a0gratuito,\u00a0admite\u00a0pontua\u00e7\u00e3o,\u00a0permite\u00a0que\u00a0voc\u00ea\u00a0programe\u00a0a\u00a0pontua\u00e7\u00e3o\u00a0e\u00a0frases\u00a0padr\u00e3o, e\u00a0oferece\u00a0tamb\u00e9m\u00a0a\u00a0op\u00e7\u00e3o\u00a0de\u00a0reconhecimento\u00a0de\u00a0fala\u00a0de\u00a0outras\u00a0l\u00ednguas\u00a0nativas,\u00a0acesse\u00a0a\u00a0p\u00e1gina dictanote .",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "Dictanote\u00a0Demo note - \u00c9 um\u00a0programa\u00a0de\u00a0reconhecimento\u00a0de\u00a0fala\u00a0totalmente\u00a0online,\u00a0gratuito,\u00a0admite\u00a0pontua\u00e7\u00e3o,\u00a0permite\u00a0que\u00a0voc\u00ea\u00a0programe\u00a0a\u00a0pontua\u00e7\u00e3o\u00a0e\u00a0frases\u00a0padr\u00e3o, e\u00a0oferece\u00a0tamb\u00e9m\u00a0a\u00a0op\u00e7\u00e3o\u00a0de\u00a0reconhecimento\u00a0de\u00a0fala\u00a0de\u00a0outras\u00a0l\u00ednguas\u00a0nativas,\u00a0acesse\u00a0a\u00a0p\u00e1gina\u00a0"
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": "dictanote"
+                        }
+                      ],
+                      "data": {
+                        "url": "https://dictanote.co/"
+                      },
+                      "type": "link"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            }
+          ],
+          "type": "ul"
+        }
+      ]
+    },
+    "0935b83b-7f2d-4c39-96c1-01c393c76af0": {
+      "@type": "slate",
+      "plaintext": "O dispositivo ReCaptcha \u00e9 lido pela\u00a0maioria dos softwares que pessoas com defici\u00eancia visual rotineiramente usam para acesso aos conte\u00fados da rede. Essa solu\u00e7\u00e3o foi adotada pelo Senado em 2019 e atende ao eMAG (*), padr\u00e3o governamental de acessibilidade.",
+      "styles": {},
+      "theme": "default",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "O dispositivo ReCaptcha \u00e9 lido pela\u00a0maioria dos softwares que pessoas com defici\u00eancia visual rotineiramente usam para acesso aos conte\u00fados da rede. Essa solu\u00e7\u00e3o foi adotada pelo Senado em 2019 e atende ao eMAG (*), padr\u00e3o governamental de acessibilidade."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "2b98e2a7-9be4-4d9c-9adb-35f9289e843f": {
+      "@type": "slate",
+      "plaintext": "Reconhecimento\u00a0de\u00a0fala",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Reconhecimento\u00a0de\u00a0fala"
+            }
+          ],
+          "type": "h3"
+        }
+      ]
+    },
+    "2e532e0a-ca44-4da7-b133-e44c50beed21": {
+      "@type": "slate",
+      "plaintext": "Atualmente\u00a0os\u00a0navegadores\u00a0costumam\u00a0trazer\u00a0integrada\u00a0ferramenta de\u00a0amplia\u00e7\u00e3o\u00a0ou\u00a0redu\u00e7\u00e3o\u00a0de\u00a0textos,\u00a0conhecida\u00a0como\u00a0zoom.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Atualmente\u00a0os\u00a0navegadores\u00a0costumam\u00a0trazer\u00a0integrada\u00a0ferramenta de\u00a0amplia\u00e7\u00e3o\u00a0ou\u00a0redu\u00e7\u00e3o\u00a0de\u00a0textos,\u00a0conhecida\u00a0como\u00a0zoom."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "33b53cb9-de3a-40fd-9174-25f69c753c4b": {
+      "@type": "slate",
+      "plaintext": "a\u00a0tecla\u00a0ALT para\u00a0os\u00a0navegadores\u00a0Internet Explorer, Google Chrome e Safari no Microsoft Windows as\u00a0teclas\u00a0SHIFT e ALT,\u00a0simultaneamente, para o\u00a0navegador\u00a0Mozilla Firefox no Windows\u00a0ou\u00a0Linux",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "a\u00a0tecla\u00a0ALT para\u00a0os\u00a0navegadores\u00a0Internet Explorer, Google Chrome e Safari no Microsoft Windows"
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "as\u00a0teclas\u00a0SHIFT e ALT,\u00a0simultaneamente, para o\u00a0navegador\u00a0Mozilla Firefox no Windows\u00a0ou\u00a0Linux"
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            }
+          ],
+          "type": "ul"
+        }
+      ]
+    },
+    "42c2eb71-8498-4b51-896d-1dd5daf04a83": {
+      "@type": "slate",
+      "plaintext": "Alguns\u00a0programas\u00a0permitem\u00a0que\u00a0o\u00a0ponteiro\u00a0do mouse\u00a0seja\u00a0controlado\u00a0por\u00a0meio\u00a0de\u00a0movimentos\u00a0da\u00a0cabe\u00e7a.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Alguns\u00a0programas\u00a0permitem\u00a0que\u00a0o\u00a0ponteiro\u00a0do mouse\u00a0seja\u00a0controlado\u00a0por\u00a0meio\u00a0de\u00a0movimentos\u00a0da\u00a0cabe\u00e7a."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "49f1ec7d-5128-46e5-bc0a-e4a5f560d261": {
+      "@type": "slate",
+      "plaintext": "A tecnologia usada nesses casos \u00e9 a \"reCaptcha\", do Google, que n\u00e3o exige digita\u00e7\u00e3o de caracteres ou sele\u00e7\u00e3o de imagens, mas apenas a marca\u00e7\u00e3o de um bot\u00e3o, que valida a intera\u00e7\u00e3o humana e comprova que n\u00e3o se trata de rob\u00f4. O Senado considera a cautela relevante, visto que a plataforma\u00a0e-Cidadania habilita a pessoa, uma vez identificada, a opinar nas mat\u00e9rias legislativas em debate, sugerindo emendas, propondo projetos de lei e participando de audi\u00eancias p\u00fablicas.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "A tecnologia usada nesses casos \u00e9 a \"reCaptcha\", do Google, que n\u00e3o exige digita\u00e7\u00e3o de caracteres ou sele\u00e7\u00e3o de imagens, mas apenas a marca\u00e7\u00e3o de um bot\u00e3o, que valida a intera\u00e7\u00e3o humana e comprova que n\u00e3o se trata de rob\u00f4. O Senado considera a cautela relevante, visto que a plataforma\u00a0e-Cidadania habilita a pessoa, uma vez identificada, a opinar nas mat\u00e9rias legislativas em debate, sugerindo emendas, propondo projetos de lei e participando de audi\u00eancias p\u00fablicas."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "4d059bdd-42bf-4017-81b5-59a9166824e8": {
+      "@type": "title"
+    },
+    "54772bc9-5b25-455c-9b3a-bba5da8f9de7": {
+      "@type": "slate",
+      "plaintext": "Os\u00a0leitores\u00a0de\u00a0tela\u00a0s\u00e3o\u00a0programas\u00a0de\u00a0computador\u00a0projetados\u00a0para\u00a0serem\u00a0utilizados\u00a0por\u00a0pessoas\u00a0com\u00a0defici\u00eancia\u00a0visual. Eles\u00a0capturam\u00a0a\u00a0informa\u00e7\u00e3o\u00a0apresentada\u00a0na\u00a0tela\u00a0e a\u00a0transformam\u00a0em\u00a0\u00e1udio. A\u00a0navega\u00e7\u00e3o\u00a0\u00e9\u00a0feita\u00a0com o\u00a0teclado,\u00a0na\u00a0maioria\u00a0das\u00a0vezes\u00a0sem\u00a0a\u00a0necessidade\u00a0de mouse\u00a0ou\u00a0de monitor. O\u00a0\u00e1udio\u00a0\u00e9\u00a0emitido\u00a0por\u00a0meio\u00a0da\u00a0placa\u00a0de\u00a0som\u00a0do\u00a0computador.\u00a0Podem\u00a0ser\u00a0gratuitos\u00a0ou\u00a0pagos. A\u00a0seguir,\u00a0listamos\u00a0alguns\u00a0dos\u00a0leitores\u00a0de\u00a0tela\u00a0mais\u00a0populares.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Os\u00a0leitores\u00a0de\u00a0tela\u00a0s\u00e3o\u00a0programas\u00a0de\u00a0computador\u00a0projetados\u00a0para\u00a0serem\u00a0utilizados\u00a0por\u00a0pessoas\u00a0com\u00a0defici\u00eancia\u00a0visual. Eles\u00a0capturam\u00a0a\u00a0informa\u00e7\u00e3o\u00a0apresentada\u00a0na\u00a0tela\u00a0e a\u00a0transformam\u00a0em\u00a0\u00e1udio. A\u00a0navega\u00e7\u00e3o\u00a0\u00e9\u00a0feita\u00a0com o\u00a0teclado,\u00a0na\u00a0maioria\u00a0das\u00a0vezes\u00a0sem\u00a0a\u00a0necessidade\u00a0de mouse\u00a0ou\u00a0de monitor. O\u00a0\u00e1udio\u00a0\u00e9\u00a0emitido\u00a0por\u00a0meio\u00a0da\u00a0placa\u00a0de\u00a0som\u00a0do\u00a0computador.\u00a0Podem\u00a0ser\u00a0gratuitos\u00a0ou\u00a0pagos. A\u00a0seguir,\u00a0listamos\u00a0alguns\u00a0dos\u00a0leitores\u00a0de\u00a0tela\u00a0mais\u00a0populares."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "5eeb8bfc-2f96-42cc-b191-319ea08782ef": {
+      "@type": "slate",
+      "plaintext": "eViaCam\nSoftware de\u00a0c\u00f3digo\u00a0aberto\u00a0dispon\u00edvel\u00a0para\u00a0os\u00a0sistemas\u00a0operacionais\u00a0Windows e Linux. O clique do mouse \u00e9\u00a0acionado\u00a0fixando-se por\u00a0alguns\u00a0segundos\u00a0o\u00a0ponteiro\u00a0do mouse\u00a0na\u00a0regi\u00e3o\u00a0desejada\u00a0da\u00a0tela.\u00a0Fa\u00e7a\u00a0o download\u00a0acessando\u00a0a p\u00e1gina do eViaCam . HeadMouse\nSoftware\u00a0gratuito\u00a0desenvolvido\u00a0pela Escola\u00a0Polit\u00e9cnica\u00a0Superior da\u00a0Universidade\u00a0de Lleida,\u00a0na\u00a0Espanha. \u00c9\u00a0poss\u00edvel\u00a0configurar\u00a0diferentes\u00a0movimentos\u00a0para o clique\u00a0do\u00a0mouse.\u00a0Fa\u00e7a\u00a0o download\u00a0acessando\u00a0a p\u00e1gina do Grupo de Investiga\u00e7\u00e3o em Rob\u00f3tica da Universidade de Lleida .",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "eViaCam\nSoftware de\u00a0c\u00f3digo\u00a0aberto\u00a0dispon\u00edvel\u00a0para\u00a0os\u00a0sistemas\u00a0operacionais\u00a0Windows e Linux. O clique do mouse \u00e9\u00a0acionado\u00a0fixando-se por\u00a0alguns\u00a0segundos\u00a0o\u00a0ponteiro\u00a0do mouse\u00a0na\u00a0regi\u00e3o\u00a0desejada\u00a0da\u00a0tela.\u00a0Fa\u00e7a\u00a0o download\u00a0acessando\u00a0a\u00a0"
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": "p\u00e1gina do eViaCam"
+                        }
+                      ],
+                      "data": {
+                        "url": "https://eviacam.crea-si.com/"
+                      },
+                      "type": "link"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "HeadMouse\nSoftware\u00a0gratuito\u00a0desenvolvido\u00a0pela Escola\u00a0Polit\u00e9cnica\u00a0Superior da\u00a0Universidade\u00a0de Lleida,\u00a0na\u00a0Espanha. \u00c9\u00a0poss\u00edvel\u00a0configurar\u00a0diferentes\u00a0movimentos\u00a0para o clique\u00a0do\u00a0mouse.\u00a0Fa\u00e7a\u00a0o download\u00a0acessando\u00a0a\u00a0"
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": "p\u00e1gina do Grupo de Investiga\u00e7\u00e3o em Rob\u00f3tica da Universidade de Lleida"
+                        }
+                      ],
+                      "data": {
+                        "url": "http://robotica.udl.cat/"
+                      },
+                      "type": "link"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            }
+          ],
+          "type": "ul"
+        }
+      ]
+    },
+    "5f6e496f-bce8-4445-a025-a1b9be79035a": {
+      "@type": "slate",
+      "plaintext": " reCaptcha - o conte\u00fado do Portal do Senado Federal \u00e9 aberto e livre. O\u00a0login\u00a0s\u00f3\u00a0\u00e9 pedido em situa\u00e7\u00f5es nas quais \u00e9 necess\u00e1rio que o usu\u00e1rio se identifique, por exemplo, ao enviar mensagens pelo \u201cFale com o Senado\u201d ou ao participar dos debates legislativos, por meio da plataforma\u00a0e-Cidadania. Nesses casos, o formul\u00e1rio correspondente requer o uso de um bot\u00e3o de verifica\u00e7\u00e3o na tela de\u00a0login.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": "reCaptcha\u00a0"
+                }
+              ],
+              "type": "b"
+            },
+            {
+              "text": "- o conte\u00fado do Portal do Senado Federal \u00e9 aberto e livre. O\u00a0login\u00a0s\u00f3\u00a0\u00e9 pedido em situa\u00e7\u00f5es nas quais \u00e9 necess\u00e1rio que o usu\u00e1rio se identifique, por exemplo, ao enviar mensagens pelo \u201cFale com o Senado\u201d ou ao participar dos debates legislativos, por meio da plataforma\u00a0e-Cidadania. Nesses casos, o formul\u00e1rio correspondente requer o uso de um bot\u00e3o de verifica\u00e7\u00e3o na tela de\u00a0login."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "70e3d8fe-adba-4a22-82d6-007091a42f07": {
+      "@type": "slate",
+      "plaintext": "Utilize as\u00a0teclas\u00a0de\u00a0atalho\u00a0para\u00a0ir\u00a0diretamente\u00a0a\u00a0alguns\u00a0pontos\u00a0do Portal.\u00a0Os\u00a0atalhos\u00a0s\u00e3o\u00a0acionados\u00a0pela\u00a0combina\u00e7\u00e3o\u00a0de\u00a0duas\u00a0ou\u00a0mais\u00a0teclas. As\u00a0teclas\u00a0de\u00a0atalho\u00a0dependem\u00a0do\u00a0sistema\u00a0operacional\u00a0(Microsoft Windows, Mac OS, Linux, DOS\u00a0ou\u00a0outros) e do\u00a0navegador\u00a0(Internet Explorer, Google Chrome, Mozilla Firefox, Safari) que\u00a0voc\u00ea\u00a0usa. Informe-se\u00a0sobre\u00a0as\u00a0configura\u00e7\u00f5es\u00a0do\u00a0seu\u00a0computador\u00a0caso\u00a0as\u00a0recomenda\u00e7\u00f5es\u00a0a\u00a0seguir\u00a0n\u00e3o\u00a0ajudem.",
+      "styles": {},
+      "theme": "default",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Utilize as\u00a0teclas\u00a0de\u00a0atalho\u00a0para\u00a0ir\u00a0diretamente\u00a0a\u00a0alguns\u00a0pontos\u00a0do Portal.\u00a0Os\u00a0atalhos\u00a0s\u00e3o\u00a0acionados\u00a0pela\u00a0combina\u00e7\u00e3o\u00a0de\u00a0duas\u00a0ou\u00a0mais\u00a0teclas. As\u00a0teclas\u00a0de\u00a0atalho\u00a0dependem\u00a0do\u00a0sistema\u00a0operacional\u00a0(Microsoft Windows, Mac OS, Linux, DOS\u00a0ou\u00a0outros) e do\u00a0navegador\u00a0(Internet Explorer, Google Chrome, Mozilla Firefox, Safari) que\u00a0voc\u00ea\u00a0usa. Informe-se\u00a0sobre\u00a0as\u00a0configura\u00e7\u00f5es\u00a0do\u00a0seu\u00a0computador\u00a0caso\u00a0as\u00a0recomenda\u00e7\u00f5es\u00a0a\u00a0seguir\u00a0n\u00e3o\u00a0ajudem."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "89c01c2b-d5a3-4145-8b3a-98ae92f3dd64": {
+      "@type": "slate",
+      "plaintext": "pressione\u00a0a\u00a0tecla\u00a0CTRL e\u00a0digite\u00a0a\u00a0tecla\u00a0+ (mais) para\u00a0aumentar pressione\u00a0a\u00a0tecla\u00a0CTRL e\u00a0digite\u00a0a\u00a0tecla\u00a0- (menos) para\u00a0diminuir pressione\u00a0a\u00a0tecla\u00a0CTRL e\u00a0digite\u00a0a\u00a0tecla\u00a00 (zero) para\u00a0restaurar\u00a0o\u00a0tamanho\u00a0original da\u00a0p\u00e1gina",
+      "styles": {},
+      "theme": "default",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "pressione\u00a0a\u00a0tecla\u00a0CTRL e\u00a0digite\u00a0a\u00a0tecla\u00a0+ (mais) para\u00a0aumentar"
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "pressione\u00a0a\u00a0tecla\u00a0CTRL e\u00a0digite\u00a0a\u00a0tecla\u00a0- (menos) para\u00a0diminuir"
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "pressione\u00a0a\u00a0tecla\u00a0CTRL e\u00a0digite\u00a0a\u00a0tecla\u00a00 (zero) para\u00a0restaurar\u00a0o\u00a0tamanho\u00a0original da\u00a0p\u00e1gina"
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            }
+          ],
+          "type": "ul"
+        }
+      ]
+    },
+    "8dd829ed-7a0a-4ca4-ac10-97c335981f57": {
+      "@type": "slate",
+      "plaintext": "JAWS\nO JAWS (Job\u00a0Acess\u00a0With Speech) \u00e9 um\u00a0programa\u00a0de\u00a0leitura\u00a0de\u00a0tela\u00a0desenvolvido\u00a0pela\u00a0empresa\u00a0norte-americana Freedom Scientific para\u00a0plataforma\u00a0Windows. Para saber\u00a0mais,\u00a0acesse\u00a0a p\u00e1gina do JAWS para Windows . Virtual Vision\nPrograma\u00a0de\u00a0leitura\u00a0de\u00a0tela\u00a0desenvolvido\u00a0pela\u00a0empresa\u00a0brasileira\u00a0MicroPower\u00a0para\u00a0ambiente\u00a0Windows. Para saber\u00a0mais,\u00a0acesse\u00a0a p\u00e1gina do Virtual Vision .",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "JAWS\nO JAWS (Job\u00a0Acess\u00a0With Speech) \u00e9 um\u00a0programa\u00a0de\u00a0leitura\u00a0de\u00a0tela\u00a0desenvolvido\u00a0pela\u00a0empresa\u00a0norte-americana Freedom Scientific para\u00a0plataforma\u00a0Windows. Para saber\u00a0mais,\u00a0acesse\u00a0a\u00a0"
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": "p\u00e1gina do JAWS para Windows"
+                        }
+                      ],
+                      "data": {
+                        "url": "http://www.freedomscientific.com/products/fs/JAWS-product-page.asp"
+                      },
+                      "type": "link"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "Virtual Vision\nPrograma\u00a0de\u00a0leitura\u00a0de\u00a0tela\u00a0desenvolvido\u00a0pela\u00a0empresa\u00a0brasileira\u00a0MicroPower\u00a0para\u00a0ambiente\u00a0Windows. Para saber\u00a0mais,\u00a0acesse\u00a0a\u00a0"
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": "p\u00e1gina do Virtual Vision"
+                        }
+                      ],
+                      "data": {
+                        "url": "https://www.virtualvision.com.br/"
+                      },
+                      "type": "link"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            }
+          ],
+          "type": "ul"
+        }
+      ]
+    },
+    "90115cb9-e589-45f0-9e6d-96cc65338848": {
+      "@type": "slate",
+      "plaintext": "Tradu\u00e7\u00e3o\u00a0autom\u00e1tica\u00a0de\u00a0conte\u00fados\u00a0de\u00a0L\u00edngua\u00a0Portuguesa para a Libras e/ou\u00a0para\u00a0Legendas\u00a0em\u00a0L\u00edngua\u00a0Portuguesa:",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Tradu\u00e7\u00e3o\u00a0autom\u00e1tica\u00a0de\u00a0conte\u00fados\u00a0de\u00a0L\u00edngua\u00a0Portuguesa para a Libras e/ou\u00a0para\u00a0Legendas\u00a0em\u00a0L\u00edngua\u00a0Portuguesa:"
+            }
+          ],
+          "type": "h3"
+        }
+      ]
+    },
+    "934b3e5f-6ca6-4080-926b-4e52a17953e5": {
+      "@type": "slate",
+      "plaintext": "Mantendo\u00a0essas\u00a0teclas\u00a0pressionadas,\u00a0digite\u00a0tamb\u00e9m\u00a0um dos\u00a0seguintes\u00a0n\u00fameros\u00a0para\u00a0ir\u00a0direto\u00a0ao\u00a0ponto\u00a0(n\u00e3o\u00a0use o\u00a0teclado\u00a0num\u00e9rico,\u00a0geralmente\u00a0\u00e0\u00a0direita\u00a0do\u00a0seu\u00a0teclado):",
+      "styles": {},
+      "theme": "default",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Mantendo\u00a0essas\u00a0teclas\u00a0pressionadas,\u00a0digite\u00a0tamb\u00e9m\u00a0um dos\u00a0seguintes\u00a0n\u00fameros\u00a0para\u00a0ir\u00a0direto\u00a0ao\u00a0ponto\u00a0(n\u00e3o\u00a0use o\u00a0teclado\u00a0num\u00e9rico,\u00a0geralmente\u00a0\u00e0\u00a0direita\u00a0do\u00a0seu\u00a0teclado):"
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "96124f59-5a03-48f6-8e8a-46f5ea4964cd": {
+      "@type": "slate",
+      "plaintext": "As\u00a0instru\u00e7\u00f5es\u00a0a\u00a0seguir\u00a0podem\u00a0facilitar\u00a0a\u00a0navega\u00e7\u00e3o.",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "As\u00a0instru\u00e7\u00f5es\u00a0a\u00a0seguir\u00a0podem\u00a0facilitar\u00a0a\u00a0navega\u00e7\u00e3o."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "961f6301-f01c-4a01-95a3-d6934c46d04a": {
+      "@type": "slate",
+      "plaintext": "tecla\u00a01 -\u00a0P\u00e1gina\u00a0inicial\u00a0do Portal tecla\u00a02 -\u00a0Conte\u00fado\u00a0principal da\u00a0p\u00e1gina\u00a0corrente tecla\u00a03 - Mapa das\u00a0principais\u00a0sess\u00f5es\u00a0do Portal tecla\u00a04 - Campo de\u00a0busca\u00a0geral\u00a0do Portal tecla 5 \u2013 Fale com o Senado",
+      "styles": {},
+      "theme": "default",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "tecla\u00a01 -\u00a0P\u00e1gina\u00a0inicial\u00a0do Portal"
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "tecla\u00a02 -\u00a0Conte\u00fado\u00a0principal da\u00a0p\u00e1gina\u00a0corrente"
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "tecla\u00a03 - Mapa das\u00a0principais\u00a0sess\u00f5es\u00a0do Portal"
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "tecla\u00a04 - Campo de\u00a0busca\u00a0geral\u00a0do Portal"
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "tecla 5 \u2013 Fale com o Senado"
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            }
+          ],
+          "type": "ul"
+        }
+      ]
+    },
+    "9897a14e-d535-46e5-97f4-18d658489489": {
+      "@type": "slate",
+      "plaintext": " Teclas\u00a0de\u00a0atalho ",
+      "value": [
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": "Teclas\u00a0de\u00a0atalho"
+                }
+              ],
+              "type": "b"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "type": "h3"
+        }
+      ]
+    },
+    "bacecdd0-71f4-44fb-b136-f28ecc57f516": {
+      "@type": "slate",
+      "plaintext": "DOSVOX\nDesenvolvido\u00a0pelo\u00a0N\u00facleo\u00a0de\u00a0Computa\u00e7\u00e3o\u00a0Eletr\u00f4nica\u00a0da\u00a0Universidade\u00a0Federal do Rio de Janeiro (UFRJ), o DOSVOX\u00a0n\u00e3o\u00a0\u00e9\u00a0apenas\u00a0um\u00a0leitor\u00a0de\u00a0telas\u00a0e sim um\u00a0sistema\u00a0operacional\u00a0completo\u00a0que\u00a0roda\u00a0em\u00a0Windows. Para\u00a0baixar,\u00a0acesse\u00a0a p\u00e1gina do Projeto DOSVOX . NVDA\nDesenvolvido\u00a0pela\u00a0organiza\u00e7\u00e3o\u00a0sem\u00a0fins\u00a0lucrativos\u00a0NV Access, \u00e9 um\u00a0programa\u00a0de\u00a0leitura\u00a0de\u00a0tela\u00a0gratuito\u00a0e de\u00a0c\u00f3digo\u00a0aberto. O NVDA (NonVisual\u00a0Desktop Access)\u00a0n\u00e3o\u00a0precisa\u00a0ser\u00a0instalado\u00a0no\u00a0sistema,\u00a0pode\u00a0estar\u00a0em\u00a0um\u00a0dispositivo\u00a0remov\u00edvel,\u00a0como\u00a0um\u00a0pendrive\u00a0por\u00a0exemplo. Para\u00a0baixar,\u00a0acesse\u00a0a p\u00e1gina de download do NVDA . Orca\nSoftware de\u00a0c\u00f3digo\u00a0aberto\u00a0desenvolvido\u00a0para o\u00a0sistema\u00a0operacional\u00a0Linux.\u00a0Al\u00e9m\u00a0de\u00a0leitor\u00a0de\u00a0tela, \u00e9\u00a0tamb\u00e9m\u00a0um\u00a0ampliador\u00a0de\u00a0tela,\u00a0possibilitando\u00a0a\u00a0utiliza\u00e7\u00e3o\u00a0de\u00a0apenas\u00a0um\u00a0programa\u00a0para\u00a0tornar\u00a0o\u00a0sistema\u00a0acess\u00edvel. Para\u00a0obter\u00a0informa\u00e7\u00f5es\u00a0sobre\u00a0como\u00a0baixar\u00a0e\u00a0instalar,\u00a0acesse\u00a0a p\u00e1gina do Orca . VoiceOver\nAplicativo\u00a0de\u00a0leitura\u00a0de\u00a0tela\u00a0que\u00a0vem\u00a0integrado\u00a0ao\u00a0sistema\u00a0operacional\u00a0dos\u00a0computadores\u00a0da Apple (Mac OS X). Para saber\u00a0mais,\u00a0acesse\u00a0a p\u00e1gina do VoiceOver .",
+      "styles": {},
+      "theme": "default",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "DOSVOX\nDesenvolvido\u00a0pelo\u00a0N\u00facleo\u00a0de\u00a0Computa\u00e7\u00e3o\u00a0Eletr\u00f4nica\u00a0da\u00a0Universidade\u00a0Federal do Rio de Janeiro (UFRJ), o DOSVOX\u00a0n\u00e3o\u00a0\u00e9\u00a0apenas\u00a0um\u00a0leitor\u00a0de\u00a0telas\u00a0e sim um\u00a0sistema\u00a0operacional\u00a0completo\u00a0que\u00a0roda\u00a0em\u00a0Windows. Para\u00a0baixar,\u00a0acesse\u00a0a\u00a0"
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": "p\u00e1gina do Projeto DOSVOX"
+                        }
+                      ],
+                      "data": {
+                        "url": "http://intervox.nce.ufrj.br/dosvox/"
+                      },
+                      "type": "link"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "NVDA\nDesenvolvido\u00a0pela\u00a0organiza\u00e7\u00e3o\u00a0sem\u00a0fins\u00a0lucrativos\u00a0NV Access, \u00e9 um\u00a0programa\u00a0de\u00a0leitura\u00a0de\u00a0tela\u00a0gratuito\u00a0e de\u00a0c\u00f3digo\u00a0aberto. O NVDA (NonVisual\u00a0Desktop Access)\u00a0n\u00e3o\u00a0precisa\u00a0ser\u00a0instalado\u00a0no\u00a0sistema,\u00a0pode\u00a0estar\u00a0em\u00a0um\u00a0dispositivo\u00a0remov\u00edvel,\u00a0como\u00a0um\u00a0pendrive\u00a0por\u00a0exemplo. Para\u00a0baixar,\u00a0acesse\u00a0a\u00a0"
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": "p\u00e1gina de download do NVDA"
+                        }
+                      ],
+                      "data": {
+                        "url": "http://www.nvaccess.org/download/"
+                      },
+                      "type": "link"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "Orca\nSoftware de\u00a0c\u00f3digo\u00a0aberto\u00a0desenvolvido\u00a0para o\u00a0sistema\u00a0operacional\u00a0Linux.\u00a0Al\u00e9m\u00a0de\u00a0leitor\u00a0de\u00a0tela, \u00e9\u00a0tamb\u00e9m\u00a0um\u00a0ampliador\u00a0de\u00a0tela,\u00a0possibilitando\u00a0a\u00a0utiliza\u00e7\u00e3o\u00a0de\u00a0apenas\u00a0um\u00a0programa\u00a0para\u00a0tornar\u00a0o\u00a0sistema\u00a0acess\u00edvel. Para\u00a0obter\u00a0informa\u00e7\u00f5es\u00a0sobre\u00a0como\u00a0baixar\u00a0e\u00a0instalar,\u00a0acesse\u00a0a\u00a0"
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": "p\u00e1gina do Orca"
+                        }
+                      ],
+                      "data": {
+                        "url": "https://wiki.gnome.org/Projects/Orca"
+                      },
+                      "type": "link"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "VoiceOver\nAplicativo\u00a0de\u00a0leitura\u00a0de\u00a0tela\u00a0que\u00a0vem\u00a0integrado\u00a0ao\u00a0sistema\u00a0operacional\u00a0dos\u00a0computadores\u00a0da Apple (Mac OS X). Para saber\u00a0mais,\u00a0acesse\u00a0a\u00a0"
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": "p\u00e1gina do VoiceOver"
+                        }
+                      ],
+                      "data": {
+                        "url": "http://www.apple.com/br/accessibility/voiceover"
+                      },
+                      "type": "link"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            }
+          ],
+          "type": "ul"
+        }
+      ]
+    },
+    "c0554dfc-f4e7-450d-af63-bc2d20688feb": {
+      "@type": "slate",
+      "plaintext": " Gratuitos: ",
+      "value": [
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": "Gratuitos:"
+                }
+              ],
+              "type": "b"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "c216bedf-a5d3-4efe-928d-fc1976bf6dd5": {
+      "@type": "slate",
+      "plaintext": " Algumas\u00a0op\u00e7\u00f5es\u00a0vendidas\u00a0no\u00a0Brasil: ",
+      "value": [
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": "Algumas\u00a0op\u00e7\u00f5es\u00a0vendidas\u00a0no\u00a0Brasil:"
+                }
+              ],
+              "type": "b"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "c46d1128-8605-4cd6-8e41-a543d4b174be": {
+      "@type": "slate",
+      "plaintext": " Para usar o\u00a0zoom\u00a0no Mac OS: ",
+      "value": [
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": "Para usar o\u00a0zoom\u00a0no Mac OS:"
+                }
+              ],
+              "type": "b"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "ca8e7cb1-2ff6-4fea-9b1b-e0c89123c1f9": {
+      "@type": "slate",
+      "plaintext": "Tamanho\u00a0do\u00a0texto",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "\nTamanho\u00a0do\u00a0texto"
+            }
+          ],
+          "type": "h3"
+        }
+      ]
+    },
+    "d0c20616-e6ae-495f-8b8c-6ba8b3a5e6e2": {
+      "@type": "slate",
+      "plaintext": "pressione\u00a0a\u00a0tecla\u00a0COMMAND e\u00a0digite\u00a0a\u00a0tecla\u00a0+ (mais) para\u00a0aumentar pressione\u00a0a\u00a0tecla\u00a0COMMAND e\u00a0digite\u00a0a\u00a0tecla\u00a0- (menos) para\u00a0diminuir pressione\u00a0a\u00a0tecla\u00a0COMMAND e\u00a0digite\u00a0a\u00a0tecla\u00a00 (zero) para\u00a0restaurar\u00a0o\u00a0tamanho\u00a0original da\u00a0p\u00e1gina",
+      "styles": {},
+      "theme": "default",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "pressione\u00a0a\u00a0tecla\u00a0COMMAND e\u00a0digite\u00a0a\u00a0tecla\u00a0+ (mais) para\u00a0aumentar"
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "pressione\u00a0a\u00a0tecla\u00a0COMMAND e\u00a0digite\u00a0a\u00a0tecla\u00a0- (menos) para\u00a0diminuir"
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "pressione\u00a0a\u00a0tecla\u00a0COMMAND e\u00a0digite\u00a0a\u00a0tecla\u00a00 (zero) para\u00a0restaurar\u00a0o\u00a0tamanho\u00a0original da\u00a0p\u00e1gina"
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            }
+          ],
+          "type": "ul"
+        }
+      ]
+    },
+    "d6859a74-86b0-4354-81aa-cc90843cfd73": {
+      "@type": "slate",
+      "plaintext": "VLibras\u00a0- \u00c9\u00a0uma\u00a0ferramenta\u00a0gratuita\u00a0de\u00a0c\u00f3digo\u00a0aberto\u00a0que\u00a0traduz\u00a0automaticamente\u00a0textos\u00a0em\u00a0L\u00edngua\u00a0Portuguesa para a\u00a0L\u00edngua\u00a0Brasileira de\u00a0Sinais\u00a0(Libras). O\u00a0VLibras\u00a0\u00e9\u00a0integrado\u00a0ao\u00a0Portal do\u00a0Senado\u00a0e\u00a0pode\u00a0ser\u00a0acessado\u00a0pelo\u00a0\u00edcone\u00a0de Libras,\u00a0localizado\u00a0no alto da\u00a0p\u00e1gina, \u00e0\u00a0direita. O\u00a0programa\u00a0tem\u00a0vers\u00f5es\u00a0para\u00a0desktops,\u00a0smartphones\u00a0e\u00a0tablets, e\u00a0tamb\u00e9m\u00a0oferece\u00a0uma\u00a0plataforma\u00a0colaborativa\u00a0para\u00a0constru\u00e7\u00e3o\u00a0de\u00a0dicion\u00e1rio\u00a0em\u00a0Libras (Wikilibras).\u00a0Fa\u00e7a\u00a0o\u00a0download\u00a0acessando\u00a0a\u00a0p\u00e1gina Conhe\u00e7a o VLibras .",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "VLibras\u00a0- \u00c9\u00a0uma\u00a0ferramenta\u00a0gratuita\u00a0de\u00a0c\u00f3digo\u00a0aberto\u00a0que\u00a0traduz\u00a0automaticamente\u00a0textos\u00a0em\u00a0L\u00edngua\u00a0Portuguesa para a\u00a0L\u00edngua\u00a0Brasileira de\u00a0Sinais\u00a0(Libras). O\u00a0VLibras\u00a0\u00e9\u00a0integrado\u00a0ao\u00a0Portal do\u00a0Senado\u00a0e\u00a0pode\u00a0ser\u00a0acessado\u00a0pelo\u00a0\u00edcone\u00a0de Libras,\u00a0localizado\u00a0no alto da\u00a0p\u00e1gina, \u00e0\u00a0direita. O\u00a0programa\u00a0tem\u00a0vers\u00f5es\u00a0para\u00a0desktops,\u00a0smartphones\u00a0e\u00a0tablets, e\u00a0tamb\u00e9m\u00a0oferece\u00a0uma\u00a0plataforma\u00a0colaborativa\u00a0para\u00a0constru\u00e7\u00e3o\u00a0de\u00a0dicion\u00e1rio\u00a0em\u00a0Libras (Wikilibras).\u00a0Fa\u00e7a\u00a0o\u00a0download\u00a0acessando\u00a0a\u00a0p\u00e1gina\u00a0"
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": "Conhe\u00e7a o VLibras"
+                        }
+                      ],
+                      "data": {
+                        "url": "http://www.vlibras.gov.br/"
+                      },
+                      "type": "link"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            }
+          ],
+          "type": "ul"
+        }
+      ]
+    },
+    "e0b66d47-f2e3-4075-837a-a7cfff8a8157": {
+      "@type": "slate",
+      "plaintext": " Para usar o\u00a0zoom\u00a0no Microsoft Windows\u00a0ou\u00a0no Linux: ",
+      "value": [
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": "Para usar o\u00a0zoom\u00a0no Microsoft Windows\u00a0ou\u00a0no Linux:"
+                }
+              ],
+              "type": "b"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "e7ac0286-e109-46ee-8166-a5d86bbbc8e2": {
+      "@type": "slate",
+      "plaintext": "Mouse\u00a0controlado\u00a0por\u00a0movimentos\u00a0da\u00a0cabe\u00e7a",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Mouse\u00a0controlado\u00a0por\u00a0movimentos\u00a0da\u00a0cabe\u00e7a"
+            }
+          ],
+          "type": "h3"
+        }
+      ]
+    },
+    "e7b1b67d-7ed8-479c-b5f8-8df3b5f4c40d": {
+      "@type": "slate",
+      "plaintext": "a\u00a0tecla\u00a0COMMAND para o\u00a0sistema\u00a0operacional\u00a0Mac OS",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "text": "a\u00a0tecla\u00a0COMMAND para o\u00a0sistema\u00a0operacional\u00a0Mac OS"
+                    }
+                  ],
+                  "type": "p"
+                }
+              ],
+              "type": "li"
+            }
+          ],
+          "type": "ul"
+        }
+      ]
+    },
+    "eb848010-9ffd-4318-9fc1-5ff199318865": {
+      "@type": "slate",
+      "plaintext": "Leitores\u00a0de\u00a0tela",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Leitores\u00a0de\u00a0tela"
+            }
+          ],
+          "type": "h3"
+        }
+      ]
+    },
+    "f4d372b5-eb25-4632-a2a2-0294704d43af": {
+      "@type": "slate",
+      "plaintext": "As\u00a0configura\u00e7\u00f5es\u00a0mais\u00a0comuns\u00a0s\u00e3o:",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "As\u00a0configura\u00e7\u00f5es\u00a0mais\u00a0comuns\u00a0s\u00e3o:"
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "4d059bdd-42bf-4017-81b5-59a9166824e8",
+      "96124f59-5a03-48f6-8e8a-46f5ea4964cd",
+      "9897a14e-d535-46e5-97f4-18d658489489",
+      "70e3d8fe-adba-4a22-82d6-007091a42f07",
+      "f4d372b5-eb25-4632-a2a2-0294704d43af",
+      "33b53cb9-de3a-40fd-9174-25f69c753c4b",
+      "e7b1b67d-7ed8-479c-b5f8-8df3b5f4c40d",
+      "934b3e5f-6ca6-4080-926b-4e52a17953e5",
+      "961f6301-f01c-4a01-95a3-d6934c46d04a",
+      "ca8e7cb1-2ff6-4fea-9b1b-e0c89123c1f9",
+      "2e532e0a-ca44-4da7-b133-e44c50beed21",
+      "e0b66d47-f2e3-4075-837a-a7cfff8a8157",
+      "89c01c2b-d5a3-4145-8b3a-98ae92f3dd64",
+      "c46d1128-8605-4cd6-8e41-a543d4b174be",
+      "d0c20616-e6ae-495f-8b8c-6ba8b3a5e6e2",
+      "eb848010-9ffd-4318-9fc1-5ff199318865",
+      "54772bc9-5b25-455c-9b3a-bba5da8f9de7",
+      "c0554dfc-f4e7-450d-af63-bc2d20688feb",
+      "bacecdd0-71f4-44fb-b136-f28ecc57f516",
+      "c216bedf-a5d3-4efe-928d-fc1976bf6dd5",
+      "8dd829ed-7a0a-4ca4-ac10-97c335981f57",
+      "e7ac0286-e109-46ee-8166-a5d86bbbc8e2",
+      "42c2eb71-8498-4b51-896d-1dd5daf04a83",
+      "5eeb8bfc-2f96-42cc-b191-319ea08782ef",
+      "2b98e2a7-9be4-4d9c-9adb-35f9289e843f",
+      "084dfa57-8a89-45db-a041-f7ade7d11aa2",
+      "90115cb9-e589-45f0-9e6d-96cc65338848",
+      "d6859a74-86b0-4354-81aa-cc90843cfd73",
+      "5f6e496f-bce8-4445-a025-a1b9be79035a",
+      "49f1ec7d-5128-46e5-bc0a-e4a5f560d261",
+      "0935b83b-7f2d-4c39-96c1-01c393c76af0"
+    ]
+  },
+  "changeNote": "",
+  "contributors": [],
+  "created": "2025-04-09T19:32:52+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "",
+  "effective": null,
+  "exclude_from_nav": true,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "acessibilidade",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "document_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-04-09T19:37:47+00:00",
+  "preview_caption": null,
+  "preview_image": null,
+  "review_state": "private",
+  "rights": "",
+  "subjects": [],
+  "title": "Acessibilidade",
+  "type_title": "Page",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2025-04-09T19:32:52+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}
