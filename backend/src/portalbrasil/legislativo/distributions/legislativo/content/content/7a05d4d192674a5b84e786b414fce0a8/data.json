@@ -1,0 +1,40 @@
+{
+  "@id": "/imagens/portalbrasil.png",
+  "@type": "Image",
+  "UID": "7a05d4d192674a5b84e786b414fce0a8",
+  "allow_discussion": null,
+  "contributors": [],
+  "created": "2025-04-05T19:52:31+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "",
+  "effective": null,
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "portalbrasil.png",
+  "image": {
+    "blob_path": "7a05d4d192674a5b84e786b414fce0a8/image/portalbrasil-wide-transp.png",
+    "content-type": "image/png",
+    "filename": "portalbrasil-wide-transp.png",
+    "height": 1080,
+    "size": 62036,
+    "width": 1920
+  },
+  "is_folderish": false,
+  "language": "##DEFAULT##",
+  "layout": "image_view",
+  "lock": {},
+  "modified": "2025-04-08T14:29:09+00:00",
+  "review_state": null,
+  "rights": "",
+  "subjects": [],
+  "title": "portalbrasil.png",
+  "type_title": "Image",
+  "version": "current",
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}

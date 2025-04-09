@@ -24,7 +24,9 @@ def answers():
 def create_site(app, distribution_name):
     def func(answers: dict) -> PloneSite:
         with api.env.adopt_user(SITE_OWNER_NAME):
-            site = site_api.create(app, distribution_name, answers)
+            site = site_api.create(
+                app, distribution_name, answers, profile_id="portalbrasil.core:base"
+            )
             setSite(site)
         return site
 

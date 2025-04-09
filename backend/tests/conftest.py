@@ -8,12 +8,13 @@ import pytest
 pytest_plugins = ["pytest_plone"]
 
 
-globals().update(
-    fixtures_factory((
-        (FUNCTIONAL_TESTING, "functional"),
-        (INTEGRATION_TESTING, "integration"),
-    ))
+FIXTURES = (
+    (FUNCTIONAL_TESTING, "functional"),
+    (INTEGRATION_TESTING, "integration"),
 )
+
+
+globals().update(fixtures_factory(FIXTURES))
 
 
 @pytest.fixture

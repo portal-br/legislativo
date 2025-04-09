@@ -20,16 +20,7 @@ node_modules/
 .installed.cfg
 .mr.developer.cfg
 .venv/
-bin/
-develop-eggs/
-eggs/
-etc/
-include/
-lib/
-lib64
-parts/
 pyvenv.cfg
-var/
 
 # mxdev
 .installed.txt

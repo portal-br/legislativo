@@ -29,7 +29,7 @@ endif
 
 PLONE_SITE_ID=Plone
 BACKEND_FOLDER=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
-PLONE_VERSION=$(shell cat $(BACKEND_FOLDER)/version.txt)
+PB_VERSION=$(shell cat $(BACKEND_FOLDER)/version.txt)
 BASE_CONTENT_FOLDER=${BACKEND_FOLDER}/src/portalbrasil/legislativo/setuphandlers/basecontent
 EXAMPLE_CONTENT_FOLDER=${BACKEND_FOLDER}/src/portalbrasil/legislativo/distributions/legislativo/content
 
@@ -157,6 +157,6 @@ test-coverage: $(VENV_FOLDER) ## run tests with coverage
 .PHONY: build-image
 build-image:  ## Build Docker Images
 	@echo "$(GREEN)==> Building $(IMAGE_NAME_PREFIX)-backend:$(IMAGE_TAG) $(RESET)"
-	@docker build . -t $(IMAGE_NAME_PREFIX)-backend:$(IMAGE_TAG) --progress plain -f Dockerfile --build-arg PLONE_VERSION=$(PLONE_VERSION)
+	@docker build . --platform linux/amd64 -t $(IMAGE_NAME_PREFIX)-backend:$(IMAGE_TAG) --progress plain -f Dockerfile --build-arg PB_VERSION=$(PB_VERSION)
 	@echo "$(GREEN)==> Building $(IMAGE_NAME_PREFIX)-demo:$(IMAGE_TAG) $(RESET)"
-	@docker build .  --pull=false -t $(IMAGE_NAME_PREFIX)-demo:$(IMAGE_TAG) -f Dockerfile.demo --build-arg IMAGE_TAG=$(IMAGE_TAG) --build-arg SEED=$(SEED)
+	@docker build .  --platform linux/amd64 --pull=false -t $(IMAGE_NAME_PREFIX)-demo:$(IMAGE_TAG) -f Dockerfile.demo --build-arg IMAGE_TAG=$(IMAGE_TAG) --build-arg SEED=$(SEED)

@@ -1,5 +1,5 @@
 {
-  "@id": "/images",
+  "@id": "/imagens",
   "@type": "Document",
   "UID": "a720393b3c0240e5bd27c43fcd2cfd1e",
   "allow_discussion": false,
@@ -22,13 +22,15 @@
           {
             "i": "path",
             "o": "plone.app.querystring.operation.string.absolutePath",
-            "v": "/images"
+            "v": "/imagens"
           }
         ],
         "sort_on": "getObjPositionInParent",
         "sort_order": "ascending",
         "sort_order_boolean": false
       },
+      "styles": {},
+      "theme": "default",
       "variation": "imageGallery"
     }
   },
@@ -50,7 +52,7 @@
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
-  "id": "images",
+  "id": "imagens",
   "is_folderish": true,
   "language": "##DEFAULT##",
   "layout": "document_view",
@@ -58,13 +60,13 @@
     "locked": false,
     "stealable": true
   },
-  "modified": "2024-05-27T03:26:27+00:00",
+  "modified": "2025-04-08T17:22:04+00:00",
   "preview_caption": null,
   "preview_image": null,
   "review_state": "published",
   "rights": "",
   "subjects": [],
-  "title": "Images",
+  "title": "Imagens",
   "type_title": "Page",
   "version": "current",
   "versioning_enabled": true,

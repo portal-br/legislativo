@@ -4,7 +4,7 @@ ARG SEED=1000
 FROM ghcr.io/portal-br/legislativo-backend:${IMAGE_TAG:-latest}
 
 LABEL maintainer="PloneGov-BR <gov@plone.org.br>" \
-      org.label-schema.name="portalbrasil-legislativo-demo" \
+      org.label-schema.name="ghcr.io/portal-br/legislativo-demo" \
       org.label-schema.description="Portal Modelo." \
       org.label-schema.vendor="PloneGov-BR"
 

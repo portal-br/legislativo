@@ -4,222 +4,35 @@
   "UID": "plone_site_root",
   "allow_discussion": null,
   "blocks": {
-    "47c92ffe-c201-493c-97c9-a2d4e0beab69": {
-      "@type": "slate",
-      "plaintext": "Plone is a powerful content management system built on a rock-solid application stack written in the Python and JavaScript programming languages.",
-      "value": [
-        {
-          "children": [
-            {
-              "text": "Plone is a powerful content management system built on a rock-solid application stack written in the "
-            },
-            {
-              "children": [
-                {
-                  "text": "Python"
-                }
-              ],
-              "type": "em"
-            },
-            {
-              "text": " and "
-            },
-            {
-              "children": [
-                {
-                  "text": "JavaScript"
-                }
-              ],
-              "type": "em"
-            },
-            {
-              "text": " programming languages."
-            }
-          ],
-          "type": "p"
-        }
-      ]
-    },
     "5f31e9e4-173f-4ec1-ab48-64e9e2789b76": {
       "@type": "title"
     },
-    "68357972-bd25-47e2-a098-c7932a923182": {
-      "@type": "image",
-      "alt": "Plone Foundation Logo",
-      "href": [
-        {
-          "@id": "https://plone.org/foundation",
-          "title": "plone.org/foundation"
-        }
-      ],
-      "image_field": "image",
-      "url": "resolveuid/a58ccead718140c1baa98d43595fc3e6"
-    },
     "ae41d44d-c4b1-426c-acf6-2e28cb9a97a0": {
       "@type": "slate",
-      "plaintext": "Find out more about Plone",
+      "plaintext": "Conhe\u00e7a mais sobre o Portal Modelo e o PortalBrasil",
+      "styles": {},
+      "theme": "default",
       "value": [
         {
           "children": [
             {
-              "text": "Find out more about Plone"
+              "text": "Conhe\u00e7a mais sobre o Portal Modelo e o PortalBrasil"
             }
           ],
           "type": "h3"
         }
       ]
     },
-    "d9707a27-2565-4d7d-9daa-6c61d60ce8fd": {
-      "@type": "slate",
-      "plaintext": " The features of Plone   Plone Documentation   Plone Training   Plone Community Forum   Add-ons for Plone (backend)   Add-ons for Volto (frontend) ",
-      "value": [
-        {
-          "children": [
-            {
-              "children": [
-                {
-                  "text": ""
-                },
-                {
-                  "children": [
-                    {
-                      "text": "The features of Plone"
-                    }
-                  ],
-                  "data": {
-                    "url": "https://plone.org/why-plone/features"
-                  },
-                  "type": "link"
-                },
-                {
-                  "text": ""
-                }
-              ],
-              "type": "li"
-            },
-            {
-              "children": [
-                {
-                  "text": ""
-                },
-                {
-                  "children": [
-                    {
-                      "text": "Plone Documentation"
-                    }
-                  ],
-                  "data": {
-                    "url": "https://docs.plone.org/"
-                  },
-                  "type": "link"
-                },
-                {
-                  "text": ""
-                }
-              ],
-              "type": "li"
-            },
-            {
-              "children": [
-                {
-                  "text": ""
-                },
-                {
-                  "children": [
-                    {
-                      "text": "Plone Training"
-                    }
-                  ],
-                  "data": {
-                    "url": "https://training.plone.org/"
-                  },
-                  "type": "link"
-                },
-                {
-                  "text": ""
-                }
-              ],
-              "type": "li"
-            },
-            {
-              "children": [
-                {
-                  "text": ""
-                },
-                {
-                  "children": [
-                    {
-                      "text": "Plone Community Forum"
-                    }
-                  ],
-                  "data": {
-                    "url": "https://community.plone.org/"
-                  },
-                  "type": "link"
-                },
-                {
-                  "text": ""
-                }
-              ],
-              "type": "li"
-            },
-            {
-              "children": [
-                {
-                  "text": ""
-                },
-                {
-                  "children": [
-                    {
-                      "text": "Add-ons for Plone (backend)"
-                    }
-                  ],
-                  "data": {
-                    "url": "https://github.com/collective/awesome-plone#readme"
-                  },
-                  "type": "link"
-                },
-                {
-                  "text": ""
-                }
-              ],
-              "type": "li"
-            },
-            {
-              "children": [
-                {
-                  "text": ""
-                },
-                {
-                  "children": [
-                    {
-                      "text": "Add-ons for Volto (frontend)"
-                    }
-                  ],
-                  "data": {
-                    "url": "https://github.com/collective/awesome-volto#readme"
-                  },
-                  "type": "link"
-                },
-                {
-                  "text": ""
-                }
-              ],
-              "type": "li"
-            }
-          ],
-          "type": "ul"
-        }
-      ]
-    },
     "e5ace182-3746-472c-ad81-696425a2b161": {
       "@type": "slate",
-      "plaintext": "Welcome to your new Plone site!",
+      "plaintext": "Boas vindas ao seu novo site!",
+      "styles": {},
+      "theme": "default",
       "value": [
         {
           "children": [
             {
-              "text": "Welcome to your new Plone site!"
+              "text": "Boas vindas ao seu novo site!"
             }
           ],
           "type": "h2"
@@ -231,10 +44,7 @@
     "items": [
       "5f31e9e4-173f-4ec1-ab48-64e9e2789b76",
       "e5ace182-3746-472c-ad81-696425a2b161",
-      "ae41d44d-c4b1-426c-acf6-2e28cb9a97a0",
-      "47c92ffe-c201-493c-97c9-a2d4e0beab69",
-      "d9707a27-2565-4d7d-9daa-6c61d60ce8fd",
-      "68357972-bd25-47e2-a098-c7932a923182"
+      "ae41d44d-c4b1-426c-acf6-2e28cb9a97a0"
     ]
   },
   "contributors": [],
@@ -247,6 +57,54 @@
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
+  "footer_links": [],
+  "footer_logos": [
+    {
+      "@id": "16c11539-dd22-4261-ad83-6f1759a7e61b",
+      "alt": "Plone Foundation",
+      "href": [
+        {
+          "@id": "https://plone.org/foundation",
+          "title": "plone.org/foundation"
+        }
+      ],
+      "logo": [
+        {
+          "@id": "resolveuid/a58ccead718140c1baa98d43595fc3e6",
+          "@type": "Image",
+          "Description": "",
+          "Title": "Plone Foundation Logo",
+          "image_field": "image",
+          "title": "Plone Foundation Logo"
+        }
+      ],
+      "openLinkInNewTab": true
+    },
+    {
+      "@id": "751a0f7f-0456-40e0-9e6a-f1b038e701a2",
+      "alt": "PloneGov-BR",
+      "href": [
+        {
+          "@id": "https://plone.org.br/",
+          "title": "plone.org.br/"
+        }
+      ],
+      "logo": [
+        {
+          "@id": "resolveuid/b20ab730c46b459a910592151e78c973",
+          "@type": "Image",
+          "Description": "",
+          "Title": "plonegovbr.png",
+          "image_field": "image",
+          "title": "plonegovbr.png"
+        }
+      ]
+    }
+  ],
+  "footer_logos_container_width": "default",
+  "footer_logos_size": "s",
+  "has_fat_menu": true,
+  "header_actions": [],
   "id": "Plone",
   "is_folderish": true,
   "items_total": 2,
@@ -255,6 +113,51 @@
     "locked": false,
     "stealable": true
   },
+  "logo": {
+    "blob_path": "plone_site_root/logo/portalbrasil-wide-transp.png",
+    "content-type": "image/png",
+    "filename": "portalbrasil-wide-transp.png",
+    "height": 1080,
+    "size": 62036,
+    "width": 1920
+  },
+  "network_links": [
+    {
+      "@id": "ca54cd38-3498-44e0-aa7c-fd5f9277b764",
+      "href": [
+        {
+          "@id": "https://bsky.app/profile/plone.org.br",
+          "title": "bsky.app/profile/plone.org.br"
+        }
+      ],
+      "id": "bluesky",
+      "title": "BlueSky"
+    },
+    {
+      "@id": "1ceaf5a5-643d-4fa8-a018-630b1700e76f",
+      "href": [
+        {
+          "@id": "https://github.com/portal-br/",
+          "title": "github.com/portal-br/"
+        }
+      ],
+      "id": "github",
+      "title": "GitHub PortalBrasil"
+    },
+    {
+      "@id": "df8b1c37-84b6-4ffc-bdb0-c91f91248d18",
+      "href": [
+        {
+          "@id": "https://github.com/plonegovbr",
+          "title": "github.com/plonegovbr"
+        }
+      ],
+      "id": "github",
+      "title": "GitHub PloneGov-BR"
+    }
+  ],
+  "preview_caption": null,
+  "preview_image": null,
   "review_state": null,
   "rights": "",
   "subjects": [],

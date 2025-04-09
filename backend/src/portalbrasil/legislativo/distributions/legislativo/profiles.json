@@ -1,7 +1,5 @@
 {
   "base": [
-    "plone.app.contenttypes:default",
-    "plonetheme.barceloneta:default",
     "portalbrasil.legislativo:default"
   ],
   "content": []
