@@ -1,4 +1,4 @@
-name: Frontend
+name: "Portal Modelo: Frontend"
 
 on:
   workflow_call:

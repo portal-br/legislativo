@@ -1,4 +1,4 @@
-name: Backend
+name: "Portal Modelo: Backend"
 
 on:
   workflow_call:
@@ -140,7 +140,7 @@ jobs:
             echo "# Coverage Report" >> $GITHUB_STEP_SUMMARY
             echo "$(uv run coverage report --format markdown)" >> $GITHUB_STEP_SUMMARY
 
-  release:
+  release-backend:
     runs-on: ubuntu-latest
     needs:
       - lint
@@ -151,6 +151,69 @@ jobs:
         include:
           - image-name-suffix: "backend"
             dockerfile: "backend/Dockerfile"
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            ${{ inputs.image-name-prefix }}-${{ matrix.image-name-suffix }}
+          labels: |
+            org.label-schema.docker.cmd=docker run -d -p 8080:8080 ${{ inputs.image-name-prefix }}-${{ matrix.image-name-suffix }}:${{ inputs.base-tag }}
+          flavor:
+            latest=false
+          tags: |
+            type=ref,event=branch
+            type=sha
+            type=pep440,pattern={{version}}
+            type=pep440,pattern={{major}}.{{minor}}
+            type=pep440,pattern={{major}}
+            type=raw,value=latest,enable={{is_default_branch}}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push ${{ inputs.image-name-prefix }}-${{ matrix.image-name-suffix }}
+        uses: docker/build-push-action@v6
+        with:
+          platforms: linux/amd64
+          context: backend/
+          file: ${{ matrix.dockerfile }}
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            IMAGE_TAG=${{ inputs.base-tag }}
+            SEED=${{ github.run_id }}
+            PB_VERSION=${{ inputs.pb-version }}
+
+  release-demo:
+    runs-on: ubuntu-latest
+    needs:
+      - release-backend
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
           - image-name-suffix: "demo"
             dockerfile: "backend/Dockerfile.demo"
 

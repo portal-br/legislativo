@@ -1,4 +1,4 @@
-name: "Documentação Portal Modelo"
+name: "Portal Modelo: Documentação"
 
 on:
   workflow_call:

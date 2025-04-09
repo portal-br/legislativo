@@ -1,4 +1,4 @@
-name: Changelog
+name: "Portal Modelo: Changelog"
 on:
   pull_request:
     types: [assigned, opened, synchronize, reopened, labeled, unlabeled]

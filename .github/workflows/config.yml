@@ -1,4 +1,4 @@
-name: 'Configurações'
+name: "Portal Modelo: Configurações"
 
 on:
   workflow_call:

@@ -1,4 +1,4 @@
-name: 'Portal Modelo - Tag'
+name: "Portal Modelo: Tag"
 
 on:
   push:
@@ -22,6 +22,69 @@ jobs:
         include:
           - image-name-suffix: "backend"
             dockerfile: "backend/Dockerfile"
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            ${{ needs.config.outputs.image-name-prefix }}-${{ matrix.image-name-suffix }}
+          labels: |
+            org.label-schema.docker.cmd=docker run -d -p 8080:8080 ${{ needs.config.outputs.image-name-prefix }}-${{ matrix.image-name-suffix }}:${{ github.ref_name }}
+          flavor:
+            latest=false
+          tags: |
+            type=ref,event=branch
+            type=sha
+            type=pep440,pattern={{version}}
+            type=pep440,pattern={{major}}.{{minor}}
+            type=pep440,pattern={{major}}
+            type=raw,value=${{ github.ref_name }}
+            type=raw,value=latest,enable={{is_default_branch}}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push ${{ needs.config.outputs.image-name-prefix }}-${{ matrix.image-name-suffix }}:${{ github.ref_name }}
+        uses: docker/build-push-action@v6
+        with:
+          platforms: linux/amd64
+          context: backend/
+          file: ${{ matrix.dockerfile }}
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            PB_VERSION=${{ needs.config.outputs.pb-version }}
+
+  release-demo:
+    runs-on: ubuntu-latest
+    needs:
+      - config
+      - release-backend
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
           - image-name-suffix: "demo"
             dockerfile: "backend/Dockerfile.demo"
 
@@ -66,7 +129,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push Backend
+      - name: Build and push ${{ needs.config.outputs.image-name-prefix }}-${{ matrix.image-name-suffix }}:${{ github.ref_name }}
         uses: docker/build-push-action@v6
         with:
           platforms: linux/amd64
@@ -76,7 +139,8 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
-            PB_VERSION=${{ needs.config.outputs.pb-version }}
+            IMAGE_TAG=${{ github.ref_name }}
+            SEED=${{ github.run_id }}
 
   release-frontend:
     runs-on: ubuntu-latest
