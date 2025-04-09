@@ -15,7 +15,7 @@ on:
       python-version:
         required: true
         type: string
-      plone-version:
+      pb-version:
         required: true
         type: string
 
@@ -79,7 +79,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PYTHON_VERSION: ${{ inputs.python-version }}
-      PLONE_VERSION: ${{ inputs.plone-version }}
+      PLONE_VERSION: ${{ inputs.pb-version }}
     steps:
 
         - name: Checkout
@@ -95,10 +95,10 @@ jobs:
           uses: actions/cache@v4
           with:
             path: ${{ env.UV_CACHE_DIR }}
-            key: uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.plone-version }}-${{ hashFiles('pyproject.toml') }}
+            key: uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.pb-version }}-${{ hashFiles('pyproject.toml') }}
             restore-keys: |
-              uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.plone-version }}-${{ hashFiles('pyproject.toml') }}
-              uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.plone-version }}
+              uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.pb-version }}-${{ hashFiles('pyproject.toml') }}
+              uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.pb-version }}
 
         - name: Install Plone and package
           run: make install
@@ -124,10 +124,10 @@ jobs:
           uses: actions/cache@v4
           with:
             path: /tmp/.uv-cache
-            key: uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.plone-version }}-${{ hashFiles('pyproject.toml') }}
+            key: uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.pb-version }}-${{ hashFiles('pyproject.toml') }}
             restore-keys: |
-              uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.plone-version }}-${{ hashFiles('pyproject.toml') }}
-              uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.plone-version }}
+              uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.pb-version }}-${{ hashFiles('pyproject.toml') }}
+              uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.pb-version }}
 
         - name: Install Plone and package
           run: make install
@@ -145,6 +145,15 @@ jobs:
     needs:
       - lint
       - coverage
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - image-name-suffix: "backend"
+            dockerfile: "backend/Dockerfile"
+          - image-name-suffix: "demo"
+            dockerfile: "backend/Dockerfile.demo"
+
     permissions:
       contents: read
       packages: write
@@ -159,29 +168,17 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ${{ inputs.image-name-prefix }}-${{ inputs.image-name-suffix }}
+            ${{ inputs.image-name-prefix }}-${{ matrix.image-name-suffix }}
           labels: |
-            org.label-schema.docker.cmd=docker run -d -p 8080:8080 ${{ inputs.image-name-prefix }}-${{ inputs.image-name-suffix }}:${{ inputs.base-tag }}
+            org.label-schema.docker.cmd=docker run -d -p 8080:8080 ${{ inputs.image-name-prefix }}-${{ matrix.image-name-suffix }}:${{ inputs.base-tag }}
           flavor:
             latest=false
           tags: |
             type=ref,event=branch
             type=sha
-            type=raw,value=latest,enable={{is_default_branch}}
-
-      - name: Docker meta
-        id: meta-demo
-        uses: docker/metadata-action@v5
-        with:
-          images: |
-            ${{ inputs.image-name-prefix }}-demo
-          labels: |
-            org.label-schema.docker.cmd=docker run -d -p 8080:8080 ${{ inputs.image-name-prefix }}-demo::${{ inputs.base-tag }}
-          flavor:
-            latest=false
-          tags: |
-            type=ref,event=branch
-            type=sha
+            type=pep440,pattern={{version}}
+            type=pep440,pattern={{major}}.{{minor}}
+            type=pep440,pattern={{major}}
             type=raw,value=latest,enable={{is_default_branch}}
 
       - name: Set up QEMU
@@ -197,27 +194,16 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push Backend
-        uses: docker/build-push-action@v5
+      - name: Build and push ${{ inputs.image-name-prefix }}-${{ matrix.image-name-suffix }}
+        uses: docker/build-push-action@v6
         with:
           platforms: linux/amd64
           context: backend/
-          file: backend/Dockerfile
+          file: ${{ matrix.dockerfile }}
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
-            PLONE_VERSION=${{ inputs.plone-version }}
-
-      - name: Build and push Demo
-        uses: docker/build-push-action@v5
-        with:
-          platforms: linux/amd64
-          context: backend/
-          file: backend/Dockerfile.demo
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta-demo.outputs.tags }}
-          labels: ${{ steps.meta-demo.outputs.labels }}
-          build-args: |
             IMAGE_TAG=${{ inputs.base-tag }}
-            SEED=$GITHUB_RUN_ID
+            SEED=${{ github.run_id }}
+            PB_VERSION=${{ inputs.pb-version }}
