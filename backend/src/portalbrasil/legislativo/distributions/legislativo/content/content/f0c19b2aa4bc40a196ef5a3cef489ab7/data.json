@@ -1,0 +1,88 @@
+{
+  "@id": "/atividade-legislativa",
+  "@type": "Document",
+  "UID": "f0c19b2aa4bc40a196ef5a3cef489ab7",
+  "allow_discussion": null,
+  "blocks": {
+    "8d7b0f13-bc81-4e5b-94c3-e53eef26ea41": {
+      "@type": "title"
+    },
+    "9cba5f40-915b-49fc-9f39-d32029ba432b": {
+      "@type": "slate"
+    },
+    "bd899df5-ede8-4571-8038-1e23ab1c91fa": {
+      "@type": "listing",
+      "headlineTag": "h2",
+      "querystring": {
+        "query": [
+          {
+            "i": "path",
+            "o": "plone.app.querystring.operation.string.absolutePath",
+            "v": "/atividade-legislativa"
+          },
+          {
+            "i": "portal_type",
+            "o": "plone.app.querystring.operation.selection.any",
+            "v": [
+              "Document"
+            ]
+          }
+        ],
+        "sort_order": "ascending"
+      },
+      "styles": {},
+      "theme": "default",
+      "variation": "default"
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "8d7b0f13-bc81-4e5b-94c3-e53eef26ea41",
+      "bd899df5-ede8-4571-8038-1e23ab1c91fa",
+      "9cba5f40-915b-49fc-9f39-d32029ba432b"
+    ]
+  },
+  "changeNote": "",
+  "contributors": [],
+  "created": "2025-04-09T20:12:16+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "",
+  "effective": null,
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "atividade-legislativa",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "document_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-04-09T20:15:51+00:00",
+  "preview_caption": null,
+  "preview_image": null,
+  "review_state": "private",
+  "rights": "",
+  "subjects": [],
+  "title": "Atividade Legislativa",
+  "type_title": "Page",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2025-04-09T20:12:16+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

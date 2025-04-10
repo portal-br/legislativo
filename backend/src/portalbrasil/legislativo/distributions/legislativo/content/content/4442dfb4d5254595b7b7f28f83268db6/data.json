@@ -1,0 +1,180 @@
+{
+  "@id": "/comunicacao/noticias/primeira-noticia",
+  "@type": "News Item",
+  "UID": "4442dfb4d5254595b7b7f28f83268db6",
+  "allow_discussion": null,
+  "blocks": {
+    "4c0ffe94-dc6d-4c0f-93d2-f9aebb5f875b": {
+      "@type": "slate",
+      "plaintext": "Este \u00e9 um conte\u00fado padr\u00e3o que deve ser editado pelo usu\u00e1rio editor do site. Para alter\u00e1-lo basta se autenticar no site, e clicar na aba  Edi\u00e7\u00e3o  , que fica logo acima do t\u00edtulo da not\u00edcia, ent\u00e3o, inserir o conte\u00fado real e clicar no bot\u00e3o Salvar .",
+      "styles": {},
+      "theme": "default",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Este \u00e9 um conte\u00fado padr\u00e3o que deve ser editado pelo usu\u00e1rio editor do site. Para alter\u00e1-lo basta se autenticar no site, e clicar na aba\u00a0"
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                },
+                {
+                  "children": [
+                    {
+                      "text": "Edi\u00e7\u00e3o"
+                    }
+                  ],
+                  "data": {
+                    "url": "https://pm3demo.interlegis.leg.br/institucional/noticias/edit"
+                  },
+                  "type": "link"
+                },
+                {
+                  "text": ""
+                }
+              ],
+              "type": "em"
+            },
+            {
+              "text": ", que fica logo acima do t\u00edtulo da not\u00edcia, ent\u00e3o, inserir o conte\u00fado real e clicar no bot\u00e3o\u00a0"
+            },
+            {
+              "children": [
+                {
+                  "text": "Salvar"
+                }
+              ],
+              "type": "em"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "94f37322-03f7-4bf4-aeb8-b350bc2bc128": {
+      "@type": "title"
+    },
+    "d8581d63-e871-4672-bb5c-6722e719b28f": {
+      "@type": "slate",
+      "plaintext": "Esta not\u00edcia est\u00e1 dentro da pasta not\u00edcias e foi criada como exemplo, logo, pode ser exclu\u00edda. Dentro desta pasta voc\u00ea pode criar outras not\u00edcias atrav\u00e9s do menu Adicionar item... , e ent\u00e3o public\u00e1-as atrav\u00e9s do menu Estado . Elas ir\u00e3o aparecer automaticamente na p\u00e1gina inicial do site e voc\u00ea poder\u00e1 selecionar as not\u00edcias de destaque no carrossel da p\u00e1gina inicial, clicando a aba Compor e arrastando-as para o carrossel.",
+      "styles": {},
+      "theme": "default",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Esta not\u00edcia est\u00e1 dentro da pasta\u00a0"
+            },
+            {
+              "children": [
+                {
+                  "text": "not\u00edcias"
+                }
+              ],
+              "type": "em"
+            },
+            {
+              "text": "\u00a0e foi criada como exemplo, logo, pode ser exclu\u00edda. Dentro desta pasta voc\u00ea pode criar outras not\u00edcias atrav\u00e9s do menu\u00a0"
+            },
+            {
+              "children": [
+                {
+                  "text": "Adicionar item..."
+                }
+              ],
+              "type": "em"
+            },
+            {
+              "text": ", e ent\u00e3o public\u00e1-as atrav\u00e9s do menu\u00a0"
+            },
+            {
+              "children": [
+                {
+                  "text": "Estado"
+                }
+              ],
+              "type": "em"
+            },
+            {
+              "text": ". Elas ir\u00e3o aparecer automaticamente na p\u00e1gina inicial do site e voc\u00ea poder\u00e1 selecionar as not\u00edcias de destaque no carrossel da p\u00e1gina inicial, clicando a aba\u00a0"
+            },
+            {
+              "children": [
+                {
+                  "text": "Compor"
+                }
+              ],
+              "type": "em"
+            },
+            {
+              "text": "\u00a0e arrastando-as para o carrossel."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "94f37322-03f7-4bf4-aeb8-b350bc2bc128",
+      "4c0ffe94-dc6d-4c0f-93d2-f9aebb5f875b",
+      "d8581d63-e871-4672-bb5c-6722e719b28f"
+    ]
+  },
+  "changeNote": "",
+  "contributors": [],
+  "created": "2025-04-09T20:19:00+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "Este \u00e9 um exemplo de not\u00edcia que pode ser criado e publicado no Portal Modelo. Voc\u00ea pode exclu\u00ed-la e criar suas pr\u00f3prias not\u00edcias. Divirta-se! ;-)",
+  "effective": null,
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "primeira-noticia",
+  "image": {
+    "blob_path": "4442dfb4d5254595b7b7f28f83268db6/image/foto-senado.jpeg",
+    "content-type": "image/jpeg",
+    "filename": "foto-senado.jpeg",
+    "height": 600,
+    "size": 138882,
+    "width": 900
+  },
+  "image_caption": null,
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "newsitem_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-04-09T20:20:52+00:00",
+  "review_state": "private",
+  "rights": "",
+  "subjects": [],
+  "title": "Primeira Not\u00edcia",
+  "type_title": "News Item",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2025-04-09T20:19:00+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

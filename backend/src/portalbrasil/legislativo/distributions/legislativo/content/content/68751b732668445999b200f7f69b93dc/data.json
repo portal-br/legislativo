@@ -1,0 +1,145 @@
+{
+  "@id": "/transparencia-publica/despesas",
+  "@type": "Document",
+  "UID": "68751b732668445999b200f7f69b93dc",
+  "allow_discussion": null,
+  "blocks": {
+    "6321d20c-2bc2-4ba6-bcb2-eacefe0e6d7c": {
+      "@type": "slate",
+      "plaintext": "Fundamenta\u00e7\u00e3o: Arts. 7\u00ba, VI e 8\u00ba, \u00a71\u00ba, inciso III, da Lei n\u00ba 12.527/2011 - LAI; arts. 48, \u00a71\u00ba, inciso II e 48-A, inciso I, da LC n\u00ba 101/20; art. 8\u00ba, inciso I, do Decreto n\u00ba 10.540/20.",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": "Fundamenta\u00e7\u00e3o: Arts. 7\u00ba, VI e 8\u00ba, \u00a71\u00ba, inciso III, da Lei n\u00ba 12.527/2011 - LAI; arts. 48, \u00a71\u00ba, inciso II e 48-A, inciso I, da LC n\u00ba 101/20; art. 8\u00ba, inciso I, do Decreto n\u00ba 10.540/20."
+                }
+              ],
+              "type": "p"
+            }
+          ],
+          "type": "blockquote"
+        }
+      ]
+    },
+    "66e03752-fd21-4149-b359-ec5d56085dfa": {
+      "@type": "slate",
+      "plaintext": "Fundamenta\u00e7\u00e3o: Arts. 7\u00ba, VI e 8\u00ba, \u00a71\u00ba, inciso III, da Lei n\u00ba 12.527/2011 - LAI; arts. 48, \u00a71\u00ba, inciso II e 48-A, inciso I, da LC n\u00ba 101/20, art. 8\u00ba, I, \"h\", do Decreto n\u00ba 10.540/2020",
+      "styles": {},
+      "theme": "default",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": "Fundamenta\u00e7\u00e3o: Arts. 7\u00ba, VI e 8\u00ba, \u00a71\u00ba, inciso III, da Lei n\u00ba 12.527/2011 - LAI; arts. 48, \u00a71\u00ba, inciso II e 48-A, inciso I, da LC n\u00ba 101/20, art. 8\u00ba, I, \"h\", do Decreto n\u00ba 10.540/2020"
+                }
+              ],
+              "type": "p"
+            }
+          ],
+          "type": "blockquote"
+        }
+      ]
+    },
+    "86e2fbda-e4eb-402a-9a5f-c90df1f67238": {
+      "@type": "slate",
+      "plaintext": "Cartilha: item 4.2 - Divulga as despesas da entidade",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": "Cartilha: item 4.2 - Divulga as despesas da entidade"
+                }
+              ],
+              "type": "p"
+            }
+          ],
+          "type": "blockquote"
+        }
+      ]
+    },
+    "cbba360f-7883-474c-99a4-73399b261b6e": {
+      "@type": "title"
+    },
+    "cd081b65-7c4e-479e-822d-eaa52c7e66c9": {
+      "@type": "slate"
+    },
+    "ee337afe-f6e3-46fb-a45c-08c4dfe5e12b": {
+      "@type": "slate",
+      "plaintext": "Cartilha: item 4.1 - Divulga as despesas da entidade",
+      "value": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": "Cartilha: item 4.1 - Divulga as despesas da entidade"
+                }
+              ],
+              "type": "p"
+            }
+          ],
+          "type": "blockquote"
+        }
+      ]
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "cbba360f-7883-474c-99a4-73399b261b6e",
+      "ee337afe-f6e3-46fb-a45c-08c4dfe5e12b",
+      "6321d20c-2bc2-4ba6-bcb2-eacefe0e6d7c",
+      "86e2fbda-e4eb-402a-9a5f-c90df1f67238",
+      "66e03752-fd21-4149-b359-ec5d56085dfa",
+      "cd081b65-7c4e-479e-822d-eaa52c7e66c9"
+    ]
+  },
+  "changeNote": "",
+  "contributors": [],
+  "created": "2025-04-09T20:24:53+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "",
+  "effective": null,
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "despesas",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "document_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-04-09T20:24:53+00:00",
+  "preview_caption": null,
+  "preview_image": null,
+  "review_state": "private",
+  "rights": "",
+  "subjects": [],
+  "title": "Despesas",
+  "type_title": "Page",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2025-04-09T20:24:53+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

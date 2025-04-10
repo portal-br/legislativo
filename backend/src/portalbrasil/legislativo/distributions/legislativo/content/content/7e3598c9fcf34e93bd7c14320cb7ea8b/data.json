@@ -1,0 +1,241 @@
+{
+  "@id": "/atividade-legislativa/mesa-diretora",
+  "@type": "Document",
+  "UID": "7e3598c9fcf34e93bd7c14320cb7ea8b",
+  "allow_discussion": null,
+  "blocks": {
+    "368d2bea-ef1a-4ace-9147-87faff4ad7d9": {
+      "@type": "slateTable",
+      "styles": {},
+      "table": {
+        "basic": false,
+        "celled": true,
+        "compact": false,
+        "fixed": true,
+        "hideHeaders": false,
+        "inverted": false,
+        "rows": [
+          {
+            "cells": [
+              {
+                "key": "35695",
+                "type": "data",
+                "value": [
+                  {
+                    "children": [
+                      {
+                        "text": "Cargo"
+                      }
+                    ],
+                    "type": "p"
+                  }
+                ]
+              },
+              {
+                "key": "6lu9e",
+                "type": "data",
+                "value": [
+                  {
+                    "children": [
+                      {
+                        "text": "Parlamentar"
+                      }
+                    ],
+                    "type": "p"
+                  }
+                ]
+              }
+            ],
+            "key": "77agh"
+          },
+          {
+            "cells": [
+              {
+                "key": "f6o87",
+                "type": "data",
+                "value": [
+                  {
+                    "children": [
+                      {
+                        "text": "Presidente"
+                      }
+                    ],
+                    "type": "p"
+                  }
+                ]
+              },
+              {
+                "key": "7h20b",
+                "type": "data",
+                "value": [
+                  {
+                    "children": [
+                      {
+                        "text": "Fulano de Tal"
+                      }
+                    ],
+                    "type": "p"
+                  }
+                ]
+              }
+            ],
+            "key": "4va4"
+          },
+          {
+            "cells": [
+              {
+                "key": "4j15u",
+                "type": "data",
+                "value": [
+                  {
+                    "children": [
+                      {
+                        "text": "Vice-Presidente"
+                      }
+                    ],
+                    "type": "p"
+                  }
+                ]
+              },
+              {
+                "key": "9o34e",
+                "type": "data",
+                "value": [
+                  {
+                    "children": [
+                      {
+                        "text": "Sicrano de Tal"
+                      }
+                    ],
+                    "type": "p"
+                  }
+                ]
+              }
+            ],
+            "key": "ee56q"
+          },
+          {
+            "cells": [
+              {
+                "key": "97t2k",
+                "type": "data",
+                "value": [
+                  {
+                    "children": [
+                      {
+                        "text": "Primeiro Secret\u00e1rio"
+                      }
+                    ],
+                    "type": "p"
+                  }
+                ]
+              },
+              {
+                "key": "ear2t",
+                "type": "data",
+                "value": [
+                  {
+                    "children": [
+                      {
+                        "text": "Beltrano de Tal"
+                      }
+                    ],
+                    "type": "p"
+                  }
+                ]
+              }
+            ],
+            "key": "bgeji"
+          },
+          {
+            "cells": [
+              {
+                "key": "ckual",
+                "type": "data",
+                "value": [
+                  {
+                    "children": [
+                      {
+                        "text": "Segundo Secret\u00e1rio"
+                      }
+                    ],
+                    "type": "p"
+                  }
+                ]
+              },
+              {
+                "key": "5bi7r",
+                "type": "data",
+                "value": [
+                  {
+                    "children": [
+                      {
+                        "text": "Rui Barbosa"
+                      }
+                    ],
+                    "type": "p"
+                  }
+                ]
+              }
+            ],
+            "key": "6ei2k"
+          }
+        ],
+        "striped": false
+      },
+      "theme": "default"
+    },
+    "afbc730b-0ef9-4c16-a186-3e2b58e6967a": {
+      "@type": "title"
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "afbc730b-0ef9-4c16-a186-3e2b58e6967a",
+      "368d2bea-ef1a-4ace-9147-87faff4ad7d9"
+    ]
+  },
+  "changeNote": "",
+  "contributors": [],
+  "created": "2025-04-09T20:15:51+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "",
+  "effective": null,
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "mesa-diretora",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "document_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-04-09T20:15:51+00:00",
+  "preview_caption": null,
+  "preview_image": null,
+  "review_state": "private",
+  "rights": "",
+  "subjects": [],
+  "title": "Mesa Diretora",
+  "type_title": "Page",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2025-04-09T20:15:51+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

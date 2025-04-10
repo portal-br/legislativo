@@ -104,7 +104,21 @@
   "footer_logos_container_width": "default",
   "footer_logos_size": "s",
   "has_fat_menu": true,
-  "header_actions": [],
+  "header_actions": [
+    {
+      "@id": "01497c3e-e369-4783-a7cc-5a58aaea5569",
+      "href": [
+        {
+          "@id": "resolveuid/f305d736a29e499880d3634fefcfd777",
+          "@type": "Document",
+          "Description": "",
+          "Title": "Acessibilidade",
+          "title": "Acessibilidade"
+        }
+      ],
+      "title": "Acessibilidade"
+    }
+  ],
   "id": "Plone",
   "is_folderish": true,
   "items_total": 2,

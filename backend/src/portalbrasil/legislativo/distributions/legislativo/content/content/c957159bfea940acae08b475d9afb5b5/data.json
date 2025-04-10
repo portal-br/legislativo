@@ -1,0 +1,92 @@
+{
+  "@id": "/institucional/ouvidoria",
+  "@type": "Document",
+  "UID": "c957159bfea940acae08b475d9afb5b5",
+  "allow_discussion": null,
+  "blocks": {
+    "14f61ccb-9c17-4169-b2a0-90d605a3fc87": {
+      "@type": "slate",
+      "plaintext": "",
+      "styles": {},
+      "theme": "default",
+      "value": [
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "a79fc2bc-8104-4d44-89e1-bd8ff6ae39e5": {
+      "@type": "image",
+      "align": "left",
+      "alt": "",
+      "image_field": "image",
+      "size": "s",
+      "styles": {
+        "blockWidth:noprefix": {
+          "--block-width": "var(--narrow-container-width)"
+        },
+        "size:noprefix": "small"
+      },
+      "theme": "default",
+      "url": "../../resolveuid/734dbe5d682548118fc91d56f9a8323a"
+    },
+    "ed7321c8-d17f-4b47-8402-b315c9165904": {
+      "@type": "title"
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "ed7321c8-d17f-4b47-8402-b315c9165904",
+      "a79fc2bc-8104-4d44-89e1-bd8ff6ae39e5",
+      "14f61ccb-9c17-4169-b2a0-90d605a3fc87"
+    ]
+  },
+  "changeNote": "",
+  "contributors": [],
+  "created": "2025-04-09T20:05:41+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "",
+  "effective": null,
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "ouvidoria",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "document_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-04-09T20:05:41+00:00",
+  "preview_caption": null,
+  "preview_image": null,
+  "review_state": "private",
+  "rights": "",
+  "subjects": [],
+  "title": "Ouvidoria",
+  "type_title": "Page",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2025-04-09T20:05:41+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

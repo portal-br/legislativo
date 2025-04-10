@@ -1,0 +1,67 @@
+{
+  "@id": "/comunicacao/noticias",
+  "@type": "Document",
+  "UID": "00cfedfb28a3447ba6693562774f0ef7",
+  "allow_discussion": null,
+  "blocks": {
+    "3080602c-5dbb-4786-ad37-c0a41501b027": {
+      "@type": "title"
+    },
+    "5e6a1cad-8694-462b-8a24-c45c45ca8343": {
+      "@type": "listing",
+      "headlineTag": "h2",
+      "styles": {},
+      "theme": "default",
+      "variation": "summary"
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "3080602c-5dbb-4786-ad37-c0a41501b027",
+      "5e6a1cad-8694-462b-8a24-c45c45ca8343"
+    ]
+  },
+  "changeNote": "",
+  "contributors": [],
+  "created": "2025-04-09T20:16:54+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "",
+  "effective": null,
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "noticias",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "document_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-04-09T20:20:03+00:00",
+  "preview_caption": null,
+  "preview_image": null,
+  "review_state": "private",
+  "rights": "",
+  "subjects": [],
+  "title": "Not\u00edcias",
+  "type_title": "Page",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2025-04-09T20:16:54+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

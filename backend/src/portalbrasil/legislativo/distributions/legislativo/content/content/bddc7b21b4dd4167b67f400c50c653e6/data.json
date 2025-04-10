@@ -1,0 +1,118 @@
+{
+  "@id": "/transparencia-publica",
+  "@type": "Document",
+  "UID": "bddc7b21b4dd4167b67f400c50c653e6",
+  "allow_discussion": null,
+  "blocks": {
+    "154013d4-a39b-42d8-9804-df4f02b357ad": {
+      "@type": "slate",
+      "plaintext": "",
+      "styles": {},
+      "theme": "default",
+      "value": [
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "1a1cab59-a89c-4198-8a20-c25bdde25755": {
+      "@type": "slate",
+      "plaintext": "Divulgue aqui os receitas da C\u00e2mara.\n\nCaso a C\u00e2mara tenha sistema, coloque aqui o link para ele.\n\nCaso n\u00e3o, insira arquivos contendo esta informa\u00e7\u00e3o. Para atender a exig\u00eancia da LAI (Lei 12.527), artigo 8\u00ba, par\u00e1grafo 3\u00ba, deve ser fornecido pelo menos um formato estruturado, leg\u00edvel por m\u00e1quina, como, por exemplo, formato Excel (XLS).",
+      "styles": {},
+      "theme": "default",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Divulgue aqui os receitas da C\u00e2mara.\n\nCaso a C\u00e2mara tenha sistema, coloque aqui o link para ele.\n\nCaso n\u00e3o, insira arquivos contendo esta informa\u00e7\u00e3o. Para atender a exig\u00eancia da LAI (Lei 12.527), artigo 8\u00ba, par\u00e1grafo 3\u00ba, deve ser fornecido pelo menos um formato estruturado, leg\u00edvel por m\u00e1quina, como, por exemplo, formato Excel (XLS)."
+            }
+          ],
+          "type": "p"
+        }
+      ]
+    },
+    "41606e88-f202-49d2-8c37-a6a751dfe995": {
+      "@type": "title"
+    },
+    "e4a798b9-ae7d-46bd-9463-a0dd33cce0ce": {
+      "@type": "listing",
+      "headlineTag": "h2",
+      "querystring": {
+        "query": [
+          {
+            "i": "path",
+            "o": "plone.app.querystring.operation.string.absolutePath",
+            "v": "/transparencia-publica"
+          },
+          {
+            "i": "portal_type",
+            "o": "plone.app.querystring.operation.selection.any",
+            "v": [
+              "Document"
+            ]
+          }
+        ],
+        "sort_order": "ascending"
+      },
+      "styles": {},
+      "theme": "default",
+      "variation": "default"
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "41606e88-f202-49d2-8c37-a6a751dfe995",
+      "1a1cab59-a89c-4198-8a20-c25bdde25755",
+      "e4a798b9-ae7d-46bd-9463-a0dd33cce0ce",
+      "154013d4-a39b-42d8-9804-df4f02b357ad"
+    ]
+  },
+  "changeNote": "",
+  "contributors": [],
+  "created": "2025-04-09T20:22:24+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "",
+  "effective": null,
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "transparencia-publica",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "document_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-04-09T20:31:47+00:00",
+  "preview_caption": null,
+  "preview_image": null,
+  "review_state": "private",
+  "rights": "",
+  "subjects": [],
+  "title": "Transpar\u00eancia P\u00fablica",
+  "type_title": "Page",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2025-04-09T20:22:24+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}
