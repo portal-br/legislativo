@@ -235,7 +235,7 @@ constraints = [
     { name = "plonegovbr-brfields", specifier = "==1.0.0a3" },
     { name = "plonetheme-barceloneta", specifier = "==3.2.3" },
     { name = "pluggy", specifier = "==1.5.0" },
-    { name = "portalbrasil-core", specifier = "==1.0.0a4" },
+    { name = "portalbrasil-core", specifier = "==1.0.0a5" },
     { name = "products-btreefolder2", specifier = "==5.1" },
     { name = "products-cmfcore", specifier = "==3.7" },
     { name = "products-cmfdifftool", specifier = "==4.0.4" },
@@ -3616,7 +3616,7 @@ wheels = [
 
 [[package]]
 name = "portalbrasil-core"
-version = "1.0.0a4"
+version = "1.0.0a5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "plone-api" },
@@ -3626,9 +3626,9 @@ dependencies = [
     { name = "plonegovbr-brfields" },
     { name = "products-cmfplone" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a9/5c/42c139eddf59de72024f47b661b178fc216769777bc469487d22a50ccfd0/portalbrasil_core-1.0.0a4.tar.gz", hash = "sha256:2310b7e558d8fa446cc85fb301253ff38198546378b6a349e0af3c58c8484cbb", size = 37881 }
+sdist = { url = "https://files.pythonhosted.org/packages/d4/0b/9533c8cdd6ecf369e0a34008974ec25a92b563bde6c99ba3229961e8476a/portalbrasil_core-1.0.0a5.tar.gz", hash = "sha256:6e57411c6686ea58256360b9f828014b2b7db14eff3a56751a901de7ebd07fb1", size = 38698 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/23/2c/de557877cef0ec617220e8e7cbe5815e1e018bfac57a575d43d41c7246b4/portalbrasil_core-1.0.0a4-py3-none-any.whl", hash = "sha256:d31156aa46e1318ee28a6df1e24026a3f7fa0c55f205d206de399d95fbb1ba15", size = 57237 },
+    { url = "https://files.pythonhosted.org/packages/a4/9e/1f99f1a8b0e73dfdfdb2aa156b12315ab29f8fc8ed8ecc295a622bdb14b2/portalbrasil_core-1.0.0a5-py3-none-any.whl", hash = "sha256:378462bf707f5a8ca305169952710db2db72318355787ff02318c04f5befded7", size = 59305 },
 ]
 
 [[package]]
@@ -3680,7 +3680,7 @@ requires-dist = [
     { name = "mypy", marker = "extra == 'test'", specifier = ">=1.15.0" },
     { name = "plone-app-testing", marker = "extra == 'test'" },
     { name = "plone-restapi", extras = ["test"], marker = "extra == 'test'" },
-    { name = "portalbrasil-core", specifier = "==1.0.0a4" },
+    { name = "portalbrasil-core", specifier = "==1.0.0a5" },
     { name = "pytest", marker = "extra == 'test'" },
     { name = "pytest-cov", marker = "extra == 'test'", specifier = "==6.1.1" },
     { name = "pytest-plone", marker = "extra == 'test'", specifier = ">=1.0.0a1" },

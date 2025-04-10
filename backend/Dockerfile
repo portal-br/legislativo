@@ -51,7 +51,6 @@ LABEL maintainer="PloneGov-BR <gov@plone.org.br>" \
       org.label-schema.vendor="PloneGov-BR"
 
 
-ENV CHAMELEON_CACHE=/data/cache
 ENV ALLOWED_DISTRIBUTIONS=portalmodelo
 
 # Copy the pre-built `/app` directory to the runtime container
