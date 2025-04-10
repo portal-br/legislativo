@@ -12,7 +12,7 @@
       "headlineTag": "h2",
       "styles": {},
       "theme": "default",
-      "variation": "summary"
+      "variation": "grid"
     }
   },
   "blocks_layout": {
@@ -28,7 +28,7 @@
     "admin"
   ],
   "description": "",
-  "effective": null,
+  "effective": "2025-04-10T01:12:53+00:00",
   "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {},
@@ -41,10 +41,10 @@
     "locked": false,
     "stealable": true
   },
-  "modified": "2025-04-09T20:20:03+00:00",
+  "modified": "2025-04-10T01:13:48+00:00",
   "preview_caption": null,
   "preview_image": null,
-  "review_state": "private",
+  "review_state": "published",
   "rights": "",
   "subjects": [],
   "title": "Not\u00edcias",
@@ -59,6 +59,13 @@
         "comments": "",
         "review_state": "private",
         "time": "2025-04-09T20:16:54+00:00"
+      },
+      {
+        "action": "publish",
+        "actor": "admin",
+        "comments": "",
+        "review_state": "published",
+        "time": "2025-04-10T01:12:53+00:00"
       }
     ]
   },

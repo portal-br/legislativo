@@ -6,6 +6,7 @@
   "blocks": {
     "a15fc589-5cc4-47ed-81f5-50e060887917": {
       "@type": "listing",
+      "headline": "\u00daltimas Not\u00edcias",
       "headlineTag": "h2",
       "querystring": {
         "query": [
@@ -26,37 +27,16 @@
       },
       "styles": {},
       "theme": "default",
-      "variation": "default"
+      "variation": "grid"
     },
     "d9d44cc0-83bf-46fb-acb7-0d267d8baf86": {
       "@type": "title"
-    },
-    "e36ebfdc-1eeb-4d42-a9fd-98405cc86587": {
-      "@type": "slate",
-      "plaintext": "",
-      "styles": {},
-      "theme": "default",
-      "value": [
-        {
-          "children": [
-            {
-              "text": ""
-            }
-          ],
-          "type": "p"
-        }
-      ]
-    },
-    "ecb2d78d-aa24-49f5-8e63-9056189005b7": {
-      "@type": "slate"
     }
   },
   "blocks_layout": {
     "items": [
       "d9d44cc0-83bf-46fb-acb7-0d267d8baf86",
-      "a15fc589-5cc4-47ed-81f5-50e060887917",
-      "e36ebfdc-1eeb-4d42-a9fd-98405cc86587",
-      "ecb2d78d-aa24-49f5-8e63-9056189005b7"
+      "a15fc589-5cc4-47ed-81f5-50e060887917"
     ]
   },
   "changeNote": "",
@@ -66,7 +46,7 @@
     "admin"
   ],
   "description": "",
-  "effective": null,
+  "effective": "2025-04-10T01:12:53+00:00",
   "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {},
@@ -79,10 +59,10 @@
     "locked": false,
     "stealable": true
   },
-  "modified": "2025-04-09T20:28:48+00:00",
+  "modified": "2025-04-10T01:14:12+00:00",
   "preview_caption": null,
   "preview_image": null,
-  "review_state": "private",
+  "review_state": "published",
   "rights": "",
   "subjects": [],
   "title": "Comunica\u00e7\u00e3o",
@@ -97,6 +77,13 @@
         "comments": "",
         "review_state": "private",
         "time": "2025-04-09T20:16:36+00:00"
+      },
+      {
+        "action": "publish",
+        "actor": "admin",
+        "comments": "",
+        "review_state": "published",
+        "time": "2025-04-10T01:12:53+00:00"
       }
     ]
   },
