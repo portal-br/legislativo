@@ -1,5 +1,5 @@
 ---
-name: portalbrasil-legislativo
+name: portal-modelo
 
 services:
   traefik:
@@ -32,7 +32,7 @@ services:
       - --log
       - --api
   frontend:
-    image: ghcr.io/portal-br/legislativo-frontend:4.0.0a0
+    image: ghcr.io/portal-br/legislativo-frontend:${PM_VERSION:-4.0.0a0}
     platform: linux/amd64
     environment:
       RAZZLE_INTERNAL_API_PATH: http://backend:8080/Plone
@@ -51,8 +51,12 @@ services:
       - traefik.http.routers.rt-frontend.middlewares=gzip
 
   backend:
-    image: ghcr.io/portal-br/legislativo-demo:4.0.0a0
+    image: ghcr.io/portal-br/legislativo-backend:${PM_VERSION:-4.0.0a0}
     platform: linux/amd64
+    environment:
+      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_NAME:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-HxfQYJgHCtjM}' port='${DB_PORT:-5432}'"
+      ZOPE_FORM_MEMORY_LIMIT: 250MB
+      HONEYPOT_FIELD: your_email
     labels:
       - traefik.enable=true
       - traefik.constraint-label=public
@@ -80,3 +84,25 @@ services:
       - traefik.http.routers.rt-backend-api.entrypoints=http
       - traefik.http.routers.rt-backend-api.service=svc-backend
       - traefik.http.routers.rt-backend-api.middlewares=gzip,mw-backend-vhm-api
+      ## /ClassicUI
+      - traefik.http.routers.rt-backend-classic.rule=Host(`portal-modelo.localhost`) && PathPrefix(`/ClassicUI`)
+      - traefik.http.routers.rt-backend-classic.entrypoints=http
+      - traefik.http.routers.rt-backend-classic.service=svc-backend
+      - traefik.http.routers.rt-backend-classic.middlewares=gzip,mw-backend-auth,mw-backend-vhm-classic
+      ## admin
+      - traefik.http.routers.rt-backend-admin.rule=Host(`admin.portal-modelo.localhost`)
+      - traefik.http.routers.rt-backend-admin.entrypoints=http
+      - traefik.http.routers.rt-backend-admin.service=svc-backend
+      - traefik.http.routers.rt-backend-admin.middlewares=gzip,mw-backend-auth
+
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: plone
+      POSTGRES_PASSWORD: HxfQYJgHCtjM
+      POSTGRES_DB: plone
+    volumes:
+      - vol-site-data:/var/lib/postgresql/data
+
+volumes:
+  vol-site-data: {}

@@ -1,5 +1,5 @@
 ---
-name: portal-modelo-demo
+name: portal-modelo-dev
 
 services:
   traefik:
@@ -32,10 +32,8 @@ services:
       - --log
       - --api
   frontend:
-    build:
-      context: ./frontend
-      args:
-        - VOLTO_VERSION=${VOLTO_VERSION}
+    image: ghcr.io/portal-br/legislativo-frontend:${PM_VERSION:-4.0.0a0}
+    platform: linux/amd64
     environment:
       RAZZLE_INTERNAL_API_PATH: http://backend:8080/Plone
     depends_on:
@@ -53,14 +51,8 @@ services:
       - traefik.http.routers.rt-frontend.middlewares=gzip
 
   backend:
-    build:
-      context: ./backend
-      args:
-        - PB_VERSION=${PB_VERSION}
-    environment:
-      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_NAME:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-iotGWgfoAhMq}' port='${DB_PORT:-5432}'"
-    depends_on:
-      - db
+    image: ghcr.io/portal-br/legislativo-demo:${PM_VERSION:-4.0.0a0}
+    platform: linux/amd64
     labels:
       - traefik.enable=true
       - traefik.constraint-label=public
@@ -88,20 +80,3 @@ services:
       - traefik.http.routers.rt-backend-api.entrypoints=http
       - traefik.http.routers.rt-backend-api.service=svc-backend
       - traefik.http.routers.rt-backend-api.middlewares=gzip,mw-backend-vhm-api
-      ## /ClassicUI
-      - traefik.http.routers.rt-backend-classic.rule=Host(`portal-modelo.localhost`) && PathPrefix(`/ClassicUI`)
-      - traefik.http.routers.rt-backend-classic.entrypoints=http
-      - traefik.http.routers.rt-backend-classic.service=svc-backend
-      - traefik.http.routers.rt-backend-classic.middlewares=gzip,mw-backend-auth,mw-backend-vhm-classic
-
-  db:
-    image: postgres:14.15
-    environment:
-      POSTGRES_USER: plone
-      POSTGRES_PASSWORD: iotGWgfoAhMq
-      POSTGRES_DB: plone
-    volumes:
-      - vol-site-data:/var/lib/postgresql/data
-
-volumes:
-  vol-site-data: {}
