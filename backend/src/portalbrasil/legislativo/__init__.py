@@ -5,7 +5,7 @@ from zope.i18nmessageid import MessageFactory
 import logging
 
 
-__version__ = "4.0.0a0"
+__version__ = "4.0.0a1"
 
 PACKAGE_NAME = "portalbrasil.legislativo"
 

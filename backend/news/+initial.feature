@@ -1,1 +1,0 @@
-Primeira versão do Portal Modelo @plonegovbr

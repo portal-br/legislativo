@@ -1,6 +1,6 @@
 {
   "name": "@portalbrasil/legislativo",
-  "version": "4.0.0-alpha.0",
+  "version": "4.0.0-alpha.1",
   "description": "Portal Modelo: Ferramenta de portais para casas do legislativo brasileiro",
   "main": "src/index.js",
   "license": "MIT",

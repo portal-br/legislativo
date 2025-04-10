@@ -1,1 +1,0 @@
-Adiciona dependência do @portalbrasil/core @plonegovbr
