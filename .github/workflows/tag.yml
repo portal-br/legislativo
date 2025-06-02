@@ -52,8 +52,8 @@ jobs:
       working-directory: backend
       push: true
       build-args: |
-            IMAGE_TAG=${{ github.ref_name }}
-            SEED=${{ github.run_id }}
+        IMAGE_TAG=${{ github.ref_name }}
+        SEED=${{ github.run_id }}
     secrets:
       username: ${{ github.actor }}
       password: ${{ secrets.GITHUB_TOKEN }}
