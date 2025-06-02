@@ -7,6 +7,13 @@
     "5f31e9e4-173f-4ec1-ab48-64e9e2789b76": {
       "@type": "title"
     },
+    "720e5a36-58b4-4aec-9375-7b58a5df0410": {
+      "@type": "video",
+      "align": "wide",
+      "styles": {},
+      "theme": "grey",
+      "url": "https://www.youtube.com/embed/ElzkqFOzmbs?si=gvPgB57lhp0WVq9r"
+    },
     "ae41d44d-c4b1-426c-acf6-2e28cb9a97a0": {
       "@type": "slate",
       "plaintext": "Conhe\u00e7a mais sobre o Portal Modelo e o PortalBrasil",
@@ -44,7 +51,8 @@
     "items": [
       "5f31e9e4-173f-4ec1-ab48-64e9e2789b76",
       "e5ace182-3746-472c-ad81-696425a2b161",
-      "ae41d44d-c4b1-426c-acf6-2e28cb9a97a0"
+      "ae41d44d-c4b1-426c-acf6-2e28cb9a97a0",
+      "720e5a36-58b4-4aec-9375-7b58a5df0410"
     ]
   },
   "contributors": [],
@@ -57,6 +65,8 @@
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
+  "facebook_app_id": "",
+  "facebook_username": "",
   "footer_links": [],
   "footer_logos": [
     {
@@ -135,50 +145,63 @@
     "size": 62036,
     "width": 1920
   },
-  "network_links": [
+  "preview_caption": null,
+  "preview_image": null,
+  "review_state": null,
+  "rights": "",
+  "share_social_data": true,
+  "social_links": [
     {
-      "@id": "ca54cd38-3498-44e0-aa7c-fd5f9277b764",
+      "@id": "31f4429d-7884-4ec6-972a-6238bce4747e",
       "href": [
         {
-          "@id": "https://bsky.app/profile/plone.org.br",
-          "title": "bsky.app/profile/plone.org.br"
+          "@id": "https://github.com/portal-br/legislativo",
+          "title": "github.com/portal-br/legislativo"
         }
       ],
-      "id": "bluesky",
-      "title": "BlueSky"
+      "id": "github",
+      "title": "GitHub Portal Modelo"
     },
     {
-      "@id": "1ceaf5a5-643d-4fa8-a018-630b1700e76f",
+      "@id": "c495b6d9-7342-4ff6-a1c6-2c0567dfd3e8",
+      "href": [
+        {
+          "@id": "https://www12.senado.leg.br/interlegis",
+          "title": "www12.senado.leg.br/interlegis"
+        }
+      ],
+      "id": "website",
+      "title": "Interlegis"
+    },
+    {
+      "@id": "9b41a292-7fae-4ac8-8561-6e394327880a",
       "href": [
         {
           "@id": "https://github.com/portal-br/",
           "title": "github.com/portal-br/"
         }
       ],
-      "id": "github",
-      "title": "GitHub PortalBrasil"
+      "id": "website",
+      "title": "Portal Brasil"
     },
     {
-      "@id": "df8b1c37-84b6-4ffc-bdb0-c91f91248d18",
+      "@id": "7bb3c34f-2114-4640-ab2f-7d8594e0c79d",
       "href": [
         {
-          "@id": "https://github.com/plonegovbr",
-          "title": "github.com/plonegovbr"
+          "@id": "https://www12.senado.leg.br/interlegis/produtos/portal-modelo",
+          "title": "www12.senado.leg.br/interlegis/produtos/portal-modelo"
         }
       ],
-      "id": "github",
-      "title": "GitHub PloneGov-BR"
+      "id": "website",
+      "title": "Documenta\u00e7\u00e3o Portal Modelo"
     }
   ],
-  "preview_caption": null,
-  "preview_image": null,
-  "review_state": null,
-  "rights": "",
   "subjects": [],
   "table_of_contents": null,
   "title": "C\u00e2mara Modelo",
   "type_title": "Plone Site",
   "workflow_history": {},
   "working_copy": null,
-  "working_copy_of": null
+  "working_copy_of": null,
+  "x_username": ""
 }

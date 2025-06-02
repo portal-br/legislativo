@@ -33,12 +33,12 @@
     "storybook-build": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build-storybook -c $(pwd)/.storybook"
   },
   "dependencies": {
-    "@plone/volto": "workspace:*",
     "@plone/registry": "workspace:*",
+    "@plone/volto": "workspace:*",
     "@portalbrasil/legislativo": "workspace:*"
   },
   "devDependencies": {
-    "mrs-developer": "^2.2.0"
+    "mrs-developer": "^2.3.0"
   },
   "pnpm": {
     "overrides": {

@@ -41,7 +41,7 @@ def current_versions() -> CurrentVersions:
         profile="1000",
         package=__version__,
         core_profile="1001",
-        core_package="1.0.0a6",
+        core_package="1.0.0a7",
     )
 
 

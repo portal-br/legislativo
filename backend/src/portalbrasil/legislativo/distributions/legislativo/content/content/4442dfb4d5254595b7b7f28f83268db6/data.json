@@ -142,7 +142,7 @@
     "admin"
   ],
   "description": "Este \u00e9 um exemplo de not\u00edcia que pode ser criado e publicado no Portal Modelo. Voc\u00ea pode exclu\u00ed-la e criar suas pr\u00f3prias not\u00edcias. Divirta-se! ;-)",
-  "effective": "2025-04-10T01:12:53+00:00",
+  "effective": "2025-04-10T01:12:00+00:00",
   "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {},

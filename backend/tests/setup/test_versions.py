@@ -1,5 +1,4 @@
 from portalbrasil.core.tools.migration import MigrationTool
-from zope.component.hooks import site
 
 import pytest
 
