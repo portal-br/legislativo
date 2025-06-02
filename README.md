@@ -5,116 +5,145 @@
 
 Ferramenta de portais para casas do legislativo brasileiro
 
-## Quick Start 🏁
+## Início Rápido 🏁
 
-### Prerequisites ✅
+Se você deseja testar o Portal Modelo, a forma mais rápida é utilizando um dos arquivos [disponíveis em nosso repositório](https://github.com/portal-br/legislativo/) para iniciar uma stack com Docker Compose.
 
-Ensure you have the following installed:
+Para isso, é necessário ter uma versão recente do Docker instalada 🐳.
+
+Caso esteja utilizando Windows com WSL, será necessário editar o arquivo `C:\Windows\System32\Drivers\etc\hosts` e adicionar, ao final do arquivo, uma entrada para o endereço desejado:
+
+```
+127.0.0.1  portal-modelo.localhost
+```
+
+### Demo do Portal Modelo
+
+- Em seu computador, crie uma pasta chamada `PortalModelo`.
+- Salve o arquivo [docker-compose-demo.yml](https://raw.githubusercontent.com/portal-br/legislativo/refs/heads/main/docker-compose-demo.yml) com o nome `docker-compose.yml` dentro da pasta criada.
+- Inicie a stack com o comando `docker compose up`. Após o download das imagens do backend e frontend, acesse o endereço [http://portal-modelo.localhost](http://portal-modelo.localhost) no seu navegador.
+- Caso deseje servir essa stack em outro endereço, por exemplo **novo.camara.sp.leg.br**, utilize a variável `STACK_HOSTNAME` como no exemplo:
+  `STACK_HOSTNAME=novo.camara.sp.leg.br docker compose up`
+
+⚠️ Importante: este ambiente não deve ser utilizado em produção, pois os dados **não são persistidos**.
+
+### Portal Modelo com dados persistentes
+
+- Em seu computador, crie uma pasta chamada `PortalModelo`.
+- Salve o arquivo [docker-compose.yml](https://raw.githubusercontent.com/portal-br/legislativo/refs/heads/main/docker-compose.yml) com o nome `docker-compose.yml` dentro da pasta criada.
+- Inicie a stack com o comando `docker compose up`. Após o download das imagens do backend e frontend, acesse o endereço [http://portal-modelo.localhost](http://portal-modelo.localhost) no seu navegador.
+- Caso deseje servir essa stack em outro endereço, por exemplo **novo.camara.sp.leg.br**, utilize a variável `STACK_HOSTNAME` como no exemplo:
+  `STACK_HOSTNAME=novo.camara.sp.leg.br docker compose up`
+
+Os dados desta stack serão persistidos no volume Docker chamado `portal-modelo_vol-site-data`.
+## Desenvolvimento do Portal Modelo
+
+### Pré-requisitos ✅
+
+Certifique-se de ter os seguintes softwares instalados:
 
 - UV 🐍
-- Node 22 🟩
-- pnpm 🧶
+- Node 22 🟩 e pnpm 🧶
 - Docker 🐳
 
-### Installation 🔧
+### Instalação 🔧
 
-1. Clone the repository:
+1. Clone o repositório:
 
 ```shell
 git clone git@github.com:portal-br/legislativo.git
-cd portalbrasil-legislativo
+cd legislativo
 ```
 
-2. Install both Backend and Frontend:
+2. Instale o Backend e o Frontend:
 
 ```shell
 make install
 ```
 
-### Fire Up the Servers 🔥
+### Suba os Servidores 🔥
 
-1. Create a new Plone site on your first run:
+1. Crie um novo site Plone na primeira execução:
 
 ```shell
 make backend-create-site
 ```
 
-2. Start the Backend at [http://localhost:8080/](http://localhost:8080/):
+2. Inicie o Backend em [http://localhost:8080/](http://localhost:8080/):
 
 ```shell
 make backend-start
 ```
 
-3. In a new terminal, start the Frontend at [http://localhost:3000/](http://localhost:3000/):
+3. Em outro terminal, inicie o Frontend em [http://localhost:3000/](http://localhost:3000/):
 
 ```shell
 make frontend-start
 ```
 
-Voila! Your Plone site should be live and kicking! 🎉
+Voilà! Seu Portal Modelo deve estar no ar e funcionando! 🎉
 
-### Local Stack Deployment 📦
+### Implantação Local com Docker 📦
 
-Deploy a local `Docker Compose` environment that includes:
+Implemente um ambiente local com `Docker Compose` que inclui:
 
-- Docker images for Backend and Frontend 🖼️
-- A stack with a Traefik router and a Postgres database 🗃️
-- Accessible at [http://portal-modelo.localhost](http://portal-modelo.localhost) 🌐
+- Imagens Docker para Backend e Frontend 🖼️
+- Uma stack com Traefik como roteador e banco de dados Postgres 🗃️
+- Acessível em [http://portal-modelo.localhost](http://portal-modelo.localhost) 🌐 ou em qualquer outro endereço definido pela variável de ambiente `STACK_HOSTNAME`.
 
-Execute the following:
+Execute o seguinte:
 
 ```shell
 make stack-start
 make stack-create-site
 ```
 
-And... you're all set! Your Plone site is up and running locally! 🚀
+E pronto! Seu site Plone está rodando localmente! 🚀
 
-## Project Structure 🏗️
+## Estrutura do Projeto 🏗️
 
-This monorepo consists of three distinct sections: `backend`, `frontend`, and `devops`.
+Este monorepositório é composto por três seções distintas: `backend`, `frontend` e `devops`.
 
-- **backend**: Houses the API and Plone installation, utilizing pip instead of buildout, and includes a policy package named portalbrasil.legislativo.
-- **frontend**: Contains the React (Volto) package.
-- **devops**: Encompasses Docker Stack, Ansible playbooks, and Cache settings.
+- **backend**: Contém a API e a instalação do Plone, utilizando pip em vez de buildout, e inclui um pacote de política chamado `portalbrasil.legislativo`.
+- **frontend**: Contém o pacote React (Volto) chamado `@portalbrasil/legislativo`.
 
-### Why This Structure? 🤔
+### Por que essa estrutura? 🤔
 
-- All necessary codebases to run the site are contained within the repo (excluding existing addons for Plone and React).
-- Specific GitHub Workflows are triggered based on changes in each codebase (refer to .github/workflows).
-- Simplifies the creation of Docker images for each codebase.
-- Demonstrates Plone installation/setup without buildout.
+- Todo o código necessário para executar o site está contido no repositório (excluindo os addons existentes para Plone e React).
+- Workflows específicos do GitHub são disparados com base nas alterações em cada base de código (consulte `.github/workflows`).
+- Facilita a criação de imagens Docker para cada base de código.
+- Demonstra a instalação/configuração do Plone sem utilizar buildout.
 
-## Code Quality Assurance 🧐
+## Garantia de Qualidade de Código 🧐
 
-To automatically format your code and ensure it adheres to quality standards, execute:
+Para formatar automaticamente seu código e garantir aderência aos padrões de qualidade, execute:
 
 ```shell
 make check
 ```
 
-It is possible to only run `format`:
+Também é possível executar apenas o `format`:
 
 ```shell
 make format
 ```
 
-or `lint`:
+ou o `lint`:
 
- ```shell
+```shell
 make lint
 ```
 
-Linters can be run individually within the `backend` or `frontend` folders.
+Os linters podem ser executados individualmente nas pastas `backend` ou `frontend`.
 
-## Internationalization 🌐
+## Internacionalização 🌐
 
-Generate translation files for Plone and Volto with ease:
+Gere arquivos de tradução para Plone e Volto com facilidade:
 
 ```shell
 make i18n
 ```
 
-## Credits and Acknowledgements 🙏
+## Créditos e Agradecimentos 🙏
 
-Generated using [Cookieplone (0.8.4)](https://github.com/plone/cookieplone) and [cookieplone-templates (86480b4)](https://github.com/plone/cookieplone-templates/commit/86480b44baa3953c98534071089ac3c6b656f3f5) on 2025-03-14 15:47:43.801432. A special thanks to all contributors and supporters!
+Gerado utilizando [Cookieplone (0.8.4)](https://github.com/plone/cookieplone) e [cookieplone-templates (86480b4)](https://github.com/plone/cookieplone-templates/commit/86480b44baa3953c98534071089ac3c6b656f3f5) em 2025-03-14 15:47:43.801432. Um agradecimento especial a todos os colaboradores e apoiadores!

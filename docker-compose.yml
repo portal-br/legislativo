@@ -11,7 +11,7 @@ services:
     labels:
       - traefik.enable=true
       - traefik.constraint-label=public
-      - traefik.http.routers.traefik-public-http.rule=Host(`traefik.portal-modelo.localhost`)
+      - traefik.http.routers.traefik-public-http.rule=Host(`traefik.${STACK_HOSTNAME:-portal-modelo.localhost}`)
       - traefik.http.routers.traefik-public-http.entrypoints=http
       - traefik.http.routers.traefik-public-http.service=api@internal
       - traefik.http.services.traefik-public.loadbalancer.server.port=8000
@@ -45,7 +45,7 @@ services:
       - traefik.http.services.svc-frontend.loadbalancer.server.port=3000
       # Routers
       ## /
-      - traefik.http.routers.rt-frontend.rule=Host(`portal-modelo.localhost`)
+      - traefik.http.routers.rt-frontend.rule=Host(`${STACK_HOSTNAME:-portal-modelo.localhost}`)
       - traefik.http.routers.rt-frontend.entrypoints=http
       - traefik.http.routers.rt-frontend.service=svc-frontend
       - traefik.http.routers.rt-frontend.middlewares=gzip
@@ -54,7 +54,7 @@ services:
     image: ghcr.io/portal-br/legislativo-backend:${PM_VERSION:-4.0.0a1}
     platform: linux/amd64
     environment:
-      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_NAME:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-HxfQYJgHCtjM}' port='${DB_PORT:-5432}'"
+      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_USER:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-HxfQYJgHCtjM}' port='${DB_PORT:-5432}'"
       ZOPE_FORM_MEMORY_LIMIT: 250MB
       HONEYPOT_FIELD: your_email
     labels:
@@ -66,11 +66,11 @@ services:
       # Middlewares
       ## VHM rewrite /++api++/
       - "traefik.http.middlewares.mw-backend-vhm-api.replacepathregex.regex=^/\\+\\+api\\+\\+($$|/.*)"
-      - "traefik.http.middlewares.mw-backend-vhm-api.replacepathregex.replacement=/VirtualHostBase/http/portal-modelo.localhost/Plone/++api++/VirtualHostRoot$$1"
+      - "traefik.http.middlewares.mw-backend-vhm-api.replacepathregex.replacement=/VirtualHostBase/http/${STACK_HOSTNAME:-portal-modelo.localhost}/Plone/++api++/VirtualHostRoot$$1"
 
       ## VHM rewrite /ClassicUI/
       - "traefik.http.middlewares.mw-backend-vhm-classic.replacepathregex.regex=^/ClassicUI($$|/.*)"
-      - "traefik.http.middlewares.mw-backend-vhm-classic.replacepathregex.replacement=/VirtualHostBase/http/portal-modelo.localhost/Plone/VirtualHostRoot/_vh_ClassicUI$$1"
+      - "traefik.http.middlewares.mw-backend-vhm-classic.replacepathregex.replacement=/VirtualHostBase/http/${STACK_HOSTNAME:-portal-modelo.localhost}/Plone/VirtualHostRoot/_vh_ClassicUI$$1"
 
       ## Basic Authentication
       ### Note: all dollar signs in the hash need to be doubled for escaping.
@@ -80,17 +80,17 @@ services:
       - traefik.http.middlewares.mw-backend-auth.basicauth.headerField=X-Auth-ClassicUI
       - traefik.http.middlewares.mw-backend-auth.basicauth.users=admin:$$apr1$$uZPT5Fgu$$AmlIdamxT5ipBvPlsdfD70
       # Routers
-      - traefik.http.routers.rt-backend-api.rule=Host(`portal-modelo.localhost`) && (PathPrefix(`/++api++`))
+      - traefik.http.routers.rt-backend-api.rule=Host(`${STACK_HOSTNAME:-portal-modelo.localhost}`) && (PathPrefix(`/++api++`))
       - traefik.http.routers.rt-backend-api.entrypoints=http
       - traefik.http.routers.rt-backend-api.service=svc-backend
       - traefik.http.routers.rt-backend-api.middlewares=gzip,mw-backend-vhm-api
       ## /ClassicUI
-      - traefik.http.routers.rt-backend-classic.rule=Host(`portal-modelo.localhost`) && PathPrefix(`/ClassicUI`)
+      - traefik.http.routers.rt-backend-classic.rule=Host(`${STACK_HOSTNAME:-portal-modelo.localhost}`) && PathPrefix(`/ClassicUI`)
       - traefik.http.routers.rt-backend-classic.entrypoints=http
       - traefik.http.routers.rt-backend-classic.service=svc-backend
       - traefik.http.routers.rt-backend-classic.middlewares=gzip,mw-backend-auth,mw-backend-vhm-classic
       ## admin
-      - traefik.http.routers.rt-backend-admin.rule=Host(`admin.portal-modelo.localhost`)
+      - traefik.http.routers.rt-backend-admin.rule=Host(`admin.${STACK_HOSTNAME:-portal-modelo.localhost}`)
       - traefik.http.routers.rt-backend-admin.entrypoints=http
       - traefik.http.routers.rt-backend-admin.service=svc-backend
       - traefik.http.routers.rt-backend-admin.middlewares=gzip,mw-backend-auth
@@ -98,9 +98,9 @@ services:
   db:
     image: postgres:14
     environment:
-      POSTGRES_USER: plone
-      POSTGRES_PASSWORD: HxfQYJgHCtjM
-      POSTGRES_DB: plone
+      POSTGRES_USER: ${DB_USER:-plone}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-HxfQYJgHCtjM}
+      POSTGRES_DB: ${DB_NAME:-plone}
     volumes:
       - vol-site-data:/var/lib/postgresql/data
 
