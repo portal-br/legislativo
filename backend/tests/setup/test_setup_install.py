@@ -18,7 +18,9 @@ class TestSetupInstall:
 
     def test_latest_version(self, profile_last_version, current_versions):
         """Test latest version of default profile."""
-        assert profile_last_version(f"{PACKAGE_NAME}:default") == current_versions.profile
+        assert (
+            profile_last_version(f"{PACKAGE_NAME}:default") == current_versions.profile
+        )
 
 
 class TestSetupDependencies:
