@@ -18,255 +18,82 @@ on:
       pb-version:
         required: true
         type: string
-
-defaults:
-  run:
-    working-directory: backend
+      working-directory:
+        required: false
+        type: string
+        default: backend
 
 jobs:
 
   lint:
-    runs-on: ubuntu-latest
-    steps:
-
-        - name: Checkout
-          uses: actions/checkout@v4
-
-        - name: Install the latest version of uv
-          uses: astral-sh/setup-uv@v5
-          with:
-            python-version: ${{ inputs.python-version }}
-            enable-cache: true
-
-        - name: Check formatting
-          if: ${{ success() || failure() }}
-          id: ruff-format
-          run: uvx ruff@latest format --diff
-
-        - name: Check lint
-          if: ${{ success() || failure() }}
-          id: ruff-lint
-          run: uvx ruff@latest check --diff
-
-        - name: Check XML / ZCML
-          if: ${{ success() || failure() }}
-          id: zpretty
-          run: uvx zpretty@latest --check src
-
-        - name: Check Package Metadata
-          if: ${{ success() || failure() }}
-          id: pyroma
-          run: uvx pyroma@latest -d .
-
-        - name: Check Python Versions
-          if: ${{ success() || failure() }}
-          id: py-versions
-          run: uvx check-python-versions@latest .
-
-        - name: Report
-          if: ${{ success() || failure() }}
-          run: |
-            echo '# Code Analysis' >> $GITHUB_STEP_SUMMARY
-            echo '| Test | Status |' >> $GITHUB_STEP_SUMMARY
-            echo '| --- | --- |' >> $GITHUB_STEP_SUMMARY
-            echo '| Format | ${{ steps.ruff-format.conclusion == 'failure' && '❌' || ' ✅' }} |' >> $GITHUB_STEP_SUMMARY
-            echo '| Lint | ${{ steps.ruff-lint.conclusion == 'failure' && '❌' || ' ✅' }} |' >> $GITHUB_STEP_SUMMARY
-            echo '| XML / ZCML | ${{ steps.zpretty.conclusion == 'failure' && '❌' || ' ✅' }} |' >> $GITHUB_STEP_SUMMARY
-            echo '| Package Metadata | ${{ steps.pyroma.conclusion == 'failure' && '❌' || ' ✅' }} |' >> $GITHUB_STEP_SUMMARY
-            echo '| Python Versions | ${{ steps.py-versions.conclusion == 'failure' && '❌' || ' ✅' }} |' >> $GITHUB_STEP_SUMMARY
+    name: "Backend: Lint"
+    uses: plone/meta/.github/workflows/backend-lint.yml@2.x
+    with:
+      python-version: ${{ inputs.python-version }}
+      plone-version: ${{ inputs.pb-version }}
+      working-directory: ${{ inputs.working-directory }}
 
   test:
-    runs-on: ubuntu-latest
-    env:
-      PYTHON_VERSION: ${{ inputs.python-version }}
-      PLONE_VERSION: ${{ inputs.pb-version }}
-    steps:
-
-        - name: Checkout
-          uses: actions/checkout@v4
-
-        - name: Install the latest version of uv
-          uses: astral-sh/setup-uv@v5
-          with:
-            python-version: ${{ inputs.python-version }}
-            enable-cache: false
-
-        - name: Restore uv cache
-          uses: actions/cache@v4
-          with:
-            path: ${{ env.UV_CACHE_DIR }}
-            key: uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.pb-version }}-${{ hashFiles('pyproject.toml') }}
-            restore-keys: |
-              uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.pb-version }}-${{ hashFiles('pyproject.toml') }}
-              uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.pb-version }}
-
-        - name: Install Plone and package
-          run: make install
-
-        - name: Run tests
-          run: make test
+    name: "Backend: Test"
+    uses: plone/meta/.github/workflows/backend-pytest.yml@2.x
+    with:
+      python-version: ${{ inputs.python-version }}
+      plone-version: ${{ inputs.pb-version }}
+      working-directory: ${{ inputs.working-directory }}
 
   coverage:
-    runs-on: ubuntu-latest
+    name: "Backend: Test"
+    uses: plone/meta/.github/workflows/backend-pytest-coverage.yml@2.x
     needs:
       - test
-    steps:
-        - name: Checkout
-          uses: actions/checkout@v4
+    with:
+      python-version: ${{ inputs.python-version }}
+      plone-version: ${{ inputs.pb-version }}
+      working-directory: ${{ inputs.working-directory }}
 
-        - name: Install the latest version of uv
-          uses: astral-sh/setup-uv@v5
-          with:
-            python-version: ${{ inputs.python-version }}
-            enable-cache: false
-
-        - name: Restore uv cache
-          uses: actions/cache@v4
-          with:
-            path: /tmp/.uv-cache
-            key: uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.pb-version }}-${{ hashFiles('pyproject.toml') }}
-            restore-keys: |
-              uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.pb-version }}-${{ hashFiles('pyproject.toml') }}
-              uv-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.pb-version }}
-
-        - name: Install Plone and package
-          run: make install
-
-        - name: Run tests
-          run: make test-coverage
-
-        - name: Report Coverage
-          run: |
-            echo "# Coverage Report" >> $GITHUB_STEP_SUMMARY
-            echo "$(uv run coverage report --format markdown)" >> $GITHUB_STEP_SUMMARY
 
   release-backend:
-    runs-on: ubuntu-latest
+    name: "Backend: Build and publish Container Image"
+    uses: plone/meta/.github/workflows/container-image-build-push.yml@2.x
     needs:
       - lint
       - coverage
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - image-name-suffix: "backend"
-            dockerfile: "backend/Dockerfile"
-
     permissions:
       contents: read
       packages: write
-
-    steps:
-
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: |
-            ${{ inputs.image-name-prefix }}-${{ matrix.image-name-suffix }}
-          labels: |
-            org.label-schema.docker.cmd=docker run -d -p 8080:8080 ${{ inputs.image-name-prefix }}-${{ matrix.image-name-suffix }}:${{ inputs.base-tag }}
-          flavor:
-            latest=false
-          tags: |
-            type=ref,event=branch
-            type=sha
-            type=pep440,pattern={{version}}
-            type=pep440,pattern={{major}}.{{minor}}
-            type=pep440,pattern={{major}}
-            type=raw,value=latest,enable={{is_default_branch}}
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Login to Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build and push ${{ inputs.image-name-prefix }}-${{ matrix.image-name-suffix }}
-        uses: docker/build-push-action@v6
-        with:
-          platforms: linux/amd64
-          context: backend/
-          file: ${{ matrix.dockerfile }}
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          build-args: |
-            IMAGE_TAG=${{ inputs.base-tag }}
-            SEED=${{ github.run_id }}
-            PB_VERSION=${{ inputs.pb-version }}
+    with:
+      base-tag: ${{ inputs.base-tag }}
+      image-name-prefix: ${{ inputs.image-name-prefix }}
+      image-name-suffix: ${{ inputs.image-name-suffix }}
+      working-directory: ${{ inputs.working-directory }}
+      build-args: |
+        IMAGE_TAG=${{ inputs.base-tag }}
+        SEED=${{ github.run_id }}
+        PB_VERSION=${{ inputs.pb-version }}
+      push: true
+    secrets:
+      username: ${{ github.actor }}
+      password: ${{ secrets.GITHUB_TOKEN }}
 
   release-demo:
-    runs-on: ubuntu-latest
+    name: "Backend: Build and publish Demo Image"
+    uses: plone/meta/.github/workflows/container-image-build-push.yml@2.x
     needs:
       - release-backend
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - image-name-suffix: "demo"
-            dockerfile: "backend/Dockerfile.demo"
-
     permissions:
       contents: read
       packages: write
-
-    steps:
-
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: |
-            ${{ inputs.image-name-prefix }}-${{ matrix.image-name-suffix }}
-          labels: |
-            org.label-schema.docker.cmd=docker run -d -p 8080:8080 ${{ inputs.image-name-prefix }}-${{ matrix.image-name-suffix }}:${{ inputs.base-tag }}
-          flavor:
-            latest=false
-          tags: |
-            type=ref,event=branch
-            type=sha
-            type=pep440,pattern={{version}}
-            type=pep440,pattern={{major}}.{{minor}}
-            type=pep440,pattern={{major}}
-            type=raw,value=latest,enable={{is_default_branch}}
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Login to Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build and push ${{ inputs.image-name-prefix }}-${{ matrix.image-name-suffix }}
-        uses: docker/build-push-action@v6
-        with:
-          platforms: linux/amd64
-          context: backend/
-          file: ${{ matrix.dockerfile }}
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          build-args: |
-            IMAGE_TAG=${{ inputs.base-tag }}
-            SEED=${{ github.run_id }}
-            PB_VERSION=${{ inputs.pb-version }}
+    with:
+      base-tag: ${{ inputs.base-tag }}
+      dockerfile: Dockerfile.demo
+      image-name-prefix: ${{ inputs.image-name-prefix }}
+      image-name-suffix: demo
+      working-directory: ${{ inputs.working-directory }}
+      build-args: |
+        IMAGE_TAG=${{ inputs.base-tag }}
+        SEED=${{ github.run_id }}
+        PB_VERSION=${{ inputs.pb-version }}
+      push: ${{ github.event_name != 'pull_request' }}
+    secrets:
+      username: ${{ github.actor }}
+      password: ${{ secrets.GITHUB_TOKEN }}

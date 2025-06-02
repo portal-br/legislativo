@@ -13,190 +13,68 @@ jobs:
     uses: ./.github/workflows/config.yml
 
   release-backend:
-    runs-on: ubuntu-latest
+    name: "Backend: ${{ needs.config.outputs.image-name-prefix }}-backend:${{ github.ref_name }}"
+    uses: plone/meta/.github/workflows/container-image-build-push.yml@2.x
     needs:
       - config
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - image-name-suffix: "backend"
-            dockerfile: "backend/Dockerfile"
-
     permissions:
       contents: read
       packages: write
-
-    steps:
-
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: |
-            ${{ needs.config.outputs.image-name-prefix }}-${{ matrix.image-name-suffix }}
-          labels: |
-            org.label-schema.docker.cmd=docker run -d -p 8080:8080 ${{ needs.config.outputs.image-name-prefix }}-${{ matrix.image-name-suffix }}:${{ github.ref_name }}
-          flavor:
-            latest=false
-          tags: |
-            type=ref,event=branch
-            type=sha
-            type=pep440,pattern={{version}}
-            type=pep440,pattern={{major}}.{{minor}}
-            type=pep440,pattern={{major}}
-            type=raw,value=${{ github.ref_name }}
-            type=raw,value=latest,enable={{is_default_branch}}
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Login to Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build and push ${{ needs.config.outputs.image-name-prefix }}-${{ matrix.image-name-suffix }}:${{ github.ref_name }}
-        uses: docker/build-push-action@v6
-        with:
-          platforms: linux/amd64
-          context: backend/
-          file: ${{ matrix.dockerfile }}
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          build-args: |
-            PB_VERSION=${{ needs.config.outputs.pb-version }}
+    with:
+      platforms: linux/amd64
+      base-tag: ${{ github.ref_name }}
+      image-name-prefix: ${{ needs.config.outputs.image-name-prefix }}
+      dockerfile: Dockerfile
+      image-name-suffix: backend
+      working-directory: backend
+      push: true
+      build-args: |
+        PB_VERSION=${{ needs.config.outputs.pb-version }}
+    secrets:
+      username: ${{ github.actor }}
+      password: ${{ secrets.GITHUB_TOKEN }}
 
   release-demo:
-    runs-on: ubuntu-latest
+    name: "Backend: ${{ needs.config.outputs.image-name-prefix }}-demo:${{ github.ref_name }}"
+    uses: plone/meta/.github/workflows/container-image-build-push.yml@2.x
     needs:
       - config
       - release-backend
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - image-name-suffix: "demo"
-            dockerfile: "backend/Dockerfile.demo"
-
     permissions:
       contents: read
       packages: write
-
-    steps:
-
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: |
-            ${{ needs.config.outputs.image-name-prefix }}-${{ matrix.image-name-suffix }}
-          labels: |
-            org.label-schema.docker.cmd=docker run -d -p 8080:8080 ${{ needs.config.outputs.image-name-prefix }}-${{ matrix.image-name-suffix }}:${{ github.ref_name }}
-          flavor:
-            latest=false
-          tags: |
-            type=ref,event=branch
-            type=sha
-            type=pep440,pattern={{version}}
-            type=pep440,pattern={{major}}.{{minor}}
-            type=pep440,pattern={{major}}
-            type=raw,value=${{ github.ref_name }}
-            type=raw,value=latest,enable={{is_default_branch}}
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Login to Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build and push ${{ needs.config.outputs.image-name-prefix }}-${{ matrix.image-name-suffix }}:${{ github.ref_name }}
-        uses: docker/build-push-action@v6
-        with:
-          platforms: linux/amd64
-          context: backend/
-          file: ${{ matrix.dockerfile }}
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          build-args: |
+    with:
+      platforms: linux/amd64
+      base-tag: ${{ github.ref_name }}
+      image-name-prefix: ${{ needs.config.outputs.image-name-prefix }}
+      dockerfile: Dockerfile.demo
+      image-name-suffix: demo
+      working-directory: backend
+      push: true
+      build-args: |
             IMAGE_TAG=${{ github.ref_name }}
             SEED=${{ github.run_id }}
+    secrets:
+      username: ${{ github.actor }}
+      password: ${{ secrets.GITHUB_TOKEN }}
 
   release-frontend:
-    runs-on: ubuntu-latest
+    name: "Frontend: ${{ needs.config.outputs.image-name-prefix }}-frontend:${{ github.ref_name }}"
+    uses: plone/meta/.github/workflows/container-image-build-push.yml@2.x
     needs:
       - config
     permissions:
       contents: read
       packages: write
-    env:
-      image-name-suffix: "frontend"
-
-    steps:
-
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: |
-            ${{ needs.config.outputs.image-name-prefix }}-${{ env.image-name-suffix }}
-          labels: |
-            org.label-schema.docker.cmd=docker run -d -p 8080:8080 ${{ needs.config.outputs.image-name-prefix }}-${{ env.image-name-suffix }}:${{ github.ref_name }}
-          flavor:
-            latest=false
-          tags: |
-            type=ref,event=branch
-            type=sha
-            type=pep440,pattern={{version}}
-            type=pep440,pattern={{major}}.{{minor}}
-            type=pep440,pattern={{major}}
-            type=raw,value=${{ github.ref_name }}
-            type=raw,value=latest,enable={{is_default_branch}}
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Login to Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build and push ${{ needs.config.outputs.image-name-prefix }}-${{ env.image-name-suffix }}
-        uses: docker/build-push-action@v6
-        with:
-          platforms: linux/amd64
-          context: frontend/
-          file: frontend/Dockerfile
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          build-args: |
-            VOLTO_VERSION=${{ needs.config.outputs.volto-version }}
+    with:
+      platforms: linux/amd64
+      base-tag: ${{ github.ref_name }}
+      image-name-prefix: ${{ needs.config.outputs.image-name-prefix }}
+      image-name-suffix: frontend
+      working-directory: frontend
+      build-args: |
+        VOLTO_VERSION=${{ needs.config.outputs.volto-version }}
+      push: true
+    secrets:
+      username: ${{ github.actor }}
+      password: ${{ secrets.GITHUB_TOKEN }}
