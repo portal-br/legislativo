@@ -1,3 +1,15 @@
+## 4.0.0a2 (2025-06-02)
+
+
+### Funcionalidade
+
+- Atualiza conteúdo de exemplo do Portal Modelo. @ericof 
+
+
+### Interno
+
+- Atualiza portalbrasil.core para versão 1.0.0a7. @ericof 
+
 ## 4.0.0a1 (2025-04-09)
 
 

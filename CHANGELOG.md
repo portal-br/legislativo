@@ -1,6 +1,52 @@
 # Mudanças
 
 <!-- towncrier release notes start -->
+## 4.0.0a2 (2025-06-02)
+
+### Backend
+
+
+#### Funcionalidade
+
+- Atualiza conteúdo de exemplo do Portal Modelo. @ericof 
+
+
+#### Interno
+
+- Atualiza portalbrasil.core para versão 1.0.0a7. @ericof 
+
+
+
+### Frontend
+
+
+#### Interno
+
+- Atualiza .eslintrc.js e tsconfig.json para mapearem o código desse pacote como @portalbrasil/legislativo. @ericof 
+- Atualiza @plone/volto para versão 18.22.0. @ericof 
+- Atualiza @portalbrasil/core para versão 1.0.0-alpha.7. @ericof 
+
+
+
+### Projeto
+
+
+#### Funcionalidade
+
+- Suporta o uso de variáveis de ambiente nos arquivos Docker compose. @ericof 
+
+
+#### Interno
+
+- GHA: Uso de workflows compartilhados em plone/meta. @ericof 
+
+
+#### Documentação
+
+- Atualiza o arquivo README.md. @ericof 
+
+
+
 ## 4.0.0a1 (2025-04-09)
 
 ### Backend
