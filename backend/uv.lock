@@ -42,6 +42,7 @@ constraints = [
     { name = "collective-recipe-omelette", specifier = "==2.0.0" },
     { name = "collective-recipe-template", specifier = "==2.2" },
     { name = "collective-recipe-vscode", specifier = "==0.1.9" },
+    { name = "collective-volto-formsupport", specifier = "==3.2.3" },
     { name = "collective-xmltestreport", specifier = "==2.0.2" },
     { name = "collective-z3cform-datagridfield", specifier = "==3.0.3" },
     { name = "colorama", specifier = "==0.4.6" },
@@ -214,7 +215,7 @@ constraints = [
     { name = "plone-resource", specifier = "==3.0.2" },
     { name = "plone-resourceeditor", specifier = "==4.0.1" },
     { name = "plone-rest", specifier = "==5.0.0" },
-    { name = "plone-restapi", specifier = "==9.13.3" },
+    { name = "plone-restapi", specifier = ">=9.14.0" },
     { name = "plone-rfc822", specifier = "==3.0.1" },
     { name = "plone-scale", specifier = "==4.1.4" },
     { name = "plone-schema", specifier = "==2.0.2" },
@@ -233,9 +234,10 @@ constraints = [
     { name = "plone-volto", specifier = "==5.0.4" },
     { name = "plone-z3cform", specifier = "==2.0.4" },
     { name = "plonegovbr-brfields", specifier = "==1.0.0a3" },
+    { name = "plonegovbr-socialmedia", specifier = "==2.0.0a2" },
     { name = "plonetheme-barceloneta", specifier = "==3.2.3" },
     { name = "pluggy", specifier = "==1.5.0" },
-    { name = "portalbrasil-core", specifier = "==1.0.0a5" },
+    { name = "portalbrasil-core", specifier = "==1.0.0a7" },
     { name = "products-btreefolder2", specifier = "==5.1" },
     { name = "products-cmfcore", specifier = "==3.7" },
     { name = "products-cmfdifftool", specifier = "==4.0.4" },
@@ -3248,7 +3250,7 @@ wheels = [
 
 [[package]]
 name = "plone-restapi"
-version = "9.13.3"
+version = "9.14.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "packaging" },
@@ -3260,9 +3262,9 @@ dependencies = [
     { name = "pytz" },
     { name = "setuptools" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/17/17/da4ae2cc0319e7d6938e5264fe91affed6ff629d8b7ab571a0aae018eda5/plone_restapi-9.13.3.tar.gz", hash = "sha256:dc00af068953ac6da74433ce0e49e10587fcdcdcf806025ad215692e1e04392d", size = 2968347 }
+sdist = { url = "https://files.pythonhosted.org/packages/fa/14/6ca0aa832e15359d6caa96476f77572b9d513779bca423c1e8d02a47575a/plone_restapi-9.14.0.tar.gz", hash = "sha256:c33d113c6f810e6e9544509e83fa6b30a2770542b786d5f994299f99133279f7", size = 2971194 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/bf/94/e97689d2079356cedbbac57bdb919cad14aa5081841d4fe3d18ca45c3fe3/plone.restapi-9.13.3-py3-none-any.whl", hash = "sha256:62de7e6950bbfda24655043fad7eeeea1ac72ededc3c0a6118f4eeeee39cba1f", size = 3090565 },
+    { url = "https://files.pythonhosted.org/packages/6e/2c/48132f3375903bbedd460d445cf86253d894c1d3dbb0c4e7bde81cdc814e/plone.restapi-9.14.0-py3-none-any.whl", hash = "sha256:3cb9bae62f700e176a4c79f9a4930358964a187a09b6c403f00075b8b46a86b7", size = 3093537 },
 ]
 
 [package.optional-dependencies]
@@ -3578,6 +3580,21 @@ wheels = [
 ]
 
 [[package]]
+name = "plonegovbr-socialmedia"
+version = "2.0.0a2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "plone-api" },
+    { name = "plone-restapi" },
+    { name = "plone-volto" },
+    { name = "products-cmfplone" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/9a/18/45b7d20abe0eca6005d661d83e067f0404332c313aaa279937c9e522950a/plonegovbr_socialmedia-2.0.0a2.tar.gz", hash = "sha256:7e397361f99c9c302bd2a7696493e13213790238e344b0898ab20f482f875140", size = 27478 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b1/cd/ff5966ee141516748854a81d1ce8dabdf2dae5abd7494856444652e7dafc/plonegovbr_socialmedia-2.0.0a2-py3-none-any.whl", hash = "sha256:c1068df8c6eb43fe266aa5090cec7ebc0e072ae51fc5c249fa1ac01916fee0e2", size = 37581 },
+]
+
+[[package]]
 name = "plonetheme-barceloneta"
 version = "3.2.3"
 source = { registry = "https://pypi.org/simple" }
@@ -3616,19 +3633,22 @@ wheels = [
 
 [[package]]
 name = "portalbrasil-core"
-version = "1.0.0a5"
+version = "1.0.0a7"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
+    { name = "collective-honeypot" },
+    { name = "collective-volto-formsupport" },
     { name = "plone-api" },
     { name = "plone-distribution" },
     { name = "plone-restapi" },
     { name = "plone-volto" },
     { name = "plonegovbr-brfields" },
+    { name = "plonegovbr-socialmedia" },
     { name = "products-cmfplone" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d4/0b/9533c8cdd6ecf369e0a34008974ec25a92b563bde6c99ba3229961e8476a/portalbrasil_core-1.0.0a5.tar.gz", hash = "sha256:6e57411c6686ea58256360b9f828014b2b7db14eff3a56751a901de7ebd07fb1", size = 38698 }
+sdist = { url = "https://files.pythonhosted.org/packages/b6/30/12984e499c25e3f474281e312e49c8acbca7eb70144ed3fb316a0614c361/portalbrasil_core-1.0.0a7.tar.gz", hash = "sha256:5e13d6156bfc7d4e039bebcc87906b53eb15c85caffd820ccec96c6af3cafe14", size = 205706 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a4/9e/1f99f1a8b0e73dfdfdb2aa156b12315ab29f8fc8ed8ecc295a622bdb14b2/portalbrasil_core-1.0.0a5-py3-none-any.whl", hash = "sha256:378462bf707f5a8ca305169952710db2db72318355787ff02318c04f5befded7", size = 59305 },
+    { url = "https://files.pythonhosted.org/packages/de/69/3d5a381997c355e5434b10879ef01a9c44d7ec26011d0b622ee4b00e4b66/portalbrasil_core-1.0.0a7-py3-none-any.whl", hash = "sha256:84e07d061da85d167902bf1ec501800b8d6b5aecd40c842e92ef1d4e720b7a03", size = 227319 },
 ]
 
 [[package]]
@@ -3680,7 +3700,7 @@ requires-dist = [
     { name = "mypy", marker = "extra == 'test'", specifier = ">=1.15.0" },
     { name = "plone-app-testing", marker = "extra == 'test'" },
     { name = "plone-restapi", extras = ["test"], marker = "extra == 'test'" },
-    { name = "portalbrasil-core", specifier = "==1.0.0a5" },
+    { name = "portalbrasil-core", specifier = "==1.0.0a7" },
     { name = "pytest", marker = "extra == 'test'" },
     { name = "pytest-cov", marker = "extra == 'test'", specifier = "==6.1.1" },
     { name = "pytest-plone", marker = "extra == 'test'", specifier = ">=1.0.0a1" },

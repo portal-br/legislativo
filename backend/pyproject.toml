@@ -34,7 +34,7 @@ classifiers = [
 dependencies = [
     "collective.volto.formsupport",
     "collective.honeypot",
-    "portalbrasil.core==1.0.0a5",
+    "portalbrasil.core==1.0.0a7",
 ]
 
 [project.optional-dependencies]
@@ -113,6 +113,7 @@ constraint-dependencies = [
     "collective.recipe.omelette==2.0.0",
     "collective.recipe.template==2.2",
     "collective.recipe.vscode==0.1.9",
+    "collective.volto.formsupport==3.2.3",
     "collective.xmltestreport==2.0.2",
     "collective.z3cform.datagridfield==3.0.3",
     "colorama==0.4.6",
@@ -285,7 +286,7 @@ constraint-dependencies = [
     "plone.resource==3.0.2",
     "plone.resourceeditor==4.0.1",
     "plone.rest==5.0.0",
-    "plone.restapi==9.13.3",
+    "plone.restapi>=9.14.0",
     "plone.rfc822==3.0.1",
     "plone.scale==4.1.4",
     "plone.schema==2.0.2",
@@ -305,9 +306,10 @@ constraint-dependencies = [
     "plone.z3cform==2.0.4",
     "Plone==6.1.1",
     "plonegovbr.brfields==1.0.0a3",
+    "plonegovbr.socialmedia==2.0.0a2",
     "plonetheme.barceloneta==3.2.3",
     "pluggy==1.5.0",
-    "portalbrasil.core==1.0.0a5",
+    "portalbrasil.core==1.0.0a7",
     "Products.BTreeFolder2==5.1",
     "Products.CMFCore==3.7",
     "Products.CMFDiffTool==4.0.4",
