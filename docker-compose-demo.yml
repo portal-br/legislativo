@@ -1,5 +1,5 @@
 ---
-name: portal-modelo-dev
+name: portal-modelo-demo
 
 services:
   traefik:
@@ -32,7 +32,7 @@ services:
       - --log
       - --api
   frontend:
-    image: ghcr.io/portal-br/legislativo-frontend:${PM_VERSION:-4.0.0a0}
+    image: ghcr.io/portal-br/legislativo-frontend:${PM_VERSION:-4.0.0a2}
     platform: linux/amd64
     environment:
       RAZZLE_INTERNAL_API_PATH: http://backend:8080/Plone
@@ -51,7 +51,7 @@ services:
       - traefik.http.routers.rt-frontend.middlewares=gzip
 
   backend:
-    image: ghcr.io/portal-br/legislativo-demo:${PM_VERSION:-4.0.0a0}
+    image: ghcr.io/portal-br/legislativo-demo:${PM_VERSION:-4.0.0a2}
     platform: linux/amd64
     labels:
       - traefik.enable=true
