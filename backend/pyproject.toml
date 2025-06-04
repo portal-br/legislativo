@@ -34,7 +34,7 @@ classifiers = [
 dependencies = [
     "collective.volto.formsupport",
     "collective.honeypot",
-    "portalbrasil.core==1.0.0a7",
+    "portalbrasil.core==1.0.0a8",
 ]
 
 [project.optional-dependencies]
@@ -306,10 +306,10 @@ constraint-dependencies = [
     "plone.z3cform==2.0.4",
     "Plone==6.1.1",
     "plonegovbr.brfields==1.0.0a3",
-    "plonegovbr.socialmedia==2.0.0a2",
+    "plonegovbr.socialmedia==2.0.0a6",
     "plonetheme.barceloneta==3.2.3",
     "pluggy==1.5.0",
-    "portalbrasil.core==1.0.0a7",
+    "portalbrasil.core==1.0.0a8",
     "Products.BTreeFolder2==5.1",
     "Products.CMFCore==3.7",
     "Products.CMFDiffTool==4.0.4",
