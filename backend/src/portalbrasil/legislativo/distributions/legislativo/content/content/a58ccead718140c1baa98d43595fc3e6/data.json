@@ -3,6 +3,7 @@
   "@type": "Image",
   "UID": "a58ccead718140c1baa98d43595fc3e6",
   "allow_discussion": null,
+  "changeNote": "",
   "contributors": [],
   "created": "2024-05-27T03:23:37+00:00",
   "creators": [
@@ -10,7 +11,6 @@
   ],
   "description": "",
   "effective": null,
-  "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
@@ -26,7 +26,10 @@
   "is_folderish": false,
   "language": "##DEFAULT##",
   "layout": "image_view",
-  "lock": {},
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
   "modified": "2025-04-05T19:51:57+00:00",
   "review_state": null,
   "rights": "",
@@ -36,6 +39,7 @@
   "title": "Plone Foundation Logo",
   "type_title": "Image",
   "version": "current",
+  "versioning_enabled": true,
   "workflow_history": {},
   "working_copy": null,
   "working_copy_of": null

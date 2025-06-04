@@ -1,6 +1,16 @@
 [
   {
     "from_attribute": "isReferencing",
+    "from_uuid": "4442dfb4d5254595b7b7f28f83268db6",
+    "to_uuid": "3cfe6f015e054e8cbac486bcc12d5e16"
+  },
+  {
+    "from_attribute": "preview_image_link",
+    "from_uuid": "4442dfb4d5254595b7b7f28f83268db6",
+    "to_uuid": "3cfe6f015e054e8cbac486bcc12d5e16"
+  },
+  {
+    "from_attribute": "isReferencing",
     "from_uuid": "c957159bfea940acae08b475d9afb5b5",
     "to_uuid": "734dbe5d682548118fc91d56f9a8323a"
   }

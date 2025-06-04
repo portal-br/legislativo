@@ -3,6 +3,7 @@
   "@type": "Image",
   "UID": "7a05d4d192674a5b84e786b414fce0a8",
   "allow_discussion": null,
+  "changeNote": "",
   "contributors": [],
   "created": "2025-04-05T19:52:31+00:00",
   "creators": [
@@ -10,7 +11,6 @@
   ],
   "description": "",
   "effective": null,
-  "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
@@ -26,7 +26,10 @@
   "is_folderish": false,
   "language": "##DEFAULT##",
   "layout": "image_view",
-  "lock": {},
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
   "modified": "2025-04-08T14:29:09+00:00",
   "review_state": null,
   "rights": "",
@@ -34,6 +37,7 @@
   "title": "portalbrasil.png",
   "type_title": "Image",
   "version": "current",
+  "versioning_enabled": true,
   "workflow_history": {},
   "working_copy": null,
   "working_copy_of": null

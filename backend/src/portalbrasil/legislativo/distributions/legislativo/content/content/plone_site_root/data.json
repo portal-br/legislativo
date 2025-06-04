@@ -7,13 +7,6 @@
     "5f31e9e4-173f-4ec1-ab48-64e9e2789b76": {
       "@type": "title"
     },
-    "720e5a36-58b4-4aec-9375-7b58a5df0410": {
-      "@type": "video",
-      "align": "wide",
-      "styles": {},
-      "theme": "grey",
-      "url": "https://www.youtube.com/embed/ElzkqFOzmbs?si=gvPgB57lhp0WVq9r"
-    },
     "ae41d44d-c4b1-426c-acf6-2e28cb9a97a0": {
       "@type": "slate",
       "plaintext": "Conhe\u00e7a mais sobre o Portal Modelo e o PortalBrasil",
@@ -29,6 +22,16 @@
           "type": "h3"
         }
       ]
+    },
+    "af769b5f-2e56-4434-868b-b48a35620ec3": {
+      "@type": "slate"
+    },
+    "d635901e-671b-4316-ad1f-f5c261aaa100": {
+      "@type": "video",
+      "align": "center",
+      "styles": {},
+      "theme": "grey",
+      "url": "https://www.youtube.com/watch?v=kdxefYmiIvM"
     },
     "e5ace182-3746-472c-ad81-696425a2b161": {
       "@type": "slate",
@@ -52,7 +55,8 @@
       "5f31e9e4-173f-4ec1-ab48-64e9e2789b76",
       "e5ace182-3746-472c-ad81-696425a2b161",
       "ae41d44d-c4b1-426c-acf6-2e28cb9a97a0",
-      "720e5a36-58b4-4aec-9375-7b58a5df0410"
+      "d635901e-671b-4316-ad1f-f5c261aaa100",
+      "af769b5f-2e56-4434-868b-b48a35620ec3"
     ]
   },
   "contributors": [],
@@ -145,8 +149,7 @@
     "size": 62036,
     "width": 1920
   },
-  "preview_caption": null,
-  "preview_image": null,
+  "preview_caption_link": null,
   "review_state": null,
   "rights": "",
   "share_social_data": true,

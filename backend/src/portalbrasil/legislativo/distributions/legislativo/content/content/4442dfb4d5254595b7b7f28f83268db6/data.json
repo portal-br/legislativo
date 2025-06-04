@@ -62,6 +62,21 @@
     "c34b5de1-da37-4c65-ad8e-b0fd951fb7ac": {
       "@type": "description"
     },
+    "ce238cc1-06e5-4fc9-867d-9f5bae437c4b": {
+      "@type": "image",
+      "align": "center",
+      "credit": {},
+      "description": "",
+      "image_field": "image",
+      "size": "l",
+      "styles": {
+        "blockWidth:noprefix": {
+          "--block-width": "var(--default-container-width)"
+        }
+      },
+      "theme": "default",
+      "url": "../../../resolveuid/3cfe6f015e054e8cbac486bcc12d5e16"
+    },
     "d8581d63-e871-4672-bb5c-6722e719b28f": {
       "@type": "slate",
       "plaintext": "Esta not\u00edcia est\u00e1 dentro da pasta not\u00edcias e foi criada como exemplo, logo, pode ser exclu\u00edda. Dentro desta pasta voc\u00ea pode criar outras not\u00edcias atrav\u00e9s do menu Adicionar item... , e ent\u00e3o public\u00e1-as atrav\u00e9s do menu Estado . Elas ir\u00e3o aparecer automaticamente na p\u00e1gina inicial do site e voc\u00ea poder\u00e1 selecionar as not\u00edcias de destaque no carrossel da p\u00e1gina inicial, clicando a aba Compor e arrastando-as para o carrossel.",
@@ -121,16 +136,13 @@
           "type": "p"
         }
       ]
-    },
-    "f9dbdd8c-100e-4e0e-9cc3-1bbe7662ac87": {
-      "@type": "leadimage"
     }
   },
   "blocks_layout": {
     "items": [
       "94f37322-03f7-4bf4-aeb8-b350bc2bc128",
       "c34b5de1-da37-4c65-ad8e-b0fd951fb7ac",
-      "f9dbdd8c-100e-4e0e-9cc3-1bbe7662ac87",
+      "ce238cc1-06e5-4fc9-867d-9f5bae437c4b",
       "4c0ffe94-dc6d-4c0f-93d2-f9aebb5f875b",
       "d8581d63-e871-4672-bb5c-6722e719b28f"
     ]
@@ -148,15 +160,6 @@
   "exportimport.constrains": {},
   "exportimport.conversation": [],
   "id": "primeira-noticia",
-  "image": {
-    "blob_path": "4442dfb4d5254595b7b7f28f83268db6/image/foto-senado.jpeg",
-    "content-type": "image/jpeg",
-    "filename": "foto-senado.jpeg",
-    "height": 600,
-    "size": 138882,
-    "width": 900
-  },
-  "image_caption": null,
   "is_folderish": true,
   "language": "##DEFAULT##",
   "layout": "newsitem_view",
@@ -164,7 +167,9 @@
     "locked": false,
     "stealable": true
   },
-  "modified": "2025-04-10T01:13:35+00:00",
+  "modified": "2025-06-04T19:58:31+00:00",
+  "nav_title": null,
+  "preview_caption_link": null,
   "review_state": "published",
   "rights": "",
   "subjects": [],

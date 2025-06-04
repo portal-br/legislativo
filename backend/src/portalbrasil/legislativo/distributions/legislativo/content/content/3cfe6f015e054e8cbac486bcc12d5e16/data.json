@@ -1,11 +1,11 @@
 {
-  "@id": "/imagens/plonegovbr.png",
+  "@id": "/comunicacao/noticias/primeira-noticia/foto-senado.jpeg",
   "@type": "Image",
-  "UID": "b20ab730c46b459a910592151e78c973",
+  "UID": "3cfe6f015e054e8cbac486bcc12d5e16",
   "allow_discussion": null,
   "changeNote": "",
   "contributors": [],
-  "created": "2025-04-08T17:22:04+00:00",
+  "created": "2025-06-04T19:57:58+00:00",
   "creators": [
     "admin"
   ],
@@ -14,14 +14,14 @@
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
-  "id": "plonegovbr.png",
+  "id": "foto-senado.jpeg",
   "image": {
-    "blob_path": "b20ab730c46b459a910592151e78c973/image/plonegovbr.png",
-    "content-type": "image/png",
-    "filename": "plonegovbr.png",
-    "height": 1080,
-    "size": 133218,
-    "width": 1920
+    "blob_path": "3cfe6f015e054e8cbac486bcc12d5e16/image/foto-senado.jpeg",
+    "content-type": "image/jpeg",
+    "filename": "foto-senado.jpeg",
+    "height": 600,
+    "size": 138882,
+    "width": 900
   },
   "is_folderish": false,
   "language": "##DEFAULT##",
@@ -30,11 +30,11 @@
     "locked": false,
     "stealable": true
   },
-  "modified": "2025-04-08T17:22:04+00:00",
+  "modified": "2025-06-04T19:57:58+00:00",
   "review_state": null,
   "rights": "",
   "subjects": [],
-  "title": "plonegovbr.png",
+  "title": "foto-senado.jpeg",
   "type_title": "Image",
   "version": "current",
   "versioning_enabled": true,

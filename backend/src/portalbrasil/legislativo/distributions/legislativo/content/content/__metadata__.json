@@ -5,8 +5,8 @@
     "a58ccead718140c1baa98d43595fc3e6/image/plone-foundation.png",
     "b20ab730c46b459a910592151e78c973/image/plonegovbr.png",
     "7a05d4d192674a5b84e786b414fce0a8/image/portalbrasil-wide-transp.png",
-    "4442dfb4d5254595b7b7f28f83268db6/image/foto-senado.jpeg",
-    "734dbe5d682548118fc91d56f9a8323a/image/icone-fala-br.jpeg"
+    "734dbe5d682548118fc91d56f9a8323a/image/icone-fala-br.jpeg",
+    "3cfe6f015e054e8cbac486bcc12d5e16/image/foto-senado.jpeg"
   ],
   "_data_files_": [
     "plone_site_root/data.json",
@@ -16,6 +16,7 @@
     "74527516266541a88ee7c637b53a375b/data.json",
     "00cfedfb28a3447ba6693562774f0ef7/data.json",
     "4442dfb4d5254595b7b7f28f83268db6/data.json",
+    "3cfe6f015e054e8cbac486bcc12d5e16/data.json",
     "c5a3eb2bc63247f0bb4c83a2003fec12/data.json",
     "a720393b3c0240e5bd27c43fcd2cfd1e/data.json",
     "a58ccead718140c1baa98d43595fc3e6/data.json",
@@ -35,6 +36,7 @@
   "local_permissions": {
     "00cfedfb28a3447ba6693562774f0ef7": {},
     "0724a67fa1364951b9be9c477802f20d": {},
+    "3cfe6f015e054e8cbac486bcc12d5e16": {},
     "4442dfb4d5254595b7b7f28f83268db6": {},
     "4eafa2d991414854af1ecd6336a975d4": {},
     "6372ca5d464f4341b8791f065a68158c": {},
@@ -115,6 +117,13 @@
       }
     },
     "0724a67fa1364951b9be9c477802f20d": {
+      "local_roles": {
+        "admin": [
+          "Owner"
+        ]
+      }
+    },
+    "3cfe6f015e054e8cbac486bcc12d5e16": {
       "local_roles": {
         "admin": [
           "Owner"
@@ -258,6 +267,7 @@
   "ordering": {
     "00cfedfb28a3447ba6693562774f0ef7": 0,
     "0724a67fa1364951b9be9c477802f20d": 0,
+    "3cfe6f015e054e8cbac486bcc12d5e16": 0,
     "4442dfb4d5254595b7b7f28f83268db6": 0,
     "4eafa2d991414854af1ecd6336a975d4": 0,
     "6372ca5d464f4341b8791f065a68158c": 1,
