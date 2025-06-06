@@ -3,7 +3,7 @@ name = "Portal Modelo"
 managed_by_uv = true
 changelog = "CHANGELOG.md"
 version = "version.txt"
-compose = "docker-compose.yml"
+compose = ["docker-compose.yml", "docker-compose-demo.yml"]
 
 [repository.towncrier]
 section = "Projeto"
