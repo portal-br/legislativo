@@ -1,3 +1,16 @@
+## 4.0.0a3 (2025-06-05)
+
+
+### Funcionalidade
+
+- Adiciona o comportamento de título de navegação a todos os tipos de conteúdo. @ericof [#9](https://github.com/portal-br/legislativo/issues/9)
+- Atualiza portalbrasil.core para versão 1.0.0a8. @ericof 
+
+
+### Documentação
+
+- Atualiza conteúdo de exemplo. @ericof 
+
 ## 4.0.0a2 (2025-06-02)
 
 

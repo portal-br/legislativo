@@ -2,6 +2,19 @@
 
 <!-- towncrier release notes start -->
 
+## 4.0.0-alpha.3 (2025-06-05)
+
+
+### Funcionalidade
+
+- Visualizador de PDF na visão padrão de arquivo. @ericof [#12](https://github.com/portal-br/legislativo/issue/12)
+- Atualiza @portalbrasil/core para versão 1.0.0-alpha.8. @ericof 
+
+
+### Correção de Bug
+
+- Corrige exibição do menu expandido. @ericof [#11](https://github.com/portal-br/legislativo/issue/11)
+
 ## 4.0.0-alpha.2 (2025-06-02)
 
 

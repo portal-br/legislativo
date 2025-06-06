@@ -1,6 +1,47 @@
 # Mudanças
 
 <!-- towncrier release notes start -->
+## 4.0.0a3 (2025-06-05)
+
+### Backend
+
+
+#### Funcionalidade
+
+- Adiciona o comportamento de título de navegação a todos os tipos de conteúdo. @ericof [#9](https://github.com/portal-br/legislativo/issues/9)
+- Atualiza portalbrasil.core para versão 1.0.0a8. @ericof 
+
+
+#### Documentação
+
+- Atualiza conteúdo de exemplo. @ericof 
+
+
+
+### Frontend
+
+
+#### Funcionalidade
+
+- Visualizador de PDF na visão padrão de arquivo. @ericof [#12](https://github.com/portal-br/legislativo/issue/12)
+- Atualiza @portalbrasil/core para versão 1.0.0-alpha.8. @ericof 
+
+
+#### Correção de Bug
+
+- Corrige exibição do menu expandido. @ericof [#11](https://github.com/portal-br/legislativo/issue/11)
+
+
+
+### Projeto
+
+
+#### Correção de Bug
+
+- Corrige versão do PM no docker-compose-demo.yml @ericof [#10](https://github.com/portal-br/legislativo/issue/10)
+
+
+
 ## 4.0.0a2 (2025-06-02)
 
 ### Backend
