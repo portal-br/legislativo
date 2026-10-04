@@ -1,7 +1,7 @@
 import type { ConfigType } from '@plone/registry';
 import { describe, expect, it } from 'vitest';
 import MultiButtonsBlockInfo from '../components/Blocks/MultiButtons';
-import install from './blocks';
+import install, { GALERIA_BLOCKS, NEWS_ITEM_BLOCKS } from './blocks';
 
 const OTHER = { id: 'other' };
 
@@ -54,5 +54,54 @@ describe('install blocks', () => {
     const grid = { id: 'gridBlock', allowedBlocks: ['slate'] };
     install(makeConfig(grid));
     expect(grid.allowedBlocks).toEqual(['slate']);
+  });
+});
+
+describe('initialBlocks', () => {
+  const types = (blocks: Array<{ '@type': string }>) =>
+    blocks.map((block) => block['@type']);
+
+  it('começa notícias com título, descrição, imagem principal e texto', () => {
+    const { blocks } = install(makeConfig());
+    expect(blocks.initialBlocks['News Item']).toBe(NEWS_ITEM_BLOCKS);
+    expect(types(NEWS_ITEM_BLOCKS)).toEqual([
+      'title',
+      'description',
+      'mainImageBlock',
+      'slate',
+    ]);
+  });
+
+  it('guarda a largura da imagem principal nos estilos do bloco', () => {
+    expect(NEWS_ITEM_BLOCKS[2]).toMatchObject({
+      styles: {
+        'blockWidth:noprefix': {
+          '--block-width': 'var(--default-container-width)',
+        },
+      },
+    });
+  });
+
+  it('começa galerias com a listagem das próprias imagens', () => {
+    const { blocks } = install(makeConfig());
+    expect(blocks.initialBlocks.Galeria).toBe(GALERIA_BLOCKS);
+    expect(types(GALERIA_BLOCKS)).toEqual(['title', 'listing', 'slate']);
+    expect(GALERIA_BLOCKS[1]).toMatchObject({
+      variation: 'imageGallery',
+      querystring: {
+        query: [
+          { i: 'portal_type', v: ['Image'] },
+          { i: 'path', v: './' },
+        ],
+        sort_on: 'getObjPositionInParent',
+      },
+    });
+  });
+
+  it('preserva os blocos iniciais de outros tipos', () => {
+    const config = makeConfig();
+    const document = [{ '@type': 'title' }];
+    config.blocks.initialBlocks = { Document: document };
+    expect(install(config).blocks.initialBlocks.Document).toBe(document);
   });
 });

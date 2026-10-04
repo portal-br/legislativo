@@ -33,6 +33,17 @@ A Galeria é um tipo do Portal Modelo para publicar fotos, como as de uma sessã
 Ela aceita apenas imagens, aparece na navegação e guarda versões a cada edição.
 Podem adicionar galerias os administradores do site, o dono da pasta e quem tem o papel de colaborador, pela permissão `portalbrasil.legislativo: Add Galeria`.
 
+## Blocos iniciais
+
+Notícias e galerias novas já começam com blocos no lugar:
+
+| Tipo | Blocos |
+|---|---|
+| News Item | título, descrição, imagem principal (a imagem de prévia da notícia) e texto |
+| Galeria | título, listagem das imagens da própria galeria, na ordem da pasta, e texto |
+
+A listagem da galeria usa a variação de galeria de imagens, que o tema exibe em grade.
+
 ## Fluxo de trabalho
 
 O fluxo de trabalho padrão é o `simple_publication_workflow` do Plone, com os estados privado, pendente e publicado.
