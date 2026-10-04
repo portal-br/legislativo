@@ -10,3 +10,13 @@ msgstr ""
 "Content-Type: \n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. Default: "Download file"
+#: components/Views/FileView
+msgid "Download file"
+msgstr "Datei herunterladen"
+
+#. Default: "PDF viewer"
+#: components/Views/FileView
+msgid "PDF viewer"
+msgstr "PDF-Betrachter"

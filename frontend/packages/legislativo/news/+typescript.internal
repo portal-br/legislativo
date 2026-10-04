@@ -1,0 +1,1 @@
+Migra o pacote para TypeScript em modo estrito, com testes em Vitest e checagem de tipos no `make lint`. O visualizador de PDF da visão de arquivo e a ativação do VLibras passam a ser implementados no próprio pacote. @ericof

@@ -15,3 +15,13 @@ msgstr ""
 "Language-Name: Português do Brasil\n"
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
+
+#. Default: "Download file"
+#: components/Views/FileView
+msgid "Download file"
+msgstr "Baixar arquivo"
+
+#. Default: "PDF viewer"
+#: components/Views/FileView
+msgid "PDF viewer"
+msgstr "Visualizador de PDF"
