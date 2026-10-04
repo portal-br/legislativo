@@ -1,9 +1,9 @@
 ---
-name: portal-modelo-demo
+name: legislativo
 
 services:
   traefik:
-    image: traefik:v2.11
+    image: traefik:v3.7
 
     ports:
       - 80:80
@@ -11,7 +11,7 @@ services:
     labels:
       - traefik.enable=true
       - traefik.constraint-label=public
-      - traefik.http.routers.traefik-public-http.rule=Host(`traefik.${STACK_HOSTNAME:-portal-modelo.localhost}`)
+      - traefik.http.routers.traefik-public-http.rule=Host(`traefik.legislativo.localhost`)
       - traefik.http.routers.traefik-public-http.entrypoints=http
       - traefik.http.routers.traefik-public-http.service=api@internal
       - traefik.http.services.traefik-public.loadbalancer.server.port=8000
@@ -47,7 +47,7 @@ services:
       - traefik.http.services.svc-frontend.loadbalancer.server.port=3000
       # Routers
       ## /
-      - traefik.http.routers.rt-frontend.rule=Host(`${STACK_HOSTNAME:-portal-modelo.localhost}`)
+      - traefik.http.routers.rt-frontend.rule=Host(`legislativo.localhost`)
       - traefik.http.routers.rt-frontend.entrypoints=http
       - traefik.http.routers.rt-frontend.service=svc-frontend
       - traefik.http.routers.rt-frontend.middlewares=gzip
@@ -56,9 +56,9 @@ services:
     build:
       context: ./backend
       args:
-        - PB_VERSION=${PB_VERSION}
+        - PLONE_VERSION=${PLONE_VERSION}
     environment:
-      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_NAME:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-iotGWgfoAhMq}' port='${DB_PORT:-5432}'"
+      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_NAME:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-ZSfjJBkCERfa}' port='${DB_PORT:-5432}'"
     depends_on:
       - db
     labels:
@@ -70,11 +70,13 @@ services:
       # Middlewares
       ## VHM rewrite /++api++/
       - "traefik.http.middlewares.mw-backend-vhm-api.replacepathregex.regex=^/\\+\\+api\\+\\+($$|/.*)"
-      - "traefik.http.middlewares.mw-backend-vhm-api.replacepathregex.replacement=/VirtualHostBase/http/${STACK_HOSTNAME:-portal-modelo.localhost}/Plone/++api++/VirtualHostRoot$$1"
+      - "traefik.http.middlewares.mw-backend-vhm-api.replacepathregex.replacement=/VirtualHostBase/http/legislativo.localhost/Plone/++api++/VirtualHostRoot$$1"
 
       ## VHM rewrite /ClassicUI/
       - "traefik.http.middlewares.mw-backend-vhm-classic.replacepathregex.regex=^/ClassicUI($$|/.*)"
-      - "traefik.http.middlewares.mw-backend-vhm-classic.replacepathregex.replacement=/VirtualHostBase/http/${STACK_HOSTNAME:-portal-modelo.localhost}/Plone/VirtualHostRoot/_vh_ClassicUI$$1"
+      - "traefik.http.middlewares.mw-backend-vhm-classic.replacepathregex.replacement=/VirtualHostBase/http/legislativo.localhost/Plone/VirtualHostRoot/_vh_ClassicUI$$1"
+
+      
 
       ## Basic Authentication
       ### Note: all dollar signs in the hash need to be doubled for escaping.
@@ -84,24 +86,25 @@ services:
       - traefik.http.middlewares.mw-backend-auth.basicauth.headerField=X-Auth-ClassicUI
       - traefik.http.middlewares.mw-backend-auth.basicauth.users=admin:$$apr1$$uZPT5Fgu$$AmlIdamxT5ipBvPlsdfD70
       # Routers
-      - traefik.http.routers.rt-backend-api.rule=Host(`${STACK_HOSTNAME:-portal-modelo.localhost}`) && (PathPrefix(`/++api++`))
+      - traefik.http.routers.rt-backend-api.rule=Host(`legislativo.localhost`) && (PathPrefix(`/++api++`))
       - traefik.http.routers.rt-backend-api.entrypoints=http
       - traefik.http.routers.rt-backend-api.service=svc-backend
       - traefik.http.routers.rt-backend-api.middlewares=gzip,mw-backend-vhm-api
+      
       ## /ClassicUI
-      - traefik.http.routers.rt-backend-classic.rule=Host(`${STACK_HOSTNAME:-portal-modelo.localhost}`) && PathPrefix(`/ClassicUI`)
+      - traefik.http.routers.rt-backend-classic.rule=Host(`legislativo.localhost`) && PathPrefix(`/ClassicUI`)
       - traefik.http.routers.rt-backend-classic.entrypoints=http
       - traefik.http.routers.rt-backend-classic.service=svc-backend
       - traefik.http.routers.rt-backend-classic.middlewares=gzip,mw-backend-auth,mw-backend-vhm-classic
 
   db:
-    image: postgres:14.15
+    image: postgres:18
     environment:
       POSTGRES_USER: plone
-      POSTGRES_PASSWORD: iotGWgfoAhMq
+      POSTGRES_PASSWORD: ZSfjJBkCERfa
       POSTGRES_DB: plone
     volumes:
-      - vol-site-data:/var/lib/postgresql/data
+      - vol-site-data:/var/lib/postgresql
 
 volumes:
   vol-site-data: {}

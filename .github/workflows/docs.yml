@@ -1,4 +1,4 @@
-name: "Portal Modelo: Documentação"
+name: Documentation
 
 on:
   workflow_call:
@@ -12,10 +12,11 @@ on:
         default: docs
 
 jobs:
-  docs:
-    name: "Documentação: Gerar e testar estilo"
+
+  build:
+    name: "Docs: Build"
     uses: plone/meta/.github/workflows/docs-build.yml@2.x
     with:
       python-version: ${{ inputs.python-version }}
       working-directory: ${{ inputs.working-directory }}
-      check-vale: false
+      check-vale: true

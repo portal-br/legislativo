@@ -2,7 +2,7 @@
 .gitattributes
 bin
 Dockerfile
-Dockerfile.demo
+Dockerfile.acceptance
 include
 instance
 instance.yaml

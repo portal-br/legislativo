@@ -1,15 +1,57 @@
 [project]
-name = "voltolighttheme-docs"
-version = "1.0.0"
-description = "Volto Light Theme documentation"
+name = "portalbrasil-legislativo-docs"
+description = "Portal Modelo: Ferramenta de portais para casas do legislativo brasileiro"
+keywords = [
+    "PortalBrasil: Legislativo",
+    "documentation",
+    "Plone",
+    "Diátaxis",
+]
+version="1.0.0"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = "==3.14.*"
+license = "GPL-2.0-only"
+maintainers = [
+    { name = "PloneGov-BR", email = "gov@plone.org.br" },
+]
+authors = [
+    { name = "PloneGov-BR", email = "gov@plone.org.br" },
+]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.14",
+]
 dependencies = [
+    "portalbrasil-legislativo",
+]
+
+[dependency-groups]
+dev = [
+    "graphviz",
     "linkify-it-py",
     "myst-parser",
     "plone-sphinx-theme",
     "sphinx-autobuild",
     "sphinx-copybutton",
     "sphinx-design",
+    "sphinx-examples",
+    "sphinx-notfound-page",
+    "sphinx-reredirects",
+    "sphinx-sitemap",
+    "sphinx-tippy",
+    "sphinxcontrib-mermaid",
+    "sphinxcontrib-video",
+    "sphinxcontrib-youtube",
     "sphinxext-opengraph",
+    "vale",
 ]
+
+[tool.uv.sources]
+portalbrasil-legislativo = { path = "../backend" }
+
+[project.urls]
+Repository = "https://github.com/portal-br/legislativo"
+Documentation = "https://portal-br.github.io/legislativo"
