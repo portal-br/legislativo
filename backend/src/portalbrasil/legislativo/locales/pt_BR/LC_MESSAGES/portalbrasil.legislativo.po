@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-10-04 14:36+0000\n"
+"POT-Creation-Date: 2026-10-04 17:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,6 +13,10 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
+
+#: portalbrasil/legislativo/profiles/default/types/Galeria.xml
+msgid "A gallery of photos"
+msgstr "Uma galeria de fotos"
 
 #: portalbrasil/legislativo/profiles.zcml:31
 msgid "Configura um novo site com o Portal Modelo"
@@ -29,6 +33,10 @@ msgstr "Ferramenta de portais para casas do legislativo brasileiro."
 #: portalbrasil/legislativo/profiles.zcml:22
 msgid "Perfil de configuração genérica com dependências principais necessárias pelo CMF."
 msgstr "Perfil de configuração genérica com dependências principais necessárias pelo CMF."
+
+#: portalbrasil/legislativo/profiles/default/types/Galeria.xml
+msgid "Photo Gallery"
+msgstr "Galeria de fotos"
 
 #: portalbrasil/legislativo/distributions/configure.zcml:17
 #: portalbrasil/legislativo/profiles.zcml:31

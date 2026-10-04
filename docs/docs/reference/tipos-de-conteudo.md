@@ -19,12 +19,19 @@ A tabela lista cada tipo, a classe que o implementa e se ele pode ser adicionado
 | Event | `plone.volto.content.FolderishEvent` | sim |
 | File | `plone.app.contenttypes.content.File` | sim |
 | Folder | `plone.app.contenttypes.content.Folder` | não |
+| Galeria | `portalbrasil.legislativo.content.galeria.Galeria` | sim |
 | Image | `plone.app.contenttypes.content.Image` | sim |
 | Link | `plone.app.contenttypes.content.Link` | sim |
 | News Item | `plone.volto.content.FolderishNewsItem` | sim |
 | Plone Site | `Products.CMFPlone.Portal.PloneSite` | não |
 
 Páginas, eventos e notícias são *folderish*: podem conter outros conteúdos.
+
+## Galeria
+
+A Galeria é um tipo do Portal Modelo para publicar fotos, como as de uma sessão solene ou de um evento.
+Ela aceita apenas imagens, aparece na navegação e guarda versões a cada edição.
+Podem adicionar galerias os administradores do site, o dono da pasta e quem tem o papel de colaborador, pela permissão `portalbrasil.legislativo: Add Galeria`.
 
 ## Fluxo de trabalho
 
@@ -48,6 +55,7 @@ Todos os tipos, exceto o site, têm o título de navegação (`volto.navtitle`),
 | Event | `plone.eventbasic`, `plone.eventrecurrence`, `plone.eventlocation`, `plone.eventattendees`, `plone.eventcontact`, `plone.basic`, `volto.preview_image_link`, `volto.kicker`, `plone.categorization`, `plone.publication`, `plone.ownership`, `plone.shortname`, `volto.navtitle`, `plone.excludefromnavigation`, `plone.relateditems`, `volto.blocks`, `plone.constraintypes`, `plone.namefromtitle`, `plone.textindexer`, `plone.versioning`, `plone.locking` |
 | File | `plone.categorization`, `plone.publication`, `plone.ownership`, `volto.preview_image_link`, `volto.kicker`, `plone.shortname`, `volto.navtitle`, `plone.relateditems`, `plone.namefromfilename`, `plone.versioning`, `plone.locking` |
 | Folder | `plone.dublincore`, `plone.namefromtitle`, `plone.excludefromnavigation`, `plone.shortname`, `plone.constraintypes`, `plone.relateditems`, `plone.nextprevioustoggle`, `volto.navtitle` |
+| Galeria | `volto.navtitle`, `plone.namefromtitle`, `volto.preview_image_link`, `plone.excludefromnavigation`, `plone.shortname`, `plone.dublincore`, `plone.relateditems`, `plone.versioning`, `plone.locking`, `volto.blocks` |
 | Image | `volto.kicker`, `plone.categorization`, `plone.publication`, `plone.ownership`, `plone.shortname`, `volto.navtitle`, `plone.relateditems`, `plone.namefromfilename`, `plone.versioning`, `plone.locking` |
 | Link | `plone.basic`, `volto.preview_image_link`, `volto.kicker`, `plone.categorization`, `plone.publication`, `plone.ownership`, `plone.shortname`, `volto.navtitle`, `plone.excludefromnavigation`, `plone.namefromtitle`, `plone.versioning`, `plone.locking` |
 | News Item | `plone.basic`, `volto.preview_image_link`, `volto.kicker`, `plone.categorization`, `plone.publication`, `plone.ownership`, `plone.shortname`, `volto.navtitle`, `plone.excludefromnavigation`, `plone.relateditems`, `volto.blocks`, `plone.constraintypes`, `plone.namefromtitle`, `plone.versioning`, `plone.locking` |

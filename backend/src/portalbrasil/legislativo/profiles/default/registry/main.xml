@@ -3,6 +3,17 @@
           i18n:domain="portalbrasil.legislativo"
 >
 
+  <!-- Galeria aparece na navegação -->
+  <records interface="plone.base.interfaces.controlpanel.INavigationSchema"
+           prefix="plone"
+  >
+    <value key="displayed_types"
+           purge="false"
+    >
+      <element>Galeria</element>
+    </value>
+  </records>
+
   <!-- -*- extra stuff goes here -*- -->
 
 </registry>
