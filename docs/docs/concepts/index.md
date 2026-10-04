@@ -1,20 +1,19 @@
 ---
 myst:
   html_meta:
-    "description": "PortalBrasil: Legislativo concepts"
-    "property=og:description": "PortalBrasil: Legislativo concepts"
-    "property=og:title": "PortalBrasil: Legislativo concepts"
-    "keywords": "Plone, PortalBrasil: Legislativo, concepts"
+    "description": "Conceitos do PortalBrasil: Legislativo"
+    "property=og:description": "Conceitos do PortalBrasil: Legislativo"
+    "property=og:title": "Conceitos do PortalBrasil: Legislativo"
+    "keywords": "Plone, PortalBrasil: Legislativo, conceitos"
 ---
 
-# Concepts
+# Conceitos
 
-This part of the documentation contains conceptual guides, including design defense and explanation of concepts for deeper study.
-The Diátaxis framework also calls this class of documentation _explanation_.
+Explicações sobre como o Portal Modelo está organizado e por quê.
 
-> Explanation is a discursive treatment of a subject, that permits reflection.
-> Explanation is understanding-oriented.
+```{toctree}
+:maxdepth: 1
 
-```{seealso}
-https://diataxis.fr/explanation/
+distribuicao
+organizacao
 ```

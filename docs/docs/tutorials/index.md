@@ -1,19 +1,18 @@
 ---
 myst:
   html_meta:
-    "description": "PortalBrasil: Legislativo Tutorials"
-    "property=og:description": "PortalBrasil: Legislativo Tutorials"
-    "property=og:title": "PortalBrasil: Legislativo Tutorials"
-    "keywords": "Plone, PortalBrasil: Legislativo, tutorials"
+    "description": "Tutoriais do PortalBrasil: Legislativo"
+    "property=og:description": "Tutoriais do PortalBrasil: Legislativo"
+    "property=og:title": "Tutoriais do PortalBrasil: Legislativo"
+    "keywords": "Plone, PortalBrasil: Legislativo, tutoriais"
 ---
 
-# Tutorials
+# Tutoriais
 
-This part of the documentation contains tutorials.
+Os tutoriais são roteiros guiados, do começo ao fim, para quem está conhecendo o projeto.
 
-> A tutorial is an experience that takes place under the guidance of a tutor.
-> A tutorial is always learning-oriented.
+```{toctree}
+:maxdepth: 1
 
-```{seealso}
-https://diataxis.fr/tutorials/
+primeiro-site
 ```

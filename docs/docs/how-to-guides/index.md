@@ -1,30 +1,20 @@
 ---
 myst:
   html_meta:
-    "description": "PortalBrasil: Legislativo how-to guides"
-    "property=og:description": "PortalBrasil: Legislativo how-to guides"
-    "property=og:title": "PortalBrasil: Legislativo how-to guides"
-    "keywords": "Plone, PortalBrasil: Legislativo, how-to, guides"
+    "description": "Guias do PortalBrasil: Legislativo"
+    "property=og:description": "Guias do PortalBrasil: Legislativo"
+    "property=og:title": "Guias do PortalBrasil: Legislativo"
+    "keywords": "Plone, PortalBrasil: Legislativo, guias"
 ---
 
-# How-to guides
+# Guias
 
-This part of the documentation contains how-to guides, including installation and usage.
+Os guias resolvem tarefas específicas e partem do princípio de que você já conhece o básico do projeto.
 
-> How-to guides are directions that guide the reader through a problem or towards a result.
-> How-to guides are goal-oriented.
+```{toctree}
+:maxdepth: 1
 
-```{seealso}
-https://diataxis.fr/how-to-guides/
+criar-site
+demo-docker-compose
+formularios
 ```
-
-
-## Authors
-
--   {doc}`plone:contributing/documentation/myst-reference`
--   {doc}`plone:contributing/documentation/authors`
-
-
-## Designers
-
--   [Contribute to Plone Sphinx Theme](https://plone-sphinx-theme.readthedocs.io/guides/contribute.html)

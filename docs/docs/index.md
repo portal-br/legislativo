@@ -4,38 +4,23 @@ myst:
     "description": "Portal Modelo: Ferramenta de portais para casas do legislativo brasileiro"
     "property=og:description": "Portal Modelo: Ferramenta de portais para casas do legislativo brasileiro"
     "property=og:title": "PortalBrasil: Legislativo"
-    "keywords": "PortalBrasil: Legislativo, documentation, Portal Modelo: Ferramenta de portais para casas do legislativo brasileiro"
+    "keywords": "PortalBrasil: Legislativo, Portal Modelo, Plone, câmara municipal, assembleia legislativa"
 ---
 
 # PortalBrasil: Legislativo
 
-Welcome to the documentation for PortalBrasil: Legislativo!
-Portal Modelo: Ferramenta de portais para casas do legislativo brasileiro
+O **Portal Modelo** é uma ferramenta para criar portais de casas do legislativo brasileiro: câmaras municipais, assembleias legislativas e órgãos semelhantes.
+Ele é construído sobre o {term}`Plone` 6, com o frontend {term}`Volto`, e é distribuído como uma {term}`distribuição` chamada `portalmodelo`.
 
-This scaffold provides a ready-to-use environment for creating comprehensive documentation for {term}`Plone` projects, based on {term}`Plone Sphinx Theme`.
+Esta documentação segue o modelo [Diátaxis](https://diataxis.fr/):
 
-Built with Markedly Structured Text ({term}`MyST`), this environment supports rich formatting, directives, and extensions tailored for technical documentation.
-
-It's structured following the [Diátaxis](https://diataxis.fr/) documentation framework.
-
-```{toctree}
-:caption: How to guides
-:maxdepth: 2
-:hidden: true
-
-how-to-guides/index
-```
+- **Tutoriais** levam você do repositório clonado a um site funcionando.
+- **Guias** resolvem tarefas específicas, como subir a demonstração com Docker Compose.
+- **Referência** descreve tipos de conteúdo, variáveis de ambiente e alvos do `Makefile`.
+- **Conceitos** explicam como o projeto está organizado e por quê.
 
 ```{toctree}
-:caption: Reference
-:maxdepth: 2
-:hidden: true
-
-reference/index
-```
-
-```{toctree}
-:caption: Tutorials
+:caption: Tutoriais
 :maxdepth: 2
 :hidden: true
 
@@ -43,7 +28,23 @@ tutorials/index
 ```
 
 ```{toctree}
-:caption: Concepts
+:caption: Guias
+:maxdepth: 2
+:hidden: true
+
+how-to-guides/index
+```
+
+```{toctree}
+:caption: Referência
+:maxdepth: 2
+:hidden: true
+
+reference/index
+```
+
+```{toctree}
+:caption: Conceitos
 :maxdepth: 2
 :hidden: true
 
@@ -51,7 +52,7 @@ concepts/index
 ```
 
 ```{toctree}
-:caption: Appendices
+:caption: Apêndices
 :maxdepth: 2
 :hidden: true
 

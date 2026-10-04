@@ -1,23 +1,20 @@
 ---
 myst:
   html_meta:
-    "description": "PortalBrasil: Legislativo Reference"
-    "property=og:description": "PortalBrasil: Legislativo Reference"
-    "property=og:title": "PortalBrasil: Legislativo Reference"
-    "keywords": "Plone, _PortalBrasil: Legislativo,_ reference"
+    "description": "Referência do PortalBrasil: Legislativo"
+    "property=og:description": "Referência do PortalBrasil: Legislativo"
+    "property=og:title": "Referência do PortalBrasil: Legislativo"
+    "keywords": "Plone, PortalBrasil: Legislativo, referência"
 ---
 
-# Reference
+# Referência
 
-This part of the documentation contains reference material, including APIs, configuration values, and environment variables.
+Descrições técnicas do Portal Modelo: o que existe e como configurar.
 
-> Reference guides are technical descriptions of the machinery and how to operate it.
-> Reference material is information-oriented.
+```{toctree}
+:maxdepth: 1
 
-```{seealso}
-https://diataxis.fr/reference/
+tipos-de-conteudo
+variaveis-de-ambiente
+makefile
 ```
-
-## Configuration
-
--   {doc}`plone:contributing/documentation/themes-and-extensions`
