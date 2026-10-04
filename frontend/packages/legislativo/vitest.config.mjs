@@ -10,11 +10,22 @@ const require = createRequire(import.meta.url);
 const addonSrc = (name) =>
   path.join(path.dirname(require.resolve(`${name}/package.json`)), 'src');
 
+// Dependências do tema, resolvidas a partir do pacote do tema.
+const themeRequire = createRequire(
+  require.resolve('@simplesconsultoria/volto-light-theme/package.json'),
+);
+const themeDepSrc = (name) =>
+  path.join(path.dirname(themeRequire.resolve(`${name}/package.json`)), 'src');
+
 const aliases = {
   '@plone/volto': path.resolve(__dirname, '../../core/packages/volto/src'), // Add paths accordingly
   '@portalbrasil/legislativo': path.resolve(__dirname, './src'), // Add paths accordingly
   '@eeacms/volto-pdf-block': addonSrc('@eeacms/volto-pdf-block'),
   '@plonegovbr/volto-vlibras': addonSrc('@plonegovbr/volto-vlibras'),
+  '@simplesconsultoria/volto-light-theme': addonSrc(
+    '@simplesconsultoria/volto-light-theme',
+  ),
+  '@kitconcept/volto-light-theme': themeDepSrc('@kitconcept/volto-light-theme'),
 };
 
 // Each Volto test project declares its own aliases, which take precedence
