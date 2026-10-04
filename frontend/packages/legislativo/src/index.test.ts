@@ -2,6 +2,7 @@ import type { ConfigType } from '@plone/registry';
 import { describe, expect, it } from 'vitest';
 import Libras from '@plonegovbr/volto-vlibras/components/Libras';
 import applyConfig from './index';
+import packageJSON from '../package.json';
 import FileView from './components/Views/FileView';
 
 const OTHER_VIEW = () => null;
@@ -56,5 +57,11 @@ describe('applyConfig', () => {
   it('preserva as demais visões por tipo', () => {
     const { views } = applyConfig(makeConfig());
     expect(views.contentTypesViews.Document).toBe(OTHER_VIEW);
+  });
+});
+
+describe('add-ons', () => {
+  it('carrega o bloco de iframe', () => {
+    expect(packageJSON.addons).toContain('@kitconcept/volto-iframe-block');
   });
 });

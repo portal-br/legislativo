@@ -34,3 +34,11 @@ Campos de cada botão, por exibição:
 
 Na exibição por imagens, a imagem e o texto alternativo são obrigatórios: o texto alternativo descreve o que o botão faz para quem usa leitor de tela.
 Um botão sem link aparece esmaecido e não pode ser clicado.
+
+## Iframe
+
+O bloco **Iframe** (`iframe`), do add-on `@kitconcept/volto-iframe-block`, incorpora uma página externa, como um painel de transparência, um mapa ou um formulário de outro sistema.
+O editor informa o endereço, o título (lido por leitores de tela), a altura e se a proporção deve ser mantida.
+
+O bloco aceita qualquer endereço.
+Para limitar os sites que podem ser incorporados, defina a lista `validUrls` na configuração do bloco, em `config.blocks.blocksConfig.iframe.validUrls`.
