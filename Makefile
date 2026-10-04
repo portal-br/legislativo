@@ -118,7 +118,7 @@ format:  ## Format codebase
 	$(MAKE) -C "./frontend/" format
 
 .PHONY: lint
-lint:  ## Format codebase
+lint:  ## Lint codebase
 	@echo "Lint the codebase"
 	$(MAKE) -C "./backend/" lint
 	$(MAKE) -C "./frontend/" lint
