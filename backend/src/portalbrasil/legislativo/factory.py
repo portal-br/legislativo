@@ -4,6 +4,7 @@ from plone.base.interfaces.installable import INonInstallable
 from plone.distribution.api import site as site_api
 from portalbrasil.legislativo import CMF_DEPENDENCIES_PROFILE
 from portalbrasil.legislativo import DEFAULT_PROFILE
+from portalbrasil.legislativo import DISTRIBUTION_NAME
 from portalbrasil.legislativo import LEGISLATIVO_PROFILE
 from portalbrasil.legislativo import PACKAGE_NAME
 from Products.CMFPlone.MigrationTool import Addon
@@ -185,9 +186,9 @@ def add_site(
     extension_ids: tuple[str, ...] = (),
     setup_content: bool = False,
     available_languages: list[str] | None = None,
-    default_language: str = "de",
+    default_language: str = "pt-br",
     portal_timezone: str = "UTC",
-    distribution: str = "volto",
+    distribution: str = DISTRIBUTION_NAME,
     **kwargs: Any,
 ) -> PloneSite:
     """Add a PloneSite to the context.
