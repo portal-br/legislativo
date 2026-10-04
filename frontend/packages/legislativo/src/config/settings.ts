@@ -9,6 +9,10 @@ export default function install(config: ConfigType) {
   // Languages not added to supportedLanguages will not be included in the build
   config.settings.supportedLanguages = ['pt-br'];
 
+  // Links para arquivos em listagens e teasers abrem a página do arquivo,
+  // que exibe PDFs, em vez de forçar o download para visitantes anônimos.
+  config.settings.downloadableObjects = [];
+
   // Habilita VLibras
   config.settings.appExtras = [
     ...config.settings.appExtras,

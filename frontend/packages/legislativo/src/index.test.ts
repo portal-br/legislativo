@@ -14,6 +14,7 @@ const makeConfig = () =>
       defaultLanguage: 'en',
       supportedLanguages: ['en', 'pt-br'],
       appExtras: [OTHER_EXTRA],
+      downloadableObjects: ['File'],
     },
     views: {
       contentTypesViews: { Document: OTHER_VIEW },
@@ -26,6 +27,11 @@ describe('applyConfig', () => {
     expect(settings.isMultilingual).toBe(false);
     expect(settings.defaultLanguage).toBe('pt-br');
     expect(settings.supportedLanguages).toEqual(['pt-br']);
+  });
+
+  it('abre arquivos pela página do conteúdo em vez de baixá-los', () => {
+    const { settings } = applyConfig(makeConfig());
+    expect(settings.downloadableObjects).toEqual([]);
   });
 
   it('habilita o VLibras em todas as páginas', () => {
