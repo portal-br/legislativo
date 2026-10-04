@@ -1,1 +1,1 @@
-Regenera a estrutura do projeto a partir do template `project` do cookieplone. @ericof
+Regenera a estrutura do projeto a partir do template `project` do cookieplone, com a integração contínua nos workflows do `plone/meta@2.x` e o `dependabot.yml` em `.github/`. @ericof
