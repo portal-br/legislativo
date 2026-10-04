@@ -38,5 +38,5 @@ MyST
     [MyST](https://myst-parser.readthedocs.io/en/latest/) é a variante de Markdown usada nesta documentação.
 
 Sphinx
-    [Sphinx](https://www.sphinx-doc.org/) gera esta documentação em HTML.
+    [Sphinx](https://www.sphinx-doc.org/en/master/) gera esta documentação em HTML.
 ```
