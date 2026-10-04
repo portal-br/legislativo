@@ -45,7 +45,7 @@
     "@plone-collective/volto-image-editor": "1.0.1",
     "@plone/components": "workspace:*",
     "@plone/volto-form-block": "1.0.0-alpha.3",
-    "@simplesconsultoria/volto-light-theme": "1.0.0-alpha.5"
+    "@simplesconsultoria/volto-light-theme": "1.0.0-alpha.11"
   },
   "peerDependencies": {
     "@plone/registry": "workspace:*",

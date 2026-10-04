@@ -43,7 +43,7 @@ class TestMigrationTool:
             "fs_version": self.profile_version,
         }
 
-    @pytest.mark.parametrize("key,expected", [("Zope", "6.1"), ("CMFPlone", "6.2.1")])
+    @pytest.mark.parametrize("key,expected", [("Zope", "6.2"), ("CMFPlone", "6.2.2")])
     def test_coreVersions_values(self, key: str, expected: str):
         """Versions match the pinned stack."""
         assert self.tool.coreVersions()[key] == expected
