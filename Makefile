@@ -17,6 +17,7 @@ PROJECT_NAME := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.name')
 STACK_NAME=legislativo-demo-plone-org-br
 VOLTO_VERSION := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.frontend.volto_version')
 PLONE_VERSION := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.backend.base_package_version')
+PYTHON_VERSION := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.backend.python_version')
 
 
 # We like colors
@@ -41,6 +42,7 @@ debug-settings:  ## Debug settings
 	@echo "PROJECT_NAME: $(PROJECT_NAME)"
 	@echo "VOLTO_VERSION: $(VOLTO_VERSION)"
 	@echo "PLONE_VERSION: $(PLONE_VERSION)"
+	@echo "PYTHON_VERSION: $(PYTHON_VERSION)"
 
 ###########################################
 # Frontend
@@ -155,12 +157,12 @@ build-images:  ## Build container images
 stack-create-site:  ## Local Stack: Create a new site
 	@echo "Create a new site in the local Docker stack"
 	@echo "(Stack must not be running already.)"
-	VOLTO_VERSION=$(VOLTO_VERSION) PLONE_VERSION=$(PLONE_VERSION) docker compose -f docker-compose-dev.yml run --build backend ./docker-entrypoint.sh create-site
+	VOLTO_VERSION=$(VOLTO_VERSION) PLONE_VERSION=$(PLONE_VERSION) PYTHON_VERSION=$(PYTHON_VERSION) docker compose -f docker-compose-dev.yml run --build backend ./docker-entrypoint.sh create-site
 
 .PHONY: stack-start
 stack-start:  ## Local Stack: Start Services
 	@echo "Start local Docker stack"
-	VOLTO_VERSION=$(VOLTO_VERSION) PLONE_VERSION=$(PLONE_VERSION) docker compose -f docker-compose-dev.yml up -d --build
+	VOLTO_VERSION=$(VOLTO_VERSION) PLONE_VERSION=$(PLONE_VERSION) PYTHON_VERSION=$(PYTHON_VERSION) docker compose -f docker-compose-dev.yml up -d --build
 	@echo "Now visit: http://legislativo.localhost"
 
 .PHONY: stack-status
@@ -175,10 +177,8 @@ stack-stop:  ## Local Stack: Stop Services
 
 .PHONY: stack-rm
 stack-rm:  ## Local Stack: Remove Services and Volumes
-	@echo "Remove local Docker stack"
-	@docker compose -f docker-compose-dev.yml down
-	@echo "Remove local volume data"
-	@docker volume rm $(PROJECT_NAME)_vol-site-data
+	@echo "Remove local Docker stack and its volumes"
+	@docker compose -f docker-compose-dev.yml down --volumes
 
 ###########################################
 # Acceptance
@@ -207,7 +207,7 @@ acceptance-frontend-image-build:
 .PHONY: acceptance-backend-image-build
 acceptance-backend-image-build:
 	@echo "Build acceptance backend image"
-	@docker build backend -t portal-br/legislativo-backend:acceptance -f backend/Dockerfile.acceptance --build-arg PLONE_VERSION=$(PLONE_VERSION)
+	@docker build backend -t portal-br/legislativo-backend:acceptance -f backend/Dockerfile.acceptance --build-arg PLONE_VERSION=$(PLONE_VERSION) --build-arg PYTHON_VERSION=$(PYTHON_VERSION)
 
 .PHONY: acceptance-images-build
 acceptance-images-build: ## Build Acceptance frontend/backend images

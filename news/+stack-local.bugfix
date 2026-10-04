@@ -1,0 +1,1 @@
+Corrige a stack local do Docker Compose: `make stack-start`, `make stack-create-site` e `make acceptance-images-build` passam a versão do Python para o build do backend, e `make stack-rm` remove o volume da stack. @ericof
