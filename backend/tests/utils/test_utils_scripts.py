@@ -26,6 +26,10 @@ import pytest
         ("setup_content", "", True),
         ("setup_content", "f", False),
         ("setup_content", "t", True),
+        ("setup_content", "  ", True),
+        # get_environmental_variables already coerces SITE_SETUP_CONTENT
+        ("setup_content", False, False),
+        ("setup_content", True, True),
     ),
 )
 def test_parse_answers(key: str, value: Any, expected: Any):
@@ -89,6 +93,17 @@ def test_options_keys():
         "portal_timezone",
         "setup_content",
     ]
+
+
+@pytest.mark.parametrize("value,expected", (("false", False), ("1", True)))
+def test_parse_answers_from_environment(monkeypatch, value: str, expected: bool):
+    """Answers read from the environment can be parsed."""
+    for _, env_var, _ in scripts.OPTIONS:
+        monkeypatch.delenv(env_var, raising=False)
+    monkeypatch.setenv("SITE_SETUP_CONTENT", value)
+    env_answers = scripts.get_environmental_variables()
+    result = scripts.parse_answers(ANSWERS_FILE, env_answers)
+    assert result["setup_content"] is expected
 
 
 class TestGetEnvironmentalVariables:
