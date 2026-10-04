@@ -25,7 +25,6 @@
     <element value="plone.namefromtitle" />
     <element value="plone.versioning" />
     <element value="plone.locking" />
-    <element value="plone.translatable" />
   </property>
 
 </object>

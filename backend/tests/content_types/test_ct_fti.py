@@ -1,6 +1,7 @@
 from . import BEHAVIORS
 from . import FTI_VALUES
 from . import NAVTITLE_TYPES
+from . import TEST_ONLY_BEHAVIORS
 from plone.behavior.interfaces import IBehavior
 from plone.dexterity.fti import DexterityFTI
 from zope.component import queryUtility
@@ -42,3 +43,9 @@ class TestContentTypeFTI:
             if queryUtility(IBehavior, name=name) is None
         ]
         assert missing == []
+
+    @pytest.mark.parametrize("portal_type", sorted(BEHAVIORS))
+    def test_no_test_only_behaviors(self, portal_type: str):
+        """FTIs do not use behaviors missing from production installs."""
+        behaviors = set(self.get_fti(portal_type).behaviors)
+        assert behaviors.isdisjoint(TEST_ONLY_BEHAVIORS)

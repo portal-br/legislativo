@@ -42,7 +42,6 @@ BEHAVIORS: dict[str, tuple[str, ...]] = {
         "plone.namefromtitle",
         "plone.versioning",
         "plone.locking",
-        "plone.translatable",
     ),
     "Event": (
         "plone.eventbasic",
@@ -66,7 +65,6 @@ BEHAVIORS: dict[str, tuple[str, ...]] = {
         "plone.textindexer",
         "plone.versioning",
         "plone.locking",
-        "plone.translatable",
     ),
     "File": (
         "plone.categorization",
@@ -116,7 +114,6 @@ BEHAVIORS: dict[str, tuple[str, ...]] = {
         "plone.namefromtitle",
         "plone.versioning",
         "plone.locking",
-        "plone.translatable",
     ),
     "News Item": (
         "plone.basic",
@@ -134,7 +131,6 @@ BEHAVIORS: dict[str, tuple[str, ...]] = {
         "plone.namefromtitle",
         "plone.versioning",
         "plone.locking",
-        "plone.translatable",
     ),
     "Plone Site": (
         "plonegovbr.socialmedia.settings",
@@ -151,6 +147,11 @@ BEHAVIORS: dict[str, tuple[str, ...]] = {
         "kitconcept.sticky_menu",
     ),
 }
+
+#: Behaviors registered only by test dependencies. plone.app.multilingual
+#: (``plone.translatable``) comes from the ``plone.restapi[test]`` extra and is
+#: not installed in production images, so FTIs must not use it.
+TEST_ONLY_BEHAVIORS = ("plone.translatable",)
 
 #: Types that must offer a navigation title (Portal Modelo feature).
 NAVTITLE_TYPES = tuple(name for name in BEHAVIORS if name != "Plone Site")
