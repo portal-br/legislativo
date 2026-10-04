@@ -22,6 +22,7 @@ Para ver a lista atualizada, rode `make help`.
 | `backend-create-site` | Cria um site Plone com o conteúdo de exemplo. |
 | `backend-start` | Inicia o backend em `http://localhost:8080`. |
 | `frontend-start` | Inicia o frontend em `http://localhost:3000`. |
+| `backend-update-base-content` | Exporta o conteúdo do site para o conteúdo base do pacote, importado em todo site novo. |
 | `backend-update-example-content` | Exporta o conteúdo do site para o conteúdo de exemplo do pacote. |
 | `clean` | Remove a instalação. |
 

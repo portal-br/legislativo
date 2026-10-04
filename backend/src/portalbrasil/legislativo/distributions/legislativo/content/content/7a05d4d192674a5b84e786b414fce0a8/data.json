@@ -14,6 +14,7 @@
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
+  "head_title": null,
   "id": "portalbrasil.png",
   "image": {
     "blob_path": "7a05d4d192674a5b84e786b414fce0a8/image/portalbrasil-wide-transp.png",
@@ -31,6 +32,7 @@
     "stealable": true
   },
   "modified": "2025-04-08T14:29:09+00:00",
+  "nav_title": null,
   "review_state": null,
   "rights": "",
   "subjects": [],

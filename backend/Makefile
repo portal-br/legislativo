@@ -35,7 +35,8 @@ PLONE_SITE_ID=Plone
 BACKEND_FOLDER=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 PYTHON_VERSION := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.backend.python_version')
 PLONE_VERSION := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.backend.base_package_version')
-EXAMPLE_CONTENT_FOLDER := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.backend.code_path')/setuphandlers/examplecontent
+BASE_CONTENT_FOLDER := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.backend.code_path')/setuphandlers/basecontent
+EXAMPLE_CONTENT_FOLDER := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.backend.code_path')/distributions/legislativo/content
 PACKAGE_NAME := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.backend.name')
 
 
@@ -63,6 +64,7 @@ debug-settings:  ## Debug settings
 	@echo "PLONE_VERSION: $(PLONE_VERSION)"
 	@echo "PACKAGE_NAME: $(PACKAGE_NAME)"
 	@echo "EXAMPLE_CONTENT_FOLDER: $(EXAMPLE_CONTENT_FOLDER)"
+	@echo "BASE_CONTENT_FOLDER: $(BASE_CONTENT_FOLDER)"
 	@echo "IMAGE_NAME: $(IMAGE_NAME)"
 
 ############################################
@@ -119,6 +121,12 @@ create-site: $(VENV_FOLDER) instance/etc/zope.ini ## Create a new site from scra
 ############################################
 # Example Content
 ############################################
+.PHONY: update-base-content
+update-base-content: $(VENV_FOLDER) ## Export base content inside package
+	@echo "$(GREEN)==> Export base content into $(BASE_CONTENT_FOLDER) $(RESET)"
+	if [ -d $(BASE_CONTENT_FOLDER)/content ]; then rm -r $(BASE_CONTENT_FOLDER)/* ;fi
+	@uv run plone-exporter instance/etc/zope.conf $(PLONE_SITE_ID) $(BASE_CONTENT_FOLDER)
+
 .PHONY: update-example-content
 update-example-content: $(VENV_FOLDER) ## Export example content inside package
 	@echo "$(GREEN)==> Export example content into $(EXAMPLE_CONTENT_FOLDER) $(RESET)"

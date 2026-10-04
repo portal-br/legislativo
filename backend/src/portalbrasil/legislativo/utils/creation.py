@@ -48,14 +48,12 @@ def create_example_content(
 ) -> None:
     """Create example content in the site."""
     contents = distribution.contents
-    # Process content import from json
-    content_json_path = contents["json"]
-    if content_json_path:
+    if path := contents.get("json"):
         # Invalidate the schema cache to make sure we get up to date behaviors.
         # Normally this happens on commit, but we didn't commit yet.
         SCHEMA_CACHE.clear()
         importer = get_importer(site)
-        importer.import_site(content_json_path)
+        importer.import_site(path)
         # Create a savepoint to ensure the import is atomic
         tx.savepoint(optimistic=True)
 

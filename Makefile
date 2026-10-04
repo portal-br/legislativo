@@ -80,6 +80,10 @@ backend-build:  ## Build Backend
 backend-create-site: ## Create a Plone site with default content
 	$(MAKE) -C "./backend/" create-site
 
+.PHONY: backend-update-base-content
+backend-update-base-content: ## Export base content inside package
+	$(MAKE) -C "./backend/" update-base-content
+
 .PHONY: backend-update-example-content
 backend-update-example-content: ## Export example content inside package
 	$(MAKE) -C "./backend/" update-example-content
