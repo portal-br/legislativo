@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+          i18n:domain="sc.voltolighttheme"
+>
+
+  <!--
+    Theme definitions for Portal Modelo.
+    Overrides the "default" theme shipped with sc.voltolighttheme.
+  -->
+
+  <records interface="sc.voltolighttheme.interfaces.ISCVLTThemeDefinition"
+           prefix="sc.voltolighttheme.theme.default"
+  >
+    <value key="name"
+           i18n:translate=""
+    >Portal Modelo Base</value>
+    <value key="description"
+           i18n:translate=""
+    >Tema padrão para o Portal Modelo.</value>
+    <value key="font_family_primary">Inter, sans-serif</value>
+    <value key="font_family_secondary">Inter, sans-serif</value>
+
+    <!-- Primary (Green from Logo) -->
+    <value key="primary_color_light">#ffffff</value>
+    <value key="primary_color_dark">#000000</value>
+    <value key="primary_foreground_color_light">#000000</value>
+    <value key="primary_foreground_color_dark">#ffffff</value>
+    <value key="primary_low_foreground_color_light">#333333</value>
+    <value key="primary_low_foreground_color_dark">#f8f8f8</value>
+    <value key="primary_accent_color_light">#009c3b</value>
+    <value key="primary_accent_color_dark">#009c3b</value>
+
+    <!-- Secondary (Blue from Logo) -->
+    <value key="secondary_color_light">#000000</value>
+    <value key="secondary_color_dark">#ffffff</value>
+    <value key="secondary_foreground_color_light">#ffffff</value>
+    <value key="secondary_foreground_color_dark">#000000</value>
+    <value key="secondary_low_foreground_color_light">#e6e6e6</value>
+    <value key="secondary_low_foreground_color_dark">#333333</value>
+    <value key="secondary_accent_color_light">#002671</value>
+    <value key="secondary_accent_color_dark">#002671</value>
+
+    <!-- Accent (Yellow from Logo) -->
+    <value key="accent_color_light">#ffe122</value>
+    <value key="accent_color_dark">#ffe122</value>
+    <value key="accent_foreground_color_light">#000000</value>
+    <value key="accent_foreground_color_dark">#000000</value>
+    <value key="accent_low_foreground_color_light">#333333</value>
+    <value key="accent_low_foreground_color_dark">#333333</value>
+    <value key="accent_accent_color_light">#000000</value>
+    <value key="accent_accent_color_dark">#000000</value>
+
+    <!-- Neutral -->
+    <value key="neutral_color_light">#edeff0</value>
+    <value key="neutral_color_dark">#333333</value>
+    <value key="neutral_foreground_color_light">#000000</value>
+    <value key="neutral_foreground_color_dark">#ffffff</value>
+    <value key="neutral_low_foreground_color_light">#333333</value>
+    <value key="neutral_low_foreground_color_dark">#e6e6e6</value>
+    <value key="neutral_accent_color_light">#009c3b</value>
+    <value key="neutral_accent_color_dark">#009c3b</value>
+  </records>
+
+</registry>
