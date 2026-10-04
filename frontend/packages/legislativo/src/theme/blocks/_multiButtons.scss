@@ -1,0 +1,168 @@
+// Bloco de múltiplos botões.
+// As cores vêm das variáveis --theme-* do tema de bloco escolhido.
+.block.multi-buttons-block {
+  --multi-buttons-gap: 0px;
+  --multi-buttons-bg: var(--theme-high-contrast-color);
+  --multi-buttons-fg: var(--theme-top-foreground-color);
+  --multi-buttons-divider: 1px dotted var(--theme-foreground-color);
+
+  max-width: $default-container-width;
+  margin-right: auto;
+  margin-left: auto;
+
+  .multi-buttons-block__list {
+    display: grid;
+    // Esconde o divisor do primeiro botão de cada linha.
+    overflow: hidden;
+    width: max-content;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    gap: var(--multi-buttons-gap);
+    // Colunas de mesma largura: a do botão mais largo, ou a largura toda.
+    grid-template-columns: repeat(var(--multi-buttons-cols, 1), minmax(0, 1fr));
+    list-style: none;
+
+    &.is-stretch {
+      width: 100%;
+    }
+  }
+
+  .multi-buttons-block__item {
+    display: flex;
+    min-width: 0;
+    border-left: var(--multi-buttons-divider);
+    margin-left: -1px;
+
+    &.is-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  .multi-buttons-block__button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    background: var(--multi-buttons-bg);
+    color: var(--multi-buttons-fg);
+    gap: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      background: color-mix(in srgb, var(--multi-buttons-bg) 90%, black);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--theme-foreground-color);
+      outline-offset: -4px;
+    }
+
+    svg {
+      flex-shrink: 0;
+      fill: currentColor;
+    }
+  }
+
+  .multi-buttons-label {
+    @include marginal-title();
+  }
+
+  .multi-buttons-block__empty {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  &.is-variant-card {
+    --multi-buttons-gap: #{$spacing-medium * 0.5};
+    --multi-buttons-divider: none;
+
+    .multi-buttons-block__item {
+      margin-left: 0;
+    }
+
+    .multi-buttons-block__button {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.25rem 1.25rem 1.25rem 2rem;
+      border-left: 10px solid var(--theme-foreground-accent-color, currentColor);
+      text-align: left;
+    }
+
+    .multi-buttons-card-title {
+      margin: 0;
+      color: inherit;
+      font-size: 1.25rem;
+    }
+
+    .multi-buttons-card-description {
+      margin: 0;
+      color: var(--theme-top-low-contrast-foreground-color, inherit);
+      @include body-text();
+    }
+  }
+
+  &.is-variant-image {
+    --multi-buttons-gap: 1.5rem;
+    --multi-buttons-bg: transparent;
+    --multi-buttons-divider: none;
+
+    .multi-buttons-block__item {
+      margin-left: 0;
+    }
+
+    .multi-buttons-block__button {
+      padding: 0;
+
+      &:hover {
+        background: transparent;
+
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .multi-buttons-image-frame {
+      display: block;
+      overflow: hidden;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .multi-buttons-image-placeholder {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: $largest-mobile-screen) {
+    .multi-buttons-block__list {
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
+
+    .multi-buttons-block__item {
+      border-left: none;
+      margin-left: 0;
+    }
+  }
+}
+
+// Dentro da grade, os botões ficam empilhados.
+.block.gridBlock .block.multi-buttons-block .multi-buttons-block__list {
+  width: 100%;
+  grid-template-columns: 1fr;
+}

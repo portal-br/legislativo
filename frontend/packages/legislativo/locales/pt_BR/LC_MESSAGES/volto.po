@@ -16,12 +16,172 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
 
+#. Default: "Add buttons in the sidebar."
+#: components/Blocks/MultiButtons/View
+msgid "Add buttons in the sidebar."
+msgstr "Adicione botões na barra lateral."
+
+#. Default: "Alternative text"
+#: components/Blocks/MultiButtons/schema
+msgid "Alternative text"
+msgstr "Texto alternativo"
+
+#. Default: "Arrow"
+#: components/Blocks/MultiButtons/schema
+msgid "Arrow"
+msgstr "Seta"
+
+#. Default: "Background color"
+#: components/Blocks/MultiButtons/schema
+msgid "Background color"
+msgstr "Cor de fundo"
+
+#. Default: "Button"
+#: components/Blocks/MultiButtons/schema
+msgid "Button"
+msgstr "Botão"
+
+#. Default: "Button list"
+#: components/Blocks/MultiButtons/schema
+msgid "Button list"
+msgstr "Lista de botões"
+
+#. Default: "Buttons"
+#: components/Blocks/MultiButtons/schema
+msgid "Buttons"
+msgstr "Botões"
+
+#. Default: "Buttons share the full width of the block. Otherwise they all take the width of the widest one."
+#: components/Blocks/MultiButtons/schema
+msgid "Buttons share the full width of the block. Otherwise they all take the width of the widest one."
+msgstr "Os botões dividem toda a largura do bloco. Do contrário, todos ficam com a largura do mais largo."
+
+#. Default: "Calendar"
+#: components/Blocks/MultiButtons/schema
+msgid "Calendar"
+msgstr "Calendário"
+
+#. Default: "Cards"
+#: components/Blocks/MultiButtons/schema
+msgid "Cards"
+msgstr "Cards"
+
+#. Default: "Check mark"
+#: components/Blocks/MultiButtons/schema
+msgid "Check mark"
+msgstr "Marca de seleção"
+
+#. Default: "Columns"
+#: components/Blocks/MultiButtons/schema
+msgid "Columns"
+msgstr "Colunas"
+
+#. Default: "Describe what the button does, for example \"Open the transparency portal\"."
+#: components/Blocks/MultiButtons/schema
+msgid "Describe what the button does, for example \"Open the transparency portal\"."
+msgstr "Descreva o que o botão faz, por exemplo \"Abrir o portal da transparência\"."
+
+#. Default: "Description"
+#: components/Blocks/MultiButtons/schema
+msgid "Description"
+msgstr "Descrição"
+
+#. Default: "Display"
+#: components/Blocks/MultiButtons/schema
+msgid "Display"
+msgstr "Exibição"
+
 #. Default: "Download file"
 #: components/Views/FileView
 msgid "Download file"
 msgstr "Baixar arquivo"
 
+#. Default: "E-mail"
+#: components/Blocks/MultiButtons/schema
+msgid "E-mail"
+msgstr "E-mail"
+
+#. Default: "Fill the width"
+#: components/Blocks/MultiButtons/schema
+msgid "Fill the width"
+msgstr "Ocupar toda a largura"
+
+#. Default: "Icon"
+#: components/Blocks/MultiButtons/schema
+msgid "Icon"
+msgstr "Ícone"
+
+#. Default: "Image"
+#: components/Blocks/MultiButtons/schema
+msgid "Image"
+msgstr "Imagem"
+
+#. Default: "Images"
+#: components/Blocks/MultiButtons/schema
+msgid "Images"
+msgstr "Imagens"
+
+#. Default: "Label"
+#: components/Blocks/MultiButtons/schema
+msgid "Label"
+msgstr "Rótulo"
+
+#. Default: "Label for screen readers"
+#: components/Blocks/MultiButtons/schema
+msgid "Label for screen readers"
+msgstr "Rótulo para leitores de tela"
+
+#. Default: "Link"
+#: components/Blocks/MultiButtons/schema
+msgid "Link"
+msgstr "Link"
+
+#. Default: "Maximum number of buttons per row. Small screens always show fewer."
+#: components/Blocks/MultiButtons/schema
+msgid "Maximum number of buttons per row. Small screens always show fewer."
+msgstr "Número máximo de botões por linha. Telas pequenas sempre mostram menos."
+
+#. Default: "Multiple buttons"
+#: components/Blocks/MultiButtons/schema
+msgid "Multiple buttons"
+msgstr "Múltiplos botões"
+
+#. Default: "News"
+#: components/Blocks/MultiButtons/schema
+msgid "News"
+msgstr "Notícias"
+
+#. Default: "No icon"
+#: components/Blocks/MultiButtons/schema
+msgid "No icon"
+msgstr "Sem ícone"
+
+#. Default: "Open in a new tab"
+#: components/Blocks/MultiButtons/schema
+msgid "Open in a new tab"
+msgstr "Abrir em nova aba"
+
 #. Default: "PDF viewer"
 #: components/Views/FileView
 msgid "PDF viewer"
 msgstr "Visualizador de PDF"
+
+#. Default: "Person"
+#: components/Blocks/MultiButtons/schema
+msgid "Person"
+msgstr "Pessoa"
+
+#. Default: "Phone"
+#: components/Blocks/MultiButtons/schema
+msgid "Phone"
+msgstr "Telefone"
+
+#. Default: "Select an image"
+#: components/Blocks/MultiButtons/View
+msgid "Select an image"
+msgstr "Selecione uma imagem"
+
+#. Default: "Summary"
+#: components/Blocks/MultiButtons/schema
+msgid "Summary"
+msgstr "Resumo"

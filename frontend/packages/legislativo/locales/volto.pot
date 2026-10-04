@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2026-10-04T15:17:11.719Z\n"
+"POT-Creation-Date: 2026-10-04T17:36:17.596Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -13,12 +13,172 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
 
+#. Default: "Add buttons in the sidebar."
+#: components/Blocks/MultiButtons/View
+msgid "Add buttons in the sidebar."
+msgstr ""
+
+#. Default: "Alternative text"
+#: components/Blocks/MultiButtons/schema
+msgid "Alternative text"
+msgstr ""
+
+#. Default: "Arrow"
+#: components/Blocks/MultiButtons/schema
+msgid "Arrow"
+msgstr ""
+
+#. Default: "Background color"
+#: components/Blocks/MultiButtons/schema
+msgid "Background color"
+msgstr ""
+
+#. Default: "Button"
+#: components/Blocks/MultiButtons/schema
+msgid "Button"
+msgstr ""
+
+#. Default: "Button list"
+#: components/Blocks/MultiButtons/schema
+msgid "Button list"
+msgstr ""
+
+#. Default: "Buttons"
+#: components/Blocks/MultiButtons/schema
+msgid "Buttons"
+msgstr ""
+
+#. Default: "Buttons share the full width of the block. Otherwise they all take the width of the widest one."
+#: components/Blocks/MultiButtons/schema
+msgid "Buttons share the full width of the block. Otherwise they all take the width of the widest one."
+msgstr ""
+
+#. Default: "Calendar"
+#: components/Blocks/MultiButtons/schema
+msgid "Calendar"
+msgstr ""
+
+#. Default: "Cards"
+#: components/Blocks/MultiButtons/schema
+msgid "Cards"
+msgstr ""
+
+#. Default: "Check mark"
+#: components/Blocks/MultiButtons/schema
+msgid "Check mark"
+msgstr ""
+
+#. Default: "Columns"
+#: components/Blocks/MultiButtons/schema
+msgid "Columns"
+msgstr ""
+
+#. Default: "Describe what the button does, for example \"Open the transparency portal\"."
+#: components/Blocks/MultiButtons/schema
+msgid "Describe what the button does, for example \"Open the transparency portal\"."
+msgstr ""
+
+#. Default: "Description"
+#: components/Blocks/MultiButtons/schema
+msgid "Description"
+msgstr ""
+
+#. Default: "Display"
+#: components/Blocks/MultiButtons/schema
+msgid "Display"
+msgstr ""
+
 #. Default: "Download file"
 #: components/Views/FileView
 msgid "Download file"
 msgstr ""
 
+#. Default: "E-mail"
+#: components/Blocks/MultiButtons/schema
+msgid "E-mail"
+msgstr ""
+
+#. Default: "Fill the width"
+#: components/Blocks/MultiButtons/schema
+msgid "Fill the width"
+msgstr ""
+
+#. Default: "Icon"
+#: components/Blocks/MultiButtons/schema
+msgid "Icon"
+msgstr ""
+
+#. Default: "Image"
+#: components/Blocks/MultiButtons/schema
+msgid "Image"
+msgstr ""
+
+#. Default: "Images"
+#: components/Blocks/MultiButtons/schema
+msgid "Images"
+msgstr ""
+
+#. Default: "Label"
+#: components/Blocks/MultiButtons/schema
+msgid "Label"
+msgstr ""
+
+#. Default: "Label for screen readers"
+#: components/Blocks/MultiButtons/schema
+msgid "Label for screen readers"
+msgstr ""
+
+#. Default: "Link"
+#: components/Blocks/MultiButtons/schema
+msgid "Link"
+msgstr ""
+
+#. Default: "Maximum number of buttons per row. Small screens always show fewer."
+#: components/Blocks/MultiButtons/schema
+msgid "Maximum number of buttons per row. Small screens always show fewer."
+msgstr ""
+
+#. Default: "Multiple buttons"
+#: components/Blocks/MultiButtons/schema
+msgid "Multiple buttons"
+msgstr ""
+
+#. Default: "News"
+#: components/Blocks/MultiButtons/schema
+msgid "News"
+msgstr ""
+
+#. Default: "No icon"
+#: components/Blocks/MultiButtons/schema
+msgid "No icon"
+msgstr ""
+
+#. Default: "Open in a new tab"
+#: components/Blocks/MultiButtons/schema
+msgid "Open in a new tab"
+msgstr ""
+
 #. Default: "PDF viewer"
 #: components/Views/FileView
 msgid "PDF viewer"
+msgstr ""
+
+#. Default: "Person"
+#: components/Blocks/MultiButtons/schema
+msgid "Person"
+msgstr ""
+
+#. Default: "Phone"
+#: components/Blocks/MultiButtons/schema
+msgid "Phone"
+msgstr ""
+
+#. Default: "Select an image"
+#: components/Blocks/MultiButtons/View
+msgid "Select an image"
+msgstr ""
+
+#. Default: "Summary"
+#: components/Blocks/MultiButtons/schema
+msgid "Summary"
 msgstr ""

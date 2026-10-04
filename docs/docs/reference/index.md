@@ -15,6 +15,7 @@ Descrições técnicas do Portal Modelo: o que existe e como configurar.
 :maxdepth: 1
 
 tipos-de-conteudo
+blocos
 variaveis-de-ambiente
 makefile
 ```

@@ -19,6 +19,9 @@ declare module '@eeacms/volto-pdf-block/components/manage/PDFViewer/BlockView' {
   export default PDFBlockView;
 }
 
+// Dependência do UniversalLink do Volto, importado pelos blocos.
+declare module 'react-router-hash-link';
+
 declare module '@plonegovbr/volto-vlibras/components/Libras' {
   import type { ComponentType } from 'react';
 

@@ -16,6 +16,7 @@ const makeConfig = () =>
       appExtras: [OTHER_EXTRA],
       downloadableObjects: ['File'],
     },
+    blocks: { blocksConfig: {} },
     views: {
       contentTypesViews: { Document: OTHER_VIEW },
     },
@@ -45,6 +46,11 @@ describe('applyConfig', () => {
   it('usa a visão de arquivo do Portal Modelo', () => {
     const { views } = applyConfig(makeConfig());
     expect(views.contentTypesViews.File).toBe(FileView);
+  });
+
+  it('registra os blocos do Portal Modelo', () => {
+    const { blocks } = applyConfig(makeConfig());
+    expect(blocks.blocksConfig.multiButtons).toBeDefined();
   });
 
   it('preserva as demais visões por tipo', () => {
