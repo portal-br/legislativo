@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tool-setup>
+  <required class="Products.MailHost.MailHost.MailHost"
+            tool_id="MailHost"
+  />
+  <required class="Products.CMFCore.CachingPolicyManager.CachingPolicyManager"
+            tool_id="caching_policy_manager"
+  />
+  <required class="Products.CMFCore.ContentTypeRegistry.ContentTypeRegistry"
+            tool_id="content_type_registry"
+  />
+  <required class="Products.SiteErrorLog.SiteErrorLog.SiteErrorLog"
+            tool_id="error_log"
+  />
+  <required class="Products.CMFPlone.PloneTool.PloneTool"
+            tool_id="plone_utils"
+  />
+  <required class="Products.CMFPlone.ActionsTool.ActionsTool"
+            tool_id="portal_actions"
+  />
+  <required class="Products.CMFPlone.CatalogTool.CatalogTool"
+            tool_id="portal_catalog"
+  />
+  <required class="Products.CMFPlone.PloneControlPanel.PloneControlPanel"
+            tool_id="portal_controlpanel"
+  />
+  <required class="Products.PlonePAS.tools.groupdata.GroupDataTool"
+            tool_id="portal_groupdata"
+  />
+  <required class="Products.PlonePAS.tools.groups.GroupsTool"
+            tool_id="portal_groups"
+  />
+  <required class="Products.PlonePAS.tools.memberdata.MemberDataTool"
+            tool_id="portal_memberdata"
+  />
+  <required class="Products.PlonePAS.tools.membership.MembershipTool"
+            tool_id="portal_membership"
+  />
+  <required class="portalbrasil.legislativo.tools.migration.MigrationTool"
+            tool_id="portal_migration"
+  />
+  <required class="Products.CMFPlone.PasswordResetTool.PasswordResetTool"
+            tool_id="portal_password_reset"
+  />
+  <required class="Products.CMFPlone.RegistrationTool.RegistrationTool"
+            tool_id="portal_registration"
+  />
+  <required class="Products.CMFPlone.SkinsTool.SkinsTool"
+            tool_id="portal_skins"
+  />
+  <required class="Products.CMFPlone.TypesTool.TypesTool"
+            tool_id="portal_types"
+  />
+  <required class="Products.CMFUid.UniqueIdAnnotationTool.UniqueIdAnnotationTool"
+            tool_id="portal_uidannotation"
+  />
+  <required class="Products.CMFUid.UniqueIdGeneratorTool.UniqueIdGeneratorTool"
+            tool_id="portal_uidgenerator"
+  />
+  <required class="Products.CMFUid.UniqueIdHandlerTool.UniqueIdHandlerTool"
+            tool_id="portal_uidhandler"
+  />
+  <required class="Products.CMFDiffTool.CMFDiffTool.CMFDiffTool"
+            tool_id="portal_diff"
+  />
+  <required class="Products.CMFPlone.URLTool.URLTool"
+            tool_id="portal_url"
+  />
+  <required class="plone.app.customerize.tool.ViewTemplateContainer"
+            tool_id="portal_view_customizations"
+  />
+  <required class="Products.CMFPlone.WorkflowTool.WorkflowTool"
+            tool_id="portal_workflow"
+  />
+  <required class="Products.CMFPlone.TranslationServiceTool.TranslationServiceTool"
+            tool_id="translation_service"
+  />
+
+</tool-setup>

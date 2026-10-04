@@ -1,0 +1,1 @@
+Remove a dependência de `portalbrasil.core`: a distribuição `portalmodelo`, a criação de sites, os serviços `@sites` e `@system` e a ferramenta de migração passam a fazer parte do pacote. @ericof

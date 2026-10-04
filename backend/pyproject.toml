@@ -649,3 +649,24 @@ mypy_path = "src"
 explicit_package_bases = true
 namespace_packages = true
 files = ["src"]
+# Zope and Plone base classes (layers, services, tools, browser layers) come
+# from packages without type information, so subclassing them means
+# subclassing Any.
+disallow_subclassing_any = false
+
+[[tool.mypy.overrides]]
+# Zope and Plone packages ship neither inline types nor a py.typed marker,
+# and no stub packages exist for them.
+module = [
+  "AccessControl.*",
+  "App.*",
+  "OFS.*",
+  "Products.*",
+  "Testing.*",
+  "ZPublisher.*",
+  "plone.*",
+  "transaction.*",
+  "zExceptions.*",
+  "zope.*",
+]
+ignore_missing_imports = true

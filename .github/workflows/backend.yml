@@ -32,6 +32,7 @@ jobs:
       python-version: ${{ inputs.python-version }}
       plone-version: ${{ inputs.plone-version }}
       working-directory: ${{ inputs.working-directory }}
+      check-typing: true
 
   test:
     name: "Backend: Test"

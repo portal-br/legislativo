@@ -1,0 +1,9 @@
+{
+  "site_id": "Plone",
+  "title": "Câmara Modelo",
+  "description": "Site da câmara modelo",
+  "setup_content": true,
+  "available_languages": ["pt-br"],
+  "default_language": "pt-br",
+  "portal_timezone": "America/Sao_Paulo"
+}

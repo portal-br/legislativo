@@ -6,5 +6,5 @@ from zope.interface import implementer
 class JSONSummarySerializerMetadata:
     """Additional metadata to be exposed on listings."""
 
-    def default_metadata_fields(self):
-        return {"image_field", "image_scales", "effective", "Subject"}
+    def default_metadata_fields(self) -> set[str]:
+        return {"id", "image_field", "image_scales", "effective", "Subject"}

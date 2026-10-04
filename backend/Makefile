@@ -135,6 +135,7 @@ lint: ## Check and fix code base according to Plone standards
 	@uvx pyroma@latest -d .
 	@uvx check-python-versions@latest .
 	@uvx zpretty@latest --check src
+	@uv run mypy src
 
 .PHONY: format
 format: ## Check and fix code base according to Plone standards
