@@ -1,0 +1,10 @@
+# Verificação ortográfica em português do Brasil.
+# Dicionário VERO (LibreOffice), em styles/dictionaries, obtido de
+# https://github.com/LibreOffice/dictionaries/tree/5cf23af85b47be6e398add826da1a02175be4238/pt_BR
+# Licença: LGPLv3 ou MPL (ver styles/dictionaries/README_pt_BR.txt).
+extends: spelling
+message: "Verifique a grafia de '%s'."
+level: error
+dicpath: dictionaries
+dictionaries:
+  - pt_BR
