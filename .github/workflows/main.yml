@@ -1,23 +1,21 @@
-name: "Portal Modelo: CI"
+name: CI
 
 on:
   push:
     paths:
       - "backend/**"
-      - "docs/**"
+      - "devops/**"
       - "frontend/**"
       - ".github/workflows/*.yml"
-      - "devops/**"
-  workflow_dispatch:
+      - "*.md"
+      - "*.toml"
+      - "docker-compose*"
+      - "docs/**"
 
-env:
-  image-name-prefix: ghcr.io/portal-br/legislativo
-  node-version: "22.x"
-  python-version: "3.12"
+  workflow_dispatch:
 
 jobs:
   config:
-    name: "Config: Compute values used in workflow"
     uses: ./.github/workflows/config.yml
 
   backend:
@@ -29,12 +27,11 @@ jobs:
         image-name-prefix: ${{ needs.config.outputs.image-name-prefix }}
         image-name-suffix: backend
         python-version: ${{ needs.config.outputs.python-version }}
-        pb-version: ${{ needs.config.outputs.pb-version }}
+        plone-version: ${{ needs.config.outputs.plone-version }}
     if: ${{ needs.config.outputs.backend == 'true' }}
     permissions:
       contents: read
       packages: write
-
   docs:
     uses: ./.github/workflows/docs.yml
     needs:
@@ -42,7 +39,6 @@ jobs:
     with:
       python-version: ${{ needs.config.outputs.python-version }}
     if: ${{ needs.config.outputs.docs == 'true' }}
-
   frontend:
     uses: ./.github/workflows/frontend.yml
     needs:
@@ -58,15 +54,55 @@ jobs:
       contents: read
       packages: write
 
+  storybook:
+    name: "Storybook"
+    uses: ./.github/workflows/tmp-frontend-storybook.yml
+    needs:
+      - config
+      - frontend
+    # Built only where it is published from, and only once the frontend jobs
+    # it would otherwise duplicate have passed. `always()` lets it run when
+    # `frontend` was skipped for a docs-only change; the failure check keeps it
+    # from publishing on top of a broken build.
+    if: ${{ needs.config.outputs.deploy-docs == 'true' && always() && github.ref == 'refs/heads/main' && !contains(needs.*.result, 'failure') }}
+    with:
+      node-version: ${{ needs.config.outputs.node-version }}
+      working-directory: "frontend"
+      artifacts-store: true
+
+  deploy-docs:
+    name: "Deploy documentation and Storybook"
+    uses: ./.github/workflows/tmp-docs-publish.yml
+    needs:
+      - config
+      - docs
+      - storybook
+    if: ${{ needs.config.outputs.deploy-docs == 'true' && always() && github.ref == 'refs/heads/main' && !contains(needs.*.result, 'failure') }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    with:
+      # A skipped job reports no outputs, so fall back to the name the builder
+      # would have computed. Both halves are rebuilt together, so an artifact
+      # from this same ref is the current one either way.
+      artifacts-docs-name: ${{ needs.docs.outputs.artifacts-name || format('docs-artifacts-{0}', github.ref_name) }}
+      artifacts-storybook-name: ${{ needs.storybook.outputs.artifacts-name || format('storybook-artifacts-{0}', github.ref_name) }}
+
   report:
-    name: "Relatório"
+    name: "Final report"
     if: ${{ always() }}
     runs-on: ubuntu-latest
     needs:
       - config
       - backend
-      - docs
       - frontend
+      - docs
+      - storybook
+      - deploy-docs
     steps:
       - name: Write report
         run: |
@@ -74,6 +110,8 @@ jobs:
           echo '| Job ID | Conclusion |' >> $GITHUB_STEP_SUMMARY
           echo '| --- | --- |' >> $GITHUB_STEP_SUMMARY
           echo '| config | ${{ needs.config.result }} |' >> $GITHUB_STEP_SUMMARY
-          echo '| docs | ${{ needs.docs.result }} |' >> $GITHUB_STEP_SUMMARY
           echo '| backend | ${{ needs.backend.result }} |' >> $GITHUB_STEP_SUMMARY
           echo '| frontend | ${{ needs.frontend.result }} |' >> $GITHUB_STEP_SUMMARY
+          echo '| docs | ${{ needs.docs.result }} |' >> $GITHUB_STEP_SUMMARY
+          echo '| storybook | ${{ needs.storybook.result }} |' >> $GITHUB_STEP_SUMMARY
+          echo '| deploy-docs | ${{ needs.deploy-docs.result }} |' >> $GITHUB_STEP_SUMMARY

@@ -1,6 +1,5 @@
 {% if sections[""] %}
 {% for category, val in definitions.items() if category in sections[""] %}
-
 ### {{ definitions[category]['name'] }}
 
 {% for text, values in sections[""][category].items() %}
@@ -8,7 +7,4 @@
 {% endfor %}
 
 {% endfor %}
-{% else %}
-Sem modificações.
-
 {% endif %}

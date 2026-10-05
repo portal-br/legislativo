@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<portlets xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+          i18n:domain="plone"
+>
+
+  <!-- Columns (portlet managers) -->
+
+  <portletmanager name="plone.leftcolumn"
+                  type="plone.app.portlets.interfaces.ILeftColumn"
+  />
+
+  <portletmanager name="plone.rightcolumn"
+                  type="plone.app.portlets.interfaces.IRightColumn"
+  />
+
+  <portletmanager name="plone.footerportlets"
+                  type="plone.app.portlets.interfaces.IFooter"
+  />
+
+  <portletmanager name="plone.dashboard1"
+                  type="plone.app.portlets.interfaces.IDashboard"
+  />
+  <portletmanager name="plone.dashboard2"
+                  type="plone.app.portlets.interfaces.IDashboard"
+  />
+  <portletmanager name="plone.dashboard3"
+                  type="plone.app.portlets.interfaces.IDashboard"
+  />
+  <portletmanager name="plone.dashboard4"
+                  type="plone.app.portlets.interfaces.IDashboard"
+  />
+
+</portlets>

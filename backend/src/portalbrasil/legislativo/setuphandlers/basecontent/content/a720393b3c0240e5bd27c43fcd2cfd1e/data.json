@@ -2,7 +2,7 @@
   "@id": "/imagens",
   "@type": "Document",
   "UID": "a720393b3c0240e5bd27c43fcd2cfd1e",
-  "allow_discussion": false,
+  "allow_discussion": null,
   "blocks": {
     "30f271c5-dadf-4f47-987f-6ce417922c6b": {
       "@type": "title"
@@ -52,6 +52,7 @@
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
+  "head_title": null,
   "id": "imagens",
   "is_folderish": true,
   "language": "##DEFAULT##",
@@ -61,8 +62,8 @@
     "stealable": true
   },
   "modified": "2025-04-08T17:22:04+00:00",
-  "preview_caption": null,
-  "preview_image": null,
+  "nav_title": null,
+  "preview_caption_link": null,
   "review_state": "published",
   "rights": "",
   "subjects": [],

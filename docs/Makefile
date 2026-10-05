@@ -1,107 +1,138 @@
-### Defensive settings for make:
-#     https://tech.davis-hansson.com/p/make/
-SHELL:=bash
-.ONESHELL:
-.SHELLFLAGS:=-xeu -o pipefail -O inherit_errexit -c
-.SILENT:
-.DELETE_ON_ERROR:
-MAKEFLAGS+=--warn-undefined-variables
-MAKEFLAGS+=--no-builtin-rules
+# Makefile for Sphinx documentation
+.DEFAULT_GOAL   = help
+SHELL           = bash
 
-# Python checks
-UV?=uv
-
-# installed?
-ifeq (, $(shell which $(UV) ))
-  $(error "UV=$(UV) not found in $(PATH)")
-endif
-
-DOCS_FOLDER=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
-
-VENV_FOLDER=$(DOCS_FOLDER)/.venv
-BIN_FOLDER=$(VENV_FOLDER)/bin
-
-# Sphinx variables
 # You can set these variables from the command line.
 SPHINXOPTS      ?=
-VALEOPTS        ?=
-# Internal variables.
-BUILDDIR        = $(DOCS_FOLDER)/_build/
-ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(SPHINXOPTS) .
-VALEFILES       := $(shell find $(DOCS_FOLDER) -type f -name "*.md" -print)
+PAPER           ?=
 
-# We like colors
-# From: https://coderwall.com/p/izxssa/colored-makefile-for-golang-projects
-RED=`tput setaf 1`
+# Internal variables.
 GREEN=`tput setaf 2`
 RESET=`tput sgr0`
-YELLOW=`tput setaf 3`
-
-.PHONY: all
-all: install
+SPHINXBUILD     = "$(realpath .venv/bin/sphinx-build)"
+DOCS_DIR        = ./docs/
+BUILDDIR        = ./_build
+PAPEROPT_a4     = -D latex_paper_size=a4
+PAPEROPT_letter = -D latex_paper_size=letter
+ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(DOCS_DIR)
+VALEFILES       := $(shell find $(DOCS_DIR) -type f -name "*.md" -print)
+VALEOPTS        ?=
+PYTHONVERSION   = >=3.11,<3.14
 
 # Add the following 'help' target to your Makefile
 # And add help text after each target name starting with '\#\#'
 .PHONY: help
-help: ## This help message
+help:  # This help message
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-$(VENV_FOLDER): ## Install dependencies
-	@echo "$(GREEN)==> Install environment$(RESET)"
+
+# environment management
+.venv/bin/python:  ## Create Python virtual environment and install package requirements
 	@uv sync
 
 .PHONY: install
-install: $(VENV_FOLDER) ## Install dependencies
+install:  .venv/bin/python ## Sync package requirements
 
-.PHONY: sync
-sync: ## Install dependencies
-	@echo "$(GREEN)==> Sync environment$(RESET)"
-	@uv sync
+
+.PHONY: init
+init: clean clean-python .venv/bin/python  ## Clean docs build directory and Python, and initialize Python virtual environment
 
 .PHONY: clean
-clean:  ## Clean current and legacy docs build directories, and Python virtual environment
-	rm -rf $(VENV_FOLDER) .python-version
-	rm -rf $(BUILDDIR)
+clean:  ## Clean docs build directory
+	cd $(DOCS_DIR) && rm -rf $(BUILDDIR)/
 
+.PHONY: clean-python
+clean-python: clean
+	rm -rf .venv/
+	rm -rf *.egg-info
+# /environment management
+
+
+# documentation builders
 .PHONY: html
-html: $(VENV_FOLDER)  ## Build html
-	@uv run sphinx-build  -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+html: .venv/bin/python  ## Build html
+	@uv run sphinx-build -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
-.PHONY: build
-build: html  ## Build html
-
 .PHONY: livehtml
-livehtml: $(VENV_FOLDER)  ## Rebuild Sphinx documentation on changes, with live-reload in the browser
-	@uv run sphinx-autobuild --ignore "*.swp"  -b html . "$(BUILDDIR)/html" $(SPHINXOPTS)
+livehtml: .venv/bin/python  ## Rebuild Sphinx documentation on changes, with live-reload in the browser
+	@uv run sphinx-autobuild \
+		--ignore "*.swp" \
+		--port 8050 \
+		-b html $(DOCS_DIR) "$(BUILDDIR)/html" $(SPHINXOPTS) $(O)
 
+.PHONY: dirhtml
+dirhtml: .venv/bin/python
+	@uv run sphinx-build -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
+	@echo
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
+
+.PHONY: singlehtml
+singlehtml: .venv/bin/python
+	@uv run sphinx-build -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml
+	@echo
+	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml."
+
+.PHONY: text
+text: .venv/bin/python
+	@uv run sphinx-build -b text $(ALLSPHINXOPTS) $(BUILDDIR)/text
+	@echo
+	@echo "Build finished. The text files are in $(BUILDDIR)/text."
+
+.PHONY: changes
+changes: .venv/bin/python
+	@uv run sphinx-build -b changes $(ALLSPHINXOPTS) $(BUILDDIR)/changes
+	@echo
+	@echo "The overview file is in $(BUILDDIR)/changes."
+
+.PHONY: rtd-prepare
+rtd-prepare:  ## Prepare environment on Read the Docs
+	asdf plugin add uv
+	asdf install uv latest
+	asdf global uv latest
+
+.PHONY: rtd-pr-preview  ## Build pull request previews on Read the Docs
+rtd-pr-preview: rtd-prepare .venv/bin/python ## Build pull request preview on Read the Docs
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) ${READTHEDOCS_OUTPUT}/html/
+
+.PHONY: build
+build: html  ## Build documentation in HTML format
+
+# /documentation builders
+
+
+# test
 .PHONY: linkcheck
-linkcheck: $(VENV_FOLDER)  ## Run linkcheck
-	@uv run sphinxbuild-b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck
+linkcheck: .venv/bin/python  ## Run linkcheck
+	@uv run sphinx-build -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck
 	@echo
 	@echo "Link check complete; look for any errors in the above output " \
 		"or in $(BUILDDIR)/linkcheck/ ."
 
 .PHONY: linkcheckbroken
-linkcheckbroken: $(VENV_FOLDER)  ## Run linkcheck and show only broken links
-	@uv run sphinxbuild-b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck | GREP_COLORS='0;31' grep -wi "broken\|redirect" --color=always | GREP_COLORS='0;31' grep -vi "https://github.com/plone/volto/issues/" --color=always && if test $$? -eq 0; then exit 1; fi || test $$? -ne 0
+linkcheckbroken: .venv/bin/python  ## Run linkcheck and show only broken links
+	@uv run sphinx-build -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck | GREP_COLORS='0;31' grep -wi "broken\|redirect" --color=always | GREP_COLORS='0;31' grep -vi "https://github.com/plone/volto/issues/" --color=always && if test $$? = 0; then exit 1; fi || test $$? = 1
+	@echo
+	@echo "Link check complete; look for any errors in the above output " \
+		"or in $(BUILDDIR)/linkcheck/ ."
+
+.PHONY: doctest
+doctest: .venv/bin/python  ## Test snippets in the documentation
+	@uv run sphinx-build -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
+	@echo "Testing of doctests in the sources finished, look at the " \
+	      "results in $(BUILDDIR)/doctest/output.txt."
 
 .PHONY: vale
-vale: $(VENV_FOLDER)  ## Install (once) and run Vale style, grammar, and spell checks
+vale: .venv/bin/python  ## Run Vale style, grammar, and spell checks
 	@uv run vale sync
 	@uv run vale --no-wrap $(VALEOPTS) $(VALEFILES)
-	@echo
 	@echo "Vale is finished; look for any errors in the above output."
+	@echo
 
-.PHONY: rtd-pr-preview
-rtd-pr-preview: ## Build previews of pull requests that have documentation changes on Read the Docs via CI
-	@pip install uv
-	@uv sync
-	@uv run sphinx-build -b html $(ALLSPHINXOPTS) ${READTHEDOCS_OUTPUT}/html/
+.PHONY: test
+test: clean vale linkcheckbroken doctest  ## Clean docs build, then run vale, linkcheckbroken, and doctest
 
-.PHONY: rtd-build
-rtd-build: ## Build Volto Light Theme docs on RTD
-	@pip install uv
-	@uv sync
-	@uv run sphinx-build -b html $(ALLSPHINXOPTS) ${READTHEDOCS_OUTPUT}/html/
+.PHONY: all
+all: clean vale linkcheckbroken html  ## Clean docs build, then run linkcheckbroken, and build html
+# /test

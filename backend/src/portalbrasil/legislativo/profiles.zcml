@@ -5,6 +5,23 @@
     >
 
   <genericsetup:registerProfile
+      name="base"
+      title="Portal Modelo - Configuração Base"
+      description="Configuração base do Portal Modelo."
+      directory="profiles/base"
+      post_handler="portalbrasil.legislativo.setuphandlers.base.import_final_steps"
+      />
+
+  <genericsetup:registerProfile
+      name="cmfdependencies"
+      title="Portal Modelo - Dependências CMF"
+      description="Perfil de configuração genérica com dependências principais necessárias pelo CMF."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="plone.base.interfaces.IPloneSiteRoot"
+      directory="profiles/cmfdependencies"
+      />
+
+  <genericsetup:registerProfile
       name="default"
       title="Portal Modelo"
       description="Configura um novo site com o Portal Modelo"
@@ -15,10 +32,9 @@
 
   <!-- Hide Uninstall Profile-->
   <utility
-      factory=".setuphandlers.HiddenProfiles"
+      factory=".factory.HiddenProfiles"
       name="portalbrasil.legislativo"
       />
-
 
   <include package=".upgrades" />
 

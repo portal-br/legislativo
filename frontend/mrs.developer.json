@@ -4,7 +4,16 @@
     "package": "@plone/volto",
     "url": "git@github.com:plone/volto.git",
     "https": "https://github.com/plone/volto.git",
-    "tag": "18.22.0",
+    "tag": "19.3.0",
     "filterBlobs": true
+  },
+  "sc-volto-light-theme": {
+    "package": "@simplesconsultoria/volto-light-theme",
+    "url": "git@github.com:simplesconsultoria/sc-volto-light-theme.git",
+    "https": "https://github.com/simplesconsultoria/sc-volto-light-theme.git",
+    "branch": "main",
+    "path": "frontend/packages/volto-light-theme",
+    "output": "packages",
+    "develop": false
   }
 }

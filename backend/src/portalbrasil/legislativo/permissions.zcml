@@ -4,6 +4,11 @@
     i18n_domain="portalbrasil.legislativo"
     >
 
+  <permission
+      id="portalbrasil.legislativo.galeria.add"
+      title="portalbrasil.legislativo: Add Galeria"
+      />
+
   <!-- -*- extra stuff goes here -*- -->
 
 </configure>

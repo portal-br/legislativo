@@ -17,13 +17,13 @@ locale_path = Path(__file__).parent.resolve()
 target_path = locale_path.parent.resolve()
 domains = [path.name[:-4] for path in locale_path.glob("*.pot")]
 
-i18ndude = "uv run i18ndude"
+i18ndude = "uvx i18ndude"
 
 # ignore node_modules files resulting in errors
 excludes = '"*.html *json-schema*.xml"'
 
 
-def locale_folder_setup(domain: str):
+def locale_folder_setup(domain: str) -> None:
     languages = [path for path in locale_path.glob("*") if path.is_dir()]
     for lang_folder in languages:
         lc_messages_path = lang_folder / "LC_MESSAGES"
@@ -40,7 +40,7 @@ def locale_folder_setup(domain: str):
             subprocess.call(cmd, shell=True)  # noQA: S602
 
 
-def _rebuild(domain: str):
+def _rebuild(domain: str) -> None:
     cmd = (
         f"{i18ndude} rebuild-pot --pot {locale_path}/{domain}.pot "
         f"--exclude {excludes} "
@@ -49,7 +49,7 @@ def _rebuild(domain: str):
     subprocess.call(cmd, shell=True)  # noQA: S602
 
 
-def _sync(domain: str):
+def _sync(domain: str) -> None:
     cmd = (
         f"{i18ndude} sync --pot {locale_path}/{domain}.pot "
         f"{locale_path}/*/LC_MESSAGES/{domain}.po"
@@ -57,7 +57,7 @@ def _sync(domain: str):
     subprocess.call(cmd, shell=True)  # noQA: S602
 
 
-def main():
+def main() -> None:
     for domain in domains:
         logger.info(f"Updating translations for {domain}")
         locale_folder_setup(domain)

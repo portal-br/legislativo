@@ -15,9 +15,9 @@
   <include file="dependencies.zcml" />
   <include file="profiles.zcml" />
   <include file="permissions.zcml" />
-  <include file="distributions.zcml" />
 
-  <include package=".controlpanel" />
+  <include package=".controlpanels" />
+  <include package=".distributions" />
   <include package=".indexers" />
   <include package=".serializers" />
   <include package=".services" />

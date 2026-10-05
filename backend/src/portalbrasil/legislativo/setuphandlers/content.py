@@ -8,7 +8,7 @@ from Products.GenericSetup.tool import SetupTool
 BASE_CONTENT_FOLDER = Path(__file__).parent / "basecontent"
 
 
-def create_base_content(portal_setup: SetupTool):
+def create_base_content(portal_setup: SetupTool) -> None:
     """Import content available at the basecontent folder."""
     portal = api.portal.get()
     importer = importers.get_importer(portal)

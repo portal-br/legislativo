@@ -1,5 +1,5 @@
-const addons = ['@portalbrasil/legislativo'];
-const theme = '@kitconcept/volto-light-theme';
+const addons = ['@simplesconsultoria/volto-light-theme', '@portalbrasil/legislativo'];
+const theme = '';
 
 module.exports = {
   addons,

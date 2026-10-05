@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "target": "es2022",
@@ -17,14 +18,23 @@
       "@portalbrasil/legislativo/*": ["./src/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
   "exclude": [
     "node_modules",
     "build",
     "public",
     "coverage",
-    "**/*.test.{js,jsx,ts,tsx}",
-    "**/*.spec.{js,jsx,ts,tsx}",
-    "**/*.stories.{js,jsx,ts,tsx}"
+    "**/*.test.js",
+    "**/*.test.jsx",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.js",
+    "**/*.spec.jsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.stories.js",
+    "**/*.stories.jsx",
+    "**/*.stories.ts",
+    "**/*.stories.tsx"
   ]
 }

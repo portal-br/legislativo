@@ -1,4 +1,4 @@
-name: "Portal Modelo: Documentação"
+name: Documentation
 
 on:
   workflow_call:
@@ -10,12 +10,18 @@ on:
         required: false
         type: string
         default: docs
+    outputs:
+      artifacts-name:
+        description: "Name of the uploaded docs artifact, propagated from the build job"
+        value: ${{ jobs.build.outputs.artifacts-name }}
 
 jobs:
-  docs:
-    name: "Documentação: Gerar e testar estilo"
-    uses: plone/meta/.github/workflows/docs-build.yml@2.x
+
+  build:
+    name: "Docs: Build"
+    uses: ./.github/workflows/tmp-docs-build.yml
     with:
       python-version: ${{ inputs.python-version }}
       working-directory: ${{ inputs.working-directory }}
-      check-vale: false
+      check-vale: true
+      artifacts-store: true

@@ -2,11 +2,12 @@
   "__version__": "1.0.0",
   "_blob_files_": [
     "plone_site_root/logo/portalbrasil-wide-transp.png",
+    "plone_site_root/footer_logo/portalbrasil-wide-transp-reverso.png",
     "a58ccead718140c1baa98d43595fc3e6/image/plone-foundation.png",
     "b20ab730c46b459a910592151e78c973/image/plonegovbr.png",
     "7a05d4d192674a5b84e786b414fce0a8/image/portalbrasil-wide-transp.png",
-    "734dbe5d682548118fc91d56f9a8323a/image/icone-fala-br.jpeg",
-    "3cfe6f015e054e8cbac486bcc12d5e16/image/foto-senado.jpeg"
+    "3cfe6f015e054e8cbac486bcc12d5e16/image/foto-senado.jpeg",
+    "734dbe5d682548118fc91d56f9a8323a/image/icone-fala-br.jpeg"
   ],
   "_data_files_": [
     "plone_site_root/data.json",
@@ -104,6 +105,55 @@
         "roles": [
           "Manager",
           "Site Administrator"
+        ]
+      },
+      "sc.voltolighttheme: Edit footer settings": {
+        "acquire": false,
+        "roles": [
+          "Manager",
+          "Site Administrator"
+        ]
+      },
+      "sc.voltolighttheme: Edit header settings": {
+        "acquire": false,
+        "roles": [
+          "Manager",
+          "Site Administrator"
+        ]
+      },
+      "sc.voltolighttheme: Edit theme settings": {
+        "acquire": false,
+        "roles": [
+          "Manager",
+          "Site Administrator"
+        ]
+      },
+      "sc.voltolighttheme: Manage themes": {
+        "acquire": false,
+        "roles": [
+          "Manager",
+          "Site Administrator"
+        ]
+      },
+      "sc.voltolighttheme: View footer settings": {
+        "acquire": false,
+        "roles": [
+          "Anonymous",
+          "Authenticated"
+        ]
+      },
+      "sc.voltolighttheme: View header settings": {
+        "acquire": false,
+        "roles": [
+          "Anonymous",
+          "Authenticated"
+        ]
+      },
+      "sc.voltolighttheme: View theme settings": {
+        "acquire": false,
+        "roles": [
+          "Anonymous",
+          "Authenticated"
         ]
       }
     }
@@ -281,7 +331,7 @@
     "a720393b3c0240e5bd27c43fcd2cfd1e": 42,
     "b20ab730c46b459a910592151e78c973": 2,
     "bddc7b21b4dd4167b67f400c50c653e6": 47,
-    "c5a3eb2bc63247f0bb4c83a2003fec12": 41,
+    "c5a3eb2bc63247f0bb4c83a2003fec12": 40,
     "c957159bfea940acae08b475d9afb5b5": 3,
     "f0c19b2aa4bc40a196ef5a3cef489ab7": 45,
     "f305d736a29e499880d3634fefcfd777": 43,

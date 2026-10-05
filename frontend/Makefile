@@ -19,18 +19,32 @@ GREEN=`tput setaf 2`
 RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
-PLONE_VERSION=6
+REPOSITORY_SETTINGS := $(shell uvx repoplone settings dump)
+
+VOLTO_VERSION := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.frontend.volto_version')
+PLONE_VERSION := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.backend.base_package_version')
+
 DOCKER_IMAGE=plone/server-dev:${PLONE_VERSION}
 DOCKER_IMAGE_ACCEPTANCE=plone/server-acceptance:${PLONE_VERSION}
 
-ADDON_NAME='legislativo'
-IMAGE_NAME=ghcr.io/portal-br/legislativo-frontend
+ADDON_NAME := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.frontend.name')
+IMAGE_NAME_PREFIX := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.container_images_prefix')
+IMAGE_NAME_SEPARATOR := -
+IMAGE_NAME_PREFIX_WITH_SEPARATOR := $(IMAGE_NAME_PREFIX)$(IMAGE_NAME_SEPARATOR)
+
+IMAGE_NAME=$(IMAGE_NAME_PREFIX_WITH_SEPARATOR)frontend
 IMAGE_TAG=latest
-VOLTO_VERSION = $(shell cat ./mrs.developer.json | python -c "import sys, json; print(json.load(sys.stdin)['core']['tag'])")
+
 
 .PHONY: help
 help: ## Show this help
 	@echo -e "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\x1b[36m\1\\x1b[m:\2/' | column -c2 -t -s :)"
+
+.PHONY: debug-settings
+debug-settings:  ## Debug settings
+	@echo "VOLTO_VERSION: $(VOLTO_VERSION)"
+	@echo "PLONE_VERSION: $(PLONE_VERSION)"
+	@echo "IMAGE_NAME: $(IMAGE_NAME)"
 
 # Dev Helpers
 .PHONY: clean
@@ -80,6 +94,7 @@ lint: ## Lint, or catch and remove problems, in code base
 	pnpm lint
 	pnpm prettier
 	pnpm stylelint --allow-empty-input
+	pnpm check-ts
 
 .PHONY: release
 release: ## Release the add-on on npmjs.org
@@ -97,7 +112,7 @@ test: ## Run unit tests
 ci-test: ## Run unit tests in CI
 	# Unit Tests need the i18n to be built
 	VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto i18n
-	CI=1 RAZZLE_JEST_CONFIG=$(CURRENT_DIR)/jest-addon.config.js pnpm --filter @plone/volto test -- --passWithNoTests
+	CI=1 pnpm run test
 
 .PHONY: backend-docker-start
 backend-docker-start:	## Starts a Docker-based backend for development

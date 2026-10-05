@@ -1,2 +1,6 @@
-_build
+# Python related
+*.egg-info
 .venv
+
+# Documentation builds
+_build

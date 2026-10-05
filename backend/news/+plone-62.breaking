@@ -1,0 +1,1 @@
+Atualiza para Plone 6.2.2 e Python 3.14, troca `collective.volto.formsupport` por `plone.formblock` e adota o tema `sc-voltolighttheme`. @ericof

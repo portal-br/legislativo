@@ -59,19 +59,70 @@
       "af769b5f-2e56-4434-868b-b48a35620ec3"
     ]
   },
-  "contributors": [],
-  "creators": [
-    "admin"
-  ],
   "description": "Site da c\u00e2mara modelo",
-  "effective": null,
+  "enable_mobile_sticky_menu": false,
   "exclude_from_nav": false,
-  "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
   "facebook_app_id": "",
   "facebook_username": "",
+  "footer_address": null,
+  "footer_brand_message": null,
+  "footer_brand_slogan": null,
+  "footer_colophon_right_text": null,
+  "footer_colophon_text": [
+    {
+      "children": [
+        {
+          "text": "Powered by Plone and Volto Light Theme\nThe Plone\u00ae Open Source CMS/WCM is \u00a9 2000-2026 by the "
+        },
+        {
+          "children": [
+            {
+              "text": "Plone Foundation"
+            }
+          ],
+          "data": {
+            "url": "http://plone.org"
+          },
+          "type": "link"
+        },
+        {
+          "text": " and friends.\nDistributed under the "
+        },
+        {
+          "children": [
+            {
+              "text": "GNU GPL v2 license"
+            }
+          ],
+          "data": {
+            "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.0.html"
+          },
+          "type": "link"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "type": "p"
+    }
+  ],
+  "footer_column_left": [],
+  "footer_column_left_header": null,
+  "footer_column_middle": [],
+  "footer_column_middle_header": null,
+  "footer_column_right": [],
+  "footer_column_right_header": null,
   "footer_links": [],
+  "footer_logo": {
+    "blob_path": "plone_site_root/footer_logo/portalbrasil-wide-transp-reverso.png",
+    "content-type": "image/png",
+    "filename": "portalbrasil-wide-transp-reverso.png",
+    "height": 314,
+    "size": 26400,
+    "width": 1858
+  },
   "footer_logos": [
     {
       "@id": "16c11539-dd22-4261-ad83-6f1759a7e61b",
@@ -137,6 +188,7 @@
   "is_folderish": true,
   "items_total": 7,
   "language": "##DEFAULT##",
+  "layout": "document_view",
   "lock": {
     "locked": false,
     "stealable": true
@@ -145,13 +197,12 @@
     "blob_path": "plone_site_root/logo/portalbrasil-wide-transp.png",
     "content-type": "image/png",
     "filename": "portalbrasil-wide-transp.png",
-    "height": 1080,
-    "size": 62036,
-    "width": 1920
+    "height": 314,
+    "size": 56103,
+    "width": 1858
   },
   "preview_caption_link": null,
   "review_state": null,
-  "rights": "",
   "share_social_data": true,
   "social_links": [
     {
@@ -199,8 +250,50 @@
       "title": "Documenta\u00e7\u00e3o Portal Modelo"
     }
   ],
+  "sticky_menu": [],
+  "sticky_menu_color": null,
+  "sticky_menu_foreground_color": null,
   "subjects": [],
-  "table_of_contents": null,
+  "theme": {
+    "title": "Default",
+    "token": "default",
+    "value": {
+      "accent_accent_color_dark": "#ffffff",
+      "accent_accent_color_light": "#000000",
+      "accent_color_dark": "#b55e1c",
+      "accent_color_light": "#f4822c",
+      "accent_foreground_color_dark": "#ffffff",
+      "accent_foreground_color_light": "#000000",
+      "accent_low_foreground_color_dark": "#f8f8f8",
+      "accent_low_foreground_color_light": "#333333",
+      "font_family_primary": "Inter, sans-serif",
+      "font_family_secondary": "Inter, sans-serif",
+      "neutral_accent_color_dark": "#f4822c",
+      "neutral_accent_color_light": "#f4822c",
+      "neutral_color_dark": "#333333",
+      "neutral_color_light": "#edeff0",
+      "neutral_foreground_color_dark": "#ffffff",
+      "neutral_foreground_color_light": "#000000",
+      "neutral_low_foreground_color_dark": "#e6e6e6",
+      "neutral_low_foreground_color_light": "#333333",
+      "primary_accent_color_dark": "#f4822c",
+      "primary_accent_color_light": "#b55e1c",
+      "primary_color_dark": "#000000",
+      "primary_color_light": "#ffffff",
+      "primary_foreground_color_dark": "#ffffff",
+      "primary_foreground_color_light": "#000000",
+      "primary_low_foreground_color_dark": "#f8f8f8",
+      "primary_low_foreground_color_light": "#333333",
+      "secondary_accent_color_dark": "#f4822c",
+      "secondary_accent_color_light": "#f4822c",
+      "secondary_color_dark": "#ffffff",
+      "secondary_color_light": "#000000",
+      "secondary_foreground_color_dark": "#000000",
+      "secondary_foreground_color_light": "#ffffff",
+      "secondary_low_foreground_color_dark": "#333333",
+      "secondary_low_foreground_color_light": "#e6e6e6"
+    }
+  },
   "title": "C\u00e2mara Modelo",
   "type_title": "Plone Site",
   "workflow_history": {},
