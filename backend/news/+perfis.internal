@@ -1,1 +1,0 @@
-Reorganiza a instalação nos perfis `base`, `cmfdependencies` e `default`: o conteúdo básico do site é importado pelo perfil `default` e o conteúdo de exemplo, pela distribuição. @ericof

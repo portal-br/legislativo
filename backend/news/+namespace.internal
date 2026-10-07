@@ -1,1 +1,0 @@
-Remove o `__init__.py` do namespace `portalbrasil`, que passa a ser um namespace implícito (PEP 420). @ericof

@@ -1,1 +1,0 @@
-Verifica os tipos com mypy em modo estrito no `make lint` e na integração contínua. @ericof

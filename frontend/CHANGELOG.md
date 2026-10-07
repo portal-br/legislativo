@@ -2,6 +2,27 @@
 
 <!-- towncrier release notes start -->
 
+## 4.0.0-alpha.4 (2026-10-06)
+
+### Breaking
+
+- Troca `@portalbrasil/core` pelo tema `@simplesconsultoria/volto-light-theme` e `volto-form-block` por `@plone/volto-form-block`, sobre o Volto 19.3.0 com pnpm 10. @ericof 
+
+### Funcionalidade
+
+- Adiciona o bloco Iframe, para incorporar páginas de outros sistemas. @ericof 
+- Adiciona o bloco Múltiplos botões, com links exibidos como botões, cards ou imagens. @ericof 
+- Links para arquivos em listagens e teasers abrem a página do arquivo, que exibe PDFs no navegador, em vez de baixar o arquivo. @ericof 
+- Notícias e galerias novas começam com blocos prontos: notícias com a imagem principal, galerias com a listagem das próprias imagens. @ericof 
+
+### Interno
+
+- Migra o pacote para TypeScript em modo estrito, com testes em Vitest e checagem de tipos no `make lint`. O visualizador de PDF da visão de arquivo e a ativação do VLibras passam a ser implementados no próprio pacote. @ericof 
+
+### Teste
+
+- Testa as funcionalidades que o tema entrega ao Portal Modelo: bloco de imagem principal, variações de listagem e temas de bloco. @ericof 
+
 ## 4.0.0-alpha.3 (2025-06-05)
 
 
