@@ -36,6 +36,12 @@
       name="portalbrasil.legislativo"
       />
 
+  <!-- Add-ons upgraded by portal_migration (and @upgrade) -->
+  <utility
+      factory=".factory.LocalAddonList"
+      name="portalbrasil.legislativo"
+      />
+
   <include package=".upgrades" />
 
 </configure>

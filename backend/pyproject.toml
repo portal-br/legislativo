@@ -31,7 +31,7 @@ dependencies = [
     "plone.formblock[honeypot]==1.0.0a3",
     "plonegovbr.brfields==1.0.0a3",
     "plonegovbr.socialmedia>=3.0.0",
-    "sc-voltolighttheme==1.0.0a11",
+    "sc-voltolighttheme==1.0.0a12",
     "plone.exportimport>=2.2.0",
 ]
 

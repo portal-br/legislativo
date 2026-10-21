@@ -168,10 +168,12 @@ class LocalAddonList:
         Addon(profile_id="plone.staticresources:default"),
         Addon(profile_id="plone.volto:default"),
         Addon(profile_id="plonetheme.barceloneta:default"),
-        Addon(profile_id="kitconcept.voltolighttheme:default"),
+        # sc.voltolighttheme 1001 uninstalls kitconcept.voltolighttheme.
+        Addon(profile_id="sc.voltolighttheme:default"),
         Addon(profile_id="plonegovbr.socialmedia:default"),
-        Addon(profile_id="portalbrasil.legislativo:default"),
         Addon(profile_id="plone.formblock:default"),
+        # Runs last, after its dependencies.
+        Addon(profile_id="portalbrasil.legislativo:default"),
     ])
 
 

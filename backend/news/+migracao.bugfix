@@ -1,0 +1,1 @@
+A atualização do site (`@upgrade` ou `@@plone-upgrade`) passa a executar os passos de upgrade do `sc-voltolighttheme`, do `plonegovbr.socialmedia`, do `plone.formblock` e do próprio Portal Modelo; antes, só os add-ons do núcleo do Plone eram atualizados. @ericof
