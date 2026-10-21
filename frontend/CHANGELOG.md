@@ -2,6 +2,17 @@
 
 <!-- towncrier release notes start -->
 
+## 4.0.0-alpha.5 (2026-10-21)
+
+### Correção de Bug
+
+- Atualiza o `@simplesconsultoria/volto-light-theme` para 1.0.0-alpha.12: os blocos Grade personalizada, Hero e Metadados do evento passam a aparecer em português. @ericof [#16](https://github.com/portal-br/legislativo/issues/16)
+- Atualiza o Volto para 19.5.1. Um navegador em inglês que visita o portal passa a ver a página renderizada em português desde o servidor. @ericof [#17](https://github.com/portal-br/legislativo/issues/17)
+
+### Teste
+
+- Testa a configuração das visões por tipo de conteúdo. @ericof 
+
 ## 4.0.0-alpha.4 (2026-10-06)
 
 ### Breaking

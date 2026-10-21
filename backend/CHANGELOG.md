@@ -2,6 +2,14 @@
 
 <!-- towncrier release notes start -->
 
+## 4.0.0a5 (2026-10-21)
+
+
+### Correção de Bug
+
+- Atualiza o `sc-voltolighttheme` para 1.0.0a12: os formulários de tema, cabeçalho e rodapé e os perfis de instalação passam a aparecer em português. @ericof [#16](https://github.com/portal-br/legislativo/issues/16)
+- A atualização do site (`@upgrade` ou `@@plone-upgrade`) passa a executar os passos de upgrade do `sc-voltolighttheme`, do `plonegovbr.socialmedia`, do `plone.formblock` e do próprio Portal Modelo; antes, só os add-ons do núcleo do Plone eram atualizados. @ericof 
+
 ## 4.0.0a4 (2026-10-06)
 
 

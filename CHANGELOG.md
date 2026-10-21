@@ -1,6 +1,38 @@
 # Mudanças
 
 <!-- towncrier release notes start -->
+## 4.0.0a5 (2026-10-21)
+
+### Backend
+
+
+#### Correção de Bug
+
+- Atualiza o `sc-voltolighttheme` para 1.0.0a12: os formulários de tema, cabeçalho e rodapé e os perfis de instalação passam a aparecer em português. @ericof [#16](https://github.com/portal-br/legislativo/issues/16)
+- A atualização do site (`@upgrade` ou `@@plone-upgrade`) passa a executar os passos de upgrade do `sc-voltolighttheme`, do `plonegovbr.socialmedia`, do `plone.formblock` e do próprio Portal Modelo; antes, só os add-ons do núcleo do Plone eram atualizados. @ericof 
+
+
+
+### Frontend
+
+#### Correção de Bug
+
+- Atualiza o `@simplesconsultoria/volto-light-theme` para 1.0.0-alpha.12: os blocos Grade personalizada, Hero e Metadados do evento passam a aparecer em português. @ericof [#16](https://github.com/portal-br/legislativo/issues/16)
+- Atualiza o Volto para 19.5.1. Um navegador em inglês que visita o portal passa a ver a página renderizada em português desde o servidor. @ericof [#17](https://github.com/portal-br/legislativo/issues/17)
+
+#### Teste
+
+- Testa a configuração das visões por tipo de conteúdo. @ericof 
+
+
+
+### Projeto
+
+No significant changes.
+
+
+
+
 ## 4.0.0a4 (2026-10-06)
 
 ### Backend
