@@ -8,13 +8,8 @@ from Products.CMFPlone.Portal import PloneSite
 from pytest_plone import fixtures_factory
 from typing import Any
 
-import os
 import pytest
 
-
-# Compila os catálogos .po ao carregar o ZCML, como a imagem Docker faz no
-# build: o wheel do sc-voltolighttheme 1.0.0a12 traz .mo desatualizados.
-os.environ.setdefault("zope_i18n_compile_mo_files", "true")
 
 pytest_plugins = ["pytest_plone"]
 
