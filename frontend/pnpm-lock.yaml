@@ -1363,8 +1363,8 @@ importers:
         specifier: 1.0.0-alpha.3
         version: 1.0.0-alpha.3(@internationalized/date@3.12.4)(@loadable/component@5.16.7(react@18.2.0))(classnames@2.5.1)(promise-file-reader@1.0.2)(query-string@9.1.1)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react-redux@8.1.2(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1))(react-router-dom@5.2.0(react@18.2.0))(react-toastify@5.5.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)(semantic-ui-react@2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
       '@plonegovbr/volto-brwidgets':
-        specifier: 1.0.0-alpha.3
-        version: 1.0.0-alpha.3(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(semantic-ui-react@2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
+        specifier: 1.0.0-beta.1
+        version: 1.0.0-beta.1(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)(semantic-ui-react@2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
       '@plonegovbr/volto-vlibras':
         specifier: 0.4.1
         version: 0.4.1(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)
@@ -2302,6 +2302,10 @@ packages:
   '@bramus/specificity@2.4.2':
     resolution: {integrity: sha512-ctxtJ/eA+t+6q2++vj5j7FYX3nRu311q1wfYH3xjlLOsczhlhxAg2FWNUXhpGvAw3BWo1xBcvOV6/YLc2r5FJw==}
     hasBin: true
+
+  '@brazilian-utils/brazilian-utils@2.5.0':
+    resolution: {integrity: sha512-rWXbTGN+8irKr5fe6/mtZ/vc/qoDBGIR57RzuwGZ90uV4/SxG00ehPo77RYviOhSzenKbYbEMDMyd8GHjmF6sg==}
+    engines: {node: ^20.19.0 || >=22.12.0}
 
   '@colordx/core@5.8.0':
     resolution: {integrity: sha512-cG0QJAO6VkaRUlIb0zOzX9gfJgs1pjoOL9gZ/PK1kfvBs0GCkADu5oQh6gPxXgQnZ3gV575h+lQRC0NlMDTclA==}
@@ -4112,13 +4116,13 @@ packages:
       react-toastify: 5.5.0
       semantic-ui-react: 2.1.5
 
-  '@plonegovbr/volto-brwidgets@1.0.0-alpha.3':
-    resolution: {integrity: sha512-Q3oFFBgHnZFFgQQNl8vCITwzgVSmaWWp29qmRFxm3Er0A4msQ4rTcojSxqF03YnE5CHTgssJa49y+4iB+zrjKA==}
+  '@plonegovbr/volto-brwidgets@1.0.0-beta.1':
+    resolution: {integrity: sha512-+s/8/9K1KVz18HGKFXK/gaPY0rCfKAytPqTDCPwvmWH4Suc7wp2FXd3OjlS/McKkuWPqr5eDZOtpo+Z1xV+Plw==}
     peerDependencies:
-      prop-types: 15.8.1
-      react: 18.2.0
-      react-dom: 18.2.0
-      semantic-ui-react: 2.1.5
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      react-intl: ^3.12.1
+      semantic-ui-react: ^2.1.5
 
   '@plonegovbr/volto-social-media@3.0.0':
     resolution: {integrity: sha512-zhlJjfkBjwwOvVbwM3yn/Zw4YFHYVSIu7CR9oZE2zkQWaeLGzsVSfc0RtGyUMKwtCCcW8YogQNgwLdaY911e2w==}
@@ -13409,6 +13413,8 @@ snapshots:
     dependencies:
       css-tree: 3.1.0
 
+  '@brazilian-utils/brazilian-utils@2.5.0': {}
+
   '@colordx/core@5.8.0': {}
 
   '@colors/colors@1.5.0':
@@ -15087,11 +15093,12 @@ snapshots:
       react-toastify: 5.5.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       semantic-ui-react: 2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
 
-  '@plonegovbr/volto-brwidgets@1.0.0-alpha.3(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(semantic-ui-react@2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))':
+  '@plonegovbr/volto-brwidgets@1.0.0-beta.1(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)(semantic-ui-react@2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))':
     dependencies:
-      prop-types: 15.8.1
+      '@brazilian-utils/brazilian-utils': 2.5.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+      react-intl: 3.12.1(react@18.2.0)
       semantic-ui-react: 2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
 
   '@plonegovbr/volto-social-media@3.0.0(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react-redux@8.1.2(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1))(react@18.2.0)':

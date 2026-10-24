@@ -40,7 +40,7 @@
   "dependencies": {
     "@eeacms/volto-pdf-block": "1.0.12",
     "@kitconcept/volto-iframe-block": "2.4.1",
-    "@plonegovbr/volto-brwidgets": "1.0.0-alpha.3",
+    "@plonegovbr/volto-brwidgets": "1.0.0-beta.1",
     "@plonegovbr/volto-vlibras": "0.4.1",
     "@plone-collective/volto-image-editor": "1.0.1",
     "@plone/components": "workspace:*",

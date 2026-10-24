@@ -1,0 +1,1 @@
+Atualiza `@plonegovbr/volto-brwidgets` para 1.0.0-beta.1, com os widgets de CEP, CNPJ, CPF e telefone validados pela biblioteca `@brazilian-utils/brazilian-utils`. @ericof

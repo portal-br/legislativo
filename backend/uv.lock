@@ -567,6 +567,20 @@ wheels = [
 ]
 
 [[package]]
+name = "brutils"
+version = "2.5.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "coverage" },
+    { name = "holidays" },
+    { name = "num2words" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/57/5c/d926f97034bacb7575efdaaf6c573e736e06f9b1fe53ab92da132a22f022/brutils-2.5.0.tar.gz", hash = "sha256:2ea29f5a3018b345ca0d2d7b53f5cd5ce61a931cc54e310ae9cae0450db45cf3", size = 98258, upload-time = "2026-06-30T22:27:10.979Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/cb/c2/bfc3e5b43f35420a214dc10c8bc0ebc9fade97a311a847848939d1ca708b/brutils-2.5.0-py3-none-any.whl", hash = "sha256:5c9c66753cdc643356010e2fb9158baa18cb5daede28e247ede905c15239c396", size = 97209, upload-time = "2026-06-30T22:27:11.903Z" },
+]
+
+[[package]]
 name = "btrees"
 version = "6.4"
 source = { registry = "https://pypi.org/simple" }
@@ -818,6 +832,12 @@ wheels = [
 ]
 
 [[package]]
+name = "docopt"
+version = "0.6.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz", hash = "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491", size = 25901, upload-time = "2014-06-16T11:18:57.406Z" }
+
+[[package]]
 name = "documenttemplate"
 version = "5.3"
 source = { registry = "https://pypi.org/simple" }
@@ -1016,6 +1036,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/01/ee/02a2c011bdab74c6fb3c75474d40b3052059d95df7e73351460c8588d963/h11-0.16.0.tar.gz", hash = "sha256:4e35b956cf45792e4caa5885e69fba00bdbc6ffafbfa020300e549b208ee5ff1", size = 101250, upload-time = "2025-04-24T03:35:25.427Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl", hash = "sha256:63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86", size = 37515, upload-time = "2025-04-24T03:35:24.344Z" },
+]
+
+[[package]]
+name = "holidays"
+version = "0.98"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "python-dateutil" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8d/a1/63c1a45599a82d91a3b5c7a4de5a6050ca253f8c0e74dd14fade3728e033/holidays-0.98.tar.gz", hash = "sha256:09b078a4695d53a35ea01517b331942f3232b3b7e3877f74f6d5227adbedc76e", size = 913785, upload-time = "2026-06-01T19:17:33.888Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c1/0c/51baf49265bd6c8f05bea02ae6ebc96a81218ae364fae89dd6a3e3f7d349/holidays-0.98-py3-none-any.whl", hash = "sha256:65c9ba3402f1d10cc715af0510cdc847e60d8854df640515d546748ca4a24e60", size = 1482103, upload-time = "2026-06-01T19:17:32.01Z" },
 ]
 
 [[package]]
@@ -1287,6 +1319,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/10/7b/6a30e17994d5004dcc6822378bfef3818556e8e859f990ac87cb1d181974/node.ext.zodb-1.6.tar.gz", hash = "sha256:03a14b1e59437a1a347eec2e505dc45122b8ab557b369f260d7348cf913afac1", size = 13258, upload-time = "2022-12-05T11:53:19.021Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/43/eb/29ff611d95f95e0feb7c953a67f323927b33d0c17c4d1a2fe7744bd971fe/node.ext.zodb-1.6-py3-none-any.whl", hash = "sha256:667a580421e10ae23cf4a86598bbaedebaa6f630c228fa3e765799bda4327f79", size = 12613, upload-time = "2022-12-05T11:53:16.952Z" },
+]
+
+[[package]]
+name = "num2words"
+version = "0.5.14"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "docopt" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f6/58/ad645bd38b4b648eb2fc2ba1b909398e54eb0cbb6a7dbd2b4953e38c9621/num2words-0.5.14.tar.gz", hash = "sha256:b066ec18e56b6616a3b38086b5747daafbaa8868b226a36127e0451c0cf379c6", size = 218213, upload-time = "2024-12-17T20:17:10.191Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d6/5b/545e9267a1cc080c8a1be2746113a063e34bcdd0f5173fd665a5c13cb234/num2words-0.5.14-py3-none-any.whl", hash = "sha256:1c8e5b00142fc2966fd8d685001e36c4a9911e070d1b120e1beb721fa1edb33d", size = 163525, upload-time = "2024-12-17T20:17:06.074Z" },
 ]
 
 [[package]]
@@ -3386,18 +3430,18 @@ wheels = [
 
 [[package]]
 name = "plonegovbr-brfields"
-version = "1.0.0a3"
+version = "1.0.0b1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
+    { name = "brutils" },
     { name = "plone-api" },
     { name = "plone-restapi" },
     { name = "plone-volto" },
     { name = "products-cmfplone" },
-    { name = "validate-docbr" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/9f/7d/1f4124bc479c287a7a47000e005ad73d4579dbd467ce122a50e29aefa537/plonegovbr.brfields-1.0.0a3.tar.gz", hash = "sha256:a096b32b2182b978076f2502caf8f386bc8a7ab643dadf23ad7d645f25854006", size = 18908, upload-time = "2025-03-14T20:40:39.725Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/9e/32/883dcb1db1419d136e123877e7af36b2ec15bd55f0ae0cb9a95f935202d0/plonegovbr_brfields-1.0.0b1.tar.gz", hash = "sha256:4736d3f9cc32512b2092aae0c7a572d9ee3a0cb7e2bf8c87568adeb75f690dec", size = 31464, upload-time = "2026-10-24T02:00:48.665Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d6/3c/97c280c1e13718d99645ac7746cec6db526920a61c646266ae1f37096218/plonegovbr.brfields-1.0.0a3-py3-none-any.whl", hash = "sha256:4522725fa9a13c127e0fbbb84ba7d2742e216d2633ea1c209072ad4379f9252b", size = 34204, upload-time = "2025-03-14T20:40:38.264Z" },
+    { url = "https://files.pythonhosted.org/packages/46/ef/d967827641b0a20cea2cdf6074b53fb4bb5c7e38ff399946d3e99db4719e/plonegovbr_brfields-1.0.0b1-py3-none-any.whl", hash = "sha256:c7f037f2bbb188d0cb7fa739b1b0a5eac6bee2274daf48f7c63ff4d4324eaa46", size = 34381, upload-time = "2026-10-24T02:00:47.409Z" },
 ]
 
 [[package]]
@@ -3491,7 +3535,7 @@ requires-dist = [
     { name = "plone-formblock", extras = ["honeypot"], specifier = "==1.0.0a3" },
     { name = "plone-restapi" },
     { name = "plone-volto" },
-    { name = "plonegovbr-brfields", specifier = "==1.0.0a3" },
+    { name = "plonegovbr-brfields", specifier = "==1.0.0b1" },
     { name = "plonegovbr-socialmedia", specifier = ">=3.0.0" },
     { name = "products-cmfplone", specifier = "==6.2.2" },
     { name = "sc-voltolighttheme", specifier = "==1.0.0a12" },
@@ -4816,14 +4860,6 @@ wheels = [
 [package.optional-dependencies]
 socks = [
     { name = "pysocks" },
-]
-
-[[package]]
-name = "validate-docbr"
-version = "1.10.0"
-source = { registry = "https://pypi.org/simple" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/8b/0d/799d5c729efb85a8bd7786c7cb55780bb66f9c386ec805198e05d3fa0c80/validate_docbr-1.10.0-py3-none-any.whl", hash = "sha256:ff016f180b0c5ecff06abce1d83385924438c4d4c7f5c050e90fb724f1d968bb", size = 18814, upload-time = "2021-10-26T19:35:20.444Z" },
 ]
 
 [[package]]
