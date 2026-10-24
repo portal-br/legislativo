@@ -1,0 +1,1 @@
+Atualiza `plonegovbr.brfields` para 1.0.0b1, que valida CEP, CNPJ, CPF e telefone com a biblioteca `brutils`. @ericof
