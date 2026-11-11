@@ -12,8 +12,3 @@ UPGRADED_PROFILES = (
 
 #: Add-on profiles left out of the upgrade.
 NOT_UPGRADED_PROFILES = ("kitconcept.voltolighttheme:default",)
-
-#: plone.volto 6.0.1 registers upgrade steps from 1100 to 1101, but its
-#: metadata.xml still declares version 1100, so a new site starts with them
-#: pending.
-PROFILES_WITH_PENDING_UPGRADES = ("plone.volto:default",)

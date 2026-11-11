@@ -1,0 +1,23 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
+
+  <genericsetup:upgradeSteps
+      profile="portalbrasil.legislativo:base"
+      source="20261004001"
+      destination="20261111001"
+      >
+    <genericsetup:upgradeStep
+        title="Upgrade the Plone core profile"
+        description="Runs the pending upgrade steps of Products.CMFPlone:plone when the site records its version."
+        handler=".upgrade_core"
+        />
+    <genericsetup:upgradeStep
+        title="Upgrade the theme and dependency add-ons"
+        description="Runs the pending upgrade steps of plone.restapi, plone.app.querystring, plone.volto and sc.voltolighttheme."
+        handler=".upgrade_dependencies"
+        />
+  </genericsetup:upgradeSteps>
+
+</configure>

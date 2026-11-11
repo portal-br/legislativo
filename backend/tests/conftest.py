@@ -38,7 +38,7 @@ def current_versions() -> CurrentVersions:
     from portalbrasil.legislativo import __version__
 
     return CurrentVersions(
-        base="20261004001",
+        base="20261111001",
         default="1000",
         package=__version__,
     )
