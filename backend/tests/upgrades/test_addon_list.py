@@ -1,5 +1,4 @@
 from . import NOT_UPGRADED_PROFILES
-from . import PROFILES_WITH_PENDING_UPGRADES
 from . import UPGRADED_PROFILES
 from portalbrasil.legislativo import PACKAGE_NAME
 from portalbrasil.legislativo.factory import LocalAddonList
@@ -79,21 +78,7 @@ class TestUpgrade:
         assert self.setup_tool.getLastVersionForProfile(THEME_PROFILE) == last
         assert self.setup_tool.listUpgrades(THEME_PROFILE) == []
 
-    @pytest.mark.parametrize(
-        "profile_id",
-        [
-            profile_id
-            for profile_id in UPGRADED_PROFILES
-            if profile_id not in PROFILES_WITH_PENDING_UPGRADES
-        ],
-    )
+    @pytest.mark.parametrize("profile_id", UPGRADED_PROFILES)
     def test_no_pending_upgrades(self, profile_id: str):
         """A new site has no pending upgrade for the add-on."""
-        assert self.setup_tool.listUpgrades(profile_id) == []
-
-    @pytest.mark.parametrize("profile_id", PROFILES_WITH_PENDING_UPGRADES)
-    def test_upgrade_clears_pending(self, profile_id: str):
-        """Upgrading the site runs the steps a new site starts with."""
-        assert self.setup_tool.listUpgrades(profile_id) != []
-        self.tool.upgrade()
         assert self.setup_tool.listUpgrades(profile_id) == []

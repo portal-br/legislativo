@@ -1,13 +1,13 @@
 from AccessControl.class_init import InitializeClass
 from App.config import DefaultConfiguration
 from App.config import getConfiguration
+from importlib.metadata import version
 from plone.base.interfaces import IMigrationTool
 from Products.CMFCore.utils import registerToolInterface
 from Products.CMFPlone.MigrationTool import MigrationTool as BaseTool
 from typing import Any
 from zope.interface import implementer
 
-import pkg_resources
 import sys
 
 
@@ -17,10 +17,13 @@ def get_configuration() -> DefaultConfiguration:
 
 
 def package_version(package_name: str) -> str:
-    """Return the version of an installed package."""
-    package_dist = pkg_resources.get_distribution(package_name)
-    version: str = package_dist.version
-    return version
+    """Return the version of an installed package.
+
+    :param package_name: Name of the installed distribution.
+    :returns: The installed version.
+    """
+    installed: str = version(package_name)
+    return installed
 
 
 @implementer(IMigrationTool)
