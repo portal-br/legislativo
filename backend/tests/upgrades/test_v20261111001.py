@@ -1,8 +1,11 @@
-"""Upgrade to 20261111001: the theme and dependency add-ons run their pending steps."""
+"""Upgrade to 20261111001: the core profile and the dependency add-ons run their pending steps."""
 
+from plone.registry.interfaces import IRegistry
 from portalbrasil.legislativo.tools.migration import MigrationTool
+from portalbrasil.legislativo.upgrades.v20261111001 import CORE_PROFILE
 from portalbrasil.legislativo.upgrades.v20261111001 import DEPENDENCIES
 from Products.GenericSetup.tool import SetupTool
+from zope.component import getUtility
 
 import pytest
 
@@ -10,11 +13,15 @@ import pytest
 PROFILE = "portalbrasil.legislativo:base"
 SOURCE = "20261004001"
 DESTINATION = "20261111001"
+QUERYSTRING_PROFILE = "plone.app.querystring:default"
+CURRENT_UID_PREFIX = "plone.app.querystring.operation.string.currentUID."
+CURRENT_UID_OPERATION = "plone.app.querystring.queryparser._currentUID"
 
 #: A version below the latest one for each dependency, so that it has
 #: pending upgrade steps when the site is at ``SOURCE``.
 OLDER_VERSIONS = {
     "plone.restapi:default": "0001",
+    "plone.app.querystring:default": "15",
     "plone.volto:default": "1010",
     "sc.voltolighttheme:default": "1000",
 }
@@ -45,10 +52,13 @@ class TestUpgrade:
         self.setup_tool.upgradeProfile(PROFILE)
 
     def test_available(self):
-        """The site at the source version is offered exactly this step."""
+        """The site at the source version is offered the two handlers of this step."""
         steps = self._steps()
 
-        assert [(s["ssource"], s["sdest"]) for s in steps] == [(SOURCE, DESTINATION)]
+        assert [(s["ssource"], s["sdest"]) for s in steps] == [
+            (SOURCE, DESTINATION),
+            (SOURCE, DESTINATION),
+        ]
 
     @pytest.mark.parametrize("profile_id", DEPENDENCIES)
     def test_runs_pending_steps(self, profile_id: str):
@@ -60,8 +70,54 @@ class TestUpgrade:
 
         assert self.setup_tool.listUpgrades(profile_id) == []
 
+    def test_querystring_currentuid_registered(self):
+        """The 15 to 16 step of plone.app.querystring registers the currentUID operation."""
+        registry = getUtility(IRegistry)
+        for name in [n for n in registry.records if n.startswith(CURRENT_UID_PREFIX)]:
+            del registry.records[name]
+        self.setup_tool.setLastVersionForProfile(QUERYSTRING_PROFILE, "15")
+
+        self._run()
+
+        assert registry[CURRENT_UID_PREFIX + "operation"] == CURRENT_UID_OPERATION
+
+    def test_core_profile_recorded_runs_its_steps(self):
+        """A site that records the core profile gets the 6.2.2 IImagingSchema change."""
+        registry = getUtility(IRegistry)
+        variants = registry.records["plone.picture_variants"].value
+        variants["small"]["sourceset"] = [
+            {"scale": "preview", "additionalScales": ["large", "larger"]}
+        ]
+        registry["plone.picture_variants"] = variants
+        self.setup_tool.setLastVersionForProfile(CORE_PROFILE, "6204")
+
+        self._run()
+
+        sourceset = registry.records["plone.picture_variants"].value["small"][
+            "sourceset"
+        ]
+        assert "sizes" in sourceset[0]
+        assert self.setup_tool.getLastVersionForProfile(CORE_PROFILE) == ("6206",)
+
+    def test_core_profile_unrecorded_is_kept(self, monkeypatch):
+        """A site without a recorded core version never has the core profile upgraded."""
+        calls: list[str] = []
+        original = SetupTool.upgradeProfile
+
+        def spy(self, profile_id, *args, **kwargs):
+            calls.append(profile_id)
+            return original(self, profile_id, *args, **kwargs)
+
+        monkeypatch.setattr(SetupTool, "upgradeProfile", spy)
+        assert self.setup_tool.getLastVersionForProfile(CORE_PROFILE) == "unknown"
+
+        self._run()
+
+        assert CORE_PROFILE not in calls
+        assert self.setup_tool.getLastVersionForProfile(PROFILE) == (DESTINATION,)
+
     def test_does_not_run_migration(self, monkeypatch):
-        """The step never calls the Plone core migration."""
+        """The step never calls the migration tool's own upgrade."""
 
         def forbidden(self, *args, **kwargs):
             raise AssertionError("portal_migration.upgrade must not run")
