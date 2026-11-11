@@ -2,6 +2,13 @@
 
 <!-- towncrier release notes start -->
 
+## 4.0.0-alpha.6 (2026-11-11)
+
+### Interno
+
+- Atualiza `@plonegovbr/volto-brwidgets` para 1.0.0-beta.1, com os widgets de CEP, CNPJ, CPF e telefone validados pela biblioteca `@brazilian-utils/brazilian-utils`. @ericof [#19](https://github.com/portal-br/legislativo/issues/19)
+- Atualiza o Volto para 19.7.0 e o `@simplesconsultoria/volto-light-theme` para 1.0.0-alpha.15. O webpack passa a seguir a versão do catálogo do Volto, para que o Storybook use a mesma versão da aplicação. @ericof [#24](https://github.com/portal-br/legislativo/issues/24)
+
 ## 4.0.0-alpha.5 (2026-10-21)
 
 ### Correção de Bug

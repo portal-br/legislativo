@@ -2,6 +2,15 @@
 
 <!-- towncrier release notes start -->
 
+## 4.0.0a6 (2026-11-11)
+
+
+### Interno
+
+- Atualiza `plonegovbr.brfields` para 1.0.0b1, que valida CEP, CNPJ, CPF e telefone com a biblioteca `brutils`. @ericof [#19](https://github.com/portal-br/legislativo/issues/19)
+- Atualiza o `plonegovbr.socialmedia` para 3.1.0. @ericof [#21](https://github.com/portal-br/legislativo/issues/21)
+- Atualiza o Plone para 6.2.3 e o `sc-voltolighttheme` para 1.0.0a15, e as versões fixadas pelas restrições do backend. Adiciona o passo de atualização 20261111001, que executa nos sites existentes os passos pendentes do perfil do Plone (quando o site registra a versão), do `plone.app.querystring`, do `plone.restapi`, do `plone.volto` e do `sc.voltolighttheme`, e passa a ler as versões dos pacotes com `importlib.metadata`, no lugar do `pkg_resources`, que o `setuptools` 84 deixou de fornecer. @ericof [#24](https://github.com/portal-br/legislativo/issues/24)
+
 ## 4.0.0a5 (2026-10-21)
 
 
