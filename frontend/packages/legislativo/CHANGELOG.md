@@ -2,6 +2,17 @@
 
 <!-- towncrier release notes start -->
 
+## 4.0.0-alpha.7 (2026-11-13)
+
+### Funcionalidade
+
+- Adiciona ao bloco Múltiplos botões a documentação do endpoint `@blocks-schema` do Volto, com os dados que o bloco guarda e um exemplo completo em JSON. @ericof [#26](https://github.com/portal-br/legislativo/issues/26)
+
+### Interno
+
+- Atualiza o `@simplesconsultoria/volto-light-theme` para 1.0.0-alpha.16, que deixa as cores dos ícones de redes sociais apenas no cabeçalho, no menu de ferramentas do celular e no rodapé. @ericof [#23](https://github.com/portal-br/legislativo/issues/23)
+- Atualiza `@plone-collective/volto-image-editor` para 1.3.0, `@kitconcept/volto-iframe-block` para 2.5.0 e `@plone/volto-form-block` para 1.0.0-alpha.4. @ericof [#29](https://github.com/portal-br/legislativo/issues/29)
+
 ## 4.0.0-alpha.6 (2026-11-11)
 
 ### Interno

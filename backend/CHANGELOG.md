@@ -2,6 +2,14 @@
 
 <!-- towncrier release notes start -->
 
+## 4.0.0a7 (2026-11-13)
+
+
+### Interno
+
+- Atualiza o `sc-voltolighttheme` para 1.0.0a16. A versão não muda o perfil do tema, então não há passo de atualização. @ericof [#23](https://github.com/portal-br/legislativo/issues/23)
+- Atualiza as dependências do backend: `plone.formblock` 1.0.0a4, `plone.exportimport` 2.3.0, `psycopg2` 2.9.13, `relstorage` 4.3.0 e `zeo` 6.2. A versão do perfil base sobe para 20261113001 com um passo nulo, que faz a migração rodar a lista de add-ons. @ericof [#29](https://github.com/portal-br/legislativo/issues/29)
+
 ## 4.0.0a6 (2026-11-11)
 
 
