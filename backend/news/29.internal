@@ -1,0 +1,1 @@
+Atualiza as dependências do backend: `plone.formblock` 1.0.0a4, `plone.exportimport` 2.3.0, `psycopg2` 2.9.13, `relstorage` 4.3.0 e `zeo` 6.2. A versão do perfil base sobe para 20261113001 com um passo nulo, que faz a migração rodar a lista de add-ons. @ericof

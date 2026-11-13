@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
+
+  <genericsetup:upgradeSteps
+      profile="portalbrasil.legislativo:base"
+      source="20261111001"
+      destination="20261113001"
+      >
+    <genericsetup:upgradeStep
+        title="Upgrade the add-ons of the distribution"
+        description="No change to the site itself: the version bump lets portal_migration run the add-on list, which upgrades plone.formblock and the other add-ons with pending steps."
+        handler="..utils.null_upgrade_step"
+        />
+  </genericsetup:upgradeSteps>
+
+</configure>

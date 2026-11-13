@@ -28,7 +28,7 @@ dependencies = [
     "plone.api",
     "plone.restapi",
     "plone.volto",
-    "plone.formblock[honeypot]==1.0.0a3",
+    "plone.formblock[honeypot]==1.0.0a4",
     "plonegovbr.brfields==1.0.0b1",
     "plonegovbr.socialmedia>=3.1.0",
     "sc-voltolighttheme==1.0.0a16",
@@ -48,9 +48,9 @@ test = [
 
 container = [
     "plone.app.upgrade",
-    "psycopg2==2.9.11",
-    "relstorage==4.2.0",
-    "zeo==6.1",
+    "psycopg2==2.9.13",
+    "relstorage==4.3.0",
+    "zeo==6.2",
 ]
 
 [project.urls]

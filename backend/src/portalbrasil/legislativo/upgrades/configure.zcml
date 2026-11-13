@@ -17,6 +17,7 @@
   -->
 
   <include package=".v20261111001" />
+  <include package=".v20261113001" />
 
   <!-- -*- extra stuff goes here -*- -->
 
