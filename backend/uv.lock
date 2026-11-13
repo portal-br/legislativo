@@ -2734,7 +2734,7 @@ wheels = [
 
 [[package]]
 name = "plone-exportimport"
-version = "2.2.0"
+version = "2.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "plone-api" },
@@ -2762,9 +2762,9 @@ dependencies = [
     { name = "zc-relation" },
     { name = "zope" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/85/b9/42d0cb11f8f09738da6499f09dd767792cc419221000ebb255903367e004/plone_exportimport-2.2.0.tar.gz", hash = "sha256:bfee2b85b45b2a85d4c5ae65db450543684b4766cfb52af51e57c6adaed5dad2", size = 220649, upload-time = "2026-10-01T19:19:49.475Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/73/cd/9ead6f14d7719819c47a6d32ba6c3c6900ea76c805be6c26c382b3ad0d90/plone_exportimport-2.3.0.tar.gz", hash = "sha256:1c44bb6ab13e027a313e0cd7ad01cea0867ea7a6e3ef208a021072e34f29991e", size = 220557, upload-time = "2026-11-03T19:34:42.575Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/51/f8/7f2578b16f9e213c94fac8afadb662c1c3d17459e13b840970f48f6a6bc9/plone_exportimport-2.2.0-py3-none-any.whl", hash = "sha256:f71ca075dd106e69564a86d551f4e13ddafabd9850dffbf96e8f21980701f683", size = 79376, upload-time = "2026-10-01T19:19:47.172Z" },
+    { url = "https://files.pythonhosted.org/packages/fc/56/4ac3cee4612fa0fde68514c3a290844fa5e971d18bcb82b1f8ffed825e78/plone_exportimport-2.3.0-py3-none-any.whl", hash = "sha256:36c0251eb809a784e7342ee1aaba4cee732464ecebf8c695b51ebeeb4d069165", size = 79507, upload-time = "2026-11-03T19:34:41.198Z" },
 ]
 
 [[package]]
@@ -2783,7 +2783,7 @@ wheels = [
 
 [[package]]
 name = "plone-formblock"
-version = "1.0.0a3"
+version = "1.0.0a4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beautifulsoup4" },
@@ -2795,9 +2795,9 @@ dependencies = [
     { name = "pyotp" },
     { name = "souper-plone" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/df/fc/890be2b7e96232a507345cf9caaefaf6495abb24411383ab469aa923bc94/plone_formblock-1.0.0a3.tar.gz", hash = "sha256:00efa055eb83bb424570e5c19c393941df548bb3f5894f2a5ead6783419f454f", size = 138494, upload-time = "2026-07-07T17:48:30.263Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d7/f6/66b4dce37473ea17cb14160bd57689e8ab2a465734c1a50f6950479761b5/plone_formblock-1.0.0a4.tar.gz", hash = "sha256:17842a80d789584ea0f60625ed9e2d0056df704612198328edc856efe80910c4", size = 138826, upload-time = "2026-11-13T01:19:26.08Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/73/32/c8b1d61849c77402b8ad427f292dd4a93e701c387d1f9c64ea3ef7b2704c/plone_formblock-1.0.0a3-py3-none-any.whl", hash = "sha256:74dbba615b221b80ea51dbfd3ba69706fea062a3b49e019fac4a6c68918f6ce9", size = 92976, upload-time = "2026-07-07T17:48:28.585Z" },
+    { url = "https://files.pythonhosted.org/packages/95/fb/7b109585e0844b9fe2c7e4a6428925e75611a0aead81327ee6da72e36561/plone_formblock-1.0.0a4-py3-none-any.whl", hash = "sha256:0e6c3c38a1c73a4b7656abb30fd3a554bb6a57f499c4c40141fa6e3c807c0e59", size = 92967, upload-time = "2026-11-13T01:19:24.52Z" },
 ]
 
 [package.optional-dependencies]
@@ -3540,7 +3540,7 @@ test = [
 requires-dist = [
     { name = "plone-api" },
     { name = "plone-exportimport", specifier = ">=2.2.0" },
-    { name = "plone-formblock", extras = ["honeypot"], specifier = "==1.0.0a3" },
+    { name = "plone-formblock", extras = ["honeypot"], specifier = "==1.0.0a4" },
     { name = "plone-restapi" },
     { name = "plone-volto" },
     { name = "plonegovbr-brfields", specifier = "==1.0.0b1" },
@@ -3552,9 +3552,9 @@ requires-dist = [
 [package.metadata.requires-dev]
 container = [
     { name = "plone-app-upgrade" },
-    { name = "psycopg2", specifier = "==2.9.11" },
-    { name = "relstorage", specifier = "==4.2.0" },
-    { name = "zeo", specifier = "==6.1" },
+    { name = "psycopg2", specifier = "==2.9.13" },
+    { name = "relstorage", specifier = "==4.3.0" },
+    { name = "zeo", specifier = "==6.2" },
 ]
 test = [
     { name = "horse-with-no-namespace" },
@@ -4192,11 +4192,11 @@ wheels = [
 
 [[package]]
 name = "psycopg2"
-version = "2.9.11"
+version = "2.9.13"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/89/8d/9d12bc8677c24dad342ec777529bce705b3e785fa05d85122b5502b9ab55/psycopg2-2.9.11.tar.gz", hash = "sha256:964d31caf728e217c697ff77ea69c2ba0865fa41ec20bb00f0977e62fdcc52e3", size = 379598, upload-time = "2025-10-10T11:14:46.075Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/91/81/6ea19b8b28feb9405c8c87a307776614d6e404bdb98467d1ce10a39d2c1d/psycopg2-2.9.13.tar.gz", hash = "sha256:d36784fc2dae69523ba4b79c7d1d1b4d6e83e87836874f111262f4db940b16a6", size = 378068, upload-time = "2026-09-09T23:56:21.749Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/47/08/737aa39c78d705a7ce58248d00eeba0e9fc36be488f9b672b88736fbb1f7/psycopg2-2.9.11-cp314-cp314-win_amd64.whl", hash = "sha256:f10a48acba5fe6e312b891f290b4d2ca595fc9a06850fe53320beac353575578", size = 2803738, upload-time = "2025-10-10T11:10:23.196Z" },
+    { url = "https://files.pythonhosted.org/packages/b9/f9/f6e9d47ea04e09282c618f5eeb67634f39ea4b04acedd0a6d8da4d986d50/psycopg2-2.9.13-cp314-cp314-win_amd64.whl", hash = "sha256:a6f54fd8e0024f35240866b5dfff9ead2a0dbd33b8096eec438bc6093412842d", size = 2866943, upload-time = "2026-09-09T23:54:01.268Z" },
 ]
 
 [[package]]
@@ -4391,7 +4391,7 @@ wheels = [
 
 [[package]]
 name = "relstorage"
-version = "4.2.0"
+version = "4.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "btrees" },
@@ -4403,20 +4403,18 @@ dependencies = [
     { name = "zope-dottedname" },
     { name = "zope-interface" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b7/e4/74e546c97b7a732ffafd1d73bed030effe851eae8aa6391de2d28b896e44/relstorage-4.2.0.tar.gz", hash = "sha256:8bc43aab746af834f6390570c2c1af1247509c6c10bf4f4b39c5b066d6dbf1a5", size = 2666545, upload-time = "2025-09-29T19:25:15.67Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a9/48/56a85c82e393872a20f5e2fc56aea4c1639491d5265880a012e39e5bc0c0/relstorage-4.3.0.tar.gz", hash = "sha256:a1b4b8a499a713ae4376e7cf9d95c5ecbbc92117a49ab72ee7de069f322efcb5", size = 2681291, upload-time = "2026-05-20T10:23:36.659Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/33/dc/0efe8d0aab9d4bb3bdb7dd9d450a3d746d715599c95fca26098ddddc5450/relstorage-4.2.0-cp314-cp314-macosx_10_15_universal2.whl", hash = "sha256:2ba9b34d7d536b7400fa1082dfb80b2685dce1492bcc387a19b5147b3d741968", size = 1412827, upload-time = "2025-09-29T19:32:17.802Z" },
-    { url = "https://files.pythonhosted.org/packages/0b/79/769bc8977fc895944d0afe690eb1e85566eec207be0c7e0d2c43b6ae94eb/relstorage-4.2.0-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:8fb1253ebc920fb259f66feaaf0cc8455bcb711092306a2d16ada7618154a708", size = 1285685, upload-time = "2025-09-29T20:17:58.109Z" },
-    { url = "https://files.pythonhosted.org/packages/cc/5a/37380deee7659e32060d404a53ab40fa91c9f1a1a40d7ea216a5e3f0da90/relstorage-4.2.0-cp314-cp314-manylinux2014_ppc64le.manylinux_2_17_ppc64le.whl", hash = "sha256:30bbfa5464f19f5ad2541d115f9982db4bfa0071eea38557fdafdf746b044849", size = 1315008, upload-time = "2025-09-29T20:15:20.812Z" },
-    { url = "https://files.pythonhosted.org/packages/7c/a6/08e65c9c5decf0ec04d82cc5e14adbce01290bc3e7d0da47d2183c1ad234/relstorage-4.2.0-cp314-cp314-manylinux2014_s390x.manylinux_2_17_s390x.whl", hash = "sha256:bfa6f7a191692672f6c4b7ee8a7b3885020e8e8682821e014853c84a70f23087", size = 1285908, upload-time = "2025-09-29T20:22:01.585Z" },
-    { url = "https://files.pythonhosted.org/packages/3c/8a/ffb6d7053716fb14e24c3d01689b6fd13339719f5143a019893d51309715/relstorage-4.2.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:58412b62668d9dcb3d0b7d58f124e9c53331fa32d1b738d209c3d14dc4b61c9d", size = 1292900, upload-time = "2025-09-29T19:46:43.415Z" },
-    { url = "https://files.pythonhosted.org/packages/e3/a8/a38027e18c5ada9e009600853ce5aeef1759baa09052920ddca454632e56/relstorage-4.2.0-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:41771476ee881371c3c756d9a72c0a5350c609acf2c65d241a1ba216e83ab184", size = 1273952, upload-time = "2025-09-29T19:47:00.232Z" },
-    { url = "https://files.pythonhosted.org/packages/df/e5/088c9bd306d7283722536090f06de035a885624c7b07e1134309882de8b1/relstorage-4.2.0-cp314-cp314-win_amd64.whl", hash = "sha256:22c5a7360e61ff0dde498f96da36af9e51d7e6a0e96cd4275fc7235fc1ef537a", size = 1185744, upload-time = "2025-09-29T19:43:05.421Z" },
-    { url = "https://files.pythonhosted.org/packages/a1/2a/00e5766d299422c66393e69c6a2583607b2bc511564bda10485f2fa1b6ea/relstorage-4.2.0-cp314-cp314t-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:92c19ff5ee13cf047250efb20cd9a552762976e02f719bf316d36579b44591e6", size = 1288088, upload-time = "2025-09-29T20:17:59.592Z" },
-    { url = "https://files.pythonhosted.org/packages/a2/36/c239ede3ddd686b154c10370f79b0c8f1c3afe2cd3398172d78c08e8f6a2/relstorage-4.2.0-cp314-cp314t-manylinux2014_ppc64le.manylinux_2_17_ppc64le.whl", hash = "sha256:8ae76a7f5befbb57c8dfe8fc30069a22a30d53bcb3c46a81054c2a4bcb38d719", size = 1313978, upload-time = "2025-09-29T20:15:22.41Z" },
-    { url = "https://files.pythonhosted.org/packages/df/82/0b1ec353154e4d1b3ece3e6e20a72ba4bf9b85ed6584a9e370f61c0fe875/relstorage-4.2.0-cp314-cp314t-manylinux2014_s390x.manylinux_2_17_s390x.whl", hash = "sha256:7a06cd1e22c0d19a6f4312a9462983809147d62dc83a114b973ffb014dc368dd", size = 1289305, upload-time = "2025-09-29T20:22:02.935Z" },
-    { url = "https://files.pythonhosted.org/packages/a1/9e/a219cca6baa0c3babfab7823c2a4ccf7852c97525328a3ba9344c19203d5/relstorage-4.2.0-cp314-cp314t-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:c86b51a9c1c0ddba29fe692fe5f13b548672d94a3d2f145499fdf620cb14a1c2", size = 1294540, upload-time = "2025-09-29T19:46:44.503Z" },
-    { url = "https://files.pythonhosted.org/packages/08/02/f4a6f26782b3811db6b429f3208e277644e4c5f157d03f338096179f1b90/relstorage-4.2.0-cp314-cp314t-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:ec14ba61e224525b0780291f5a1c62348924435a76a6afe1f6e51456d50b9aa5", size = 1272535, upload-time = "2025-09-29T19:47:01.479Z" },
+    { url = "https://files.pythonhosted.org/packages/5e/47/7c128547cef8b7f9987760d1d3b718311f1a21532a87f59cc11586ee762e/relstorage-4.3.0-cp314-cp314-macosx_10_15_universal2.whl", hash = "sha256:e480dabf3b5a20513525244b38017d5aff63f056ca5e2cdd63abaebda63b53c0", size = 1430308, upload-time = "2026-05-20T10:33:15.724Z" },
+    { url = "https://files.pythonhosted.org/packages/ee/68/aec0c4970bc75e756529229bbd0ed91c58ef118713847368c1b0fdb01ace/relstorage-4.3.0-cp314-cp314-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:14c50347a0ce4c17146cf5bfffeae4e80cd0e8de56585976249bd64ba0118ec6", size = 1282202, upload-time = "2026-05-20T11:15:56.795Z" },
+    { url = "https://files.pythonhosted.org/packages/5a/9f/4858effc5d6d618d1a46862a6b83b1279238e155dc1411c90bf379b8d280/relstorage-4.3.0-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:2e57765c6f9b570e069630ef9957a1029771ff9b67c3518bfa0d159c17cd7ac1", size = 1290322, upload-time = "2026-05-20T10:43:09.034Z" },
+    { url = "https://files.pythonhosted.org/packages/b3/04/a532f6f6e48d1b244161a91313e5823690523535767d45549b41426602e7/relstorage-4.3.0-cp314-cp314-musllinux_1_2_aarch64.whl", hash = "sha256:a0c5be3f4727f3afbc68f29c6c739bddf2a6adb3467ea1e0696a86370229f463", size = 2266406, upload-time = "2026-05-20T11:18:45.513Z" },
+    { url = "https://files.pythonhosted.org/packages/c0/67/dbdb5b16e0891927518ad253eb6f1de3e0fad4e319e5603608cbf518fad1/relstorage-4.3.0-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:058255e3a19d86bd11e0e1e1e699efb70846e5e766e22c42bf784ff36227841c", size = 2321386, upload-time = "2026-05-20T10:43:21.465Z" },
+    { url = "https://files.pythonhosted.org/packages/cf/16/ccc4914e925dcda99aaf1b4c8981ee767e4e655e45d183cf8461f819d3e4/relstorage-4.3.0-cp314-cp314-win_amd64.whl", hash = "sha256:dd9514f518d741675ae69cee29515cddd86f82386edcde75578e7fc2c4a04fd3", size = 1208108, upload-time = "2026-05-20T12:50:38.899Z" },
+    { url = "https://files.pythonhosted.org/packages/49/ac/538d76077fa00066ddb0f8e7819c1943f6924cc8bf29ac6ea82bf9a4080d/relstorage-4.3.0-cp314-cp314t-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:01681b126c335aafd8af6446d04c25af73945ee2f129cd519c2af19f5863dbc2", size = 1286318, upload-time = "2026-05-20T11:15:59.08Z" },
+    { url = "https://files.pythonhosted.org/packages/c8/d6/7362103af3b939b359e1a54418072e4b61218a4000ba908d84764197e516/relstorage-4.3.0-cp314-cp314t-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:09187b2a32e0b646df1cbca3fa28a272d45a642ee65d74fd0eab69cc8f72db50", size = 1291634, upload-time = "2026-05-20T10:43:10.832Z" },
+    { url = "https://files.pythonhosted.org/packages/9d/e6/2eadbd80a232c0887b08b4a82a96505d4aab645c2a474107daabd61e1f4d/relstorage-4.3.0-cp314-cp314t-musllinux_1_2_aarch64.whl", hash = "sha256:b309e3f3f0807653e3f57603c9159ed41b04916c0a537fcfc03bc97ec53a424c", size = 2269278, upload-time = "2026-05-20T11:18:47.16Z" },
+    { url = "https://files.pythonhosted.org/packages/81/82/4520c9e17574f8d9e959d77be709f89e7bd56fccb4a6c4dcc5b91900d63b/relstorage-4.3.0-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:a0faf4224df88d94874a8236e4cccb3ee7ceef71dfd97f8cac0fd2e719c7487e", size = 2322156, upload-time = "2026-05-20T10:43:22.762Z" },
 ]
 
 [[package]]
@@ -5225,7 +5223,7 @@ wheels = [
 
 [[package]]
 name = "zeo"
-version = "6.1"
+version = "6.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "persistent" },
@@ -5236,9 +5234,9 @@ dependencies = [
     { name = "zodb" },
     { name = "zope-interface" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/92/0c/aa9463ba65f930e84e30541ff624b3710c77bf8ad1d2128b55cd5e28d202/zeo-6.1.tar.gz", hash = "sha256:24589b9cf611c444aa906eb1ce9cd46a2a1193c6f361411e2baf7bad703ca4de", size = 243838, upload-time = "2025-07-23T15:52:40.392Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ab/18/2a43f856f8ffa0dad376b180fb56fc8f50ebe1702ffd48a34d6c1fd3b340/zeo-6.2.tar.gz", hash = "sha256:e29c52eb9767d94b270bff4c6eca4c863fcbc46d15323686e6fb71bfe43c7899", size = 244123, upload-time = "2026-04-13T17:59:42.757Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/59/24/019246ea07bd574829396b0bb96102025a0123423797e0583696e872b30c/zeo-6.1-py3-none-any.whl", hash = "sha256:6935c2da9edc90bbc62dc5bf408008c7bd9bd9c05537464d3b4636bc5e55967c", size = 247130, upload-time = "2025-07-23T15:52:38.247Z" },
+    { url = "https://files.pythonhosted.org/packages/ec/55/23cb30701f9e857216a92693e52726812ac2db9daeffa3ac44da9a58bfc9/zeo-6.2-py3-none-any.whl", hash = "sha256:254853c9e6a2a29dfe7df89977e71c287f1f31a646a3d1941a6df738f5c282f9", size = 247483, upload-time = "2026-04-13T17:59:41.077Z" },
 ]
 
 [[package]]

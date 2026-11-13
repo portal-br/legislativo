@@ -13,6 +13,8 @@ import pytest
 PROFILE = "portalbrasil.legislativo:base"
 SOURCE = "20261004001"
 DESTINATION = "20261111001"
+#: The run goes on to the next step, the null step of 20261113001.
+CURRENT = "20261113001"
 QUERYSTRING_PROFILE = "plone.app.querystring:default"
 CURRENT_UID_PREFIX = "plone.app.querystring.operation.string.currentUID."
 CURRENT_UID_OPERATION = "plone.app.querystring.queryparser._currentUID"
@@ -52,12 +54,16 @@ class TestUpgrade:
         self.setup_tool.upgradeProfile(PROFILE)
 
     def test_available(self):
-        """The site at the source version is offered the two handlers of this step."""
+        """The site at the source version is offered the two handlers of this step.
+
+        ``listUpgrades`` also offers the step that follows, to the current version.
+        """
         steps = self._steps()
 
         assert [(s["ssource"], s["sdest"]) for s in steps] == [
             (SOURCE, DESTINATION),
             (SOURCE, DESTINATION),
+            (DESTINATION, CURRENT),
         ]
 
     @pytest.mark.parametrize("profile_id", DEPENDENCIES)
@@ -114,7 +120,7 @@ class TestUpgrade:
         self._run()
 
         assert CORE_PROFILE not in calls
-        assert self.setup_tool.getLastVersionForProfile(PROFILE) == (DESTINATION,)
+        assert self.setup_tool.getLastVersionForProfile(PROFILE) == (CURRENT,)
 
     def test_does_not_run_migration(self, monkeypatch):
         """The step never calls the migration tool's own upgrade."""
@@ -126,4 +132,4 @@ class TestUpgrade:
 
         self._run()
 
-        assert self.setup_tool.getLastVersionForProfile(PROFILE) == (DESTINATION,)
+        assert self.setup_tool.getLastVersionForProfile(PROFILE) == (CURRENT,)
